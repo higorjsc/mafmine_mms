@@ -2,9 +2,9 @@ function Open_pop_up_pesos() //Mostra a planilha com os pesos do método UBC
 {
     const titulo = document.getElementById('titulo_section_1').innerText
     if(titulo.includes('CHARACTERISTICS')){
-        window.open('pesos_english_nicholas_92.html', '_blank')
+        window.open('Nicholas_1992\\pesos_english_nicholas_92.html', '_blank')
     }else{
-        window.open('pesos_portuguese_nicholas_92.html', '_blank')
+        window.open('Nicholas_1992\\pesos_portuguese_nicholas_92.html', '_blank')
     }
 }
 

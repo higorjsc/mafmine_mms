@@ -7,9 +7,9 @@ function Open_pop_up_gsi(id)
     const parametro = id + '_' + idioma
     let encoded_id = ''
     if(idioma=='en'){
-        encoded_id = 'gsi_calculadora\\pop_up_gsi_en.html?' + encodeURIComponent(parametro)
+        encoded_id = 'UBC\\gsi_calculadora\\pop_up_gsi_en.html?' + encodeURIComponent(parametro)
     }else{
-        encoded_id = 'gsi_calculadora\\pop_up_gsi_pt.html?' + encodeURIComponent(parametro)
+        encoded_id = 'UBC\\gsi_calculadora\\pop_up_gsi_pt.html?' + encodeURIComponent(parametro)
     }
 
     window.open(encoded_id, '_blank', 'width=770,height=730')
@@ -24,9 +24,9 @@ function Open_pop_up_rmr(id)
   
     const parametro = id + '_' + idioma
     if(idioma=='en'){
-        encoded_id = 'rmr_calculadora\\pop_up_rmr_en.html?' + encodeURIComponent(parametro)
+        encoded_id = 'UBC\\rmr_calculadora\\pop_up_rmr_en.html?' + encodeURIComponent(parametro)
     }else{
-        encoded_id = 'rmr_calculadora\\pop_up_rmr_pt.html?' + encodeURIComponent(parametro)
+        encoded_id = 'UBC\\rmr_calculadora\\pop_up_rmr_pt.html?' + encodeURIComponent(parametro)
     }
 
     window.open(encoded_id, '_blank', 'width=600,height=650')
@@ -38,9 +38,9 @@ function Open_pop_up_pesos() //Mostra a planilha com os pesos do método UBC
 
     const titulo = document.getElementById('titulo_section_1').innerText
     if(titulo.includes('CHARACTERISTICS')){
-        window.open('pesos_english_ubc.html', '_blank')
+        window.open('UBC\\pesos_english_ubc.html', '_blank')
     }else{
-        window.open('pesos_portuguese_ubc.html', '_blank')
+        window.open('UBC\\pesos_portuguese_ubc.html', '_blank')
     }
 }
 

@@ -62,7 +62,7 @@ h2 /*Titulos principais de cada seção*/
 /*---------------------------------------SECTION 0------------------------------------------------*/
 #nav_menu{
     grid-column: 1/2;
-    line-height: 25px;
+    line-height: 24px;
     gap: 0;
     display: block; 
     color: white;
@@ -74,6 +74,7 @@ h2 /*Titulos principais de cada seção*/
     border-radius: 20px;
     background-color: white;
     overflow: hidden;
+    font-size: 10pt;
 
 }
 p{
@@ -85,6 +86,7 @@ p{
     text-align: justify;
     box-sizing: border-box;
     padding: 5px;
+    font-size: 10pt;
 }
 
 #menu_metodos{

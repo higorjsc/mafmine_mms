@@ -21,16 +21,16 @@ function English()
 {
 
     const paragrafo_explicacao = document.querySelector('#paragrafo_explicacao')
-    paragrafo_explicacao.innerHTML = "O Método de Nicholas de 1992 é uma versão modificada do método de Nicholas de 1981, publicada pelo mesmo autor." + 
-    "A nova versão tem o objetivo de corrigir o 'problema' clássico do procedimento orignal, onde todos os critérios de seleção possuem a mesma importância (peso).<br><br>"+
+    paragrafo_explicacao.innerHTML = "The Nicholas selection procedure of 1992 is an modified version of the Nicholas approach from 1981, published by the same author." + 
+    "The 1992 edition aims to correct the classic issue in the original approach where all criteria were assigned equal importance.<br><br>"+
 
-    "<strong>As modificações incluem:<br></strong>" +
+    "<strong>The modifications include:<br></strong>" +
                      
-    "&ensp;&ensp;- O somatório das notas de cada critério de seleção é multiplicado por um 'Fator de peso';<br>" +
-    "&ensp;&ensp;- 'Fatores de pesos' são sugeridos pelo autor para a geometria do depósito, corpo de minério, hanging wall e footwall.<br><br>" +
+    "&ensp;&ensp;- The sum of each value assigned to the selection criteria is multiplied by a 'Weighting Factor'.<br>" +
+    "&ensp;&ensp;- Weighting Factors are suggested by the author for deposit geometry, and rock mechanics characteristics of the orebody, hanging wall and footwall.<br><br>" +
 
-    "<strong>Observações:<br></strong>"+
-    "&ensp;&ensp; - Nicholas propõem que o usuário do método seja livre para atribuir quaisquer outros fatores de peso.<br>"
+    "<strong>Notes:<br></strong>"+
+    "&ensp;&ensp; - Nicholas states that the proposed values for each characteristic in this method 'can be' adjusted as our technical expertise, mining equipment, and overall mining processes evolve and improve.<br>"
 
     //titulos  
     const titulo_section_1 = document.querySelector('#titulo_section_1')
@@ -122,6 +122,15 @@ function English()
     });
 
 
+    //FATORES DE PESO
+    const h2_fatores_peso = document.querySelector('#h2_fatores_peso')
+    h2_fatores_peso.innerText = 'Weighting Factors'
+
+    const span_cm = document.querySelector('#span_cm')
+    span_cm.innerText = 'OB'
+ 
+
+
 
 }
 
@@ -129,15 +138,15 @@ function Portuguese()
 {
     const paragrafo_explicacao = document.querySelector('#paragrafo_explicacao')
     paragrafo_explicacao.innerHTML = "O Método de Nicholas de 1992 é uma versão modificada do método de Nicholas de 1981, publicada pelo mesmo autor." + 
-    "A nova versão tem o objetivo de corrigir o 'problema' clássico do procedimento orignal, onde todos os critérios de seleção possuem a mesma importância (peso).<br><br>"+
+    "A nova versão tem o objetivo de corrigir o 'problema' clássico do procedimento orignal, onde todos os critérios de seleção possuem a mesma importância.<br><br>"+
 
     "<strong>As modificações incluem:<br></strong>" +
                      
     "&ensp;&ensp;- O somatório das notas de cada critério de seleção é multiplicado por um 'Fator de peso';<br>" +
-    "&ensp;&ensp;- 'Fatores de pesos' são sugeridos pelo autor para a geometria do depósito, corpo de minério, hanging wall e footwall.<br><br>" +
+    "&ensp;&ensp;- 'Fatores de pesos' são sugeridos pelo autor para a geometria do depósito, e características geotécnicas do corpo de minério, hanging wall e footwall.<br><br>" +
 
     "<strong>Observações:<br></strong>"+
-   " &ensp;&ensp; - Nicholas propõem que o usuário do método seja livre para atribuir quaisquer outros fatores de peso.<br>"
+   " &ensp;&ensp; - Nicholas afirma que os valores propostos para cada característica em seu método 'pode ser' alterado, conforme a  nossa expertise tecnica, equipamentos de mineração, e o processo de mineração em geral evoluem e melhoram.<br>"
 
     //titulos
     const titulo_section_1 = document.querySelector('#titulo_section_1')
@@ -227,6 +236,14 @@ function Portuguese()
         element.options[1].text = 'Moderada'
         element.options[2].text = 'Forte'
     });
+
+
+    //FATORES DE PESO
+    const h2_fatores_peso = document.querySelector('#h2_fatores_peso')
+    h2_fatores_peso.innerText = 'Fatores de Peso'
+
+    const span_cm = document.querySelector('#span_cm')
+    span_cm.innerText = 'CM'
  
 
         

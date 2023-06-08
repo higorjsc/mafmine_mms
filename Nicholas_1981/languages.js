@@ -20,11 +20,13 @@ function Switch_language() //BOTÃO SWITCH DE TROCAR IDIOMAS
 function English()
 {
     const paragrafo_explicacao = document.querySelector('#paragrafo_explicacao')
-    paragrafo_explicacao.innerHTML = "O Método propsoto por Nicholas, em 1981, foi o primeiro procedimento númerico de seleção de métodos de lavra."+
-    "Consiste no ranqueamento dos métodos de lavra com base na geometria do depósito e em parâmetros geotécnicos.<br><br>"+
+    paragrafo_explicacao.innerHTML = "The Nicholas (1981) mining method selection procedure was the first numerical approach developed to the problem."+
+    "The method numerically ranks deposit characteristics of ore geometry and rock mechanics characteristics of the ore zone, hanging wall and footwall."+
+    "The value assigned to each characteristic of each mining method are than summed together, with the higher rankings being the more favourable or likely mining methods.<br><br>"+
 
-    "<strong>Observações:</strong><br>"+
-    "&ensp;&ensp; - O método de Nicholas não considera que os critérios de seleção possuam diferentes relevâncias.<br>"
+    "<strong>Notes:</strong><br>"+
+    "&ensp;&ensp; - The Nicholas (1981) approach has the disadvantage of assigning equal importance to all criteria.<br>"+
+    "&ensp;&ensp; - This method is criticized for having a significant gap between the ranking values of 'unlikely' (0) and 'eliminated' (-49).<br>"
     
     //titulos
     const titulo_section_1 = document.querySelector('#titulo_section_1')
@@ -122,11 +124,13 @@ function English()
 function Portuguese()
 {
     const paragrafo_explicacao = document.querySelector('#paragrafo_explicacao')
-    paragrafo_explicacao.innerHTML = "O Método propsoto por Nicholas, em 1981, foi o primeiro procedimento númerico de seleção de métodos de lavra."+
-    "Consiste no ranqueamento dos métodos de lavra com base na geometria do depósito e em parâmetros geotécnicos.<br><br>"+
+    paragrafo_explicacao.innerHTML = "O Método de Nicholas (1981) foi o primeiro procedimento númerico desenvolvido para a seleção de métodos de lavra;"+
+    "O método ranqueia númericamente caracteristicas do geométricas do depósito mineral e características geotécnicas do corpo de minério, hanging wall e footwall;"+
+    "Os valores atribuidos para cada característica, de cada método de lavra, são somados e os maiores valores definem os métodos preferidos para o depósito em questão.<br><br>"+
 
-    "<strong>Observações:</strong><br>"+
-    "&ensp;&ensp; - O método de Nicholas não considera que os critérios de seleção possuam diferentes relevâncias.<br>"
+    "<strong>Obersvações:</strong><br>"+
+    "&ensp;&ensp; - O método tem a desvantagem de que atribui iguais importancias (pesos) para todos os critérios de seleção.<br>"+
+    "&ensp;&ensp; - O método é criticado pelo grande espaço entre os valores de ranque 'unlikely' (0) e 'eliminated' (-49).<br>"
 
     //titulos
     const titulo_section_1 = document.querySelector('#titulo_section_1')

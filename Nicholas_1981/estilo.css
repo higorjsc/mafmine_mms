@@ -64,7 +64,7 @@ h2 /*Titulos principais de cada seção*/
 
 #nav_menu{
     grid-column: 1/2;
-    line-height: 25px;
+    line-height: 24px;
     gap: 0;
     display: block; /* Adicionado "display: flex" para o menu principal */
     position: absolute;
@@ -72,13 +72,13 @@ h2 /*Titulos principais de cada seção*/
     margin: 0px;
     border: 1pt solid black;
     height: 100%;
-    width: 99%;
+    width: 98%;
     min-width: 200px;
     padding: 0%;
     border-radius: 20px;
     background-color: white;
     overflow:hidden;
-
+    
 }
 p{
     transform: translateY(-15px);
@@ -90,6 +90,7 @@ p{
     text-align: justify;
     box-sizing: border-box;
     padding: 5px;
+    font-size: 11pt;
 }
 
 #menu_metodos{

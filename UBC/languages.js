@@ -21,17 +21,19 @@ function English()
 {
 
     const paragrafo_explicacao = document.querySelector('#paragrafo_explicacao')
-    paragrafo_explicacao.innerHTML = "O UBC Mining Method Selection (1996) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia, Vancouver, B.C., Canada.<br><br>"
-    "<strong>As modificações incluem:<br></strong>"
+    paragrafo_explicacao.innerHTML = "The UBC mining method selection is a modified version of the Nicholas (1981) approach developed by the University of British Columbia in Vancouver, B.C., Canada.<br><br>"+
+    "<strong>The modifications include:<br></strong>"+
 
-    "&ensp;&ensp;- Adição do ranking '-10' para características ruins, mas que não totalmente descartam o método de lavra;<br>"
-    "&ensp;&ensp;- Adição dos critérios de seleção 'Profundidade' e 'RMR (Bieniawski, 1989)';<br>"
-    "&ensp;&ensp;- Remoção dos critérios de seleção 'Espaçamento das Fraturas' e 'Características das inter-fraturas';<br>"
-    "&ensp;&ensp;- Adição do valor 'muito estreito' para a espessura do minério;<br>"
-    "&ensp;&ensp;- Adição do valor 'muito fraca' para a Rock Substance Strenght.<br><br>"
+    "&ensp;&ensp;- The weights of each selection criteria were adjusted;<br>"+
+    "&ensp;&ensp;- A value of '-10' is assigned to significantly discount a mining method without completely eliminating it;<br>"+
+    "&ensp;&ensp;- 'Depth' and Bieniawski (1989) RMR were introduced as additional new criteria in the selection process;<br>"+
 
-    "<strong>Observações:<br></strong>"
-    "&ensp;&ensp; - O UBC MMS foi criado para se adaptar ao cenário da mineração Canadense da época, portanto é tendensioso a resultar em métodos de Stoping."
+    "&ensp;&ensp;- 'Fracture Spacing' and 'Fracture Strenght' were removed from the selection criteria;<br>"+
+    "&ensp;&ensp;- 'Very Narrow' was included as an option in the 'Ore thickness' selection criteria;<br>"+
+    "&ensp;&ensp;- 'Very Weak' was included as an option in the 'Rock Substance Strength' selection criteria.<br><br>"+
+
+    "<strong>Notes:<br></strong>"+
+    "&ensp;&ensp; - The UBC procedure modifies Nicholas approach to put emphasis  on stope mining rather than caving techniques"
 
     //titulos
     const titulo_section_1 = document.querySelector('#titulo_section_1')
@@ -122,17 +124,18 @@ function English()
 function Portuguese()
 {
     const paragrafo_explicacao = document.querySelector('#paragrafo_explicacao')
-    paragrafo_explicacao.innerHTML = "O UBC Mining Method Selection (1996) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia, Vancouver, B.C., Canada.<br><br>"+
+    paragrafo_explicacao.innerHTML = "O UBC Mining Method Selection (1996) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia em Vancouver, B.C., Canada.<br><br>"+
     "<strong>As modificações incluem:<br></strong>"+
 
-    "&ensp;&ensp;- Adição do ranking '-10' para características ruins, mas que não totalmente descartam o método de lavra;<br>"+
-    "&ensp;&ensp;- Adição dos critérios de seleção 'Profundidade' e 'RMR (Bieniawski, 1989)';<br>"+
+    "&ensp;&ensp;- Modificação dos pesos atribuidos a cada critério de seleção;<br>"+
+    "&ensp;&ensp;- O valor '-10' foi adicionado para descontar fortemente um método de lavra sem elimina-lo completamente;<br>"+
+    "&ensp;&ensp;- 'Profundidade' e 'RMR (Bieniawski, 1989)' foram adicionados como critérios de seleção;<br>"+
     "&ensp;&ensp;- Remoção dos critérios de seleção 'Espaçamento das Fraturas' e 'Características das inter-fraturas';<br>"+
-    "&ensp;&ensp;- Adição do valor 'muito estreito' para a espessura do minério;<br>"+
-    "&ensp;&ensp;- Adição do valor 'muito fraca' para a Rock Substance Strenght.<br><br>"+
+    "&ensp;&ensp;- Adição do valor 'muito estreito' como opção para a espessura do minério;<br>"+
+    "&ensp;&ensp;- Adição do valor 'muito fraca' como opção para a Rock Substance Strenght.<br><br>"+
 
     "<strong>Observações:<br></strong>"+
-    "&ensp;&ensp; - O UBC MMS foi criado para se adaptar ao cenário da mineração Canadense da época, portanto é tendensioso a resultar em métodos de Stoping."
+    "&ensp;&ensp; - O método UBC foi desenvolvido com ênfase em métodos de 'stope' em vez de 'caving', , adaptando-se ao cenário da mineração Canadense da época."
 
     //titulos
     const titulo_section_1 = document.querySelector('#titulo_section_1')
