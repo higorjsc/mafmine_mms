@@ -1,0 +1,153 @@
+main
+{
+    align-items: center;
+    justify-content: center;
+    border: 1pt solid black;
+    line-height: 25px;
+    padding: 5px;
+    font: 11pt roboto;
+    width: 480px;
+    padding: 5px;
+    margin: auto;
+}
+h1
+{
+    font: bold 11pt ;
+    text-align: center;
+}
+h2
+{
+    font: bold 11pt;
+}
+.parametro_1,.parametro_2, .parametro_3, .parametro_4, .parametro_5, .parametro_6
+{
+    display: grid;
+    position: inherit;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    justify-items: center;
+}
+#ground_water
+{
+    position: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: auto;
+    color: blue;
+}
+
+.coluna_1
+{
+    position: inherit;
+    grid-area: 1 / 1 / 2 / 2;  
+    justify-self: left;
+}
+.coluna_2
+{
+    position: inherit;
+    grid-area: 1 / 2 / 2 / 3; 
+}
+select
+{
+    width: 200px;
+    cursor: pointer;
+    height:22px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: -10px 5px 10px rgba(104, 62, 62, 0.425);   
+}
+select:hover
+{
+    box-shadow: 0px 0px 10px black;
+    font: 12pt;
+    font-weight: bold;
+}
+#select_strenght
+{
+    grid-area: 1 / 2 / 2 / 3;
+    position: inherit;
+    justify-self: left;
+    width: 100px;
+    transform: translateX(20px)
+}
+#ucs
+{
+    grid-area: 1 / 2 / 2 / 3;
+    position: inherit;
+    display: block;
+    justify-self: right;
+    width: 100px;
+    transform: translateX(-20px)
+}
+#point_load
+{
+    grid-area: 1 / 2 / 2 / 3;
+    position: inherit;
+    display: none;
+    justify-self: right;
+    width: 100px;
+    transform: translateX(-20px)
+}
+#inflow
+{
+    display: none;
+}
+#ratio
+{
+    display: none;
+}
+#general
+{
+    display: block;
+}
+#dip_1
+{
+    position: inherit;
+}
+#dip_2
+{
+    display: none;
+}
+.resultados
+{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    position: inherit;
+    align-items: center;
+    justify-items: center;
+}
+#resultado_rmr
+{
+    color: red;
+    font-weight: bold;
+    columns: 2/3;
+}
+#classe_rmr
+{
+    color: red;
+    font-weight: bold;
+    columns: 3/4;
+}
+
+/* ------------------BOTÃO ADICIONAR VALOR -----------------*/
+
+#botao_input
+{
+    background: black;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border: 1pt solid black;
+    border-radius: 10px;
+    columns: 4/5;
+    transform: translateX(10px);    
+}
+
+#botao_input:hover
+{
+    box-shadow: 0px 0px 10px blue;
+    transform: scale(1.05);
+    cursor: pointer;
+}
