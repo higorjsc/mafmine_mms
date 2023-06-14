@@ -111,7 +111,6 @@ function Mudar_imagem(metodo = "nicholas") {
             superficie.style.display = "none"
         }
     }
-
     if (metodo == "nicholas_81" || metodo == "nicholas_92" || metodo == "ubc") {
         if (mergulho == "intermediario") {
             transformacoes += "rotate(30deg) "
@@ -129,7 +128,6 @@ function Mudar_imagem(metodo = "nicholas") {
             transformacoes += "rotate(80deg) "
         }
     }
-
     if (espessura == "muito_estreito") {
         transformacoes += "scale(0.6) "
     } else if (espessura == "estreito") {
