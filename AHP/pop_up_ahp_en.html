@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js"></script>
+    <script src="design.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+
+        <section id = 'section-1'>
+
+            <h1 id="h1_section_1">ANALYTIC HIERARCHY PROCESS</h1>
+
+            <h2 id="h2_slider">PAIR-WISE COMPARISION</h2>
+            <div class="slider-container" id = 'slider-geometria'>
+
+                <!-- SLIDER GEOMETRY -->
+                <span class="span-titulo-slider">GEOMETRY vs OREBODY</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider_geo_ob">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+                
+                <span class="span-titulo-slider">GEOMETRY vs HANGING WALL</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider_geo_hw">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+
+                <span class="span-titulo-slider">GEOMETRY vs FOOTWALL</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider_geo_fw">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+
+                <!-- SLIDER OREBODY -->
+                <span class="span-titulo-slider">OREBODY vs HANGING WALL</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider_ob_hw">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+                
+                <span class="span-titulo-slider">OREBODY vs FOOTWALL</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider_ob_fw">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+
+                <!-- SLIDER HANGING WALL -->
+                <span class="span-titulo-slider">HANGING WALL vs FOOTWALL</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider_hw_fw">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+
+            </div>
+            <div id="div_img">
+                <img src="Imagens\ahp_en.png" id="img_ahp_escala">
+            </div>
+            
+            <table id = 'matriz'>
+                <tr>
+                    <th class="th_coluna_matriz"></th>
+                    <th  class="th_linha">GEO</th>
+                    <th  class="th_linha">OB</th>
+                    <th  class="th_linha">HW</th>
+                    <th  class="th_linha">FW</th>
+                </tr>
+                <tr>
+                    <th class="th_coluna_matriz">GEO</th>
+                    <td id="geo_geo">1</td>
+                    <td id="geo_ob">1</td>
+                    <td id="geo_hw">1</td>
+                    <td id="geo_fw">1</td>
+                </tr>
+                <tr>
+                    <th class="th_coluna_matriz">OB</th>
+                    <td id="ob_geo">1</td>
+                    <td id="ob_ob">1</td>
+                    <td id="ob_hw">1</td>
+                    <td id="ob_fw">1</td>
+                </tr>
+                <tr>
+                    <th class="th_coluna_matriz">HW</th>
+                    <td id="hw_geo">1</td>
+                    <td id="hw_ob">1</td>
+                    <td id="hw_hw">1</td>
+                    <td id="hw_fw">1</td>
+                </tr>
+                <tr>
+                    <th class="th_coluna_matriz">FW</th>
+                    <td id="fw_geo">1</td>
+                    <td id="fw_ob">1</td>
+                    <td id="fw_hw">1</td>
+                    <td id="fw_fw">1</td>
+                </tr>
+            </table>
+
+            <table id="vetores_peso">
+
+                <tr>
+                    <th  class="th_linha_vetores_peso">&ensp;</th>
+                    <td class = 'td_vetores_peso' id="titulo_pesos">WEIGHT</td>
+                </tr>
+                <tr>
+                    <th  class="th_coluna_vetores_peso">GEO</th>
+                    <td class = 'td_vetores_peso' id="td_peso_geo">1</td>                           
+                </tr>
+                <tr>
+                    <th  class="th_coluna_vetores_peso">OB</th>
+                    <td  class = 'td_vetores_peso' id="td_peso_ob">1</td>                          
+                </tr>
+                <tr>
+                    <th  class="th_coluna_vetores_peso">HW</th>
+                    <td  class = 'td_vetores_peso' id="td_peso_hw">1</td>                            
+                </tr>
+                <tr>
+                    <th  class="th_coluna_vetores_peso">FW</th>
+                    <td  class = 'td_vetores_peso' id="td_peso_fw">1</td>                   
+                </tr>
+                
+            </table>
+
+            <table id="vetores_cons">
+
+                <tr>
+                    <th  class="th_linha_vetores_cons">&ensp;</th>
+                    <td class = 'td_vetores_cons' id="titulo_cons">CONS</td>
+                </tr>
+                <tr>                      
+                    <th  class="th_coluna_vetores">GEO</th>
+                    <td class = 'td_vetores_cons' id="td_cons_geo">1</td>                        
+                </tr>
+                <tr>                    
+                    <th  class="th_coluna_vetores">OB</th>
+                    <td  class = 'td_vetores_cons' id="td_cons_ob">1</td>                        
+                </tr>
+                <tr>   
+                    <th  class="th_coluna_vetores">HW</th>                   
+                    <td  class = 'td_vetores_cons' id="td_cons_hw">1</td>                        
+                </tr>
+                <tr>                      
+                    <th  class="th_coluna_vetores">FW</th>
+                    <td  class = 'td_vetores_cons' id="td_cons_fw">1</td>                        
+                </tr>
+                
+            </table>
+
+            <div id="div_resultados">
+                <span class="span_texto_resultado" id="lambda">Coefficient <strong>&lambda;</strong>: </span>
+                <span class = 'span_resultado' id="resultado_lambda"> x</span>
+                
+                <span class="span_texto_resultado" id="ci">Consistence Index: </span>
+                <span class = 'span_resultado' id="resultado_ci"> x</span>
+                
+                <span class="span_texto_resultado" id="ri">Random Index: </span>
+                <span class = 'span_resultado' id="resultado_ri">0.90</span>
+
+                <span class="span_texto_resultado" id="cr">Consistence Ratio: </span>
+                <span class = 'span_resultado' id="resultado_cr"> x</span>
+            </div>
+
+            <button id="botao_input" onclick="Retornar_valor()"> ADD<br/>VALUE</button>
+
+        </section>
+        <!-- FIM SECTION 1 -->
+        
+        <span class = balao id = 'balao'> </span> <!-- Balão de ajuda -->
+    </main>
+
+
+
+</body>
+<script>
+    Evento()
+    Matriz_maker()
+    Calculos()
+</script>
+
+</html>

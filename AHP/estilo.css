@@ -1,0 +1,361 @@
+*{
+  padding: 0%;
+  box-sizing: border-box;
+  font-style: roboto;
+  font-size: 12pt;
+
+}
+
+#balao /* Balão de texto hover*/
+{
+  position: fixed;
+  z-index: 2;
+  font: bold 9pt Roboto;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 1%;
+  display: none;
+}
+
+body{
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+main{
+  width: 600px;
+  height: 620px;
+
+  /* display: grid; */
+  position: absolute;
+
+  /* grid-template-columns: 3fr 2fr; */
+  margin: auto;
+  border: 1pt solid black;
+  border-radius: 30px;
+  overflow: hidden;
+
+}
+
+h1{
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  margin: 0.5%;
+  font-size: 14pt;
+  font-weight: bold;
+  grid-column: 1/5;
+
+}
+
+h2{
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  margin: 5%;
+  font-size: 12pt;
+
+}
+
+section{
+  background-color: white;
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding-top: 1%;
+  padding-left: 2%;
+}
+
+
+#section-1{
+  /* grid-column: 1/2; */
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-rows: 5fr 5fr 90fr;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  justify-items: center;
+
+  /* border-right: 1pt solid black; */
+}
+
+/* ----------------------------------SLIDERS------------------------------------------------ */
+#h2_slider{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  text-align: center;
+}
+
+.slider-container {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  position: absolute;
+  width: 90%;
+  display: block;
+  margin: auto;
+  top: 0%;
+  text-align: center;
+}
+
+.slider {
+  width: 100%;
+  height: 15px;
+  border-radius: 50px;
+  opacity: 0.7;
+  appearance: none;
+  background: linear-gradient(90deg, red 50%, blue 50%);
+  border: 1pt solid black;
+  appearance: none;
+  outline: none;
+  transition: .2s;
+  transition: opacity .2s;
+  position: relative;
+}
+
+/* THUMB do CHROME */
+.slider::-webkit-slider-thumb{ 
+  appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+/* THUMB do MOZILA */
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.span-titulo-slider{
+  font-size: 10pt;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 5%;
+}
+
+.slider-span {
+  font-size: 12px;
+}
+
+/* -------------------------IMAGEM ESCALA-------------------- */
+#img_ahp_escala{
+  transform: scale(1);
+  grid-column: 1/4;
+  position: absolute;
+  top: -3%;
+  right: -12%;
+  border: 1pt solid black;
+
+}
+
+#div_img{
+  grid-column: 1/4;
+  position: absolute;
+  top: 8%;
+  right: 4%;
+  background-color: white;
+  width: 50%;
+  height: 23%;
+  overflow: hidden;
+}
+
+/* ---------------------------MATRIZ----------------------------------- */
+
+#matriz{
+  grid-column: 2/4;
+  grid-row: 3/4;
+  display: flexbox;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  right: 6%;
+}
+
+.th_linha{
+  text-align: center;
+  box-sizing: border-box;
+  width: 20%;
+}
+
+.th_coluna_matriz{
+  text-align: right;
+  padding-right: 2%;
+  box-sizing: border-box;
+  width: 20%;
+}
+
+#matriz td{
+  border: 1pt solid black;
+  width: 20%;
+}
+
+/* ---------------------------VETOR PESOS--------------------------------- */
+
+#vetores_peso{
+  grid-column: 2/4;
+  grid-row: 3/4;
+  display: flexbox;
+  text-align: center;
+  position: absolute;
+  width: 35%;
+  top: 48%;
+  left: 12%;
+}
+
+
+.th_linha_vetores_peso{
+  text-align: center;
+  box-sizing: border-box;
+  width: 20%;
+}
+
+.th_coluna_vetores_peso{
+  text-align: right;
+  padding-right: 2%;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.td_vetores_peso{
+  border: 1pt solid black;
+  width: 50%;
+}
+
+#vetores_peso #titulo_pesos{
+  border: none;
+  font-weight: bold;
+}
+
+/* ---------------------------VETOR CONS--------------------------------- */
+
+#vetores_cons{
+  grid-column: 2/4;
+  grid-row: 3/4;
+  display: flexbox;
+  text-align: center;
+  position: absolute;
+  width: 37%;
+  top: 48%;
+  right: 15%;
+}
+
+
+.th_linha_vetores_cons{
+  text-align: center;
+  box-sizing: border-box;
+  width: 20%;
+}
+
+.th_coluna_vetores_cons{
+  text-align: right;
+  padding-right: 2%;
+  box-sizing: border-box;
+  width: 20%;
+}
+
+.td_vetores_cons{
+  border: 1pt solid black;
+  width: 40%;
+}
+
+#vetores_cons #titulo_cons{
+  border: none;
+  font-weight: bold;
+}
+
+
+
+/* ---------------------------RESULTADOS--------------------------------- */
+#div_resultados{
+  grid-column: 1/4;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 180px 100px;
+  grid-template-rows: auto;
+  position: absolute;
+  width: 60%;
+  bottom: 5%;
+  left: 10%;
+  height: 15%;
+}
+
+#div_resultados .span_texto_resultado{
+  grid-column: 1/2;
+  text-align: right;
+  cursor: default;
+}
+
+#div_resultados .span_resultado{
+  grid-column: 2/3;
+  text-align: center;
+  cursor: default;
+  width: 100%;
+}
+
+/* ------------------BOTÃO ADICIONAR VALOR ----------------- */
+
+#botao_input
+{
+  position: absolute;
+  background: black;
+  color: white;
+  width: 100px;
+  height: 50px;
+  border: 1pt solid black;
+  border-radius: 10px;
+  bottom: 2%;
+  right: 2%;
+  transform: scale(0.8);
+}
+
+#botao_input:hover
+{
+  box-shadow: 0 0 10px blue;
+  transform: scale(0.85);
+  cursor: pointer;
+}
+
+/* ------------------BOTÃO HELP ----------------- */
+
+#help_button
+{
+  position: absolute;
+  background: white;
+  color: black;
+  font-weight: bold;
+  width: 70px;
+  height: 25px;
+  border: 1pt solid black;
+  border-radius: 10px;
+  top: 1%;
+  left: 2%;
+  transform: scale(0.8);
+  align-content: center;
+  align-items: center;
+}
+
+#help_button:hover
+{
+  box-shadow: 0 0 10px blue;
+  transform: scale(0.85);
+  cursor: pointer;
+}
+

@@ -1,0 +1,417 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: bold 10pt;
+  line-height: 1.5;
+}
+
+input {
+  all: unset;
+  position: absolute;
+  height: 20px; 
+  right: 1%;
+  width: 40%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: -5px 0 20px rgb(104 62 62 / 42.5%);
+
+}
+
+span {
+  all: unset;
+}
+
+body {
+  align-items: center;
+  background-color: white;
+  color: black;
+  position: relative;
+}
+
+/* <main> */
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
+  width: 100%;
+  min-width: 850px;
+  position: absolute;
+  top: 0;
+  transform: translateY(-5px);
+}
+
+section {
+  background-color: white;
+  padding-left: 15px;
+  position: relative;
+  font: 11pt normal;
+  height: 100%;
+  padding-bottom: 3%;
+  box-sizing: border-box;
+}
+
+#span-rights {
+  font-style: normal;
+  color: black;
+  padding: 15px;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+
+/* Balão de texto hover */ 
+.balao {
+  position: fixed;
+  z-index: 2;
+  font: bold; 
+  font-size: 9pt;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 1%;
+  display: none;
+}
+
+h2 /*Titulos principais de cada seção*/ {
+  border-bottom: 1px solid black;
+  text-align: center;
+  margin-top: 5px;
+  align-content: center;
+  font: bold 12pt;
+}
+
+/* ---------------------------------------SECTION 0------------------------------------------------ */
+#nav-menu {
+  grid-column: 1/2;
+  gap: 0;
+  display: block;
+  color: white;
+  margin: 0;
+  border: 1pt solid black;
+  height: 100%;
+  width: 99%;
+  padding: 0%;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  font-size: 10pt;
+}
+
+p {
+  transform: translateY(-15px);
+  background-color: white;
+  color: black;
+  display: block;
+  text-align: justify;
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 10pt;
+}
+
+#menu-metodos {
+  list-style-type: none;
+  margin: 0;
+  gap: 0;
+  padding: 0%;
+  background-color: rgb(40 41 40);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+#li-titulo {
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.options {
+  width: 100%;
+  border-top: 1pt solid white;
+  border-bottom: 1pt solid white;
+  text-align: center;
+  margin: 0;
+  padding: 0%;
+}
+
+#menu-metodos li:hover {
+  box-shadow: 0 0 10px blue;
+  cursor: pointer;
+}
+
+#menu-metodos li ul li:hover {
+  background-color: blue;
+}
+
+#menu-metodos li ul {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  gap: 0;
+  padding: 0%;
+}
+
+#menu-metodos li:hover ul {
+  display: block;
+}
+
+a {
+  display: block;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+/* -------------------SEÇÃO 1 LATERAL ESQUERDA---------------------------- */
+
+#section-1 {
+  grid-column: 2/3;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 100%;
+}
+
+h3 /*Subtitulos da seção 1*/ {
+  color: black;
+  font: 11pt;
+  font-weight: bold;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+#titulo-section-1 /*Titulo principal (h1)  da seção 1*/ {
+  width: 97%;
+}
+
+select {
+  width: 40%; /* 150px */
+  position: absolute;
+  cursor: pointer;
+  right: 1%;
+  height: 22px; 
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: -5px 0 20px rgb(104 62 62 / 42.5%);
+}
+
+select:hover {
+  box-shadow: 0 0 10px blue;
+  font: 12pt;
+  font-weight: bold;
+}
+
+.resultado-rss /* Três spans que contém o resultado do calculo RSS*/ {
+  position: absolute;
+  height: 22.5px; 
+  right: 1%;
+  width: 40%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: default;
+  color: red;
+}
+
+.rmr /*Display vinculado aos botões-checkbox de buttons.css pela função Checkbox em design.js */ {
+  display: none;
+}
+
+.gsi  /*Display vinculado aos botões-checkbox de buttons.css pela função Checkbox em design.js */ {
+  display: none;
+}
+
+.q  /*Display vinculado aos botões-checkbox de buttons.css pela função Checkbox em design.js */ {
+  display: none;
+}
+
+/* -------------------SEÇÃO 2 CENTRO---------------------------- */
+
+#section-2 {
+  grid-column: 3/4;
+  border: 1px solid black;
+  min-width: 300px;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 0%;
+}
+
+#titulo-section-2 {
+  width: 97%;
+}
+
+#superficie {
+  position: absolute;
+  width: 95%;
+  top: 3%;
+  z-index: 1;
+}
+
+#div-ilustracao {
+  position: absolute;
+  right: 10%;
+  top: 100%;
+}
+
+#ilustracao {
+  margin: 0%;
+  position: absolute;
+  width: 85%;
+  height: 54%;
+  left: 8%;
+  top: 15%;
+}
+
+/* -------------------SEÇÃO 3 LATERAL DIREITA---------------------------- */
+
+#section-3 {
+  grid-column: 4/5;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  min-width: 200px;
+  text-align: left;
+}
+
+#titulo-section-3 {
+  width: 95%;
+}
+
+#div-section-3 {
+  line-height: 50px;
+}
+
+/* ------------------PESOS---------------------------- */
+#div-select-pesos {
+  position: absolute;
+  align-items: center;
+  align-content: center;
+  left: 10%;
+  width: 80%;
+  bottom: 15%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+#div-select-pesos h2 {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  text-align: center;
+  font-size: 11pt;
+  background-color: white;
+  color: black;
+  border: 0;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+#div-select-pesos span {
+  grid-row: 2/3
+}
+
+#div-select-pesos select {
+  display: block;
+  align-items: center;
+  position: absolute;
+  grid-column: 1/5;
+  grid-row: 3/4;
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  padding: 0;
+
+}
+
+.input-pesos {
+  grid-row: 4/5;
+  width: 100%;
+  height: 85%;
+  display: none;
+  box-shadow: none;
+  position: absolute;
+  top: 3%;
+}
+
+#input-peso-geo {
+  grid-column: 1/2;
+}
+
+#input-peso-ob {
+  grid-column: 2/3;
+}
+
+#input-peso-hw {
+  grid-column: 3/4;
+}
+
+#input-peso-fw {
+  grid-column: 4/5;
+}
+
+/* ------------------PESOS UBC---------------------------- */
+
+#div-select-pesos-ubc {
+  position: absolute;
+  align-items: center;
+  align-content: center;
+  left: 10%;
+  width: 80%;
+  bottom: 10%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+#div-select-pesos-ubc h2 {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  text-align: center;
+  font-size: 11pt;
+  background-color: white;
+  color: black;
+  border: 0;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+#div-select-pesos-ubc span {
+  grid-row: 2/3
+}
+
+.input-pesos-ubc {
+  grid-row: 3/4;
+  width: 90%;
+  height: 85%;
+  display: block;
+  box-shadow: none;
+  position: absolute;
+  top: 3%;
+}
+
+#input-peso-ubc-geo {
+  grid-column: 1/2;
+}
+
+#input-peso-ubc-ob {
+  grid-column: 2/3;
+}
+
+#input-peso-ubc-hw {
+  grid-column: 3/4;
+}
+
+#input-peso-ubc-fw {
+  grid-column: 4/5;
+}

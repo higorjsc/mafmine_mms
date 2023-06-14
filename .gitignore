@@ -1,0 +1,35 @@
+ Dependências geradas pelo npm
+/node_modules/
+
+# Arquivos gerados pelo build
+/dist/
+/build/
+
+# Arquivos de ambiente
+.env
+
+# Arquivos de log
+*.log
+
+# Arquivos de configuração local
+config.local.js
+
+# Arquivos de cache
+.cache/
+*.cache
+
+# Arquivos de backup
+*.bak
+*.backup
+
+# Arquivos temporários
+*.tmp
+
+# Arquivos gerados pelo IDE
+.idea/
+.vscode/
+
+# Arquivos de histórico de depuração
+*.swp
+*.swo
+.DS_Store

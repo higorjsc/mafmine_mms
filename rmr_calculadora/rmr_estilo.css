@@ -1,0 +1,156 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 11pt;
+}
+
+main {
+  align-items: center;
+  justify-content: center;
+  border: 1pt solid black;
+  line-height: 25px;
+  width: 90%;
+  height: 95vh;
+  padding: 5px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 20pt;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.parametro_1,.parametro_2, .parametro_3, .parametro_4, .parametro_5, .parametro_6 {
+  display: grid;
+  position: inherit;
+  grid-template-columns: 1fr 200px;
+  height: auto;
+  justify-items: center;
+}
+
+#ground_water {
+  position: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: auto;
+  color: blue;
+}
+
+.coluna_1 {
+  position: inherit;
+  grid-area: 1 / 1 / 2 / 2;  
+  justify-self: left;
+}
+
+.coluna_2 {
+  position: inherit;
+  grid-area: 1 / 2 / 2 / 3; 
+}
+
+select {
+  width: 200px;
+  cursor: pointer;
+  height: 22px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size: 10pt;
+}
+
+select:hover {
+  box-shadow: 0 0 10px blue;
+  font-weight: bold;
+}
+
+#select_strenght {
+  grid-area: 1 / 2 / 2 / 3;
+  position: inherit;
+  justify-self: left;
+  width: 100px;
+  left: 0%;
+}
+
+#ucs {
+  grid-area: 1 / 2 / 2 / 3;
+  position: inherit;
+  display: block;
+  justify-self: right;
+  width: 100px;
+  right: 0%;
+}
+
+#point_load {
+  grid-area: 1 / 2 / 2 / 3;
+  position: absolute;
+  display: none;
+  justify-self: right;
+  width: 100px;
+  right: 0%;
+}
+
+#inflow {
+  display: none;
+}
+
+#ratio {
+  display: none;
+}
+
+#general {
+  display: block;
+}
+
+#dip_1 {
+  position: inherit;
+}
+
+#dip_2 {
+  display: none;
+}
+
+/* -----------------DIV RESULTADOS------------------- */
+.resultados {
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+  align-items: center;
+  justify-items: center;
+  position: inherit;
+  width: 100%;
+  margin-top: 8%;
+}
+
+#resultado_rmr {
+  color: red;
+  font-weight: bold;
+  columns: 2/3;
+}
+
+#classe_rmr {
+  color: red;
+  font-weight: bold;
+  columns: 3/4;
+}
+
+/* ------------------BOTÃO ADICIONAR VALOR ----------------- */
+
+#botao_input {
+  background: black;
+  color: white;
+  width: 100px;
+  height: 50px;
+  border: 1pt solid black;
+  border-radius: 10px;
+  columns: 4/5;   
+}
+
+#botao_input:hover {
+  box-shadow: 0 0 10px blue;
+  transform: scale(1.05);
+  cursor: pointer;
+}

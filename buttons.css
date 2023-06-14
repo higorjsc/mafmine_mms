@@ -1,0 +1,206 @@
+/* ------------------BOTÃO TRIPLO CHECKBOX ----------------- */
+.checkbox-rmr-q-gsi {
+  display: none;
+}
+
+/* DIV dos botões (RMR) (GSI) (Q) */
+
+#checkbox-container {
+  position: absolute;
+  display: flex;
+  background: black;
+  width: auto;
+  height: 5.1%;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  transform: translate(180%,10%) scale(0.6);
+}
+
+/* Texto dentro dos botões (RMR) (GSI) (Q) */
+
+.span-checkbox {
+  position: relative;
+  color: black;
+  font: 10pt;
+  font-weight: bold;
+}
+
+/* Label branco que contém o texto dos botões (RMR) (GSI) (Q) */
+.label-checkbox-rmr-q-gsi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1pt solid black;
+  border-radius: 25%;
+  background: white;
+}
+
+label:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px blue;
+  transform: scale(1.1);
+}
+
+/* ------------------BOTÃO IMPRIMIR (CANTO INFERIOR DIREITO) ----------------- */
+
+#botao-imprimir {
+  position: absolute;
+  border: none;
+  border-radius: 10px;
+  background: none;
+  transform: scale(0.8);
+  bottom: 1%;
+  right: 3.5%;
+
+}
+
+#botao-imprimir:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px blue;
+  transform: scale(1.01);
+}
+
+/* ------------------BOTÃO PESOS (CANTO SUPERIOR DIREITO) ----------------- */
+
+#botao-pesos {
+  position: absolute;
+  border: none;
+  border-radius: 10px;
+  background: none;
+  transform: scale(0.8);
+  right: 5%;
+  top: 40px;
+}
+
+#botao-pesos:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px blue;
+  transform: scale(1.01);
+}
+
+/* ------------------SWITCH IDIOMA (CANTO SUPERIOR ESQUERDO) ----------------- */
+
+#checkbox-switch {
+  display: none;
+}
+
+#switch-texto {
+  color: white;
+  font: normal 8pt;
+  position: inherit;
+  top: 22%;
+  margin-left: 1px;
+  margin-right: 5px;
+}
+
+.switch-label {
+  display: inline-block;
+  cursor: pointer;
+  width: 50px;
+  height: 20px;
+  background-color: black;
+  border-radius: 15px;
+  position: absolute;
+  top: 45px;
+  right: 2%;
+  box-shadow: 10px 0 20px rgb(104 62 62 / 42.5%);
+}
+
+.switch-label::after {
+  content: '';
+  display: block;
+  width: 19px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  transition: transform 0.2s ease-in-out;
+}
+
+#checkbox-switch:checked + .switch-label::after {
+  transform: translateX(30px);
+}
+
+.switch-label:hover {
+  box-shadow: blue;
+  font: 12pt;
+  font-weight: bold;
+}
+
+/* ------------------BOTÃO CALCULADORA RMR (CANTO INFERIOR ESQUERDO) ----------------- */
+.botao-calculadora-rmr {
+  position: absolute;
+  right: 42%;
+  z-index: 2;
+  transform: translate(25%, -20%) scale(0.5);
+  box-shadow: 0 0 10px rgb(104 62 62 / 42.5%);
+  background-color: rgb(255 255 255 / 0%);
+  border: none;
+}
+
+.botao-calculadora-rmr:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px blue;
+}
+
+/* ------------------BOTÃO CALCULADORA GSI (CANTO INFERIOR ESQUERDO) ----------------- */
+.botao-calculadora-gsi {
+  position: absolute;
+  right: 43%;
+  z-index: 2;
+  transform: translate(25%, -20%) scale(0.5);
+  box-shadow: 0 0 10px rgb(104 62 62 / 42.5%);
+  background-color: rgb(255 255 255 / 0%);
+  border: none;
+}
+
+.botao-calculadora-gsi:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px blue;
+}
+
+/* --------------BOTAO AHP------------------------------- */
+#botao-ahp {
+  grid-row: 5/6;
+  grid-column: 1/5;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  border: 1pt solid black;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  justify-self: center;
+  display: none;
+}
+
+#botao-ahp:hover {
+  box-shadow: 0 0 10px blue;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* --------------BOTAO AHP UBC------------------------------- */
+#botao-ahp-ubc {
+  grid-row: 4/5;
+  grid-column: 1/5;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  border: 1pt solid black;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  justify-self: center;
+  display: none;
+}
+
+#botao-ahp-ubc:hover {
+  box-shadow: 0 0 10px blue;
+  transform: scale(1.05);
+  cursor: pointer;
+}

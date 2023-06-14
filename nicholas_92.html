@@ -1,266 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=0.9">
     <title>Nicholas 1992</title>
-    <link rel="stylesheet" href="Nicholas_1992\estilo.css">
-    <link rel="stylesheet" href="Nicholas_1992\buttons.css">
-    <script src="Nicholas_1992\pesos.js"></script>
-    <script src="Nicholas_1992\eventos.js"></script>
-    <script src="Nicholas_1992\calculos.js"></script>
-    <script src="Nicholas_1992\design.js"></script>
-    <script src="Nicholas_1992\languages.js"></script>
-    <script src="Nicholas_1992\imprimir_relatorio.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="buttons.css">
+    <script src="pesos.js"></script>
+    <script src="eventos.js"></script>
+    <script src="calculos.js"></script>
+    <script src="design.js"></script>
+    <script src="languages\nicholas_92_languages.js"></script>
+    <script src="imprimir_relatorio.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" 
-    integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
- 
+
 </head>
 
 <body>
-    
-    <main class ="wrapper">
 
-        <section id="nav_menu">
-            <ul id="menu_metodos">
-                <li id="li_titulo">SELECIONE O MÉTODO</li>
-                <li class='options' id="option_ubc">
+    <main class="wrapper">
+
+        <section id="nav-menu">
+            <ul id="menu-metodos">
+                <li id="li-titulo">SELECIONE O MÉTODO</li>
+                <li class='options' id="option-ubc">
                     <a>NICHOLAS 1992&ensp;&ensp;&darr;</a>
                     <ul>
-                        <li class='options' id="option_ubc"><a href="index.html">UBC</a></li>
-                        <li class='options' id="option_nicholas_1981"><a href="nicholas_81.html">NICHOLAS 1981</a></li>
+                        <li class='options' id="option-ubc"><a href="index.html">UBC</a>
+                        </li>
+                        <li class='options' id="option-nicholas-1981"><a href="nicholas_81.html">NICHOLAS 1981</a></li>
+                        <li class='options' id="option-sheb"><a href="shb.html">SH&B</a></li>
+
                     </ul>
-                </li>           
+                </li>
             </ul>
-            <p id = "paragrafo_explicacao">
-                O Método de Nicholas de 1992 é uma versão modificada do método de Nicholas de 1981, publicada pelo mesmo autor. 
-                A nova versão tem o objetivo de corrigir o "problema" clássico do procedimento orignal, onde todos os critérios de seleção possuem a mesma importância (peso).<br><br>
-                    
-                <strong>As modificações incluem:<br></strong>
-                     
-                &ensp;&ensp;- O somatório das notas de cada critério de seleção é multiplicado por um "Fator de peso";<br>
-                &ensp;&ensp;- "Fatores de pesos" são sugeridos pelo autor para a geometria do depósito, corpo de minério, hanging wall e footwall.<br><br>
-       
-                <strong>Observações:<br></strong>
-                &ensp;&ensp; - Nicholas propõem que o usuário do método seja livre para atribuir quaisquer outros fatores de peso.<br>
-    
-            </p>
+            <p id="paragrafo-explicacao"></p>
         </section>
 
-         
-        <section id="section_1"> <!-- SEÇÃO 1 (LATERAL ESQUERDA)-->
+
+        <section id="section-1"> <!-- SEÇÃO 1 (LATERAL ESQUERDA)-->
 
             <!-- BOTÃO SWITCH IDIOMAS -->
-            <input type="checkbox" id="checkbox_switch"/>  <!-- CHECKBOX INVISÍVEL -->
-            <label for="checkbox_switch" class="switch_label" id="switch_label"><span id="switch_texto"> </span></label> <!-- LABEL ANIMADO -->
+            <input type="checkbox" id="checkbox-switch" /> <!-- CHECKBOX INVISÍVEL -->
+            <label for="checkbox-switch" class="switch-label" id="switch-label"><span id="switch-texto"> </span></label>
+            <!-- LABEL ANIMADO -->
 
-            <h2 id="titulo_section_1">CARACTERÍSTICAS GERAIS </h2>
+            <h2 id="titulo-section-1">CARACTERÍSTICAS GERAIS </h2>
 
-                <!-- SEÇÃO 1 (LATERAL ESQUERDA) - GEOMETRIA DO DEPOSITO -->
-                <h3  id="subtitulo_geometria">Geometria do depósito</h3>
-                <div>
-                    <span id ='span_forma_geral'> Forma geral: </span> <!-- FORMA GERAL-->
-                    <select class="menu_geometria" id="forma_geral">
-                        <option  value="massivo"> Massiva </option>
-                        <option  value="tabular"> Tabular </option>
-                        <option  value="irregular"> Irregular </option>
-                    </select>       
-                </div> 
-                <div>
-                    <span id ='span_mergulho'> Mergulho:</span> <!-- MERGULHO-->
-                    <select class="menu_geometria" id="mergulho">
-                        <option  value="plano"> Plano </option>
-                        <option  value="intermediario"> Intermediário </option>
-                        <option  value="inclinado"> Inclinado </option>
-                    </select>
-                </div>
-                <div>
-                    <span id ='span_espessura'> Espessura do minério:</span> <!-- ESPESSURA-->
-                    <select class="menu_geometria" id="espessura">
-                        <option  value="estreito"> Estreito </option>
-                        <option  value="intermediario"> Intermediário </option>
-                        <option  value="espesso"> Espesso </option>
-                        <option  value="muito_espesso"> Muito Espesso </option>
-                    </select>
-                </div>
-                <div>
-                    <span id ='span_distribuicao'> Distribuição de teores:</span> <!--DISTRIBUIÇÃO DE TEORES-->
-                    <select class="menu_geometria" id='distribuicao'>
-                        <option  value="uniforme"> Uniforme </option>
-                        <option  value="gradacional"> Gradacional </option>
-                        <option  value="erratico"> Errático </option>
-                    </select>
-                </div>
+            <!-- SEÇÃO 1 (LATERAL ESQUERDA) - GEOMETRIA DO DEPOSITO -->
+            <h3 id="subtitulo-geometria">Geometria do depósito</h3>
+            <div>
+                <span id='span-forma-geral'> Forma geral: </span> <!-- FORMA GERAL-->
+                <select class="menu-geometria" id="forma-geral">
+                    <option value="massivo"> Massiva </option>
+                    <option value="tabular"> Tabular </option>
+                    <option value="irregular"> Irregular </option>
+                </select>
+            </div>
+            <div>
+                <span id='span-mergulho'> Mergulho:</span> <!-- MERGULHO-->
+                <select class="menu-geometria" id="mergulho">
+                    <option value="plano"> Plano </option>
+                    <option value="intermediario"> Intermediário </option>
+                    <option value="inclinado"> Inclinado </option>
+                </select>
+            </div>
+            <div>
+                <span id='span-espessura'> Espessura do minério:</span> <!-- ESPESSURA-->
+                <select class="menu-geometria" id="espessura">
+                    <option value="estreito"> Estreito </option>
+                    <option value="intermediario"> Intermediário </option>
+                    <option value="espesso"> Espesso </option>
+                    <option value="muito_espesso"> Muito Espesso </option>
+                </select>
+            </div>
+            <div>
+                <span id='span-distribuicao'> Distribuição de teores:</span> <!--DISTRIBUIÇÃO DE TEORES-->
+                <select class="menu-geometria" id='distribuicao'>
+                    <option value="uniforme"> Uniforme </option>
+                    <option value="gradacional"> Gradacional </option>
+                    <option value="erratico"> Errático </option>
+                </select>
+            </div>
 
-                <!-- SEÇÃO 1 (LATERAL ESQUERDA) - INPUT DENSIDADE-->
-                <h3 id="subtitulo_densidade">Densidade</h3>
-                <div>
-                    <span  id ="span_densidade_ob"> Corpo de minério:</span>
-                    <input type="text" class='input_rss' id="densidade_ob" placeholder= "2600 kg/m³">
-                </div>
-                <div>
-                    <span> Hanging Wall:</span>
-                    <input type="text" class='input_rss' id="densidade_hw" placeholder= "2800 kg/m³">
-                </div>
-                <div>
-                    <span> Footwall:</span>
-                    <input type="text" class='input_rss' id="densidade_fw" placeholder= "2650 kg/m³">
-                </div>
+            <!-- SEÇÃO 1 (LATERAL ESQUERDA) - INPUT DENSIDADE-->
+            <h3 id="subtitulo-densidade">Densidade</h3>
+            <div>
+                <span id="span-densidade-ob"> Corpo de minério:</span>
+                <input type="text" class='input-rss' id="densidade-ob" placeholder="2600 kg/m³">
+            </div>
+            <div>
+                <span> Hanging Wall:</span>
+                <input type="text" class='input-rss' id="densidade-hw" placeholder="2800 kg/m³">
+            </div>
+            <div>
+                <span> Footwall:</span>
+                <input type="text" class='input-rss' id="densidade-fw" placeholder="2650 kg/m³">
+            </div>
 
-                <!-- SEÇÃO 1 (LATERAL ESQUERDA) - INPUT PROFUNDIDADE-->
-                <h3 id="subtitulo_profundidade">Profundidade</h3>
-                <div>
-                    <span id ="span_profundidade_ob"> Corpo de minério:</span>
-                    <input type="text" class='input_rss' id="profundidade_ob" placeholder= "600 m">
-                </div>
-                <div>
-                    <span> Hanging Wall:</span>
-                    <input type="text" class='input_rss' id="profundidade_hw" placeholder= "400 m">
-                </div>
-                <div>
-                    <span> Footwall:</span>
-                    <input type="text" class='input_rss' id="profundidade_fw" placeholder= "800 m">
-                </div>
+            <!-- SEÇÃO 1 (LATERAL ESQUERDA) - INPUT PROFUNDIDADE-->
+            <h3 id="subtitulo-profundidade">Profundidade</h3>
+            <div>
+                <span id="span-profundidade-ob"> Corpo de minério:</span>
+                <input type="text" class='input-rss' id="profundidade-ob" placeholder="600 m">
+            </div>
+            <div>
+                <span> Hanging Wall:</span>
+                <input type="text" class='input-rss' id="profundidade-hw" placeholder="400 m">
+            </div>
+            <div>
+                <span> Footwall:</span>
+                <input type="text" class='input-rss' id="profundidade-fw" placeholder="800 m">
+            </div>
 
-                <!-- SEÇÃO 1 (LATERAL ESQUERDA) - INPUT UCS-->
-                <h3 id="subtitulo_ucs">Uniaxial Compressive Strenght</h3>
-                <div>
-                    <span id ="span_ucs_ob"> Corpo de minério:</span>
-                    <input type="text" class='input_rss' id="ucs_ob" placeholder= "185 Mpa">
-                </div>
-                <div>
-                    <span> Hanging Wall:</span>
-                    <input type="text" class='input_rss' id="ucs_hw" placeholder= "220 Mpa">
-                </div>
-                <div>
-                    <span> Footwall:</span>
-                    <input type="text" class='input_rss' id="ucs_fw" placeholder= "200 Mpa">
-                </div>
+            <!-- SEÇÃO 1 (LATERAL ESQUERDA) - INPUT UCS-->
+            <h3 id="subtitulo-ucs">Uniaxial Compressive Strenght</h3>
+            <div>
+                <span id="span-ucs-ob"> Corpo de minério:</span>
+                <input type="text" class='input-rss' id="ucs-ob" placeholder="185 Mpa">
+            </div>
+            <div>
+                <span> Hanging Wall:</span>
+                <input type="text" class='input-rss' id="ucs-hw" placeholder="220 Mpa">
+            </div>
+            <div>
+                <span> Footwall:</span>
+                <input type="text" class='input-rss' id="ucs-fw" placeholder="200 Mpa">
+            </div>
 
-                <!-- SEÇÃO 1 (LATERAL ESQUERDA) - RESULTADO RSS (CALCULADA)-->
-                <h3 id="subtitulo_rss">Rock Substance Strenght</h3>
-                <div>
-                    <span id="span_resultado_rss_ob"> Corpo de Minério:</span>
-                    <span class = 'resultado_rss' id = 'resultado_rss_ob'> </span><br/>
-                    <span> Hanging Wall:</span>
-                    <span class = 'resultado_rss' id = 'resultado_rss_hw'> </span><br/>
-                    <span> Footwall:</span>
-                    <span class = 'resultado_rss' id = 'resultado_rss_fw'> </span><br/>
-                </div>
+            <!-- SEÇÃO 1 (LATERAL ESQUERDA) - RESULTADO RSS (CALCULADA)-->
+            <h3 id="subtitulo-rss">Rock Substance Strenght</h3>
+            <div>
+                <span id="span-resultado-rss-ob"> Corpo de Minério:</span>
+                <span class='resultado-rss' id='resultado-rss-ob'> </span><br />
+                <span> Hanging Wall:</span>
+                <span class='resultado-rss' id='resultado-rss-hw'> </span><br />
+                <span> Footwall:</span>
+                <span class='resultado-rss' id='resultado-rss-fw'> </span><br />
+            </div>
 
-                <!-- SELECT ESPAÇAMENTO DAS FRATURAS -->
-                <h3  id="subtitulo_fracture_spacing">Espaçamento das Fraturas</h3>
-                <div>
-                    <span id ='span_fracture_spacing_ob'>Corpo de minério:</span>
-                    <select class="menu_fracture_spacing">
-                        <option  value="perto"> Perto </option>
-                        <option  value="muito_perto">Muito perto </option>
-                        <option  value="longe">Longe</option>
-                        <option  value="muito_longe">Muito longe </option>
-                    </select>       
-                </div>
-                <div>
-                    <span>Hanging Wall:</span>
-                    <select class="menu_fracture_spacing">
-                        <option  value="muito_perto">Muito perto </option>
-                        <option  value="perto"> Perto </option>
-                        <option  value="longe">Longe</option>
-                        <option  value="muito_longe">Muito longe </option>
-                    </select>       
-                </div>
-                <div>
-                    <span>Footwall:</span>
-                    <select class="menu_fracture_spacing">
-                        <option  value="perto"> Perto </option>
-                        <option  value="muito_perto">Muito perto </option>
-                        <option  value="longe">Longe</option>
-                        <option  value="muito_longe">Muito longe </option>
-                    </select>       
-                </div> 
+            <!-- SELECT ESPAÇAMENTO DAS FRATURAS -->
+            <h3 id="subtitulo-fracture-spacing">Espaçamento das Fraturas</h3>
+            <div>
+                <span id='span-fracture-spacing-ob'>Corpo de minério:</span>
+                <select class="menu-fracture-spacing" id="fracture-spacing-ob">
+                    <option value="perto"> Perto </option>
+                    <option value="muito_perto">Muito perto </option>
+                    <option value="longe">Longe</option>
+                    <option value="muito_longe">Muito longe </option>
+                </select>
+            </div>
+            <div>
+                <span>Hanging Wall:</span>
+                <select class="menu-fracture-spacing" id="fracture-spacing-hw">
+                    <option value="muito_perto">Muito perto </option>
+                    <option value="perto"> Perto </option>
+                    <option value="longe">Longe</option>
+                    <option value="muito_longe">Muito longe </option>
+                </select>
+            </div>
+            <div>
+                <span>Footwall:</span>
+                <select class="menu-fracture-spacing" id="fracture-spacing-fw">
+                    <option value="perto"> Perto </option>
+                    <option value="muito_perto">Muito perto </option>
+                    <option value="longe">Longe</option>
+                    <option value="muito_longe">Muito longe </option>
+                </select>
+            </div>
 
-                <!-- SELECT RESITÊNCIA DAS FRATURAS -->
-                <h3  id="subtitulo_fracture_strenght">Característica das inter-fraturas</h3>
-                <div>
-                    <span id ='span_fracture_strenght_ob'>Corpo de minério:</span>
-                    <select class="menu_fracture_strenght">
-                        <option  value="fraca">Fraca </option>
-                        <option  value="moderada">Moderada</option>
-                        <option  value="forte">Forte</option>
-                    </select>       
-                </div>
-                <div>
-                    <span>Hanging Wall:</span>
-                    <select class="menu_fracture_strenght">
-                        <option  value="fraca">Fraca </option>
-                        <option  value="moderada">Moderada</option>
-                        <option  value="forte">Forte</option>
-                    </select>       
-                </div>
-                <div>
-                    <span>Footwall:</span>
-                    <select class="menu_fracture_strenght">
-                        <option  value="fraca">Fraca </option>
-                        <option  value="moderada">Moderada</option>
-                        <option  value="forte">Forte</option>
-                    </select>       
-                </div>
+            <!-- SELECT RESITÊNCIA DAS FRATURAS -->
+            <h3 id="subtitulo-fracture-strenght">Característica das inter-fraturas</h3>
+            <div>
+                <span id='span-fracture-strenght-ob'>Corpo de minério:</span>
+                <select class="menu-fracture-strenght" id="fracture-strenght-ob">
+                    <option value="fraca">Fraca </option>
+                    <option value="moderada">Moderada</option>
+                    <option value="forte">Forte</option>
+                </select>
+            </div>
+            <div>
+                <span>Hanging Wall:</span>
+                <select class="menu-fracture-strenght" id="fracture-strenght-hw">
+                    <option value="fraca">Fraca </option>
+                    <option value="moderada">Moderada</option>
+                    <option value="forte">Forte</option>
+                </select>
+            </div>
+            <div>
+                <span>Footwall:</span>
+                <select class="menu-fracture-strenght" id="fracture-strenght-fw">
+                    <option value="fraca">Fraca </option>
+                    <option value="moderada">Moderada</option>
+                    <option value="forte">Forte</option>
+                </select>
+            </div>
 
         </section>
 
-        <section id="section_2"> <!-- SEÇÃO 2 (CENTRO)-->
+        <section id="section-2"> <!-- SEÇÃO 2 (CENTRO)-->
 
             <!-- SEÇÃO 2 (CENTRO) - TITULO E IMAGEM -->
-            <h2  id="titulo_section_2"> SIMULAÇÃO DO DEPÓSITO</h2>
-            <div id = 'div_ilustracao'> </div>
-            <img id = superficie src="Nicholas_1992\Imagens\superficie.png">
-            <img id ='ilustracao' alt="Aqui deveria ter uma ilustracao"> <!-- ilustração do depósito --> 
-            
-
+            <h2 id="titulo-section-2"> SIMULAÇÃO DO DEPÓSITO</h2>
+            <div id='div-ilustracao'> </div>
+            <img id=superficie src="Imagens\superficie.png">
+            <!-- ilustração do depósito -->
+            <img id='ilustracao' alt="Aqui deveria ter uma ilustracao">
+            <span id="span-rights"> &copy Universidade Federal do Rio Grande do Sul</span>
         </section>
 
-        <section id="section_3"> <!-- SEÇÃO 3 (LATERAL DIREITA)-->
+        <section id="section-3"> <!-- SEÇÃO 3 (LATERAL DIREITA)-->
 
             <!-- SEÇÃO 2 (LATERAL DIREITA) - TITULO E PREFERENCIAS -->
-            <h2 id="titulo_section_3"> PREFERÊNCIAS</h2>
-            <button id= 'botao_pesos'><img id = 'pesos_img' src="Nicholas_1992\\Imagens\peso.png"></button>
-            <div id="div_section_3"></div>
-            <button id="botao_imprimir"><img id = 'impressora_img' src="Nicholas_1992\\Imagens\impressora.png"></button>
-            
-            
-            <div id="div_select_pesos">
-                <h2 id ='h2_fatores_peso'>Fatores de Pesos<br></h2>
-                <span >Geo.</span>
-                <span id="span_cm">CM</span>
+            <h2 id="titulo-section-3"> PREFERÊNCIAS</h2>
+            <button id='botao-pesos'><img id='pesos-img' src="Imagens\peso.png"></button>
+            <div id="div-section-3"></div>
+            <button id="botao-imprimir"><img id='impressora-img' src="Imagens\impressora.png"></button>
+
+
+            <div id="div-select-pesos">
+                <h2 id='h2-fatores-peso'>Fatores de Pesos<br></h2>
+                <span>Geo.</span>
+                <span id="span-cm">CM</span>
                 <span>HW</span>
                 <span>FW</span>
-                <select id="menu_pesos">
-                    <option value = '1'>1.00&emsp;&emsp;1.33&emsp;&emsp;1.33&emsp;&emsp;1.33</option>
-                    <option value = '2'>1.00&emsp;&emsp;0.75&emsp;&emsp;0.60&emsp;&emsp;0.38</option>
-                    <option value = '3'>1.00&emsp;&emsp;1.00&emsp;&emsp;0.80&emsp;&emsp;0.50</option>
-                    <option value = '4'>Inserir outros valores</option>
+                <select id="menu-pesos">
+                    <option value='1'>1.00&emsp;&emsp;1.33&emsp;&emsp;1.33&emsp;&emsp;1.33</option>
+                    <option value='2'>1.00&emsp;&emsp;0.75&emsp;&emsp;0.60&emsp;&emsp;0.38</option>
+                    <option value='3'>1.00&emsp;&emsp;1.00&emsp;&emsp;0.80&emsp;&emsp;0.50</option>
+                    <option value='4'>Inserir outros valores</option>
                 </select>
-                <input class = "input_pesos" id="input_peso_geometria" placeholder="1.0">
-                <input class = "input_pesos" id="input_peso_ob" placeholder="1.0">
-                <input class = "input_pesos" id="input_peso_hw" placeholder="1.0">
-                <input class = "input_pesos" id="input_peso_fw" placeholder="1.0">
+                <input class="input-pesos" id="input-peso-geo" name="input-peso-geo" placeholder="1.0">
+                <input class="input-pesos" id="input-peso-ob" name="input-peso-ob" placeholder="1.0">
+                <input class="input-pesos" id="input-peso-hw" name="input-peso-hw" placeholder="1.0">
+                <input class="input-pesos" id="input-peso-fw" name="input-peso-fw" placeholder="1.0">
+                <button id="botao-ahp">CALCULAR POR AHP</button>
             </div>
-            
         </section>
-        
-    </main>
-    <span class = balao id = 'balao'> </span> <!-- Balão de ajuda -->
 
-    <footer> &copy Universidade Federal do Rio Grande do Sul</footer>
-  
+    </main>
+    <span class=balao id='balao'> </span> <!-- Balão de ajuda -->
+
 </body>
 
 <script>
-    Eventos()
-    Mudar_imagem()
+    Eventos('nicholas_92')
 </script>
 
 
