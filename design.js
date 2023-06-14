@@ -92,19 +92,22 @@ function Mudar_imagem(metodo = "nicholas") {
     let transformacoes = ""
 
     if (metodo == "ubc") {
+        const profundidade = document.getElementById("profundidade").value
         if (profundidade == "intermediaria") {
             transformacoes += "translate(0px, 45%)"
         } else if (profundidade == "profunda") {
-            transformacoes += "translate(0px, 45%)"
+            transformacoes += "translate(0px, 75%)"
             superficie.style.display = "none"
         }
-    } else if (metodo == "shb") {
+    }
+    if (metodo == "shb") {
+        const profundidade = document.getElementById("profundidade").value
         if (profundidade == "intermediaria") {
-            transformacoes += "translate(0px, 25%)"
+            transformacoes += "translate(0px, 45%)"
         } else if (profundidade == "pouco_profunda") {
-            transformacoes += "translate(0px, 45%)"
+            transformacoes += "translate(0px, 60%)"
         } else if (profundidade == "profunda") {
-            transformacoes += "translate(0px, 45%)"
+            transformacoes += "translate(0px, 75%)"
             superficie.style.display = "none"
         }
     }
@@ -138,7 +141,6 @@ function Mudar_imagem(metodo = "nicholas") {
     } else if (espessura == "muito_espesso") {
         transformacoes += "scale(1) "
     }
-
 
     //Aplica a animação criada pelos parâmetros profundidade, mergulho e espessura
     ilustracao.style.transform = transformacoes
@@ -310,7 +312,7 @@ function Balao_entra(metodo, entry) {
         "botao-pesos": { x: -100, y: -20 },
         "botao-imprimir": { x: -100, y: -50 },
         "switch-language": { x: 30, y: -40 },
-        "frature-strenght": {x: 100, y: -200}
+        "frature-strenght": { x: 100, y: -200 }
 
     }
 

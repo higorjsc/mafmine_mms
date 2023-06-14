@@ -34,10 +34,11 @@ body {
   display: grid;
   grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
   width: 100%;
-  min-width: 850px;
+  height: auto;
   position: absolute;
   top: 0;
   transform: translateY(-5px);
+  padding-bottom: 0.25%;
 }
 
 section {
