@@ -132,7 +132,7 @@ function Imprimir_relatorio(metodo) {
         doc.text(Texto("h2-fatores-peso"), identacao, y_coord += line_spacing)
         y_coord += 2
         doc.setFontStyle("normal")
-        const select_fatores = document.getElementById("menu_pesos").value
+        const select_fatores = document.getElementById("menu-pesos").value
         if (Number(select_fatores) == 1) {
             doc.text(geo + "1.00", identacao, y_coord += line_spacing)
             doc.text(ob + "1.33", identacao, y_coord += line_spacing)
