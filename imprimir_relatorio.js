@@ -133,17 +133,17 @@ function Imprimir_relatorio(metodo) {
         y_coord += 2
         doc.setFontStyle("normal")
         const select_fatores = document.getElementById("menu-pesos").value
-        if (Number(select_fatores) == 1) {
+        if (select_fatores == "1") {
             doc.text(geo + "1.00", identacao, y_coord += line_spacing)
             doc.text(ob + "1.33", identacao, y_coord += line_spacing)
             doc.text(hw + "1.33", identacao, y_coord += line_spacing)
             doc.text(fw + "1.33", identacao, y_coord += line_spacing)
-        } else if (Number(select_fatores) == 2) {
+        } else if (select_fatores == "2") {
             doc.text(geo + "1.00", identacao, y_coord += line_spacing)
             doc.text(ob + "0.75", identacao, y_coord += line_spacing)
             doc.text(hw + "0.60", identacao, y_coord += line_spacing)
             doc.text(fw + "0.38", identacao, y_coord += line_spacing)
-        } else if (Number(select_fatores) == 3) {
+        } else if (select_fatores == "3") {
             doc.text(geo + "1.00", identacao, y_coord += line_spacing)
             doc.text(ob + "1.00", identacao, y_coord += line_spacing)
             doc.text(hw + "0.80", identacao, y_coord += line_spacing)
