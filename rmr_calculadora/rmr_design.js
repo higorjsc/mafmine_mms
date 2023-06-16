@@ -1,7 +1,7 @@
 //Oculta um dos <selector>'s de strenght com base no input
 function Display_strenght() {
-    const strenght = document.getElementById("select_strenght")
-    const point_load = document.getElementById("point_load")
+    const strenght = document.getElementById("select-strenght")
+    const point_load = document.getElementById("poin-load")
     const ucs = document.getElementById("ucs")
 
     if (strenght.value == "point_load") {
@@ -14,7 +14,7 @@ function Display_strenght() {
 }
 //Oculta dois dos <selector>'s de grownd water com base no input
 function Display_grownd_water() {
-    const gw = document.getElementById("select_gw").value
+    const gw = document.getElementById("select-gw").value
     const inflow = document.getElementById("inflow")
     const ratio = document.getElementById("ratio")
     const general = document.getElementById("general")
@@ -35,9 +35,9 @@ function Display_grownd_water() {
 }
 //Oculta um dos <selector>'s de dip com base no input do strike
 function Display_dip() {
-    const strike = document.getElementById("select_strike").value
-    const dip_1 = document.getElementById("dip_1")
-    const dip_2 = document.getElementById("dip_2")
+    const strike = document.getElementById("select-strike").value
+    const dip_1 = document.getElementById("dip-1")
+    const dip_2 = document.getElementById("dip-2")
     if (strike != "irrelevante") {
         dip_1.style.display = "block"
         dip_2.style.display = "none"

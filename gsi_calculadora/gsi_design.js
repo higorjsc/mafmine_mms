@@ -1,21 +1,21 @@
-function Inserir_idioma(){
+function Inserir_idioma() {
     let url = window.location.href
-    const imagem = document.getElementById("img_gsi_picker")
+    const imagem = document.getElementById("img-gsi-picker")
 
-    if(url.includes("pt")){
+    if (url.includes("pt")) {
         imagem.src = "Imagens\\gsi_portuguese.png"
-    }else{
+    } else {
         imagem.src = "Imagens\\gsi_english.png"
     }
     imagem.style.display = "block"
 }
 
-function Desenhar_retas(X, Y){
+function Desenhar_retas(X, Y) {
 
     const pad = document.getElementById("pad")
     pad.innerHTML = ""
-    largura  = pad.clientWidth
-    altura  = pad.clientHeight
+    largura = pad.clientWidth
+    altura = pad.clientHeight
     X = X - 26
     Y = Y - 15
 
@@ -52,33 +52,33 @@ function Desenhar_retas(X, Y){
 
 }
 
-function Mostrar_inputs(){
-    
-    const select_metodo_calculo = document.getElementById("select_metodo_calculo").value
+function Mostrar_inputs() {
 
-    const img_container = document.getElementById("img_container")
-    const input_container = document.getElementById("input_container")
+    const select_metodo_calculo = document.getElementById("select-metodo-calculo").value
 
-    const div_inputs = document.getElementById("div_inputs")
-    const input_jc = document.getElementById("input_jc")
+    const img_container = document.getElementById("img-container")
+    const input_container = document.getElementById("input-container")
 
-    const div_calculo_jc = document.getElementById("div_calculo_jc")
+    const div_inputs = document.getElementById("div-inputs")
+    const input_jc = document.getElementById("input-jc")
 
-    if(select_metodo_calculo == "input"){
+    const div_calculo_jc = document.getElementById("div-calculo-jc")
+
+    if (select_metodo_calculo == "input") {
         div_inputs.style.display = "block"
         img_container.style.display = "none"
         input_container.style.display = "block"
 
-        if(select_jc.value == "inserir_jc"){
+        if (select_jc.value == "inserir_jc") {
             input_jc.disabled = false
             input_jc.style.color = "black"
             div_calculo_jc.style.display = "none"
-        }else{
+        } else {
             input_jc.disabled = true
             div_calculo_jc.style.display = "grid"
         }
 
-    }else  if(select_metodo_calculo == "click"){
+    } else if (select_metodo_calculo == "click") {
         img_container.style.display = "block"
         input_container.style.display = "none"
         div_inputs.style.display = "none"
@@ -87,12 +87,12 @@ function Mostrar_inputs(){
 }
 
 
-function Balao_gsi(entry, X, Y){   
+function Balao_gsi(entry, X, Y) {
 
     const balao = document.getElementById("balao")
 
-    const pad = document.getElementById("pad")  
-    X = ((X / pad.clientWidth) * 45 ) + 4
+    const pad = document.getElementById("pad")
+    X = ((X / pad.clientWidth) * 45) + 4
     Y = (Y / pad.clientHeight) * 40 + 2
     X > X === 45 ? X = 45 : X
     Y > Y === 40 ? Y = 40 : Y
@@ -100,7 +100,7 @@ function Balao_gsi(entry, X, Y){
     messages = {
         "pad": `${X.toFixed(0)}, ${Y.toFixed(0)}`
     }
-    
+
 
     const positions = {
         "pad": { x: 5, y: -30 },
@@ -110,7 +110,7 @@ function Balao_gsi(entry, X, Y){
     balao.innerText = messages[entry]
     balao.style.display = "block"
 
-    if (positions[entry]){
+    if (positions[entry]) {
         const { x, y } = positions[entry]
         balao.style.transform = `translate(${x}px, ${y}px)`
     } else {
@@ -119,7 +119,7 @@ function Balao_gsi(entry, X, Y){
 
 }
 
-function Balao_sai(){
+function Balao_sai() {
     const balao = document.getElementById("balao")
     balao.style.display = "none"
 }

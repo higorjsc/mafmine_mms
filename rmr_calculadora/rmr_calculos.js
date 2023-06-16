@@ -11,7 +11,7 @@ function Retornar_valor() {
         id = "rmr-fw"
     }
     //Obtém o valor do elemento na janela popup
-    const classe_rmr = document.getElementById("classe_rmr").innerText
+    const classe_rmr = document.getElementById("classe-rmr").innerText
     // Acessa a janela principal através de window.opener
     const janela_principal = window.opener
     const seletor = janela_principal.document.getElementById(id)
@@ -88,13 +88,13 @@ function Pesos(valor) {
 
 function Escrever_resultado(rmr) {
 
-    const rmr_num = document.getElementById("resultado_rmr")
+    const rmr_num = document.getElementById("resultado-rmr")
     //Mostra o valor do RMR com duas casas decimais no pop up
     rmr_num.innerText = rmr.toFixed(2)
 
     //Obtém o idioma da janela através do titulo
     const titulo = document.getElementById("titulo").innerText
-    const rmr_classe = document.getElementById("classe_rmr")
+    const rmr_classe = document.getElementById("classe-rmr")
 
     if (!titulo.includes("calculation")) {
         if (rmr <= 20) {
@@ -130,23 +130,23 @@ function Calculo_pop_up() {
     //Utiliza window[0bject] para escolher o select. Melhor do que um switch gigante?
 
     //Obtém o valor do primeiro select  = point_load ou ucs
-    let select_strenght = document.getElementById("select_strenght").value
+    let select_strenght = document.getElementById("select-strenght").value
     let Strenght_value = { "point_load": "null", "ucs": "null" }
     //Obtém o valor do segundo select
     Strenght_value[select_strenght] = window[select_strenght].value
 
     //Obtém o valor do primeiro select  = ratio, inflow ou general
-    let select_gw = document.getElementById("select_gw").value
+    let select_gw = document.getElementById("select-gw").value
     let Ground_water_value = { "general": "null", "ratio": "null", "inflow": "null" }
     //Obtém o valor do segundo select
     Ground_water_value[select_gw] = window[select_gw].value
 
-    const strike = document.getElementById("select_strike").value
+    const strike = document.getElementById("select-strike").value
     let dip
     if (strike != "irrelevante") {
-        dip = document.getElementById("dip_1").value
+        dip = document.getElementById("dip-1").value
     } else {
-        dip = document.getElementById("dip_2").value
+        dip = document.getElementById("dip-2").value
     }
 
     let valor = {

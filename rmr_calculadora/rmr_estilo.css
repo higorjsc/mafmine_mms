@@ -24,7 +24,7 @@ h2 {
   font-weight: bold;
 }
 
-.parametro_1,.parametro_2, .parametro_3, .parametro_4, .parametro_5, .parametro_6 {
+.parametro-1,.parametro-2, .parametro-3, .parametro-4, .parametro-5, .parametro-6 {
   display: grid;
   position: inherit;
   grid-template-columns: 1fr 200px;
@@ -32,22 +32,22 @@ h2 {
   justify-items: center;
 }
 
-#ground_water {
+#ground-water {
   position: inherit;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: auto;
-  color: blue;
+  color: blue
 }
 
-.coluna_1 {
+.coluna-1 {
   position: inherit;
   grid-area: 1 / 1 / 2 / 2;  
   justify-self: left;
 }
 
-.coluna_2 {
+.coluna-2 {
   position: inherit;
   grid-area: 1 / 2 / 2 / 3; 
 }
@@ -67,7 +67,7 @@ select:hover {
   font-weight: bold;
 }
 
-#select_strenght {
+#select-strenght {
   grid-area: 1 / 2 / 2 / 3;
   position: inherit;
   justify-self: left;
@@ -84,7 +84,7 @@ select:hover {
   right: 0%;
 }
 
-#point_load {
+#point-load {
   grid-area: 1 / 2 / 2 / 3;
   position: absolute;
   display: none;
@@ -105,11 +105,11 @@ select:hover {
   display: block;
 }
 
-#dip_1 {
+#dip-1 {
   position: inherit;
 }
 
-#dip_2 {
+#dip-2 {
   display: none;
 }
 
@@ -125,13 +125,13 @@ select:hover {
   margin-top: 8%;
 }
 
-#resultado_rmr {
+#resultado-rmr {
   color: red;
   font-weight: bold;
   columns: 2/3;
 }
 
-#classe_rmr {
+#classe-rmr {
   color: red;
   font-weight: bold;
   columns: 3/4;
@@ -139,7 +139,7 @@ select:hover {
 
 /* ------------------BOTÃO ADICIONAR VALOR ----------------- */
 
-#botao_input {
+#botao-input {
   background: black;
   color: white;
   width: 100px;
@@ -149,7 +149,7 @@ select:hover {
   columns: 4/5;   
 }
 
-#botao_input:hover {
+#botao-input:hover {
   box-shadow: 0 0 10px blue;
   transform: scale(1.05);
   cursor: pointer;

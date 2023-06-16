@@ -57,7 +57,7 @@ function Calculo_jc() {
 
     )
 
-    let input_jc = document.getElementById("input_jc")
+    let input_jc = document.getElementById("input-jc")
     input_jc.value = jc.toFixed(0)
     input_jc.style.color = "Red"
 
@@ -82,9 +82,9 @@ function Calculo_gsi_click(X, Y) {
 
 function Calculo_gsi_input() {
 
-    let input_jc = document.getElementById("input_jc")
-    let input_rqd = document.getElementById("input_rqd").value
-    const select_jc = document.getElementById("select_jc").value
+    let input_jc = document.getElementById("input-jc")
+    let input_rqd = document.getElementById("input-rqd").value
+    const select_jc = document.getElementById("select-jc").value
     let jc
     let gsi
 
@@ -119,7 +119,7 @@ function Calculo_gsi(X = 0, Y = 0) {
     const pad = document.getElementById("pad")
     pad.innerHTML = ""
 
-    const tipo_calculo = document.getElementById("select_metodo_calculo").value
+    const tipo_calculo = document.getElementById("select-metodo-calculo").value
     if (tipo_calculo == "click") {
         Desenhar_retas(X, Y)
         gsi = Calculo_gsi_click(X, Y)
