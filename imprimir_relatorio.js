@@ -32,6 +32,10 @@ function Imprimir_relatorio(metodo) {
         const elemento = document.getElementById(id).selectedOptions[0].innerText
         return elemento
     }
+    function Texto_input(id) {
+        const elemento = document.getElementById(id).value
+        return elemento
+    }
 
     //DEFINI A FORMATAÇÃO DO PDF
     const identacao = 40
@@ -149,10 +153,10 @@ function Imprimir_relatorio(metodo) {
             doc.text(hw + "0.80", identacao, y_coord += line_spacing)
             doc.text(fw + "0.50", identacao, y_coord += line_spacing)
         } else {
-            doc.text(geo + Texto("input-peso-geo"), identacao, y_coord += line_spacing)
-            doc.text(ob + Texto("input-peso-ob"), identacao, y_coord += line_spacing)
-            doc.text(hw + Texto("input-peso-hw"), identacao, y_coord += line_spacing)
-            doc.text(fw + Texto("input-peso-fw"), identacao, y_coord += line_spacing)
+            doc.text(geo + Texto_input("input-peso-geo"), identacao, y_coord += line_spacing)
+            doc.text(ob + Texto_input("input-peso-ob"), identacao, y_coord += line_spacing)
+            doc.text(hw + Texto_input("input-peso-hw"), identacao, y_coord += line_spacing)
+            doc.text(fw + Texto_input("input-peso-fw"), identacao, y_coord += line_spacing)
         }
     }
     if (metodo == "ubc") {
@@ -161,10 +165,10 @@ function Imprimir_relatorio(metodo) {
         doc.text(Texto("h2-fatores-peso-ubc"), identacao, y_coord += line_spacing)
         y_coord += 2
         doc.setFontStyle("normal")
-        doc.text(geo + Texto("input-peso-ubc-geo"), identacao, y_coord += line_spacing)
-        doc.text(ob + Texto("input-peso-ubc-ob"), identacao, y_coord += line_spacing)
-        doc.text(hw + Texto("input-peso-ubc-hw"), identacao, y_coord += line_spacing)
-        doc.text(fw + Texto("input-peso-ubc-fw"), identacao, y_coord += line_spacing)
+        doc.text(geo + Texto_input("input-peso-ubc-geo"), identacao, y_coord += line_spacing)
+        doc.text(ob + Texto_input("input-peso-ubc-ob"), identacao, y_coord += line_spacing)
+        doc.text(hw + Texto_input("input-peso-ubc-hw"), identacao, y_coord += line_spacing)
+        doc.text(fw + Texto_input("input-peso-ubc-fw"), identacao, y_coord += line_spacing)
     }
 
     //RESULTADOS
