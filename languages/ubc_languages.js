@@ -10,6 +10,9 @@ function Escrever(id, texto, op) {
 
 function English() {
 
+    //HEADER
+    Escrever("titulo-pagina", "MINING METHOD SELECTION: UBC (1996)")
+
     //SEÇÃO 1
     let paragrafo_explicacao = "The UBC mining method selection is a modified version of the Nicholas (1981) approach developed by the University of British Columbia in Vancouver, B.C., Canada.<br><br>" +
         "<strong>The modifications include:<br></strong>" +
@@ -94,8 +97,11 @@ function English() {
 
 function Portuguese() {
 
+    //HEADER
+    Escrever("titulo-pagina", "SELEÇÃO DE METODOS DE LAVRA: Método UBC")
+
     //SEÇÃO 1
-    let paragrafo_explicacao = "O UBC Mining Method Selection (1996) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia em Vancouver, B.C., Canada.<br><br>" +
+    const paragrafo_explicacao = "O UBC Mining Method Selection (1996) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia em Vancouver, B.C., Canada.<br><br>" +
         "<strong>As modificações incluem:<br></strong>" +
         "&ensp;&ensp;- Ajuste dos pesos atribuidos a cada critério de seleção;<br>" +
         "&ensp;&ensp;- O valor '-10' foi adicionado para descontar fortemente um método de lavra sem elimina-lo completamente;<br>" +
@@ -171,4 +177,11 @@ function Portuguese() {
     Escrever("h2-fatores-peso-ubc", "Fatores de Peso")
     Escrever("span-cm-ubc", "CM")
     Escrever("botao-ahp-ubc", "CALCULAR POR AHP")
+
+    //RODAPÉ
+    Escrever("universidade", "UFRGS Universidade Federal do Rio Grande do Sul")
+    Escrever("laboratorio", "LAPROM Laboratório de Processamento Mineral")
+    Escrever("localizacao", "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970")
+    Escrever("contato", " Contato: email@ufrgs.com")
+
 }

@@ -10,6 +10,9 @@ function Escrever(id, texto, op) {
 
 function English() {
 
+    //HEADER
+    Escrever("titulo-pagina", "MINING METHOD SELECTION: Nicholas (1981)")
+
     const paragrafo_explicacao = "The Nicholas (1981) mining method selection procedure was the first numerical approach developed to the problem. " +
         "The method numerically ranks deposit characteristics of ore geometry and rock mechanics characteristics of the ore zone, hanging wall and footwall. " +
         "The value assigned to each characteristic of each mining method are than summed together, with the higher rankings being the more favourable or likely mining methods.<br><br>" +
@@ -85,6 +88,10 @@ function English() {
 }
 
 function Portuguese() {
+
+    //HEADER
+    Escrever("titulo-pagina", "SELEÇÃO DE METODOS DE LAVRA: Nicholas (1981)")
+
     const paragrafo_explicacao = "O Método de Nicholas (1981) foi o primeiro procedimento númerico desenvolvido para a seleção de métodos de lavra. " +
         "O método ranqueia númericamente caracteristicas geométricas do depósito mineral e características geotécnicas do corpo de minério, hanging wall e footwall. " +
         "Os valores atribuidos para cada característica, de cada método de lavra, são somados e os maiores valores definem os métodos preferidos para o depósito em questão.<br><br>" +

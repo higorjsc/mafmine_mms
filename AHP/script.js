@@ -1,6 +1,6 @@
 function Open_pop_up_help() {
 
-    const titulo = document.getElementById("titulo_section_1").innerText
+    const titulo = document.getElementById("titulo-section_1").innerText
 
     let idioma = titulo.includes("CHARACTERISTICS") ? "en" : "pt"
 
@@ -19,10 +19,10 @@ function Open_pop_up_help() {
 
 function Retornar_valor() {
     // Obtém os pesos calculados por AHP
-    const td_peso_geo = document.querySelector("#td_peso_geo").innerText
-    const td_peso_ob = document.querySelector("#td_peso_ob").innerText
-    const td_peso_hw = document.querySelector("#td_peso_hw").innerText
-    const td_peso_fw = document.querySelector("#td_peso_fw").innerText
+    const td_peso_geo = document.querySelector("#td-peso-geo").innerText
+    const td_peso_ob = document.querySelector("#td-peso-ob").innerText
+    const td_peso_hw = document.querySelector("#td-peso-hw").innerText
+    const td_peso_fw = document.querySelector("#td-peso-fw").innerText
 
     // Acessa a janela principal através de window.opener
     const janela_principal = window.opener
@@ -67,32 +67,31 @@ function Calculos() {
     }
 
     //SOMATÓRIO DAS COLUNAS
-    let geo_geo = Converter_divisao("geo_geo")
-    let ob_geo = Converter_divisao("ob_geo")
-    let hw_geo = Converter_divisao("hw_geo")
-    let fw_geo = Converter_divisao("fw_geo")
+    let geo_geo = Converter_divisao("geo-geo")
+    let ob_geo = Converter_divisao("ob-geo")
+    let hw_geo = Converter_divisao("hw-geo")
+    let fw_geo = Converter_divisao("fw-geo")
 
-    let geo_ob = Converter_divisao("geo_ob")
-    let ob_ob = Converter_divisao("ob_ob")
-    let hw_ob = Converter_divisao("hw_ob")
-    let fw_ob = Converter_divisao("fw_ob")
+    let geo_ob = Converter_divisao("geo-ob")
+    let ob_ob = Converter_divisao("ob-ob")
+    let hw_ob = Converter_divisao("hw-ob")
+    let fw_ob = Converter_divisao("fw-ob")
 
-    let geo_hw = Converter_divisao("geo_hw")
-    let ob_hw = Converter_divisao("ob_hw")
-    let hw_hw = Converter_divisao("hw_hw")
-    let fw_hw = Converter_divisao("fw_hw")
+    let geo_hw = Converter_divisao("geo-hw")
+    let ob_hw = Converter_divisao("ob-hw")
+    let hw_hw = Converter_divisao("hw-hw")
+    let fw_hw = Converter_divisao("fw-hw")
 
 
-    let geo_fw = Converter_divisao("geo_fw")
-    let ob_fw = Converter_divisao("ob_fw")
-    let hw_fw = Converter_divisao("hw_fw")
-    let fw_fw = Converter_divisao("fw_fw")
+    let geo_fw = Converter_divisao("geo-fw")
+    let ob_fw = Converter_divisao("ob-fw")
+    let hw_fw = Converter_divisao("hw-fw")
+    let fw_fw = Converter_divisao("fw-fw")
 
     let soma_coluna_geo = geo_geo + ob_geo + hw_geo + fw_geo
     let soma_coluna_ob = geo_ob + ob_ob + hw_ob + fw_ob
     let soma_coluna_hw = geo_hw + ob_hw + hw_hw + fw_hw
     let soma_coluna_fw = geo_fw + ob_fw + hw_fw + fw_fw
-    // console.log(soma_coluna_geo, soma_coluna_ob, soma_coluna_hw, soma_coluna_fw)
 
     //NORMATIZAÇÃO
     norma_geo_geo = geo_geo / soma_coluna_geo
@@ -115,9 +114,6 @@ function Calculos() {
     norma_hw_fw = hw_fw / soma_coluna_fw
     norma_fw_fw = fw_fw / soma_coluna_fw
 
-    // console.log(norma_geo_geo, norma_ob_geo, norma_hw_geo, norma_fw_geo)
-    // console.log(norma_geo_ob, norma_ob_ob, norma_hw_ob, norma_fw_ob)
-
     //CRIAÇÃO DO VETOR PESO
     let peso_geo = (norma_geo_geo + norma_geo_ob + norma_geo_hw + norma_geo_fw) / 4
     let peso_ob = (norma_ob_geo + norma_ob_ob + norma_ob_hw + norma_ob_fw) / 4
@@ -131,10 +127,10 @@ function Calculos() {
     }
 
     //ATRIBUIÇÃO DOS VALORES DE PESOS
-    Atribuir_valor("td_peso_geo", peso_geo)
-    Atribuir_valor("td_peso_ob", peso_ob)
-    Atribuir_valor("td_peso_hw", peso_hw)
-    Atribuir_valor("td_peso_fw", peso_fw)
+    Atribuir_valor("td-peso-geo", peso_geo)
+    Atribuir_valor("td-peso-ob", peso_ob)
+    Atribuir_valor("td-peso-hw", peso_hw)
+    Atribuir_valor("td-peso-fw", peso_fw)
 
     //MULTIPLICA O VETOR PESO PELA MATRIZ ORIGINAL
     let ws_geo = (peso_geo * geo_geo) + (peso_ob * geo_ob) + (peso_hw * geo_hw) + (peso_fw * geo_fw)
@@ -149,24 +145,24 @@ function Calculos() {
     let cons_fw = ws_fw / peso_fw
 
     //ATRIBUIÇÃO DOS VALORES DO VETOR CONSISTENCIA
-    Atribuir_valor("td_cons_geo", cons_geo)
-    Atribuir_valor("td_cons_ob", cons_ob)
-    Atribuir_valor("td_cons_hw", cons_hw)
-    Atribuir_valor("td_cons_fw", cons_fw)
+    Atribuir_valor("td-cons-geo", cons_geo)
+    Atribuir_valor("td-cons-ob", cons_ob)
+    Atribuir_valor("td-cons-hw", cons_hw)
+    Atribuir_valor("td-cons-fw", cons_fw)
 
     //CALCULO DO LAMBDA
     let lambda = (cons_geo + cons_ob + cons_hw + cons_fw) / 4
-    Atribuir_valor("resultado_lambda", lambda)
+    Atribuir_valor("resultado-lambda", lambda)
 
     //CALCULO DO INDICE DE CONSISTENCIA
     const qtd_criterios = 4 //Ordem da matriz
     let ci = (lambda - qtd_criterios) / (qtd_criterios - 1)
-    Atribuir_valor("resultado_ci", ci)
+    Atribuir_valor("resultado-ci", ci)
 
     //CALCULO DA RAZÃO DE CONSISTENCIA
     const random_index = 0.90 //Saaty 1980 RI for matrix size = 4
     let cr = ci / random_index
-    Atribuir_valor("resultado_cr", cr)
+    Atribuir_valor("resultado-cr", cr)
 }
 
 function Matriz_maker() {
@@ -190,16 +186,16 @@ function Matriz_maker() {
     //PREENCHE O TRIANGULO SUPERIOR DA MATRIZ
     function Pega_elemento_direto(id) {
         let elemento = document.getElementById(id) //matriz triangular superior
-        let slider = Conversor_ahp(document.querySelector(`#slider_${id}`).value)
+        let slider = Conversor_ahp(document.querySelector(`#slider-${id}`).value)
         let display = slider < 0 ? `1/${Math.abs(slider)}` : slider.toString()
         elemento.textContent = display
     }
 
     //PRENCHE O TRIANGULO INFERIOR DA MATRIZ
     function Pega_elemento_indireto(id) {
-        let nome = id.split("_")
+        let nome = id.split("-")
         let elemento = document.getElementById(id) //matriz triangular inferior
-        let slider = Conversor_ahp(document.querySelector(`#slider_${nome[1]}_${nome[0]}`).value)
+        let slider = Conversor_ahp(document.querySelector(`#slider-${nome[1]}-${nome[0]}`).value)
         let display = slider > 0 ? `1/${Math.abs(slider)}` : Math.abs(slider).toString()
         elemento.textContent = display
     }
@@ -207,26 +203,26 @@ function Matriz_maker() {
     //-----------------DIRETOS---------------------
 
     //LINHA GEO
-    Pega_elemento_direto("geo_ob")
-    Pega_elemento_direto("geo_hw")
-    Pega_elemento_direto("geo_fw")
+    Pega_elemento_direto("geo-ob")
+    Pega_elemento_direto("geo-hw")
+    Pega_elemento_direto("geo-fw")
     //LINHA OB
-    Pega_elemento_direto("ob_hw")
-    Pega_elemento_direto("ob_fw")
+    Pega_elemento_direto("ob-hw")
+    Pega_elemento_direto("ob-fw")
     //LINHA HW
-    Pega_elemento_direto("hw_fw")
+    Pega_elemento_direto("hw-fw")
 
     // ------------INDIRETOS-----------------
 
     //LINHA OB
-    Pega_elemento_indireto("ob_geo")
+    Pega_elemento_indireto("ob-geo")
     //LINHA HW
-    Pega_elemento_indireto("hw_geo")
-    Pega_elemento_indireto("hw_ob")
+    Pega_elemento_indireto("hw-geo")
+    Pega_elemento_indireto("hw-ob")
     //LINHA FW
-    Pega_elemento_indireto("fw_geo")
-    Pega_elemento_indireto("fw_ob")
-    Pega_elemento_indireto("fw_hw")
+    Pega_elemento_indireto("fw-geo")
+    Pega_elemento_indireto("fw-ob")
+    Pega_elemento_indireto("fw-hw")
 }
 
 function Slider_color() {
@@ -257,11 +253,11 @@ function Slider_color() {
 
 
 function Slider_mouse_over(id) {
-    let span = id.split("_")
+    let span = id.split("-")
     span.splice(0, 1)
 
-    const id_td_1 = span[0] + "_" + span[1]
-    const id_td_2 = span[1] + "_" + span[0]
+    const id_td_1 = span[0] + "-" + span[1]
+    const id_td_2 = span[1] + "-" + span[0]
 
     const slider = document.getElementById(id)
     const td_1 = document.getElementById(id_td_1)
@@ -273,11 +269,11 @@ function Slider_mouse_over(id) {
 }
 
 function Slider_mouse_leave(id) {
-    let span = id.split("_")
+    let span = id.split("-")
     span.splice(0, 1)
 
-    const id_td_1 = span[0] + "_" + span[1]
-    const id_td_2 = span[1] + "_" + span[0]
+    const id_td_1 = span[0] + "-" + span[1]
+    const id_td_2 = span[1] + "-" + span[0]
 
     const slider = document.getElementById(id)
     const td_1 = document.getElementById(id_td_1)
@@ -290,7 +286,7 @@ function Slider_mouse_leave(id) {
 
 function Resultado_mouse_over(id) {
     let elemento_1 = document.getElementById(id)
-    const id_2 = "resultado_" + id
+    const id_2 = "resultado-" + id
     let elemento_2 = document.getElementById(id_2)
 
     elemento_1.style.borderLeft = "1pt solid blue"
@@ -308,7 +304,7 @@ function Resultado_mouse_over(id) {
 function Resultado_mouse_leave(id) {
 
     const elemento_1 = document.getElementById(id)
-    const id_2 = "resultado_" + id
+    const id_2 = "resultado-" + id
     const elemento_2 = document.getElementById(id_2)
 
     elemento_1.style.border = "none"
@@ -327,6 +323,12 @@ function Evento() {
         balao.style.top = event.clientY + "px"
         balao.style.left = event.clientX + "px"
     })
+
+    const help_button = document.querySelector("#help-button")
+    help_button.addEventListener("click", Open_pop_up_help)
+
+    const botao_input = document.querySelector("#botao-input")
+    botao_input.addEventListener("click", Retornar_valor)
 
     const slideres = document.querySelectorAll(".slider")
     slideres.forEach(element => {
@@ -349,14 +351,14 @@ function Evento() {
     })
 
     //VETOR PESOS
-    const td_vetores_peso = document.querySelectorAll(".td_vetores_peso")
+    const td_vetores_peso = document.querySelectorAll(".td-vetores-peso")
     td_vetores_peso.forEach(element => {
         element.addEventListener("mouseover", () => { Balao_entra("pesos") })
         element.addEventListener("mouseleave", Balao_sai)
     })
 
     //VETOR CONSISTENCIA
-    const td_vetores_cons = document.querySelectorAll(".td_vetores_cons")
+    const td_vetores_cons = document.querySelectorAll(".td-vetores-cons")
     td_vetores_cons.forEach(element => {
         element.addEventListener("mouseover", () => { Balao_entra("cons") })
         element.addEventListener("mouseleave", Balao_sai)
@@ -381,7 +383,7 @@ function Evento() {
         Balao_sai("lambda")
         Resultado_mouse_leave("lambda")
     }
-    const resultado_lambda = document.querySelector("#resultado_lambda")
+    const resultado_lambda = document.querySelector("#resultado-lambda")
     resultado_lambda.onmouseover = function () {
         Balao_entra("lambda")
         Resultado_mouse_over("lambda")
@@ -401,7 +403,7 @@ function Evento() {
         Balao_sai("ci")
         Resultado_mouse_leave("ci")
     }
-    const resultado_ci = document.querySelector("#resultado_ci")
+    const resultado_ci = document.querySelector("#resultado-ci")
     resultado_ci.onmouseover = function () {
         Balao_entra("ci")
         Resultado_mouse_over("ci")
@@ -421,7 +423,7 @@ function Evento() {
         Balao_sai("cr")
         Resultado_mouse_leave("cr")
     }
-    const resultado_cr = document.querySelector("#resultado_cr")
+    const resultado_cr = document.querySelector("#resultado-cr")
     resultado_cr.onmouseover = function () {
         Balao_entra("cr")
         Resultado_mouse_over("cr")
@@ -441,7 +443,7 @@ function Evento() {
         Balao_sai("ri")
         Resultado_mouse_leave("ri")
     }
-    const resultado_ri = document.querySelector("#resultado_ri")
+    const resultado_ri = document.querySelector("#resultado-ri")
     resultado_ri.onmouseover = function () {
         Balao_entra("ri")
         Resultado_mouse_over("ri")

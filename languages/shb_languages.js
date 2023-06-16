@@ -9,9 +9,11 @@ function Escrever(id, texto, op) {
 }
 
 function English() {
-
+    //HEADER
+    Escrever("titulo-pagina", "MINING METHOD SELECTION: Shahriar and Bakhtavar (2007)")
+    
     //SEÇÃO 1
-    let paragrafo_explicacao = "The Shahriar and Bakhtavar (Sh&B) mining method selection procedure is a modifiedy version of the UBC (1996) method.<br><br>"
+    const paragrafo_explicacao = "The Shahriar and Bakhtavar (Sh&B) mining method selection procedure is a modifiedy version of the UBC (1996) method.<br><br>"
         + "<strong>The modifications include:</strong><br>"
         + "&ensp;&ensp;- The weights of each selection criterion were adjusted, and decimal values were used.<br>"
         + "&ensp;&ensp;- 'Ore value' was introduced as additional new criteria in the selection process<br>"
@@ -99,6 +101,8 @@ function English() {
 }
 
 function Portuguese() {
+    //HEADER
+    Escrever("titulo-pagina", "SELEÇÃO DE METODOS DE LAVRA: Shahriar e Bakhtavar (2007)")
 
     //SEÇÃO 1
     let paragrafo_explicacao = "O procedimento de seleção de métodos de lavra de Shahriar e Bakhtavar (Sh&B) é mais uma grande modificação do método UBC (1996).<br><br>"

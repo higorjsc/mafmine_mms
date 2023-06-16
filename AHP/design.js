@@ -12,13 +12,13 @@ function Balao_entra(entry) {
             "ci": "Consistence index of pair-wise comparision matrix",
             "ri": "Consistency index of a randomly generated reciprocal matrix. (Saaty, 1991)",
             "cr": "CR < 0.1 → Consistent matrix\nCR > 0.1 → Inconsistent matrix",
-            "botao_help": "Check method",
-            "slider_geo_ob": "Importance of geometry\nrelative to ore body",
-            "slider_geo_hw": "Importance of geometry\nrelative to hanging wall",
-            "slider_geo_fw": "Importance of geometry\nrelative to footwall",
-            "slider_ob_hw": "Importance of ore body\nrelative to hanging wall",
-            "slider_ob_fw": "Importance of ore body\nrelative to footwall",
-            "slider_hw_fw": "Importance of hanging wall\nrelative to footwall"
+            "botao-help": "Check method",
+            "slider-geo-ob": "Importance of geometry\nrelative to ore body",
+            "slider-geo-hw": "Importance of geometry\nrelative to hanging wall",
+            "slider-geo-fw": "Importance of geometry\nrelative to footwall",
+            "slider-ob-hw": "Importance of ore body\nrelative to hanging wall",
+            "slider-ob-fw": "Importance of ore body\nrelative to footwall",
+            "slider-hw-fw": "Importance of hanging wall\nrelative to footwall"
         }
     } else { //caso o titulo da seção 1 esteja em português
         messages = {
@@ -29,13 +29,13 @@ function Balao_entra(entry) {
             "ci": "Indice de consistencia da matriz de julgamento ",
             "ri": "índice de consistência de uma matriz recíproca\ngerada randomicamente. (Saaty, 1991)",
             "cr": "CR < 0.1 → Matriz de julgamento consistente\nCR > 0.1 → Matriz de julgamento inconsistente",
-            "botao_help": "Verificar Método",
-            "slider_geo_ob": "Importancia da geometria em\nrelação ao corpo de minério",
-            "slider_geo_hw": "Importancia da geometria em\nrelação ao hanging wall",
-            "slider_geo_fw": "Importancia da geometria em\nrelação ao footwall",
-            "slider_ob_hw": "Importancia do corpo de minerio\nem relação ao hanging wall",
-            "slider_ob_fw": "Importancia do corpo de minerio\nem relação ao footwall",
-            "slider_hw_fw": "Importancia do hanging wall\nem relação ao footwall",
+            "botao-help": "Verificar Método",
+            "slider-geo-ob": "Importancia da geometria em\nrelação ao corpo de minério",
+            "slider-geo-hw": "Importancia da geometria em\nrelação ao hanging wall",
+            "slider-geo-fw": "Importancia da geometria em\nrelação ao footwall",
+            "slider-ob-hw": "Importancia do corpo de minerio\nem relação ao hanging wall",
+            "slider-ob-fw": "Importancia do corpo de minerio\nem relação ao footwall",
+            "slider-hw-fw": "Importancia do hanging wall\nem relação ao footwall",
         }
     }
 

@@ -1,3 +1,10 @@
+:root {
+  --cor-1: #304454;;
+  --shadow-apretada: -5px 0 5px rgb(12 7 7 / 76%);
+  --shadow-blue: 0 0 10px blue;
+  --borda-simples: 1pt solid black;
+}
+
 /* ------------------BOTÃO TRIPLO CHECKBOX ----------------- */
 .checkbox-rmr-q-gsi {
   display: none;
@@ -8,22 +15,22 @@
 #checkbox-container {
   position: absolute;
   display: flex;
-  background: black;
+  background: var(--cor-1);
   width: auto;
   height: 5.1%;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-  transform: translate(180%,10%) scale(0.6);
+  transform: translate(145%,10%) scale(0.6);
+  box-shadow: var(--shadow-apretada);
 }
 
 /* Texto dentro dos botões (RMR) (GSI) (Q) */
 
 .span-checkbox {
   position: relative;
-  color: black;
   font: 10pt;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 /* Label branco que contém o texto dos botões (RMR) (GSI) (Q) */
@@ -33,14 +40,14 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 1pt solid black;
+  border: var(--borda-simples);
   border-radius: 25%;
   background: white;
 }
 
 label:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px blue;
+  box-shadow: var( --shadow-blue);
   transform: scale(1.1);
 }
 
@@ -59,7 +66,7 @@ label:hover {
 
 #botao-imprimir:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px blue;
+  box-shadow: var( --shadow-blue);
   transform: scale(1.01);
 }
 
@@ -77,7 +84,7 @@ label:hover {
 
 #botao-pesos:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px blue;
+  box-shadow: var( --shadow-blue);
   transform: scale(1.01);
 }
 
@@ -101,12 +108,12 @@ label:hover {
   cursor: pointer;
   width: 50px;
   height: 20px;
-  background-color: black;
+  background-color: var(--cor-1);
   border-radius: 15px;
   position: absolute;
   top: 45px;
   right: 2%;
-  box-shadow: 10px 0 20px rgb(104 62 62 / 42.5%);
+  box-shadow: var(--shadow-apretada)
 }
 
 .switch-label::after {
@@ -137,14 +144,13 @@ label:hover {
   right: 42%;
   z-index: 2;
   transform: translate(25%, -20%) scale(0.5);
-  box-shadow: 0 0 10px rgb(104 62 62 / 42.5%);
   background-color: rgb(255 255 255 / 0%);
   border: none;
 }
 
 .botao-calculadora-rmr:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px blue;
+  box-shadow: var( --shadow-blue);
 }
 
 /* ------------------BOTÃO CALCULADORA GSI (CANTO INFERIOR ESQUERDO) ----------------- */
@@ -153,14 +159,13 @@ label:hover {
   right: 43%;
   z-index: 2;
   transform: translate(25%, -20%) scale(0.5);
-  box-shadow: 0 0 10px rgb(104 62 62 / 42.5%);
   background-color: rgb(255 255 255 / 0%);
   border: none;
 }
 
 .botao-calculadora-gsi:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px blue;
+  box-shadow: var( --shadow-blue);
 }
 
 /* --------------BOTAO AHP------------------------------- */
@@ -170,7 +175,7 @@ label:hover {
   width: 100%;
   height: 100%;
   align-self: center;
-  border: 1pt solid black;
+  border: var(--borda-simples);
   background-color: black;
   color: white;
   border-radius: 20px;
@@ -179,7 +184,7 @@ label:hover {
 }
 
 #botao-ahp:hover {
-  box-shadow: 0 0 10px blue;
+  box-shadow: var( --shadow-blue);
   transform: scale(1.05);
   cursor: pointer;
 }
@@ -191,7 +196,7 @@ label:hover {
   width: 100%;
   height: 100%;
   align-self: center;
-  border: 1pt solid black;
+  border: var(--borda-simples);
   background-color: black;
   color: white;
   border-radius: 20px;
@@ -200,7 +205,7 @@ label:hover {
 }
 
 #botao-ahp-ubc:hover {
-  box-shadow: 0 0 10px blue;
+  box-shadow: var( --shadow-blue);
   transform: scale(1.05);
   cursor: pointer;
 }

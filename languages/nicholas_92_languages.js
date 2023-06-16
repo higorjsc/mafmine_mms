@@ -10,6 +10,9 @@ function Escrever(id, texto, op) {
 
 function English() {
 
+    //HEADER
+    Escrever("titulo-pagina", "MINING METHOD SELECTION: Nicholas (1992)")
+
     let paragrafo_explicacao = "The Nicholas selection procedure of 1992 is an modified version of the Nicholas approach from 1981, published by the same author." +
         "The 1992 edition aims to correct the classic issue in the original approach where all criteria were assigned equal importance.<br><br>" +
         "<strong>The modifications include:<br></strong>" +
@@ -90,7 +93,11 @@ function English() {
 }
 
 function Portuguese() {
-    let paragrafo_explicacao = "O Método de Nicholas de 1992 é uma versão modificada do método de Nicholas de 1981, publicada pelo mesmo autor." +
+
+    //HEADER
+    Escrever("titulo-pagina", "SELEÇÃO DE METODOS DE LAVRA: Nicholas (1992)")
+
+    const paragrafo_explicacao = "O Método de Nicholas de 1992 é uma versão modificada do método de Nicholas de 1981, publicada pelo mesmo autor." +
         "A nova versão tem o objetivo de corrigir o 'problema' clássico do procedimento orignal, onde todos os critérios de seleção possuem a mesma importância.<br><br>" +
         "<strong>As modificações incluem:<br></strong>" +
         "&ensp;&ensp;- O somatório das notas de cada critério de seleção é multiplicado por um 'Fator de peso';<br>" +

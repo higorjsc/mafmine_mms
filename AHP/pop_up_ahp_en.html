@@ -15,14 +15,15 @@
 
         <section id = 'section-1'>
 
-            <h1 id="h1_section_1">ANALYTIC HIERARCHY PROCESS</h1>
+            <button id="help-button">HELP</button>  
+            <h1 id="h1-section-1">ANALYTIC HIERARCHY PROCESS</h1>
 
-            <h2 id="h2_slider">PAIR-WISE COMPARISION</h2>
+            <h2 id="h2-slider">PAIR-WISE COMPARISION</h2>
             <div class="slider-container" id = 'slider-geometria'>
 
                 <!-- SLIDER GEOMETRY -->
                 <span class="span-titulo-slider">GEOMETRY vs OREBODY</span>
-                <input type="range" min="0" max="100" value="50" class="slider" id="slider_geo_ob">
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-geo-ob">
                 <div class="slider-labels">
                     <span class="slider-span">1/9</span>
                     <span class="slider-span">0</span>
@@ -30,7 +31,7 @@
                 </div>
                 
                 <span class="span-titulo-slider">GEOMETRY vs HANGING WALL</span>
-                <input type="range" min="0" max="100" value="50" class="slider" id="slider_geo_hw">
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-geo-hw">
                 <div class="slider-labels">
                     <span class="slider-span">1/9</span>
                     <span class="slider-span">0</span>
@@ -38,7 +39,7 @@
                 </div>
 
                 <span class="span-titulo-slider">GEOMETRY vs FOOTWALL</span>
-                <input type="range" min="0" max="100" value="50" class="slider" id="slider_geo_fw">
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-geo-fw">
                 <div class="slider-labels">
                     <span class="slider-span">1/9</span>
                     <span class="slider-span">0</span>
@@ -47,7 +48,7 @@
 
                 <!-- SLIDER OREBODY -->
                 <span class="span-titulo-slider">OREBODY vs HANGING WALL</span>
-                <input type="range" min="0" max="100" value="50" class="slider" id="slider_ob_hw">
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-ob-hw">
                 <div class="slider-labels">
                     <span class="slider-span">1/9</span>
                     <span class="slider-span">0</span>
@@ -55,7 +56,7 @@
                 </div>
                 
                 <span class="span-titulo-slider">OREBODY vs FOOTWALL</span>
-                <input type="range" min="0" max="100" value="50" class="slider" id="slider_ob_fw">
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-ob-fw">
                 <div class="slider-labels">
                     <span class="slider-span">1/9</span>
                     <span class="slider-span">0</span>
@@ -64,7 +65,7 @@
 
                 <!-- SLIDER HANGING WALL -->
                 <span class="span-titulo-slider">HANGING WALL vs FOOTWALL</span>
-                <input type="range" min="0" max="100" value="50" class="slider" id="slider_hw_fw">
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-hw-fw">
                 <div class="slider-labels">
                     <span class="slider-span">1/9</span>
                     <span class="slider-span">0</span>
@@ -72,113 +73,113 @@
                 </div>
 
             </div>
-            <div id="div_img">
-                <img src="Imagens\ahp_en.png" id="img_ahp_escala">
+            <div id="div-img">
+                <img src="Imagens\ahp-en.png" id="img-ahp-escala">
             </div>
             
             <table id = 'matriz'>
                 <tr>
-                    <th class="th_coluna_matriz"></th>
-                    <th  class="th_linha">GEO</th>
-                    <th  class="th_linha">OB</th>
-                    <th  class="th_linha">HW</th>
-                    <th  class="th_linha">FW</th>
+                    <th class="th-coluna-matriz"></th>
+                    <th  class="th-linha">GEO</th>
+                    <th  class="th-linha">OB</th>
+                    <th  class="th-linha">HW</th>
+                    <th  class="th-linha">FW</th>
                 </tr>
                 <tr>
-                    <th class="th_coluna_matriz">GEO</th>
-                    <td id="geo_geo">1</td>
-                    <td id="geo_ob">1</td>
-                    <td id="geo_hw">1</td>
-                    <td id="geo_fw">1</td>
+                    <th class="th-coluna-matriz">GEO</th>
+                    <td id="geo-geo">1</td>
+                    <td id="geo-ob">1</td>
+                    <td id="geo-hw">1</td>
+                    <td id="geo-fw">1</td>
                 </tr>
                 <tr>
-                    <th class="th_coluna_matriz">OB</th>
-                    <td id="ob_geo">1</td>
-                    <td id="ob_ob">1</td>
-                    <td id="ob_hw">1</td>
-                    <td id="ob_fw">1</td>
+                    <th class="th-coluna-matriz">OB</th>
+                    <td id="ob-geo">1</td>
+                    <td id="ob-ob">1</td>
+                    <td id="ob-hw">1</td>
+                    <td id="ob-fw">1</td>
                 </tr>
                 <tr>
-                    <th class="th_coluna_matriz">HW</th>
-                    <td id="hw_geo">1</td>
-                    <td id="hw_ob">1</td>
-                    <td id="hw_hw">1</td>
-                    <td id="hw_fw">1</td>
+                    <th class="th-coluna-matriz">HW</th>
+                    <td id="hw-geo">1</td>
+                    <td id="hw-ob">1</td>
+                    <td id="hw-hw">1</td>
+                    <td id="hw-fw">1</td>
                 </tr>
                 <tr>
-                    <th class="th_coluna_matriz">FW</th>
-                    <td id="fw_geo">1</td>
-                    <td id="fw_ob">1</td>
-                    <td id="fw_hw">1</td>
-                    <td id="fw_fw">1</td>
+                    <th class="th-coluna-matriz">FW</th>
+                    <td id="fw-geo">1</td>
+                    <td id="fw-ob">1</td>
+                    <td id="fw-hw">1</td>
+                    <td id="fw-fw">1</td>
                 </tr>
             </table>
 
-            <table id="vetores_peso">
+            <table id="vetores-peso">
 
                 <tr>
-                    <th  class="th_linha_vetores_peso">&ensp;</th>
-                    <td class = 'td_vetores_peso' id="titulo_pesos">WEIGHT</td>
+                    <th  class="th-linha-vetores-peso">&ensp;</th>
+                    <td class = 'td-vetores-peso' id="titulo-pesos">WEIGHT</td>
                 </tr>
                 <tr>
-                    <th  class="th_coluna_vetores_peso">GEO</th>
-                    <td class = 'td_vetores_peso' id="td_peso_geo">1</td>                           
+                    <th  class="th-coluna-vetores-peso">GEO</th>
+                    <td class = 'td-vetores-peso' id="td-peso-geo">1</td>                           
                 </tr>
                 <tr>
-                    <th  class="th_coluna_vetores_peso">OB</th>
-                    <td  class = 'td_vetores_peso' id="td_peso_ob">1</td>                          
+                    <th  class="th-coluna-vetores-peso">OB</th>
+                    <td  class = 'td-vetores-peso' id="td-peso-ob">1</td>                          
                 </tr>
                 <tr>
-                    <th  class="th_coluna_vetores_peso">HW</th>
-                    <td  class = 'td_vetores_peso' id="td_peso_hw">1</td>                            
+                    <th  class="th-coluna-vetores-peso">HW</th>
+                    <td  class = 'td-vetores-peso' id="td-peso-hw">1</td>                            
                 </tr>
                 <tr>
-                    <th  class="th_coluna_vetores_peso">FW</th>
-                    <td  class = 'td_vetores_peso' id="td_peso_fw">1</td>                   
+                    <th  class="th-coluna-vetores-peso">FW</th>
+                    <td  class = 'td-vetores-peso' id="td-peso-fw">1</td>                   
                 </tr>
                 
             </table>
 
-            <table id="vetores_cons">
+            <table id="vetores-cons">
 
                 <tr>
-                    <th  class="th_linha_vetores_cons">&ensp;</th>
-                    <td class = 'td_vetores_cons' id="titulo_cons">CONS</td>
+                    <th  class="th-linha-vetores-cons">&ensp;</th>
+                    <td class = 'td-vetores-cons' id="titulo-cons">CONS</td>
                 </tr>
                 <tr>                      
-                    <th  class="th_coluna_vetores">GEO</th>
-                    <td class = 'td_vetores_cons' id="td_cons_geo">1</td>                        
+                    <th  class="th-coluna-vetores">GEO</th>
+                    <td class = 'td-vetores-cons' id="td-cons-geo">1</td>                        
                 </tr>
                 <tr>                    
-                    <th  class="th_coluna_vetores">OB</th>
-                    <td  class = 'td_vetores_cons' id="td_cons_ob">1</td>                        
+                    <th  class="th-coluna-vetores">OB</th>
+                    <td  class = 'td-vetores-cons' id="td-cons-ob">1</td>                        
                 </tr>
                 <tr>   
-                    <th  class="th_coluna_vetores">HW</th>                   
-                    <td  class = 'td_vetores_cons' id="td_cons_hw">1</td>                        
+                    <th  class="th-coluna-vetores">HW</th>                   
+                    <td  class = 'td-vetores-cons' id="td-cons-hw">1</td>                        
                 </tr>
                 <tr>                      
-                    <th  class="th_coluna_vetores">FW</th>
-                    <td  class = 'td_vetores_cons' id="td_cons_fw">1</td>                        
+                    <th  class="th-coluna-vetores">FW</th>
+                    <td  class = 'td-vetores-cons' id="td-cons-fw">1</td>                        
                 </tr>
                 
             </table>
 
-            <div id="div_resultados">
-                <span class="span_texto_resultado" id="lambda">Coefficient <strong>&lambda;</strong>: </span>
-                <span class = 'span_resultado' id="resultado_lambda"> x</span>
+            <div id="div-resultados">
+                <span class="span-texto-resultado" id="lambda">Coefficient <strong>&lambda;</strong>: </span>
+                <span class = 'span-resultado' id="resultado-lambda"> x</span>
                 
-                <span class="span_texto_resultado" id="ci">Consistence Index: </span>
-                <span class = 'span_resultado' id="resultado_ci"> x</span>
+                <span class="span-texto-resultado" id="ci">Consistence Index: </span>
+                <span class = 'span-resultado' id="resultado-ci"> x</span>
                 
-                <span class="span_texto_resultado" id="ri">Random Index: </span>
-                <span class = 'span_resultado' id="resultado_ri">0.90</span>
+                <span class="span-texto-resultado" id="ri">Random Index: </span>
+                <span class = 'span-resultado' id="resultado-ri">0.90</span>
 
-                <span class="span_texto_resultado" id="cr">Consistence Ratio: </span>
-                <span class = 'span_resultado' id="resultado_cr"> x</span>
+                <span class="span-texto-resultado" id="cr">Consistence Ratio: </span>
+                <span class = 'span-resultado' id="resultado-cr"> x</span>
             </div>
 
-            <button id="botao_input" onclick="Retornar_valor()"> ADD<br/>VALUE</button>
+            <button id="botao-input"> ADD<br/>VALUE</button>
 
         </section>
         <!-- FIM SECTION 1 -->
@@ -190,6 +191,23 @@
 
 </body>
 <script>
+    window.onload = function(){
+        // Obtém as dimensões da tela
+        const largura_janela = window.screen.width
+        const altura_janela = window.screen.height
+        
+        // Define as dimensões da janela do pop-up
+        const largura_pop_up = document.documentElement.clientWidth
+        const altura_pop_up = document.documentElement.clientHeight
+
+        
+        // Calcula a posição para centralizar a janela
+        const esquerda = (largura_janela - largura_pop_up) / 2
+        const topo = (altura_janela - altura_pop_up) /2 
+        
+        // Define as coordenadas para a janela do pop-up
+        window.moveTo(esquerda, topo)
+        }
     Evento()
     Matriz_maker()
     Calculos()

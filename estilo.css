@@ -1,8 +1,17 @@
+:root {
+  --cor-1: #304454;
+  --cor-2: #112536;
+  --shadow-apretada: -5px 0 5px  rgb(0 0 0 / 95%);
+  --shadow-blue: 0 0 10px blue;
+  --borda-simples: 1pt solid black;
+}
+
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style: bold 10pt;
+  font-size: 11pt;
   line-height: 1.5;
+  color: black;
 }
 
 input {
@@ -12,9 +21,9 @@ input {
   right: 1%;
   width: 40%;
   text-align: center;
-  border: 1px solid black;
+  border: var(--borda-simples);
   border-radius: 10px;
-  box-shadow: -5px 0 20px rgb(104 62 62 / 42.5%);
+  box-shadow: var(--shadow-apretada);
 
 }
 
@@ -24,26 +33,38 @@ span {
 
 body {
   align-items: center;
-  background-color: white;
-  color: black;
   position: relative;
+}
+
+.head {
+  background-color: var(--cor-1);
+  border: var(--borda-simples);
+  width: 100%;
+  max-width: 1570px;
+  height: 60px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.head h1 {
+  font-size: 14pt;
+  color: white;
+  text-align: center;
 }
 
 /* <main> */
 .wrapper {
   display: grid;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1570px;
   grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
-  margin: auto;
   height: auto;
   position: relative;
-  transform: translateY(-5px);
-  padding-bottom: 0.25%;
+  padding-bottom: 0.2%;
+  padding-top: 0.2%;
 }
 
 section {
-  background-color: white;
   padding-left: 15px;
   position: relative;
   font: 11pt normal;
@@ -54,7 +75,6 @@ section {
 
 #span-rights {
   font-style: normal;
-  color: black;
   padding: 15px;
   position: absolute;
   bottom: 0%;
@@ -65,23 +85,23 @@ section {
 .balao {
   position: fixed;
   z-index: 2;
-  font: bold; 
+  font-weight: bold; 
   font-size: 9pt;
-  background-color: white;
   align-items: center;
   text-align: center;
   border-radius: 15px;
-  border: 1px solid black;
+  border: var(--borda-simples);
   padding: 1%;
   display: none;
+  background-color: white;
 }
 
 h2 /*Titulos principais de cada seção*/ {
-  border-bottom: 1px solid black;
+  border-bottom: var(--borda-simples);
   text-align: center;
   margin-top: 5px;
   align-content: center;
-  font: bold 12pt;
+  font-weight: bold;
 }
 
 /* ---------------------------------------SECTION 0------------------------------------------------ */
@@ -91,20 +111,18 @@ h2 /*Titulos principais de cada seção*/ {
   display: block;
   color: white;
   margin: 0;
-  border: 1pt solid black;
+  border: var(--borda-simples);
   height: 100%;
   width: 99%;
   padding: 0%;
   border-radius: 20px;
-  background-color: white;
   overflow: hidden;
   font-size: 10pt;
+  padding-top: 1%;
 }
 
 p {
   transform: translateY(-15px);
-  background-color: white;
-  color: black;
   display: block;
   text-align: justify;
   box-sizing: border-box;
@@ -117,17 +135,17 @@ p {
   margin: 0;
   gap: 0;
   padding: 0%;
-  background-color: rgb(40 41 40);
+  background-color: var(--cor-1);
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
 
 #li-titulo {
-  background-color: white;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  background-color: white;
   text-align: center;
-  color: red;
+  color: var(--cor-1);
   font-weight: bold;
 }
 
@@ -141,12 +159,12 @@ p {
 }
 
 #menu-metodos li:hover {
-  box-shadow: 0 0 10px blue;
+  box-shadow: var(--shadow-blue);
   cursor: pointer;
 }
 
 #menu-metodos li ul li:hover {
-  background-color: blue;
+  background-color: var(--cor-2);
 }
 
 #menu-metodos li ul {
@@ -174,14 +192,13 @@ a {
   grid-column: 2/3;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  border-left: 1px solid black;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: var(--borda-simples);
+  border-top: var(--borda-simples);
+  border-bottom: var(--borda-simples);
   height: 100%;
 }
 
 h3 /*Subtitulos da seção 1*/ {
-  color: black;
   font: 11pt;
   font-weight: bold;
   margin-bottom: 12px;
@@ -200,26 +217,26 @@ select {
   height: 22px; 
   text-align: center;
   border-radius: 10px;
-  border: 1px solid black;
-  box-shadow: -5px 0 20px rgb(104 62 62 / 42.5%);
+  border: var(--borda-simples);
+  box-shadow: var(--shadow-apretada);
 }
 
 select:hover {
-  box-shadow: 0 0 10px blue;
+  box-shadow: var(--shadow-blue);
   font: 12pt;
   font-weight: bold;
 }
 
 .resultado-rss /* Três spans que contém o resultado do calculo RSS*/ {
   position: absolute;
-  height: 22.5px; 
+  height: 22px; 
   right: 1%;
   width: 40%;
   text-align: center;
-  border: 1px solid black;
+  border: var(--borda-simples);
   border-radius: 10px;
   cursor: default;
-  color: red;
+  color: var(--cor-1);
 }
 
 .rmr /*Display vinculado aos botões-checkbox de buttons.css pela função Checkbox em design.js */ {
@@ -238,7 +255,7 @@ select:hover {
 
 #section-2 {
   grid-column: 3/4;
-  border: 1px solid black;
+  border: var(--borda-simples);
   min-width: 300px;
   height: 100%;
   overflow: hidden;
@@ -277,9 +294,9 @@ select:hover {
   grid-column: 4/5;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-right: var(--borda-simples);
+  border-top: var(--borda-simples);
+  border-bottom: var(--borda-simples);
   min-width: 200px;
   text-align: left;
 }
@@ -311,11 +328,8 @@ select:hover {
   grid-row: 1/2;
   text-align: center;
   font-size: 11pt;
-  background-color: white;
-  color: black;
-  border: 0;
   width: 100%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 #div-select-pesos span {
@@ -337,7 +351,7 @@ select:hover {
 
 .input-pesos {
   grid-row: 4/5;
-  width: 100%;
+  width: 90%;
   height: 85%;
   display: none;
   box-shadow: none;
@@ -381,11 +395,8 @@ select:hover {
   grid-row: 1/2;
   text-align: center;
   font-size: 11pt;
-  background-color: white;
-  color: black;
-  border: 0;
   width: 100%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 #div-select-pesos-ubc span {
@@ -417,3 +428,28 @@ select:hover {
 #input-peso-ubc-fw {
   grid-column: 4/5;
 }
+
+.rodape {
+  background-color: var(--cor-1);
+  border: var(--borda-simples);
+  width: 100%;
+  max-width: 1570px;
+  height: 100px;
+  border-radius: 20px;
+  position: relative;
+  align-items: center;
+  padding-top: 1%;
+}
+
+.span-footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 10pt;
+  padding-left: 1%;
+  opacity: 0.8;
+}
+
+
+
+
