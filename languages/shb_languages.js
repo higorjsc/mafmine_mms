@@ -11,7 +11,7 @@ function Escrever(id, texto, op) {
 function English() {
     //HEADER
     Escrever("titulo-pagina", "MINING METHOD SELECTION: Shahriar and Bakhtavar (2007)")
-    
+
     //SEÇÃO 1
     const paragrafo_explicacao = "The Shahriar and Bakhtavar (Sh&B) mining method selection procedure is a modifiedy version of the UBC (1996) method.<br><br>"
         + "<strong>The modifications include:</strong><br>"
@@ -98,6 +98,14 @@ function English() {
     Escrever("h2-fatores-peso-ubc", "Weighting Factors")
     Escrever("span-cm-ubc", "OB")
     Escrever("botao-ahp-ubc", "CALCULATE BY AHP")
+    
+    // RODAPÉ
+    Escrever("universidade", "Universidade Federal do Rio Grande do Sul")
+    Escrever("laboratorio", "Laboratório de Processamento Mineral")
+    Escrever("localizacao", "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970")
+    Escrever("contato", " Contato: email@ufrgs.com")
+    Escrever("desenvolvedor", "Desenvolvedor: Higor Campos")
+    Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
 }
 
 function Portuguese() {
@@ -190,4 +198,13 @@ function Portuguese() {
     Escrever("h2-fatores-peso-ubc", "Fatores de Peso")
     Escrever("span-cm-ubc", "CM")
     Escrever("botao-ahp-ubc", "CALCULAR POR AHP")
+
+
+    // RODAPÉ
+    Escrever("universidade", "Universidade Federal do Rio Grande do Sul")
+    Escrever("laboratorio", "Laboratório de Processamento Mineral")
+    Escrever("localizacao", "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970")
+    Escrever("contato", " Contato: email@ufrgs.com")
+    Escrever("desenvolvedor", "Desenvolvedor: Higor Campos")
+    Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
 }

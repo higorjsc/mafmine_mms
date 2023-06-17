@@ -85,6 +85,14 @@ function English() {
         Escrever(element.id, "Moderate", 1)
         Escrever(element.id, "Strong", 2)
     })
+    
+    // RODAPÉ
+    Escrever("universidade", "Universidade Federal do Rio Grande do Sul")
+    Escrever("laboratorio", "Laboratório de Processamento Mineral")
+    Escrever("localizacao", "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970")
+    Escrever("contato", " Contato: email@ufrgs.com")
+    Escrever("desenvolvedor", "Desenvolvedor: Higor Campos")
+    Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
 }
 
 function Portuguese() {
@@ -163,4 +171,11 @@ function Portuguese() {
         Escrever(element.id, "Forte", 2)
     })
 
+    // RODAPÉ
+    Escrever("universidade", "Universidade Federal do Rio Grande do Sul")
+    Escrever("laboratorio", "Laboratório de Processamento Mineral")
+    Escrever("localizacao", "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970")
+    Escrever("contato", " Contato: email@ufrgs.com")
+    Escrever("desenvolvedor", "Desenvolvedor: Higor Campos")
+    Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
 }

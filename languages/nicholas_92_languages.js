@@ -90,6 +90,14 @@ function English() {
     //FATORES DE PESO
     Escrever("h2-fatores-peso", "Weighting Factors")
     Escrever("span-cm", "OB")
+    
+    // RODAPÉ
+    Escrever("universidade", "Universidade Federal do Rio Grande do Sul")
+    Escrever("laboratorio", "Laboratório de Processamento Mineral")
+    Escrever("localizacao", "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970")
+    Escrever("contato", " Contato: email@ufrgs.com")
+    Escrever("desenvolvedor", "Desenvolvedor: Higor Campos")
+    Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
 }
 
 function Portuguese() {
@@ -174,4 +182,11 @@ function Portuguese() {
     Escrever("h2-fatores-peso", "Fatores de Peso")
     Escrever("span-cm", "CM")
 
+    // RODAPÉ
+    Escrever("universidade", "Universidade Federal do Rio Grande do Sul")
+    Escrever("laboratorio", "Laboratório de Processamento Mineral")
+    Escrever("localizacao", "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970")
+    Escrever("contato", " Contato: email@ufrgs.com")
+    Escrever("desenvolvedor", "Desenvolvedor: Higor Campos")
+    Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
 }
