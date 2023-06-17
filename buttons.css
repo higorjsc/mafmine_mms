@@ -21,7 +21,7 @@
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-  transform: translate(145%,10%) scale(0.6);
+  transform: translate(175%,10%) scale(0.6);
   box-shadow: var(--shadow-apretada);
 }
 
