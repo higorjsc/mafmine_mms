@@ -11,7 +11,7 @@ function Escrever(id, texto, op) {
 function English() {
 
     //HEADER
-    Escrever("titulo-pagina", "MINING METHOD SELECTION: UBC (1996)")
+    Escrever("titulo-pagina", "MINING METHOD SELECTION: UBC (1995)")
 
     //SEÇÃO 1
     let paragrafo_explicacao = "The UBC mining method selection is a modified version of the Nicholas (1981) approach developed by the University of British Columbia in Vancouver, B.C., Canada.<br><br>" +
@@ -109,7 +109,7 @@ function Portuguese() {
     Escrever("titulo-pagina", "SELEÇÃO DE METODOS DE LAVRA: Método UBC")
 
     //SEÇÃO 1
-    const paragrafo_explicacao = "O UBC Mining Method Selection (1996) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia em Vancouver, B.C., Canada.<br><br>" +
+    const paragrafo_explicacao = "O UBC Mining Method Selection (1995) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia em Vancouver, B.C., Canada.<br><br>" +
         "<strong>As modificações incluem:<br></strong>" +
         "&ensp;&ensp;- Ajuste dos pesos atribuidos a cada critério de seleção;<br>" +
         "&ensp;&ensp;- O valor '-10' foi adicionado para descontar fortemente um método de lavra sem elimina-lo completamente;<br>" +
