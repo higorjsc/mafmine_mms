@@ -56,6 +56,7 @@ function Open_pop_up_pesos(metodo) {
     window.open("tabelas\\" + tabela_nome, "_blank")
 }
 
+
 function Eventos(metodo) {
     //POSICIONA O BALÃO DE AJUDA NA POSIÇÃO DO CURSOR
     var balao = document.getElementById("balao")
@@ -241,7 +242,6 @@ function Eventos(metodo) {
     botao_imprimir.addEventListener("mouseleave", Balao_sai)
 
     //MENU SUSPENSO DA GEOMETRIA DO DEPÓSITO
-
     const menu_suspenso_geometria = document.querySelectorAll(".menu-geometria")
     menu_suspenso_geometria[0].addEventListener("mouseover", () => {
         Balao_entra(metodo, "forma-geral")

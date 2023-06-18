@@ -3,9 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Calcule e apresente o método de lavra mais adequado para o depósito mineral em estudo, utilizando a versão UBC do procedimento seleção de métodos de lavra de Nicholas (1981), criado pela University of British Columbia. Tome decisões informadas sobre a melhor abordagem para a extração de minerais com base em análises e critérios específicos.">
+    <meta name="keywords" content="nicholas, 1992, mining, method, selection, procedure, calculation, software">
+    <meta name="author" content="Higor José Silva Campos">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UBC</title>
+
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="buttons.css">
     <script src="eventos.js"></script>
@@ -29,8 +34,7 @@
             <h1 id="titulo-pagina"></h1>
         </div>
     </header>
-    <main class="wrapper">
-
+    <main class="wrapper" id="wrapper">
         <section id="nav-menu">
             <ul id="menu-metodos">
                 <li id="li-titulo">SELECIONE O MÉTODO</li>
@@ -256,8 +260,10 @@
             <!-- SEÇÃO 2 (CENTRO) - TITULO E IMAGEM -->
             <h2 id="titulo-section-2"> SIMULAÇÃO DO DEPÓSITO</h2>
             <div id='div-ilustracao'> </div>
-            <img id=superficie src="Imagens\\superficie.png">
-            <img id='ilustracao' alt="Aqui deveria ter uma ilustracao"> <!-- ilustração do depósito -->
+            <!-- ilustração da superfície -->
+            <img id = superficie src="Imagens\\superficie.png" alt="imagem_limite_da_superficie">
+            <!-- ilustração do depósito -->
+            <img id='ilustracao' alt="Aqui deveria ter uma ilustracao" > 
 
 
             <span id="span-rights"> &copy Universidade Federal do Rio Grande do Sul</span>
@@ -268,9 +274,9 @@
 
             <!-- SEÇÃO 2 (LATERAL DIREITA) - TITULO E PREFERENCIAS -->
             <h2 id="titulo-section-3"> PREFERÊNCIAS</h2>
-            <button id='botao-pesos'><img id='pesos-img' src="Imagens\\peso.png"></button>
+            <button id= 'botao-pesos'><img id = 'pesos-img' src="Imagens\\peso.png" alt="icone_pesos_dos_criterios"></button>
             <div id="div-section-3"></div>
-            <button id="botao-imprimir"><img id='impressora-img' src="Imagens\\impressora.png"></button>
+            <button id="botao-imprimir"><img id = 'impressora-img' src="Imagens\\impressora.png" alt="icone_impressora_png"></button>
 
             <div id="div-select-pesos-ubc" style="display: none">
                 <h2 id='h2-fatores-peso-ubc'>Fatores de Pesos<br></h2>
@@ -301,10 +307,8 @@
             <img id="img-ufrgs" src="Imagens\ufrgs.png" alt="logo_ufrgs_img">
 
             <div class="div-span-footer" id="div-span-footer-2">
-
                 <span class='span-footer' id="desenvolvedor"></span>
                 <span class='span-footer' id="contato-desenvolvedor"></span>
-
             </div>
 
         </div>

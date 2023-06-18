@@ -16,7 +16,6 @@ function Open_pop_up_help() {
 
 }
 
-
 function Retornar_valor() {
     // Obtém os pesos calculados por AHP
     const td_peso_geo = document.querySelector("#td-peso-geo").innerText
@@ -224,6 +223,36 @@ function Matriz_maker() {
     Pega_elemento_indireto("fw-ob")
     Pega_elemento_indireto("fw-hw")
 }
+function Obter_idioma() {
+    let url = window.location.href
+    if (url.includes("pt")) {
+        return "pt"
+    } else {
+        return "en"
+    }
+}
+
+function Consistencia() {
+    let resultado_cr = Number(document.getElementById("resultado-cr").innerText)
+    let span_warn = document.getElementById("span-warn")
+    let idioma = Obter_idioma()
+    let texto_warn = {
+        "pt_positivo": "MATRIZ\nCONSISTENTE!",
+        "en_positivo": "CONSISTENT\nMATRIX!",
+        "pt_negativo": "MATRIZ\nINCONSISTENTE!",
+        "en_negativo": "INCONSISTENT\nMATRIX!"
+    }
+
+    let consistencia = resultado_cr < 0.1 ? "_positivo" : "_negativo"
+
+    span_warn.innerText = texto_warn[(idioma + consistencia)]
+
+    if (span_warn.innerText.includes("INCONSISTENTE!")) {
+        span_warn.style.color = "Red"
+    } else {
+        span_warn.style.color = "Green"
+    }
+}
 
 function Slider_color() {
 
@@ -337,6 +366,7 @@ function Evento() {
             Matriz_maker()
             Slider_color()
             Calculos()
+            Consistencia()
         })
 
         element.addEventListener("mouseover", function () {
