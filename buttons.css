@@ -12,19 +12,26 @@
 
 /* DIV dos botões (RMR) (GSI) (Q) */
 
-#checkbox-container {
+.checkbox-container {
   position: absolute;
   display: flex;
   background: var(--cor-1);
   width: auto;
+  right: 1%;
   height: 5.1%;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-  right: 5%;
-  bottom: 11%;
   transform: scale(0.6);
   box-shadow: var(--shadow-apretada);
+}
+
+#checkbox-container-ubc {
+  bottom: 10%;
+}
+
+#checkbox-container-shb {
+  bottom: 9%;
 }
 
 /* Texto dentro dos botões (RMR) (GSI) (Q) */
