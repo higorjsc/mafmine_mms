@@ -1,3 +1,5 @@
+
+//Obtém o idioma da janela principal através da URL
 function Obter_idioma() {
     let url = window.location.href
     if (url.includes("pt")) {
@@ -7,6 +9,7 @@ function Obter_idioma() {
     }
 }
 
+//Adiciona eventos ao selementos do Pop Up
 function Eventos_pop_rmr() {
 
     let select = document.querySelectorAll("select")

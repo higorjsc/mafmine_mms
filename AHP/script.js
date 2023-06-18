@@ -200,7 +200,6 @@ function Matriz_maker() {
     }
 
     //-----------------DIRETOS---------------------
-
     //LINHA GEO
     Pega_elemento_direto("geo-ob")
     Pega_elemento_direto("geo-hw")
@@ -212,7 +211,6 @@ function Matriz_maker() {
     Pega_elemento_direto("hw-fw")
 
     // ------------INDIRETOS-----------------
-
     //LINHA OB
     Pega_elemento_indireto("ob-geo")
     //LINHA HW

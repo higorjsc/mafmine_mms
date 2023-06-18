@@ -86,7 +86,7 @@ select:hover {
 
 #point-load {
   grid-area: 1 / 2 / 2 / 3;
-  position: absolute;
+  position: inherit;
   display: none;
   justify-self: right;
   width: 100px;

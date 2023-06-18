@@ -1,50 +1,43 @@
-
 function Retornar_valor() {
 
-    const titulo = document.getElementById("titulo").innerText
-    let id = ""
-
-    if (titulo.includes("Corpo") || titulo.includes("Orebody")) {
-        id = "rmr-ob"
-    } else if (titulo.includes("Hanging")) {
-        id = "rmr-hw"
-    } else if (titulo.includes("Footwall")) {
-        id = "rmr-fw"
+    //Obtém ob, hw, ou fw através da url. url[2] = ob, hw ou fw
+    let url = (window.location.href).split("-")
+    let id = {
+        "ob": "rmr-ob",
+        "hw": "rmr-hw",
+        "fw": "rmr-fw",
     }
-    //Obtém o valor do elemento na janela popup
+
+    //Obtém o valor do RMR calculado na janela popup
     const classe_rmr = document.getElementById("classe-rmr").innerText
+
     // Acessa a janela principal através de window.opener
     const janela_principal = window.opener
-    const seletor = janela_principal.document.getElementById(id)
+    //Obtém o selector que vai receber o valor através do dicionário 'id' e do valor da url[2]
+    const seletor = janela_principal.document.getElementById(id[url[2]])
 
-    //Se incluir 'Muito' e incluir 'Pobre'
-    if (((classe_rmr.includes("Pobre") && classe_rmr.includes("Muito")) || (classe_rmr.includes("Very") && classe_rmr.includes("Poor")))) {
-        seletor.selectedIndex = 0
-    }
-    //Se incluir 'Pobre' e não incluir 'Muito'
-    if (((classe_rmr.includes("Pobre") && !classe_rmr.includes("Muito")) || (classe_rmr.includes("Poor") && !classe_rmr.includes("Very")))) {
-        seletor.selectedIndex = 1
-    }
-
-    if (classe_rmr.includes("Razoável") || classe_rmr.includes("Fair")) {
-        seletor.selectedIndex = 2
-    }
-    //Se incluir 'Boa' e não incluir 'Muito'
-    if (((classe_rmr.includes("Boa") && !classe_rmr.includes("Muito")) || (classe_rmr.includes("Good") && !classe_rmr.includes("Very")))) {
-        seletor.selectedIndex = 3
+    let escrever_rmr = {
+        "Muito Pobre": 0,
+        "Very Poor": 0,
+        "Pobre": 1,
+        "Poor": 1,
+        "Razoável": 2,
+        "Fair": 2,
+        "Boa": 3,
+        "Good": 3,
+        "Muito Boa": 4,
+        "Very Good": 4,
     }
 
-    //Se incluir 'Muito' e incluir 'Boa'
-    if (((classe_rmr.includes("Boa") && classe_rmr.includes("Muito")) || (classe_rmr.includes("Good") && classe_rmr.includes("Very")))) {
-        seletor.selectedIndex = 4
-    }
+    // Escreve no seletor da janela principal
+    seletor.selectedIndex = escrever_rmr[classe_rmr]
 
     // Fechar a janela popup
     window.close()
-
 }
 
 function Pesos(valor) {
+
     const pesos = {
 
         "pesos_point_load": { ">10": 15, "4-10": 12, "2-4": 7, "1-2": 4, "0": 0, "null": 0 },
@@ -69,6 +62,8 @@ function Pesos(valor) {
             "irrelevante_0-20": -5
         }
     }
+    
+    //Calcula o RMR
     let rmr = (0
         + Number(pesos["pesos_point_load"][valor["point_load"]])
         + Number(pesos["pesos_ucs"][valor["ucs"]])
@@ -83,7 +78,6 @@ function Pesos(valor) {
         + Number(pesos["pesos_general"][valor["general"]])
         + Number(pesos["pesos_strike_dip"][valor["orientacao"]])
     )
-
     return rmr
 }
 
@@ -93,11 +87,11 @@ function Escrever_resultado(rmr) {
     //Mostra o valor do RMR com duas casas decimais no pop up
     rmr_num.innerText = rmr.toFixed(2)
 
-    //Obtém o idioma da janela através do titulo
-    const titulo = document.getElementById("titulo").innerText
+    //Obtém o idioma da janela principal
+    const idioma = Obter_idioma()
     const rmr_classe = document.getElementById("classe-rmr")
 
-    if (!titulo.includes("calculation")) {
+    if (idioma == "pt") {
         if (rmr <= 20) {
             rmr_classe.innerText = "Muito Pobre"
         } else if (rmr > 20 && rmr <= 40) {
@@ -132,26 +126,23 @@ function Calculo_pop_up() {
 
     //Obtém o valor do primeiro select  = point_load ou ucs
     let select_strenght = document.getElementById("select-strenght").value
-    let Strenght_value = { "point_load": "null", "ucs": "null" }
+    let Strenght_value = { "point-load": "null", "ucs": "null" }
     //Obtém o valor do segundo select
     Strenght_value[select_strenght] = window[select_strenght].value
 
     //Obtém o valor do primeiro select  = ratio, inflow ou general
     let select_gw = document.getElementById("select-gw").value
     let Ground_water_value = { "general": "null", "ratio": "null", "inflow": "null" }
-    //Obtém o valor do segundo select
+    //Obtém o valor do segundo select de grownd water
     Ground_water_value[select_gw] = window[select_gw].value
 
+    //Obtém os parâmetros de orientação
     const strike = document.getElementById("select-strike").value
-    let dip
-    if (strike != "irrelevante") {
-        dip = document.getElementById("dip-1").value
-    } else {
-        dip = document.getElementById("dip-2").value
-    }
+    const id_dip = (strike !== "irrelevante") ? "dip-1" : "dip-2"
+
 
     let valor = {
-        "point_load": Strenght_value["point_load"],
+        "point_load": Strenght_value["point-load"],
         "ucs": Strenght_value["ucs"],
         "rqd": document.getElementById("rqd").value,
         "spacing": document.getElementById("spacing").value,
@@ -163,7 +154,7 @@ function Calculo_pop_up() {
         "inflow": Ground_water_value["inflow"],
         "ratio": Ground_water_value["ratio"],
         "general": Ground_water_value["general"],
-        "orientacao": (strike + "_" + dip)
+        "orientacao": (strike + "_" + document.getElementById(id_dip).value)
     }
 
     let rmr = Pesos(valor)

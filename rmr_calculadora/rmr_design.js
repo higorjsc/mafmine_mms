@@ -1,54 +1,42 @@
-//Oculta um dos <selector>'s de strenght com base no input
-function Display_strenght() {
-    const strenght = document.getElementById("select-strenght")
-    const point_load = document.getElementById("poin-load")
-    const ucs = document.getElementById("ucs")
-
-    if (strenght.value == "point_load") {
-        point_load.style.display = "block"
-        ucs.style.display = "none"
-    } else {
-        point_load.style.display = "none"
-        ucs.style.display = "block"
-    }
+//MOSTRA elementos
+function Display_block(id) {
+    let elemento = document.getElementById(id)
+    elemento.style.display = "block"
+}
+//OCULTA elementos
+function Display_none(id) {
+    let elemento = document.getElementById(id)
+    elemento.style.display = "none"
 }
 
-//Oculta dois dos <selector>'s de grownd water com base no input
+//EVENTO de troca do select visível da rock strenght
+function Display_strenght() {
+    const strenght = document.getElementById("select-strenght").value
+    Display_none("point-load")
+    Display_none("ucs")
+    Display_block(strenght)
+}
+
+//EVENTO de troca do select visível de grownd water conditions
 function Display_grownd_water() {
     const gw = document.getElementById("select-gw").value
-    const inflow = document.getElementById("inflow")
-    const ratio = document.getElementById("ratio")
-    const general = document.getElementById("general")
-
-    if (gw == "inflow") {
-        inflow.style.display = "block"
-        ratio.style.display = "none"
-        general.style.display = "none"
-    } else if (gw == "ratio") {
-        inflow.style.display = "none"
-        ratio.style.display = "block"
-        general.style.display = "none"
-    } else if (gw == "general") {
-        inflow.style.display = "none"
-        ratio.style.display = "none"
-        general.style.display = "block"
-    }
+    Display_none("inflow")
+    Display_none("ratio")
+    Display_none("general")
+    Display_block(gw)
 }
-//Oculta um dos <selector>'s de dip com base no input do strike
+
+//EVENTO de troca do select visível do dip e strike
 function Display_dip() {
     const strike = document.getElementById("select-strike").value
-    const dip_1 = document.getElementById("dip-1")
-    const dip_2 = document.getElementById("dip-2")
-    if (strike != "irrelevante") {
-        dip_1.style.display = "block"
-        dip_2.style.display = "none"
-    } else {
-        dip_1.style.display = "none"
-        dip_2.style.display = "block"
-    }
+    Display_none("dip-1")
+    Display_none("dip-2")
+
+    const id_dip = (strike !== "irrelevante") ? "dip-1" : "dip-2"
+    Display_block(id_dip)
 }
 
-//Obtém o parâmetro incluso na URL para informar o idioma e objetivo do cálculo ao pop up
+//Obtém o parâmetro incluso na URL para saber se o calculo é para OB, HW ou FW
 function Inserir_titulo() {
     let url = (window.location.href).split("-")
     let idioma = "_" + Obter_idioma()
@@ -63,4 +51,3 @@ function Inserir_titulo() {
     let titulo = document.getElementById("titulo")
     titulo.innerText += texto[(url[2] + idioma)]
 }
-

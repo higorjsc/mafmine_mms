@@ -1,20 +1,18 @@
 
 function Retornar_valor() {
 
-    let url = window.location.href
-    let id = ""
-
-    if (url.includes("calculadora-gsi-ob")) {
-        id = "gsi-ob"
-    } else if (url.includes("calculadora-gsi-hw")) {
-        id = "gsi-hw"
-    } else if (url.includes("calculadora-gsi-fw")) {
-        id = "gsi-fw"
+    //Obtém ob, hw, ou fw através da url. url[2] = ob, hw ou fw
+    let url = (window.location.href).split("-")
+    let id = {
+        "ob": "gsi-ob",
+        "hw": "gsi-hw",
+        "fw": "gsi-fw",
     }
 
     const janela_principal = window.opener  // Acessa a janela principal através de window.opener
 
-    let valor = janela_principal.document.getElementById(id)
+    let valor = janela_principal.document.getElementById(id[url[2]])
+    
     let texto = document.querySelector("#resultado").innerText
     valor.value = texto
 
