@@ -35,11 +35,10 @@
 }
 
 /* Texto dentro dos botões (RMR) (GSI) (Q) */
-
 .span-checkbox {
   position: relative;
   font: 10pt;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 /* Label branco que contém o texto dos botões (RMR) (GSI) (Q) */
