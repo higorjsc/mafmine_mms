@@ -35,18 +35,13 @@ body {
 }
 
 main {
-  width: 600px;
+  min-width: 600px;
   height: 620px;
-
-  /* display: grid; */
-  position: absolute;
-
-  /* grid-template-columns: 3fr 2fr; */
-  margin: auto;
+  position: relative;
+  margin: 2%;
   border: 1pt solid black;
   border-radius: 30px;
   overflow: hidden;
-
 }
 
 h1 {
@@ -81,16 +76,14 @@ section {
 
 
 #section-1 {
-  /* grid-column: 1/2; */
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: minmax(257.13px, 1.5fr) minmax(171.44px, 1fr) minmax(171.44px, 1fr);
+  max-width: 600px;
   grid-template-rows: 5fr 5fr 90fr;
   align-items: center;
-  position: relative;
+  position: absolute;
   justify-content: center;
   justify-items: center;
-
-  /* border-right: 1pt solid black; */
 }
 
 /* ----------------------------------SLIDERS------------------------------------------------ */
