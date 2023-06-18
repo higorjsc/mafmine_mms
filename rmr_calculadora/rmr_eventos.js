@@ -1,3 +1,12 @@
+function Obter_idioma() {
+    let url = window.location.href
+    if (url.includes("pt")) {
+        return "pt"
+    } else {
+        return "en"
+    }
+}
+
 function Eventos_pop_rmr() {
 
     let select = document.querySelectorAll("select")

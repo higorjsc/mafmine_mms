@@ -90,17 +90,6 @@ function Calculo_gsi_input() {
 
     if (select_jc == "inserir_jc") {
 
-        // do{
-        //     jc = Number(input_jc.value)
-        //     if(jc>30){
-        //         window.alert('O valor de JC deve ser <= 30!')
-        //         input_jc.value = '0.0'
-        //         flag = false
-        //     }else{
-        //         flag = true
-        //     }
-        // }while(flag = false) 
-
         jc = input_jc.value
         input_rqd = input_rqd == "" ? 0 : input_rqd
         gsi = (1.5 * jc) + (input_rqd / 2)

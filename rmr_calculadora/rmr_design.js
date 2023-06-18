@@ -12,6 +12,7 @@ function Display_strenght() {
         ucs.style.display = "block"
     }
 }
+
 //Oculta dois dos <selector>'s de grownd water com base no input
 function Display_grownd_water() {
     const gw = document.getElementById("select-gw").value
@@ -46,19 +47,20 @@ function Display_dip() {
         dip_2.style.display = "block"
     }
 }
+
 //Obtém o parâmetro incluso na URL para informar o idioma e objetivo do cálculo ao pop up
 function Inserir_titulo() {
-    let url = window.location.href
-
-    if (url.includes("calculadora-rmr-ob")) {
-        url = url.includes("pt") ? "Calculo RMR: Corpo de Minério" : "RMR calculation: Orebody"
-    } else if (url.includes("calculadora-rmr-hw")) {
-        url = url.includes("pt") ? "Calculo RMR: Hanging Wall" : "RMR calculation: Hanging Wall"
-    } else if (url.includes("calculadora-rmr-fw")) {
-        url = url.includes("pt") ? "Calculo RMR: Footwall" : "RMR calculation: Footwall"
+    let url = (window.location.href).split("-")
+    let idioma = "_" + Obter_idioma()
+    let texto = {
+        "ob_pt": "Calculo RMR: Corpo de Minério",
+        "ob_en": "RMR calculation: Orebody",
+        "hw_pt": "Calculo RMR: Hanging Wall",
+        "hw_en": "RMR calculation: Hanging Wall",
+        "fw_pt": "Calculo RMR: Footwall",
+        "fw_en": "RMR calculation: Footwall",
     }
-
     let titulo = document.getElementById("titulo")
-    titulo.innerText += url
+    titulo.innerText += texto[(url[2] + idioma)]
 }
 
