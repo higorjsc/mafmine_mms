@@ -33,3 +33,11 @@ config.local.js
 *.swp
 *.swo
 .DS_Store
+
+#eslint stylelint
+.eslintrc.js
+.stylelintrc.json
+.eslintignore
+
+#self
+.gitignore
