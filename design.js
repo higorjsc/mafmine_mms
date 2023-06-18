@@ -307,8 +307,8 @@ function Balao_entra(metodo, entry) {
         "botao-calculadora-rmr": { x: 10, y: -70 },
         "botao-calculadora-gsi": { x: 10, y: -70 },
         "botao": { x: -110, y: -100 },
-        "botao-pesos": { x: -100, y: -20 },
-        "botao-imprimir": { x: -100, y: -50 },
+        "botao-pesos": { x: -150, y: -50 },
+        "botao-imprimir": { x: -150, y: -50 },
         "switch-language": { x: 30, y: -40 },
         "frature-strenght": { x: 100, y: -200 }
 
