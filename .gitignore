@@ -41,3 +41,4 @@ config.local.js
 
 #self
 .gitignore
+mms.code-workspace
