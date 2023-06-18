@@ -23,6 +23,7 @@
   grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
   height: auto;
   position: relative;
+  align-items: center;
 }
 
 .head #div-header {
@@ -43,6 +44,15 @@
   width: 100%;
 }
 
+#img-simbolo-mineracao-direita {
+  position: absolute;
+  right: 1%;
+}
+
+#img-simbolo-mineracao-esquerda {
+  position: absolute;
+  left: 1%;
+}
 
 input {
   all: unset;
@@ -110,8 +120,8 @@ section {
   left: 0%;
 }
 
-
-h2 /*Titulos principais de cada seção*/ {
+/* Titulos principais de cada seção */ 
+h2 {
   border-bottom: var(--borda-simples);
   text-align: center;
   margin-top: 5px;
@@ -160,7 +170,6 @@ p {
   border-top-left-radius: 20px;
   background-color: white;
   text-align: center;
-  color: var(--cor-1);
   font-weight: bold;
 }
 
@@ -213,7 +222,8 @@ a {
   height: 100%;
 }
 
-h3 /*Subtitulos da seção 1*/ {
+/* Subtitulos da seção 1 */
+h3 {
   font: 11pt;
   font-weight: bold;
   margin-bottom: 12px;
@@ -242,7 +252,8 @@ select:hover {
   font-weight: bold;
 }
 
-.resultado-rss /* Três spans que contém o resultado do calculo RSS*/ {
+/* Três spans que contém o resultado do calculo RSS */
+.resultado-rss {
   position: absolute;
   height: 21px; 
   right: 1%;
@@ -254,15 +265,18 @@ select:hover {
   color: var(--cor-1);
 }
 
-.rmr /*Display vinculado aos botões-checkbox de buttons.css pela função Checkbox em design.js */ {
+/* Display vinculado aos botões-checkbox de buttons.css pela função Checkbox em design.js */
+.rmr {
   display: none;
 }
 
-.gsi  /*Display vinculado aos botões-checkbox de buttons.css pela função Checkbox em design.js */ {
+/* Display vinculado aos botões-checkbox de buttons.css pela função Checkbox em design.js */ 
+.gsi {
   display: none;
 }
 
-.q  /*Display vinculado aos botões-checkbox de buttons.css pela função Checkbox em design.js */ {
+/* Display vinculado aos botões-checkbox de buttons.css pela função Checkbox em design.js */
+.q {
   display: none;
 }
 
