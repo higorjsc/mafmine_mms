@@ -21,7 +21,9 @@
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-  transform: translate(175%,10%) scale(0.6);
+  right: 5%;
+  bottom: 11%;
+  transform: scale(0.6);
   box-shadow: var(--shadow-apretada);
 }
 
