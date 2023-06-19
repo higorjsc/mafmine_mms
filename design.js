@@ -223,7 +223,7 @@ function Balao_entra(metodo, entry) {
             "botao-imprimir": "Print report",
             "switch-language": "Change to portuguese"
         }
-        messages_shb = messages = {
+        messages_shb = {
             "forma-geral": "\n- Equi-dimensional: all dimensions are onthe same\n order of magnitude\n\n- Platy-tabular: two dimensions are many times the\nthickness, which does not usually exceed 35m \n\n- Irregular: dimensions vary over short distances\n\n",
             "mergulho": "\n- Flat: inclination bellow 15º\n\n- Low: inclination between 15º-30º\n\n- Intermediate: inclination between 35º-45º\n\n- Rarely Steep: inclination between 45º-60º\n\n- Steep: more than 60º of inclination\n\n",
             "espessura": "\n-Very narrow: bellow 3m thick\n\n-Narrow: between 3m and 10m thick\n\n- Intermediate: between 10m an 30m thick\n\n- Thick: between 30m and 100m thick\n\n- Very Thick: more than 100m thick\n\n",
