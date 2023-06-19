@@ -1,19 +1,6 @@
 function Open_pop_up_help() {
-
-    const titulo = document.getElementById("titulo-section_1").innerText
-
-    let idioma = titulo.includes("CHARACTERISTICS") ? "en" : "pt"
-
-    const parametro = idioma
-    let encoded_id = ""
-    if (idioma == "en") {
-        encoded_id = "UBC\\AHP\\pop_up_help_en.html?" + encodeURIComponent(parametro)
-    } else {
-        encoded_id = "UBC\\AHP\\pop_up_help_pt.html?" + encodeURIComponent(parametro)
-    }
-
-    window.open(encoded_id, "_blank", "width=650,height=650")
-
+    let pop_up = "help_ahp_" + Obter_idioma() + ".html?"
+    window.open(pop_up, "_blank", "width=650,height=650")
 }
 
 function Retornar_valor() {
