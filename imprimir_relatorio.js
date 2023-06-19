@@ -13,7 +13,7 @@ function Imprimir_relatorio(metodo) {
     //Define os textos fixos com base no idioma
     let ob = idioma == "pt" ? "Corpo de minério: " : "Orebody: "
     let geo = idioma == "pt" ? "Geometria: " : "Geometry: "
-    let hw = "Hanging wall"
+    let hw = "Hanging wall: "
     let fw = "Footwall: "
     let titulo_user_input = idioma == "pt" ? "DADOS INSERIDOS: " : "INPUT DATA: "
     let titulo_resultados = idioma == "pt" ? "PREFERENCIAS: " : "RANKING: "

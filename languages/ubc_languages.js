@@ -47,7 +47,7 @@ function English() {
     Escrever("mergulho", "Steep", 2)
 
     //ESPESSURA
-    Escrever("span-espessura", "Ore thickness")
+    Escrever("span-espessura", "Ore thickness:")
     Escrever("espessura", "Very narrow", 0)
     Escrever("espessura", "Narrow", 1)
     Escrever("espessura", "Intermediate", 2)
