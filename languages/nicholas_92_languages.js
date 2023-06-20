@@ -157,7 +157,7 @@ function Portuguese() {
     Escrever("span-resultado-rss-ob", "Corpo de minério:")
 
     //ESPAÇAMENTO FRATURAS
-    Escrever("subtitulo-fracture-spacing", "Fracture Spacing:")
+    Escrever("subtitulo-fracture-spacing", "Espaçamento das fraturas:")
     Escrever("span-fracture-spacing-ob", "Corpo de minério:")
     const menu_fracture_spacing = document.querySelectorAll(".menu-fracture-spacing")
     menu_fracture_spacing.forEach(element => {
@@ -168,7 +168,7 @@ function Portuguese() {
     })
 
     //QUALIDADE FRATURAS
-    Escrever("subtitulo-fracture-strenght", "Fracture Strenght:")
+    Escrever("subtitulo-fracture-strenght", "Características das inter-fraturas:")
     Escrever("span-fracture-strenght-ob", "Corpo de minério:")
     const menu_fracture_strenght = document.querySelectorAll(".menu-fracture-strenght")
 
