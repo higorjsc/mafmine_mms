@@ -5,8 +5,8 @@ function Imprimir_relatorio(metodo) {
     //Define os possíveis titulos
     let titulo = {
         "nicholas_81": "Nicholas (1981) Mining Method Selection Procedure",
-        "nicholas_92": "Nicholas (1981) Mining Method Selection Procedure",
-        "ubc": "UBC (1996) Mining Method Selection Procedure",
+        "nicholas_92": "Nicholas (1992) Mining Method Selection Procedure",
+        "ubc": "UBC (1995) Mining Method Selection Procedure",
         "shb": "Shahriar and Bakhtavar (2007) Mining Method Selection Procedure"
     }
 
