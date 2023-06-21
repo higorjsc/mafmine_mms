@@ -21,14 +21,17 @@
   max-width: 1570px;
   display: grid;
   grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
-  height: auto;
-  position: relative;
   align-items: center;
+  position: relative;
+  height: 58.31px;
 }
 
 .head #div-header {
   grid-column: 1/5;
+  display: grid;
+  position: absolute;
   width: 100%;
+  max-width: 1570px;
   height: 100%;
   background-color: var(--cor-1);
   border-radius: 20px;
@@ -37,22 +40,27 @@
 }
 
 .head #div-header h1 {
-  display: block;
   font-size: 14pt;
   color: white;
   text-align: center;
   width: 100%;
 }
 
-#img-simbolo-mineracao-direita {
-  position: absolute;
-  right: 1%;
-}
-
 #img-simbolo-mineracao-esquerda {
   position: absolute;
+  grid-column: 1/2;
   left: 1%;
+  z-index: 2;
+
 }
+
+#img-simbolo-mineracao-direita {
+  position: absolute;
+  grid-column: 4/5;
+  right: 1%;
+  z-index: 2;
+}
+
 
 input {
   all: unset;
