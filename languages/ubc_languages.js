@@ -17,7 +17,7 @@ function English() {
     let paragrafo_explicacao = "The UBC mining method selection is a modified version of the Nicholas (1981) approach developed by the University of British Columbia in Vancouver, B.C., Canada.<br><br>" +
         "<strong>The modifications include:<br></strong>" +
         "&ensp;&ensp;- The weights of each selection criteria were adjusted;<br>" +
-        "&ensp;&ensp;- A value of '-10' is assigned to significantly discount a mining method without completely eliminating it;<br>" +
+        "&ensp;&ensp;- A value of &quot;-10&quot; is assigned to significantly discount a mining method without completely eliminating it;<br>" +
         "&ensp;&ensp;- 'Depth' and Bieniawski (1989) RMR were introduced as additional new criteria in the selection process;<br>" +
         "&ensp;&ensp;- 'Fracture Spacing' and 'Fracture Strenght' were removed from the selection criteria;<br>" +
         "&ensp;&ensp;- 'Very Narrow' was included as an option in the 'Ore thickness' selection criteria;<br>" +
