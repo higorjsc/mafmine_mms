@@ -18,7 +18,7 @@ function English() {
         "The value assigned to each characteristic of each mining method are than summed together, with the higher rankings being the more favourable or likely mining methods.<br><br>" +
         "<strong>Notes:</strong><br>" +
         "&ensp;&ensp; - The Nicholas (1981) approach has the disadvantage of assigning equal importance to all criteria.<br>" +
-        "&ensp;&ensp; - This method is criticized for having a significant gap between the ranking values of 'unlikely' (0) and 'eliminated' (-49).<br>"
+        "&ensp;&ensp; - This method is criticized for having a significant gap between the ranking values of  &ldquo;unlikely &ldquo; (0) and  &ldquo;eliminated &ldquo; (-49).<br>"
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
 
@@ -106,7 +106,7 @@ function Portuguese() {
 
         "<strong>Obersvações:</strong><br>" +
         "&ensp;&ensp; - O método tem a desvantagem de que atribui iguais importancias (pesos) para todos os critérios de seleção.<br>" +
-        "&ensp;&ensp; - O método é criticado pelo grande espaço entre os valores de ranque 'unlikely' (0) e 'eliminated' (-49).<br>"
+        "&ensp;&ensp; - O método é criticado pelo grande espaço entre os valores de ranque  &ldquo;unlikely &ldquo; (0) e  &ldquo;eliminated &ldquo; (-49).<br>"
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
     //titulos

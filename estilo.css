@@ -17,8 +17,9 @@
 
 
 .head {
+  min-width: 100%;
   width: 100%;
-  max-width: 1570px;
+  max-width: 100%;
   display: grid;
   grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
   align-items: center;
@@ -30,9 +31,9 @@
   grid-column: 1/5;
   display: grid;
   position: absolute;
+  min-width: 100%;
   width: 100%;
-  max-width: 1570px;
-  height: 100%;
+  max-width: 100%;
   background-color: var(--cor-1);
   border-radius: 20px;
   margin: 0;
@@ -102,8 +103,9 @@ body {
 /* <main> */
 .wrapper {
   display: grid;
+  min-width: 100%;
   width: 100%;
-  max-width: 1570px;
+  max-width: 100%;
   grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
   height: auto;
   position: relative;
@@ -469,8 +471,9 @@ select:hover {
 /* -----------------------FOOTER----------------------------- */
 .rodape {
   display: grid;
+  min-width: 100%;
   width: 100%;
-  max-width: 1570px;
+  max-width: 100%;
   grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
   height: auto;
   position: relative;
@@ -483,7 +486,9 @@ select:hover {
   grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr);
   position: absolute;
   grid-column: 1/5;
+  min-width: 100%;
   width: 100%;
+  max-width: 100%;
   height: 100px;
   border-radius: 20px;
   align-items: center;
