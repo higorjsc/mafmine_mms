@@ -55,6 +55,7 @@ function Desenhar_retas(X, Y) {
 function Mostrar_inputs() {
 
     const select_metodo_calculo = document.getElementById("select-metodo-calculo").value
+    const select_jc = document.getElementById("select-jc").value
 
     const img_container = document.getElementById("img-container")
     const input_container = document.getElementById("input-container")
@@ -69,7 +70,7 @@ function Mostrar_inputs() {
         img_container.style.display = "none"
         input_container.style.display = "block"
 
-        if (select_jc.value == "inserir_jc") {
+        if (select_jc == "inserir_jc") {
             input_jc.disabled = false
             input_jc.style.color = "black"
             div_calculo_jc.style.display = "none"

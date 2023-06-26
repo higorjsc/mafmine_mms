@@ -14,7 +14,8 @@ function Switch_language(metodo) {
         switch_texto.style.transform = "translate(21px, -6px)"
         Portuguese()
     }
-    // é chamada para alterar o valor do resultado do RSS
+
+    // Calculo é chamada para alterar o valor do resultado do RSS
     Calculo(metodo)
 }
 
@@ -32,21 +33,13 @@ function Open_pop_up_ahp() {
 
 // ABRE POP UP DE CALCULO DO GSI
 function Open_pop_up_gsi(id) {
-    const endereco =
-        "gsi_calculadora\\pop_up_gsi_" +
-        Obter_idioma() +
-        ".html?" +
-        encodeURIComponent(id)
+    const endereco = "gsi_calculadora\\pop_up_gsi_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
     window.open(endereco, "_blank", "width=770,height=730")
 }
 
 // ABRE POP UP DE  CALCULO RMR
 function Open_pop_up_rmr(id) {
-    const endereco =
-        "rmr_calculadora\\pop_up_rmr_" +
-        Obter_idioma() +
-        ".html?" +
-        encodeURIComponent(id)
+    const endereco = "rmr_calculadora\\pop_up_rmr_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
     window.open(endereco, "_blank", "width=600,height=650")
 }
 
@@ -56,275 +49,114 @@ function Open_pop_up_pesos(metodo) {
     window.open("tabelas\\" + tabela_nome, "_blank")
 }
 
+// MOSTRA O BOTÃO PARA TESTE DO AHP NO UBC E SHB
+function Mostra_ahp(metodo) {
+
+    const div_select_pesos = document.querySelector("#div-select-pesos-ubc")
+    document.addEventListener("keydown", (event) => {
+        if (event.ctrlKey && event.key === "x") {
+            div_select_pesos.style.display = "grid"
+            botao_ahp.style.display = "block"
+        } else if (event.ctrlKey && event.key === "b") {
+            div_select_pesos.style.display = "none"
+            botao_ahp.style.display = "none"
+
+        }
+    })
+
+}
 
 function Eventos(metodo) {
+
     //POSICIONA O BALÃO DE AJUDA NA POSIÇÃO DO CURSOR
-    var balao = document.getElementById("balao")
+    const balao = document.getElementById("balao")
     document.addEventListener("mousemove", function (event) {
-        //OBS: o off-set do balão é configurado na função Balao_entra() em design.js
         balao.style.top = event.clientY + "px"
         balao.style.left = event.clientX + "px"
     })
 
     //BOTÃO SWITCH LANGUAGE
     const switch_language = document.querySelector("#checkbox-switch")
-    //false → A página inicia em português
-    switch_language.checked = false
-    Switch_language(metodo)
-    switch_language.addEventListener("change", () => {
-        Switch_language(metodo)
-    })
+    switch_language.onchange = () => Switch_language(metodo)
+
     //label do switch
     const switch_label = document.querySelector(".switch-label") //mouseover no label, não na checkbox invisível
-    switch_label.addEventListener("mouseover", () => {
-        Balao_entra(metodo, "switch-language")
-    })
-    switch_label.addEventListener("mouseleave", Balao_sai)
+    switch_label.onmouseover = () => Balao_entra("switch-language")
+    switch_label.onmouseout = () => Balao_sai()
 
     //BOTAO RMR_Q_GSI
-    const checkbox = document.querySelectorAll(".checkbox-rmr-q-gsi")
     if (metodo == "ubc" || metodo == "shb") {
+        const checkbox = document.querySelectorAll(".checkbox-rmr-q-gsi")
         checkbox.forEach((element) => {
-            element.addEventListener("change", () => {
-                Checkbox(element.id, metodo)
-            })
+            element.onchange = () => Checkbox(element.id, metodo)
         })
-        const botao_rmr_q_gsi = document.getElementById("checkbox-rmr")
-        //A página inicia com a opção colocada no ID acima
-        botao_rmr_q_gsi.checked = true
-        // Recebe a checkbox marcada no loading
-        Checkbox(botao_rmr_q_gsi.id)
     }
 
     //BOTÃO CALCULADORA RMR
-    const botao_calculadora_rmr = document.querySelectorAll(
-        ".botao-calculadora-rmr"
-    )
+    const botao_calculadora_rmr = document.querySelectorAll(".botao-calculadora-rmr")
     botao_calculadora_rmr.forEach((elemento) => {
-        elemento.addEventListener("mouseover", () => {
-            Balao_entra(metodo, "botao-calculadora-rmr")
-        })
-        elemento.addEventListener("mouseleave", Balao_sai)
-        elemento.addEventListener("click", () => {
-            Open_pop_up_rmr(elemento.id)
-        })
+        elemento.onclick = () => Open_pop_up_rmr(elemento.id)
     })
 
     //BOTÃO CALCULADORA GSI
-    const botao_calculadora_gsi = document.querySelectorAll(
-        ".botao-calculadora-gsi"
-    )
+    const botao_calculadora_gsi = document.querySelectorAll(".botao-calculadora-gsi")
     botao_calculadora_gsi.forEach((elemento) => {
-        elemento.addEventListener("mouseover", () => {
-            Balao_entra(metodo, "botao-calculadora-gsi")
-        })
-        elemento.addEventListener("mouseleave", Balao_sai)
-        elemento.addEventListener("click", () => {
-            Open_pop_up_gsi(elemento.id)
-        })
+        elemento.onclick = () => Open_pop_up_gsi(elemento.id)
     })
 
-    //INPUT DOS VALORES DO GSI
-    const input_gsi = document.querySelectorAll(".input-gsi")
-    input_gsi.forEach((elemento) => {
-        elemento.addEventListener("blur", () => {
-            Formatar_entry(elemento.id)
-        })
-        elemento.addEventListener("mouseover", () => {
-            Balao_entra(metodo, "gsi")
-        })
-        elemento.addEventListener("mouseleave", Balao_sai)
-        elemento.addEventListener("input", () => {
-            Calculo(metodo)
-        })
-        elemento.addEventListener("change", () => {
-            Calculo(metodo)
-        })
-    })
-
-    //INPUT DOS VALORES DO Q-SYSTEM
-    const input_q = document.querySelectorAll(".input-q")
-    input_q.forEach((elemento) => {
-        elemento.addEventListener("blur", () => {
-            Formatar_entry(elemento.id)
-        })
-        elemento.addEventListener("mouseover", () => {
-            Balao_entra(metodo, "q")
-        })
-        elemento.addEventListener("mouseleave", Balao_sai)
-        elemento.addEventListener("input", () => {
-            Calculo(metodo)
-        })
-    })
-
-    //INPUT DOS FATORES DE PESOS E AHP
-    //Select do Nicholas 92
+    //INPUT DOS FATORES DE PESOS E AHP NO MÉTODO DE NICHOLAS 1992
     if (metodo == "nicholas_92") {
         const menu_pesos = document.querySelector("#menu-pesos")
-        menu_pesos.onchange = function () {
-            Calculo(metodo)
-            Mostrar_input_pesos()
-        }
-
-        //caixas de input
-        const input_pesos = document.querySelectorAll(".input-pesos")
-        input_pesos.forEach((elemento) => {
-            elemento.addEventListener("blur", () => {
-                Formatar_entry(elemento.id)
-            })
-            elemento.addEventListener("input", () => {
-                Calculo(metodo)
-            })
-        })
-        //botao ahp
+        menu_pesos.onchange = () => Mostrar_input_pesos
         const botao_ahp = document.querySelector("#botao-ahp")
         botao_ahp.onclick = Open_pop_up_ahp
     }
 
-    if (metodo == "ubc" || metodo == "shb") {
-        //botao ahp
-        const botao_ahp = document.querySelector("#botao-ahp-ubc")
-        botao_ahp.onclick = Open_pop_up_ahp
-        //Container
-        const div_select_pesos = document.querySelector("#div-select-pesos-ubc")
-        document.addEventListener("keydown", (event) => {
-            if (event.ctrlKey && event.key === "x") {
-                div_select_pesos.style.display = "grid"
-                botao_ahp.style.display = "block"
-            } else if (event.ctrlKey && event.key === "b") {
-                div_select_pesos.style.display = "none"
-                botao_ahp.style.display = "none"
-
-            }
-        })
-        //caixas de input
-        const input_pesos = document.querySelectorAll(".input-pesos-ubc")
-        input_pesos.forEach((elemento) => {
-            elemento.addEventListener("blur", () => {
-                Formatar_entry(elemento.id)
-            })
-            elemento.addEventListener("input", () => {
-                Calculo(metodo)
-            })
-        })
-    }
-
-    //MENU SUSPENSO DO RMR
-    if (metodo == "ubc" || metodo == "shb") {
-        const menu_suspenso_rmr = document.querySelectorAll(".menu-rmr")
-        menu_suspenso_rmr.forEach((elemento) => {
-            elemento.addEventListener("change", () => {
-                Calculo(metodo)
-            })
-            elemento.addEventListener("mouseover", () => {
-                Balao_entra(metodo, "rmr")
-            })
-            elemento.addEventListener("mouseleave", Balao_sai)
-        })
-    }
-
     //BOTÃO MOSTRA TABELA COM OS PESOS
     const botao_pesos = document.querySelector("#botao-pesos")
-    botao_pesos.addEventListener("click", () => {
-        Open_pop_up_pesos(metodo)
-    })
-    botao_pesos.addEventListener("mouseover", () => {
-        Balao_entra(metodo, "botao-pesos")
-    })
-    botao_pesos.addEventListener("mouseleave", Balao_sai)
+    botao_pesos.onclick = () => Open_pop_up_pesos(metodo)
 
-    // //BOTÃO IMPRIMIR RELATÓRIO
+    //BOTÃO IMPRIMIR RELATÓRIO
     const botao_imprimir = document.querySelector("#botao-imprimir")
-    botao_imprimir.addEventListener("click", () => Imprimir_relatorio(metodo))
-    botao_imprimir.addEventListener("mouseover", () => {
-        Balao_entra(metodo, "botao-imprimir")
-    })
-    botao_imprimir.addEventListener("mouseleave", Balao_sai)
+    botao_imprimir.onclick = () => Imprimir_relatorio(metodo)
 
-    //MENU SUSPENSO DA GEOMETRIA DO DEPÓSITO
-    const menu_suspenso_geometria = document.querySelectorAll(".menu-geometria")
-    menu_suspenso_geometria[0].addEventListener("mouseover", () => {
-        Balao_entra(metodo, "forma-geral")
+    // EVENTOS BUTTONS
+    const button = document.querySelectorAll("button")
+    button.forEach((element) => {
+        element.onmouseover = () => Baloes(element.id)
+        element.onmouseout = () => Balao_sai()
     })
-    menu_suspenso_geometria[1].addEventListener("mouseover", () => {
-        Balao_entra(metodo, "mergulho")
-    })
-    menu_suspenso_geometria[2].addEventListener("mouseover", () => {
-        Balao_entra(metodo, "espessura")
-    })
-    menu_suspenso_geometria[3].addEventListener("mouseover", () => {
-        Balao_entra(metodo, "distribuicao")
-    })
-    if (metodo == "ubc" || metodo == "shb") {
-        menu_suspenso_geometria[4].addEventListener("mouseover", () => {
-            Balao_entra(metodo, "profundidade")
-        })
-    }
-    menu_suspenso_geometria.forEach((elemento) => {
-        elemento.addEventListener("change", () => {
+
+    // EVENTOS SELECTS
+    const select = document.querySelectorAll("select")
+    select.forEach((element) => {
+        element.onchange = () => {
             Calculo(metodo)
-        })
-        elemento.addEventListener("mouseleave", Balao_sai)
+            element.blur()
+        }
+        element.onmouseover = () => Baloes(element.id, metodo)
+        element.onmouseout = () => Balao_sai()
     })
 
-    //MENU SUSPENSO DO VALOR ECONOMICO
-    const valor_minerio = document.querySelector("#valor-minerio")
-    if (valor_minerio) {
-        valor_minerio.addEventListener("change", () => {
-            Calculo(metodo)
-        })
-        valor_minerio.addEventListener("mouseover", () => {
-            Balao_entra(metodo, "valor-minerio")
-        })
-        valor_minerio.addEventListener("mouseleave", Balao_sai)
-    }
+    // EVENTOS INPUTS
+    const input = document.querySelectorAll("input")
+    input.forEach((element, index) => {
+        element.oninput = () => Calculo(metodo)
+        element.onblur = () => Formatar_entry(element.id)
+        element.onmouseover = () => Baloes(element.id, metodo)
+        element.onmouseout = () => Balao_sai()
+        element.onkeydown = (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault() // Impede o comportamento padrão de enviar o formulário
 
-    //MENU SUSPENSO FRACTURE SPACING
-    if (metodo == "nicholas_81" || metodo == "nicholas_92") {
-
-        const menu_suspenso_fracture_spacing = document.querySelectorAll(".menu-fracture-spacing")
-        menu_suspenso_fracture_spacing.forEach((elemento) => {
-            elemento.addEventListener("change", () => {
-                Calculo(metodo)
-            })
-            elemento.addEventListener("mouseover", () => {
-                Balao_entra(metodo, "fracture-spacing")
-            })
-            elemento.addEventListener("mouseleave", Balao_sai)
-        })
-
-        //MENU SUSPENSO FRACTURE STRENGHT
-        const menu_suspenso_fracture_strenght = document.querySelectorAll(".menu-fracture-strenght")
-        menu_suspenso_fracture_strenght.forEach((elemento) => {
-            elemento.addEventListener("change", () => {
-                Calculo(metodo)
-            })
-            elemento.addEventListener("mouseover", () => {
-                Balao_entra(metodo, "frature-strenght")
-            })
-            elemento.addEventListener("mouseleave", Balao_sai)
-        })
-    }
-
-    //INPUT DENSIDADE PROFUNDIDADE UCS
-    const inputs_rss = document.querySelectorAll(".input-rss")
-    inputs_rss.forEach((elemento) => {
-        elemento.addEventListener("blur", () => {
-            Formatar_entry(elemento.id)
-        })
-        elemento.addEventListener("input", () => {
-            Calculo(metodo)
-        })
+                // Move o foco para o próximo input
+                const nextIndex = (index + 1) % input.length
+                input[nextIndex].focus()
+            }
+        }
     })
 
-    //SPAN COM OS RESULTADOS DO RSS
-    const resultado_rss = document.querySelectorAll(".resultado-rss")
-    resultado_rss.forEach((elemento) => {
-        elemento.addEventListener("mouseover", () => {
-            Balao_entra(metodo, "rss")
-        })
-        elemento.addEventListener("mouseleave", Balao_sai)
-    })
-
+    // Mostra_ahp(metodo)
+    Switch_language(metodo)
     Calculo(metodo)
 }

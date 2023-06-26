@@ -173,160 +173,24 @@ function Formatar_entry(entry) {
     }
 }
 
-function Balao_entra(metodo, entry) {
-    let idioma = Obter_idioma()
-    let messages_ubc = {}
-    let messages_nicholas_81 = {}
-    let messages_nicholas_92 = {}
-    let messages_shb = {}
-    //Verifica se o titulo da seção 1 está em ingles
-    if (idioma == "en") {
-        messages_ubc = {
-            "forma-geral": "\n- Equi-dimensional: all dimensions are onthe same\n order of magnitude\n\n- Platy-tabular: two dimensions are many times the\nthickness, which does not usually exceed 35m \n\n- Irregular: dimensions vary over short distances\n\n",
-            "mergulho": "\n- Flat: inclination bellow 20º\n\n- Intermediate: inclination between 20º-50º\n\n- Steep: more than 55º of inclination\n\n",
-            "espessura": "\n-Very narrow: bellow 3m thick\n\n-Narrow: between 3m and 10m thick\n\n- Intermediate: between 10m an 30m thick\n\n- Thick: between 30m and 100m thick\n\n- Very Thick: more than 100m thick\n\n",
-            "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
-            "profundidade": "\n- Shallow: between 0 m and 100 m\n\n- Intermediate: between 100 m and 600 m\n\n- Deep: more than 600 m\n\n",
-            "rss": "\nUCS (Pa)\n_________________________\n\nDensity(N/m³) x Depth(m)\n\n",
-            "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
-            "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
-            "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
-            "botao-calculadora-rmr": "Calculate RMR",
-            "botao-calculadora-gsi": "Calculate GSI",
-            "botao-pesos": "Check weights",
-            "botao-imprimir": "Print report",
-            "switch-language": "Change to portuguese"
-        }
-        messages_nicholas_81 = {
-            "forma-geral": "\n- Equi-dimensional: all dimensions are onthe same\n order of magnitude\n\n- Platy-tabular: two dimensions are many times the\nthickness, which does not usually exceed 35m \n\n- Irregular: dimensions vary over short distances\n\n",
-            "mergulho": "\n- Flat: inclination bellow 20º\n\n- Intermediate: inclination between 20º-50º\n\n- Steep: more than 55º of inclination\n\n",
-            "espessura": "\n-Very narrow: bellow 3m thick\n\n-Narrow: between 3m and 10m thick\n\n- Intermediate: between 10m an 30m thick\n\n- Thick: between 30m and 100m thick\n\n- Very Thick: more than 100m thick\n\n",
-            "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
-            "profundidade": "\n- Shallow: between 0 m and 100 m\n\n- Intermediate: between 100 m and 600 m\n\n- Deep: more than 600 m\n\n",
-            "rss": "\nUCS (Pa)\n_________________________\n\nDensity(N/m³) x Depth(m)\n\n",
-            "fracture-spacing": "\n-Very close - more than 16 fractures per meter \n\n- Close: 10 to 16 fracture per meter\n\n-Wide: 3 to 10 fracture per meter\n\n- Very wide: 3 fracture per meter or less\n\n",
-            "frature-strenght": "\n- Weak: clean joint with a smooth surface\nor fill with material whose strenght is less\n than rock RSS\n\n- Moderate: clean joint with a rough surface\n\n- Strong: joint is filled with a material that is\n equal to or stronger than rock RSS\n\n",
-            "botao-pesos": "Check weights",
-            "botao-imprimir": "Print report",
-            "switch-language": "Change to portuguese"
-        }
-        messages_nicholas_92 = {
-            "forma-geral": "\n- Equi-dimensional: all dimensions are onthe same\n order of magnitude\n\n- Platy-tabular: two dimensions are many times the\nthickness, which does not usually exceed 35m \n\n- Irregular: dimensions vary over short distances\n\n",
-            "mergulho": "\n- Flat: inclination bellow 20º\n\n- Intermediate: inclination between 20º-50º\n\n- Steep: more than 55º of inclination\n\n",
-            "espessura": "\n-Very narrow: bellow 3m thick\n\n-Narrow: between 3m and 10m thick\n\n- Intermediate: between 10m an 30m thick\n\n- Thick: between 30m and 100m thick\n\n- Very Thick: more than 100m thick\n\n",
-            "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
-            "profundidade": "\n- Shallow: between 0 m and 100 m\n\n- Intermediate: between 100 m and 600 m\n\n- Deep: more than 600 m\n\n",
-            "rss": "\nUCS (Pa)\n_________________________\n\nDensity(N/m³) x Depth(m)\n\n",
-            "fracture-spacing": "\n-Very close - more than 16 fractures per meter \n\n- Close: 10 to 16 fracture per meter\n\n-Wide: 3 to 10 fracture per meter\n\n- Very wide: 3 fracture per meter or less\n\n",
-            "frature-strenght": "\n- Weak: clean joint with a smooth surface\nor fill with material whose strenght is less\n than rock RSS\n\n- Moderate: clean joint with a rough surface\n\n- Strong: joint is filled with a material that is\n equal to or stronger than rock RSS\n\n",
-            "botao-pesos": "Check weights",
-            "botao-imprimir": "Print report",
-            "switch-language": "Change to portuguese"
-        }
-        messages_shb = {
-            "forma-geral": "\n- Equi-dimensional: all dimensions are onthe same\n order of magnitude\n\n- Platy-tabular: two dimensions are many times the\nthickness, which does not usually exceed 35m \n\n- Irregular: dimensions vary over short distances\n\n",
-            "mergulho": "\n- Flat: inclination bellow 15º\n\n- Low: inclination between 15º-30º\n\n- Intermediate: inclination between 35º-45º\n\n- Rarely Steep: inclination between 45º-60º\n\n- Steep: more than 60º of inclination\n\n",
-            "espessura": "\n-Very narrow: bellow 3m thick\n\n-Narrow: between 3m and 10m thick\n\n- Intermediate: between 10m an 30m thick\n\n- Thick: between 30m and 100m thick\n\n- Very Thick: more than 100m thick\n\n",
-            "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
-            "profundidade": "\n- Shallow: between 0 m and 200 m\n\n- Intermediate: between 200 m and 500 m\n\n- Rarely Deep: between 500 m and 800 m\n\n- Deep: more than 800 m\n\n",
-            "rss": "\nUCS (Pa)\n_________________________\n\nDensity(N/m³) x Depth(m)\n\n",
-            "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
-            "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
-            "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
-            "botao-calculadora-rmr": "Calculate RMR",
-            "botao-calculadora-gsi": "Calculate GSI",
-            "botao-pesos": "Check weights",
-            "botao-imprimir": "Print report",
-            "switch-language": "Change to portuguese",
-            "valor-minerio": "Relative value"
-
-        }
-    } else {
-        messages_ubc = {
-            "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
-            "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-50º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
-            "espessura": "\n- Muito Estreito: inferior a 3m\n\n-Estreito: entre 3m e 10m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
-            "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
-            "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
-            "rss": "\nUCS (Pa)\n_________________________\n\nDensidade(N/m³) x Profundidade(m)\n\n",
-            "rmr": "\n Classificação RMR de Bieniawski (1989) \n\n",
-            "gsi": "\nConversão GSI→RMR \n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
-            "q": "\nConversão Q→RMR \n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
-            "botao-calculadora-rmr": "Calcular RMR",
-            "botao-calculadora-gsi": "Calcular GSI",
-            "botao-pesos": "Verificar Pesos",
-            "botao-imprimir": "Imprimir relatório",
-            "switch-language": "Mudar para inglês"
-        }
-        messages_nicholas_81 = {
-            "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
-            "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-50º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
-            "espessura": "\n- Muito Estreito: inferior a 3m\n\n-Estreito: entre 3m e 10m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
-            "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
-            "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
-            "rss": "\nUCS (Pa)\n_________________________\n\nDensidade(N/m³) x Profundidade(m)\n\n",
-            "fracture-spacing": "\n- Muito perto: menos de 16 fraturas por metro\n\n- Perto: entre 10 e 16 fraturas por metro\n\n-Longe: entre 3 e 10 fraturas por metro\n\n- Muito onge: 3 fraturas por metro ou menos\n\n",
-            "frature-strenght": "\n- Fraca: fraturas \"limpas\" com uma superfície\n ou preenchimento de resistencia menor\n do que a RSS da rocha\n\n- Fraturas: \"limpas\" e com uma superfície rugosa\n\n- Fraturas preenchidas com material de\n resistencia igual ou superior a RSS da rocha\n\n",
-            "botao-pesos": "Verificar Pesos",
-            "botao-imprimir": "Imprimir relatório",
-            "switch-language": "Mudar para inglês"
-        }
-        messages_nicholas_92 = {
-            "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
-            "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-50º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
-            "espessura": "\n- Muito Estreito: inferior a 3m\n\n-Estreito: entre 3m e 10m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
-            "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
-            "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
-            "rss": "\nUCS (Pa)\n_________________________\n\nDensidade(N/m³) x Profundidade(m)\n\n",
-            "fracture-spacing": "\n- Muito perto: menos de 16 fraturas por metro\n\n- Perto: entre 10 e 16 fraturas por metro\n\n-Longe: entre 3 e 10 fraturas por metro\n\n- Muito onge: 3 fraturas por metro ou menos\n\n",
-            "frature-strenght": "\n- Fraca: fraturas \"limpas\" com uma superfície\n ou preenchimento de resistencia menor\n do que a RSS da rocha\n\n- Fraturas: \"limpas\" e com uma superfície rugosa\n\n- Fraturas preenchidas com material de\n resistencia igual ou superior a RSS da rocha\n\n",
-            "botao-pesos": "Verificar Pesos",
-            "botao-imprimir": "Imprimir relatório",
-            "switch-language": "Mudar para inglês"
-        }
-        messages_shb = {
-            "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
-            "mergulho": "\n- Plano: <15º de inclinação \n\n- Baixo: 15º-30º de inclinação\n\n- Intermediário: 30º-45º de inclinação\n\n- Pouco inclinado: 45º-60º de inclinação\n\n- Inclinado: > 60º de inclinação\n\n",
-            "espessura": "\n- Muito Estreito: inferior a 3m\n\n-Estreito: entre 3m e 10m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
-            "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
-            "profundidade": "\n- Rasa: entre 0 m e 200 m\n\n- Intermediária: entre 200 m e 500 m\n\n- Pouco profunda: entre 500 m e 800 m\n\n- Profunda: superior a 800 m\n\n",
-            "rss": "\nUCS (Pa)\n_________________________\n\nDensidade(N/m³) x Profundidade(m)\n\n",
-            "rmr": "\n Classificação RMR de Bieniawski (1989) \n\n",
-            "gsi": "\nConversão GSI→RMR \n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
-            "q": "\nConversão Q→RMR \n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
-            "botao-calculadora-rmr": "Calcular RMR",
-            "botao-calculadora-gsi": "Calcular GSI",
-            "botao-pesos": "Verificar Pesos",
-            "botao-imprimir": "Imprimir relatório",
-            "switch-language": "Mudar para inglês",
-            "valor-minerio": "Valores relativos"
-        }
-    }
-
-    const positions = {
-        "botao-calculadora-rmr": { x: 10, y: -70 },
-        "botao-calculadora-gsi": { x: 10, y: -70 },
-        "botao": { x: -110, y: -100 },
-        "botao-pesos": { x: -150, y: -50 },
-        "botao-imprimir": { x: -150, y: -50 },
-        "switch-language": { x: 30, y: -40 },
-        "frature-strenght": { x: 100, y: -200 }
-
-    }
-
-    //Verifica qual texto deve ser impresso
-    if (metodo == "nicholas_81") {
-        balao.innerText = messages_nicholas_81[entry]
-    } else if (metodo == "nicholas_92") {
-        balao.innerText = messages_nicholas_92[entry]
-    } else if (metodo == "ubc") {
-        balao.innerText = messages_ubc[entry]
-    } else if (metodo == "shb") {
-        balao.innerText = messages_shb[entry]
-    }
+// Recebe a posição dos balões de ajuda de cada elemento
+function Positions(entry, messages, positions) {
+    
+    entry = entry.includes("calculadora-rmr") ? "calculadora-bieniawsk" : entry
+    entry = entry.includes("calculadora-gsi") ? "calculadora-hoek" : entry
+    entry = entry.includes("rmr") ? "rmr" : entry
+    entry = entry.includes("gsi") ? "gsi" : entry
+    entry = entry.includes("q") ? "q" : entry
+    entry = entry.includes("rss") ? "rss" : entry
+    entry = entry.includes("fracture-spacing") ? "fracture-spacing" : entry
+    entry = entry.includes("fracture-strenght") ? "fracture-strenght" : entry
 
     //Mostra o balão de texto
-    balao.style.display = "block"
+    const balao = document.getElementById("balao")
+    if (messages[entry]) {
+        balao.innerText = messages[entry]
+        balao.style.display = "block"
+    }
 
     //Posiciona o balão conforme o dicionário de posições
     if (positions[entry]) {
@@ -335,7 +199,150 @@ function Balao_entra(metodo, entry) {
     } else {
         balao.style.transform = "translate(100px,-100px)"
     }
+
 }
+
+function Balao_entra(entry, idioma) {
+    let messages
+    if (idioma == "en") {
+        messages = {
+            "calculadora-bieniawsk": "Calculate RMR",
+            "calculadora-hoek": "Calculate GSI",
+            "botao-pesos": "Check weights",
+            "botao-imprimir": "Print report",
+            "switch-language": "Change to portuguese",
+        }
+    } else {
+        messages = {
+            "calculadora-bieniawsk": "Calcular RMR",
+            "calculadora-hoek": "Calcular GSI",
+            "botao-pesos": "Verificar Pesos",
+            "botao-imprimir": "Imprimir relatório",
+            "switch-language": "Mudar para inglês",
+        }
+    }
+
+    const positions = {
+        "calculadora-bieniawsk": { x: 10, y: -70 },
+        "calculadora-hoek": { x: 10, y: -70 },
+        "botao": { x: -110, y: -100 },
+        "botao-pesos": { x: -150, y: -50 },
+        "botao-imprimir": { x: -150, y: -50 },
+        "switch-language": { x: 30, y: -40 },
+
+    }
+    //Mostra e posiciona o balão conforme o dicionário de posições
+    Positions(entry, messages, positions)
+}
+
+
+function Balao_entra_shb(entry, idioma) {
+    let messages
+    //Verifica se o titulo da seção 1 está em ingles
+    if (idioma == "en") {
+        messages = {
+            "forma-geral": "\n- Equi-dimensional: all dimensions are onthe same\n order of magnitude\n\n- Platy-tabular: two dimensions are many times the\nthickness, which does not usually exceed 35m \n\n- Irregular: dimensions vary over short distances\n\n",
+            "mergulho": "\n- Flat: inclination bellow 15º\n\n- Low: inclination between 15º-30º\n\n- Intermediate: inclination between 35º-45º\n\n- Rarely Steep: inclination between 45º-60º\n\n- Steep: more than 60º of inclination\n\n",
+            "espessura": "\n-Very narrow: bellow 3m thick\n\n-Narrow: between 3m and 10m thick\n\n- Intermediate: between 10m an 30m thick\n\n- Thick: between 30m and 100m thick\n\n- Very Thick: more than 100m thick\n\n",
+            "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
+            "profundidade": "\n- Shallow: between 0 m and 200 m\n\n- Intermediate: between 200 m and 500 m\n\n- Rarely Deep: between 500 m and 800 m\n\n- Deep: more than 800 m\n\n",
+            "valor-minerio": "Relative value",
+            "rss": "\nUCS (Pa)\n_________________________\n\nDensity(N/m³) x Depth(m)\n\n",
+            "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
+            "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
+            "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
+        }
+    } else {
+        messages = {
+            "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
+            "mergulho": "\n- Plano: <15º de inclinação \n\n- Baixo: 15º-30º de inclinação\n\n- Intermediário: 30º-45º de inclinação\n\n- Pouco inclinado: 45º-60º de inclinação\n\n- Inclinado: > 60º de inclinação\n\n",
+            "espessura": "\n- Muito Estreito: inferior a 3m\n\n-Estreito: entre 3m e 10m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
+            "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
+            "profundidade": "\n- Rasa: entre 0 m e 200 m\n\n- Intermediária: entre 200 m e 500 m\n\n- Pouco profunda: entre 500 m e 800 m\n\n- Profunda: superior a 800 m\n\n",
+            "valor-minerio": "Valores relativos",
+            "rss": "\nUCS (Pa)\n_________________________\n\nDensidade(N/m³) x Profundidade(m)\n\n",
+            "rmr": "\n Classificação RMR de Bieniawski (1989) \n\n",
+            "gsi": "\nConversão GSI→RMR \n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
+            "q": "\nConversão Q→RMR \n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
+        }
+    }
+
+    const positions = {
+    }
+
+    //Mostra e posiciona o balão conforme o dicionário de posições
+    Positions(entry, messages, positions)
+
+}
+
+
+function Balao_entra_ubc(entry, idioma) {
+    let messages
+    if (idioma == "en") {
+        messages = {
+            "forma-geral": "\n- Equi-dimensional: all dimensions are onthe same\n order of magnitude\n\n- Platy-tabular: two dimensions are many times the\nthickness, which does not usually exceed 35m \n\n- Irregular: dimensions vary over short distances\n\n",
+            "mergulho": "\n- Flat: inclination bellow 20º\n\n- Intermediate: inclination between 20º-50º\n\n- Steep: more than 55º of inclination\n\n",
+            "espessura": "\n-Very narrow: bellow 3m thick\n\n-Narrow: between 3m and 10m thick\n\n- Intermediate: between 10m an 30m thick\n\n- Thick: between 30m and 100m thick\n\n- Very Thick: more than 100m thick\n\n",
+            "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
+            "profundidade": "\n- Shallow: between 0 m and 100 m\n\n- Intermediate: between 100 m and 600 m\n\n- Deep: more than 600 m\n\n",
+            "rss": "\nUCS (Pa)\n_________________________\n\nDensity(N/m³) x Depth(m)\n\n",
+            "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
+            "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
+            "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n"
+        }
+    } else {
+        messages = {
+            "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
+            "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-50º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
+            "espessura": "\n- Muito Estreito: inferior a 3m\n\n-Estreito: entre 3m e 10m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
+            "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
+            "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
+            "rss": "\nUCS (Pa)\n_________________________\n\nDensidade(N/m³) x Profundidade(m)\n\n",
+            "rmr": "\n Classificação RMR de Bieniawski (1989) \n\n",
+            "gsi": "\nConversão GSI→RMR \n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
+            "q": "\nConversão Q→RMR \n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
+        }
+    }
+    const positions = {
+    }
+
+    //Mostra e posiciona o balão conforme o dicionário de posições
+    Positions(entry, messages, positions)
+
+}
+
+function Balao_entra_nicholas(entry, idioma) {
+    let messages
+    if (idioma == "en") {
+        messages = {
+            "forma-geral": "\n- Equi-dimensional: all dimensions are onthe same\n order of magnitude\n\n- Platy-tabular: two dimensions are many times the\nthickness, which does not usually exceed 35m \n\n- Irregular: dimensions vary over short distances\n\n",
+            "mergulho": "\n- Flat: inclination bellow 20º\n\n- Intermediate: inclination between 20º-50º\n\n- Steep: more than 55º of inclination\n\n",
+            "espessura": "\n-Very narrow: bellow 3m thick\n\n-Narrow: between 3m and 10m thick\n\n- Intermediate: between 10m an 30m thick\n\n- Thick: between 30m and 100m thick\n\n- Very Thick: more than 100m thick\n\n",
+            "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
+            "profundidade": "\n- Shallow: between 0 m and 100 m\n\n- Intermediate: between 100 m and 600 m\n\n- Deep: more than 600 m\n\n",
+            "fracture-spacing": "\n-Very close - more than 16 fractures per meter \n\n- Close: 10 to 16 fracture per meter\n\n-Wide: 3 to 10 fracture per meter\n\n- Very wide: 3 fracture per meter or less\n\n",
+            "fracture-strenght": "\n- Weak: clean joint with a smooth surface\nor fill with material whose strenght is less\n than rock RSS\n\n- Moderate: clean joint with a rough surface\n\n- Strong: joint is filled with a material that is\n equal to or stronger than rock RSS\n\n",
+            "rss": "\nUCS (Pa)\n_________________________\n\nDensity(N/m³) x Depth(m)\n\n",
+        }
+    } else {
+        messages = {
+            "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
+            "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-50º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
+            "espessura": "\n- Muito Estreito: inferior a 3m\n\n-Estreito: entre 3m e 10m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
+            "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
+            "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
+            "fracture-spacing": "\n- Muito perto: menos de 16 fraturas por metro\n\n- Perto: entre 10 e 16 fraturas por metro\n\n-Longe: entre 3 e 10 fraturas por metro\n\n- Muito onge: 3 fraturas por metro ou menos\n\n",
+            "fracture-strenght": "\n- Fraca: fraturas \"limpas\" com uma superfície\n ou preenchimento de resistencia menor\n do que a RSS da rocha\n\n- Fraturas: \"limpas\" e com uma superfície rugosa\n\n- Fraturas preenchidas com material de\n resistencia igual ou superior a RSS da rocha\n\n",
+            "rss": "\nUCS (Pa)\n_________________________\n\nDensidade(N/m³) x Profundidade(m)\n\n",
+        }
+    }
+    const positions = {
+        "fracture-strenght": { x: 100, y: -200 }
+    }
+    //Mostra e posiciona o balão conforme o dicionário de posições
+    Positions(entry, messages, positions)
+}
+
 
 //REMOVE O BALÃO DE TEXTO NO MOUSEOUT
 function Balao_sai() {
@@ -344,4 +351,23 @@ function Balao_sai() {
 }
 
 
+function Baloes(entry, metodo = "undefined") {
 
+    const idioma = Obter_idioma()
+    if (metodo == "nicholas_81") {
+        Balao_entra_nicholas(entry, idioma)
+
+    } else if (metodo == "nicholas_92") {
+        Balao_entra_nicholas(entry, idioma)
+
+    } else if (metodo == "ubc") {
+        Balao_entra_ubc(entry, idioma)
+
+    } else if (metodo == "shb") {
+        Balao_entra_shb(entry, idioma)
+    } else {
+        Balao_entra(entry, idioma)
+    }
+
+
+}

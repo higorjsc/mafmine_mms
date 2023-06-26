@@ -223,7 +223,7 @@ select {
   position: absolute;
   left: 10px;
   color: red;
-  font: 18pt;
+  font-size: 20pt;
   font-weight: bold;
   transform: translate(0, 5px);
 }
@@ -232,7 +232,7 @@ select {
   position: absolute;
   right: 130px;
   color: red;
-  font: 18pt;
+  font-size: 20pt;
   font-weight: bold;
   transform: translate(0, 5px);
 }
