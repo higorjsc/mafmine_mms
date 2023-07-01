@@ -9,7 +9,7 @@
   --cor-1: #304454;
   --cor-2: #112536;
   --shadow-apretada: -5px 0 5px  rgb(0 0 0 / 95%);
-  --shadow-blue: 0 0 10px blue;
+  --shadow-blue: 0 0 10px var(--cor-2);
   --borda-simples: 1pt solid black;
 }
 
