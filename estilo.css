@@ -245,11 +245,11 @@ h3 {
 }
 
 select {
-  width: 40%; /* 150px */
+  width: 40.69%; /* 150px */
   position: absolute;
   cursor: pointer;
   right: 1%;
-  height: 22px; 
+  height: 22.66px; 
   text-align: center;
   border-radius: 10px;
   border: var(--borda-simples);

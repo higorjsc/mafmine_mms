@@ -147,7 +147,7 @@ label:hover {
 }
 
 /* ------------------BOTÃO CALCULADORA RMR (CANTO INFERIOR ESQUERDO) ----------------- */
-.botao-calculadora-rmr {
+.botao-calculadora {
   position: absolute;
   right: 42%;
   z-index: 2;
@@ -156,40 +156,12 @@ label:hover {
   border: none;
 }
 
-.botao-calculadora-rmr:hover {
+.botao-calculadora:hover {
   cursor: pointer;
   box-shadow: var( --shadow-blue);
 }
 
-/* ------------------BOTÃO CALCULADORA GSI (CANTO INFERIOR ESQUERDO) ----------------- */
-.botao-calculadora-gsi {
-  position: absolute;
-  right: 43%;
-  z-index: 2;
-  transform: translate(25%, -20%) scale(0.5);
-  background-color: rgb(255 255 255 / 0%);
-  border: none;
-}
 
-.botao-calculadora-gsi:hover {
-  cursor: pointer;
-  box-shadow: var( --shadow-blue);
-}
-
-/* ------------------BOTÃO CALCULADORA GSI (CANTO INFERIOR ESQUERDO) ----------------- */
-.botao-calculadora-ucs {
-  position: absolute;
-  right: 42%;
-  z-index: 2;
-  transform: translate(25%, -20%) scale(0.5);
-  background-color: rgb(255 255 255 / 0%);
-  border: none;
-}
-
-.botao-calculadora-ucs:hover {
-  cursor: pointer;
-  box-shadow: var( --shadow-blue);
-}
 
 /* --------------BOTAO AHP------------------------------- */
 #botao-ahp {
