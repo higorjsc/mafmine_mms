@@ -37,6 +37,11 @@ select {
   box-shadow: -0 0 10px rgb(104 62 62 / 42.5%);
 }
 
+select:hover {
+  font-weight: bold;
+  box-shadow: var(--shadow-blue);
+}
+
 #img-gsi-picker {
   position: absolute;
   top: 0%;
@@ -129,8 +134,6 @@ select {
   text-align: center;
   border-radius: 20px;
   border: 1pt solid black;
-  box-shadow: 0 0 0;
-
 }
 
 #span-rqd {
