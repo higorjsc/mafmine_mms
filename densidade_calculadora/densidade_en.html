@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo_ucs.css">
+    <script src="script.js"></script>
+    <title>ESTIMATIVA DENSIDADES</title>
+</head>
+
+<body>
+    <main>
+        <!-- <button id="help-button">SOBRE</button> -->
+        <span id="span-help">CLICK ON VALUE</span>
+        <h1 id="titulo-tabela-rochas">ROCK DENSITY TABLE: &ensp;&ensp;
+            <select id="select-tipo-rocha">
+                <option value="ignea">Igneous Rocks</option>
+                <option value="sedimentar">Sedimentary Rocks</option>
+                <option value="metamorfica">Metamorphic Rocks</option>
+            </select>
+        </h1>
+        <!-- -----------------------IGNEAS----------------------------------- -->
+        <table class="tabela-rochas" id='tabela-ignea'>
+            <tr id="tr-titulo">
+                <th class="th-rocha" id="th-rocha-titulo">Rock</th>
+                <th class="th-minimo" id="td-minimo-titulo">Low<br>(Kg/m³)</th>
+                <th class="th-medio" id="td-medio-titulo">Average<br>(Kg/m³)</th>
+                <th class="th-maximo" id="td-maximo-titulo">High<br>(Kg/m³)</th>
+            </tr>
+            <tr id="tr-andesito">
+                <td class="td-rocha" id="td-rocha-andesito">Andesite</td>
+                <td class="td-minimo td-valor" id="td-minimo-andesito">1560</td>
+                <td class="td-medio td-valor" id="td-medio-andesito">2565</td>
+                <td class="td-maximo td-valor" id="td-maximo-andesito">2990</td>
+            </tr>
+            <tr id="tr-basalto">
+                <td class="td-rocha" id="td-rocha-basalto">Basalt</td>
+                <td class="td-minimo td-valor" id="td-minimo-basalto">1780</td>
+                <td class="td-medio td-valor" id="td-medio-basalto">2768</td>
+                <td class="td-maximo td-valor" id="td-maximo-basalto">3060</td>
+            </tr>
+            <tr id="tr-dacito">
+                <td class="td-rocha" id="td-rocha-dacito">Dacite</td>
+                <td class="td-minimo td-valor" id="td-minimo-dacito">1940</td>
+                <td class="td-medio td-valor" id="td-medio-dacito">2402</td>
+                <td class="td-maximo td-valor" id="td-maximo-dacito">2700</td>
+            </tr>
+            <tr id="tr-diorito">
+                <td class="td-rocha" id="td-rocha-diorito">Diorite</td>
+                <td class="td-minimo td-valor" id="td-minimo-diorito">2430</td>
+                <td class="td-medio td-valor" id="td-medio-diorito">2797</td>
+                <td class="td-maximo td-valor" id="td-maximo-diorito">3160</td>
+            </tr>
+            <tr id="tr-diabasio">
+                <td class="td-rocha" id="td-rocha-diabasio">Diabase (dolerite)</td>
+                <td class="td-minimo td-valor" id="td-minimo-diabasio">2360</td>
+                <td class="td-medio td-valor" id="td-medio-diabasio">2749</td>
+                <td class="td-maximo td-valor" id="td-maximo-diabasio">3040</td>
+            </tr>
+            <tr id="tr-gabro">
+                <td class="td-rocha" id="td-rocha-gabro">Gabbro</td>
+                <td class="td-minimo td-valor" id="td-minimo-gabro">2260</td>
+                <td class="td-medio td-valor" id="td-medio-gabro">2884</td>
+                <td class="td-maximo td-valor" id="td-maximo-gabro">3340</td>
+            </tr>
+            <tr id="tr-granito">
+                <td class="td-rocha" id="td-rocha-granito">Granite </td>
+                <td class="td-minimo td-valor" id="td-minimo-granito">2330</td>
+                <td class="td-medio td-valor" id="td-medio-granito">2640</td>
+                <td class="td-maximo td-valor" id="td-maximo-granito">2940</td>
+            </tr>
+            <tr id="tr-granodiorito">
+                <td class="td-rocha" id="td-rocha-granodiorito">Granodiorite</td>
+                <td class="td-minimo td-valor" id="td-minimo-granodiorito">2530</td>
+                <td class="td-medio td-valor" id="td-medio-granodiorito">2681</td>
+                <td class="td-maximo td-valor" id="td-maximo-granodiorito">2940</td>
+            </tr>
+            <tr id="tr-riolito">
+                <td class="td-rocha" id="td-rocha-riolito">Rhyolite</td>
+                <td class="td-minimo td-valor" id="td-minimo-riolito">1360</td>
+                <td class="td-medio td-valor" id="td-medio-riolito">2207</td>
+                <td class="td-maximo td-valor" id="td-maximo-riolito">2740</td>
+            </tr>
+            <tr id="tr-brecha_vulcanica">
+                <td class="td-rocha" id="td-rocha-brecha_vulcanica">Volcanic Breccia</td>
+                <td class="td-minimo td-valor" id="td-minimo-brecha_vulcanica">1320</td>
+                <td class="td-medio td-valor" id="td-medio-brecha_vulcanica">2195</td>
+                <td class="td-maximo td-valor" id="td-maximo-brecha_vulcanica">2950</td>
+            </tr>
+            <tr id="tr-sienito">
+                <td class="td-rocha" id="td-rocha-sienito">Syenite</td>
+                <td class="td-minimo td-valor" id="td-minimo-sienito">2440</td>
+                <td class="td-medio td-valor" id="td-medio-sienito">2719</td>
+                <td class="td-maximo td-valor" id="td-maximo-sienito">2860</td>
+            </tr>
+            <tr id="tr-ignimbrite">
+                <td class="td-rocha" id="td-rocha-ignimbrite">Ignimbrite</td>
+                <td class="td-minimo td-valor" id="td-minimo-ignimbrite">1240</td>
+                <td class="td-medio td-valor" id="td-medio-ignimbrite">2125</td>
+                <td class="td-maximo td-valor" id="td-maximo-ignimbrite">2620</td>
+            </tr>
+            <tr id="tr-lamprophyre">
+                <td class="td-rocha" id="td-rocha-lamprophyre">Lamprophyre</td>
+                <td class="td-minimo td-valor" id="td-minimo-lamprophyre">2650</td>
+                <td class="td-medio td-valor" id="td-medio-lamprophyre">2910</td>
+                <td class="td-maximo td-valor" id="td-maximo-lamprophyre">3390</td>
+            </tr>
+            <tr id="tr-peridotite">
+                <td class="td-rocha" id="td-rocha-peridotite">Peridotite</td>
+                <td class="td-minimo td-valor" id="td-minimo-peridotite">2440</td>
+                <td class="td-medio td-valor" id="td-medio-peridotite">2719</td>
+                <td class="td-maximo td-valor" id="td-maximo-peridotite">2860</td>
+            </tr>
+            <tr id="tr-phonolite">
+                <td class="td-rocha" id="td-rocha-phonolite">Phonolite</td>
+                <td class="td-minimo td-valor" id="td-minimo-phonolite">2470</td>
+                <td class="td-medio td-valor" id="td-medio-phonolite">2536</td>
+                <td class="td-maximo td-valor" id="td-maximo-phonolite">2630</td>
+            </tr>
+            <tr id="tr-pumice">
+                <td class="td-rocha" id="td-rocha-pumice">Pumice</td>
+                <td class="td-minimo td-valor" id="td-minimo-pumice">1150</td>
+                <td class="td-medio td-valor" id="td-medio-pumice">1719</td>
+                <td class="td-maximo td-valor" id="td-maximo-pumice">2230</td>
+            </tr>
+            <tr id="tr-pyroxenite">
+                <td class="td-rocha" id="td-rocha-pyroxenite">Pyroxenite</td>
+                <td class="td-minimo td-valor" id="td-minimo-pyroxenite">2240</td>
+                <td class="td-medio td-valor" id="td-medio-pyroxenite">3122</td>
+                <td class="td-maximo td-valor" id="td-maximo-pyroxenite">3330</td>
+            </tr>
+            <tr id="tr-spilite">
+                <td class="td-rocha" id="td-rocha-spilite">Spilite</td>
+                <td class="td-minimo td-valor" id="td-minimo-spilite">2500</td>
+                <td class="td-medio td-valor" id="td-medio-spilite">2863</td>
+                <td class="td-maximo td-valor" id="td-maximo-spilite">3090</td>
+            </tr>
+            <tr id="tr-trachyte">
+                <td class="td-rocha" id="td-rocha-trachyte">Trachyte</td>
+                <td class="td-minimo td-valor" id="td-minimo-trachyte">2170</td>
+                <td class="td-medio td-valor" id="td-medio-trachyte">2591</td>
+                <td class="td-maximo td-valor" id="td-maximo-trachyte">2950</td>
+            </tr>
+        </table>
+
+        <!-- -----------------------SEDIMENTAR----------------------------------- -->
+        <table class="tabela-rochas" id='tabela-sedimentar'>
+            <tr id="tr-titulo">
+                <th class="th-rocha" id="th-rocha-titulo">Rock</th>
+                <th class="th-minimo" id="td-minimo-titulo">Low<br>(Kg/m³)</th>
+                <th class="th-medio" id="td-medio-titulo">Average<br>(Kg/m³)</th>
+                <th class="th-maximo" id="td-maximo-titulo">High<br>(Kg/m³)</th>
+            </tr>
+            <tr id="tr-argilito">
+                <td class="td-rocha" id="td-rocha-argilito">Argillite</td>
+                <td class="td-minimo td-valor" id="td-minimo-argilito">2000</td>
+                <td class="td-medio td-valor" id="td-medio-argilito">2691</td>
+                <td class="td-maximo td-valor" id="td-maximo-argilito">3160</td>
+            </tr>
+            <tr id="tr-brecha">
+                <td class="td-rocha" id="td-rocha-brecha">Breccia</td>
+                <td class="td-minimo td-valor" id="td-minimo-brecha">1540</td>
+                <td class="td-medio td-valor" id="td-medio-brecha">2291</td>
+                <td class="td-maximo td-valor" id="td-maximo-brecha">3000</td>
+            </tr>
+            <tr id="tr-coal">
+                <td class="td-rocha" id="td-rocha-coal">Coal</td>
+                <td class="td-minimo td-valor" id="td-minimo-coal">1130</td>
+                <td class="td-medio td-valor" id="td-medio-coal">1712</td>
+                <td class="td-maximo td-valor" id="td-maximo-coal">2100</td>
+            </tr>
+            <tr id="tr-conglomer">
+                <td class="td-rocha" id="td-rocha-conglomer">Conglomerate</td>
+                <td class="td-minimo td-valor" id="td-minimo-conglomer">2110</td>
+                <td class="td-medio td-valor" id="td-medio-conglomer">2570</td>
+                <td class="td-maximo td-valor" id="td-maximo-conglomer">3000</td>
+            </tr>
+            <tr id="tr-limestone">
+                <td class="td-rocha" id="td-rocha-limestone">Limestone</td>
+                <td class="td-minimo td-valor" id="td-minimo-limestone">1890</td>
+                <td class="td-medio td-valor" id="td-medio-limestone">2484</td>
+                <td class="td-maximo td-valor" id="td-maximo-limestone">3010</td>
+            </tr>
+            <tr id="tr-mudstone">
+                <td class="td-rocha" id="td-rocha-mudstone">Mudstone</td>
+                <td class="td-minimo td-valor" id="td-minimo-mudstone">1320</td>
+                <td class="td-medio td-valor" id="td-medio-mudstone">2204</td>
+                <td class="td-maximo td-valor" id="td-maximo-mudstone">2870</td>
+            </tr>
+            <tr id="tr-sandstone">
+                <td class="td-rocha" id="td-rocha-sandstone">Sandstone</td>
+                <td class="td-minimo td-valor" id="td-minimo-sandstone">1510</td>
+                <td class="td-medio td-valor" id="td-medio-sandstone">2463</td>
+                <td class="td-maximo td-valor" id="td-maximo-sandstone">3000</td>
+            </tr>
+            <tr id="tr-shale">
+                <td class="td-rocha" id="td-rocha-shale">Shale</td>
+                <td class="td-minimo td-valor" id="td-minimo-shale">1610</td>
+                <td class="td-medio td-valor" id="td-medio-shale">2335</td>
+                <td class="td-maximo td-valor" id="td-maximo-shale">2730</td>
+            </tr>
+            <tr id="tr-siltstone">
+                <td class="td-rocha" id="td-rocha-siltstone">Siltstone</td>
+                <td class="td-minimo td-valor" id="td-minimo-siltstone">1360</td>
+                <td class="td-medio td-valor" id="td-medio-siltstone">2347</td>
+                <td class="td-maximo td-valor" id="td-maximo-siltstone">2880</td>
+            </tr>
+            <tr id="tr-tuff">
+                <td class="td-rocha" id="td-rocha-tuff">Tuff</td>
+                <td class="td-minimo td-valor" id="td-minimo-tuff">1410</td>
+                <td class="td-medio td-valor" id="td-medio-tuff">2113</td>
+                <td class="td-maximo td-valor" id="td-maximo-tuff">2940</td>
+            </tr>
+            <tr id="tr-diatomite">
+                <td class="td-rocha" id="td-rocha-diatomite">Diatomite</td>
+                <td class="td-minimo td-valor" id="td-minimo-diatomite">1390</td>
+                <td class="td-medio td-valor" id="td-medio-diatomite">1528</td>
+                <td class="td-maximo td-valor" id="td-maximo-diatomite">1720</td>
+            </tr>
+            <tr id="tr-lignite">
+                <td class="td-rocha" id="td-rocha-lignite">Lignite</td>
+                <td class="td-minimo td-valor" id="td-minimo-lignite">1210</td>
+                <td class="td-medio td-valor" id="td-medio-lignite">1390</td>
+                <td class="td-maximo td-valor" id="td-maximo-lignite">1670</td>
+            </tr>
+          
+        </table>
+
+        <!-- -----------------------METAMORFICAS----------------------------------- -->
+        <table class="tabela-rochas" id='tabela-metamorfica'>
+            <tr id="tr-titulo">
+                <th class="th-rocha" id="th-rocha-titulo">Rock</th>
+                <th class="th-minimo" id="td-minimo-titulo">Low<br>(Kg/m³)</th>
+                <th class="th-medio" id="td-medio-titulo">Average<br>(Kg/m³)</th>
+                <th class="th-maximo" id="td-maximo-titulo">High<br>(Kg/m³)</th>
+            </tr>
+            <tr id="tr-anfibolito">
+                <td class="td-rocha" id="td-rocha-anfibolito">Amphibolite</td>
+                <td class="td-minimo td-valor" id="td-minimo-anfibolito">2630</td>
+                <td class="td-medio td-valor" id="td-medio-anfibolito">2892</td>
+                <td class="td-maximo td-valor" id="td-maximo-anfibolito">3100</td>
+            </tr>
+            <tr id="tr-gneiss">
+                <td class="td-rocha" id="td-rocha-gneiss">Gneiss</td>
+                <td class="td-minimo td-valor" id="td-minimo-gneiss">1830</td>
+                <td class="td-medio td-valor" id="td-medio-gneiss">2812</td>
+                <td class="td-maximo td-valor" id="td-maximo-gneiss">3100</td>
+            </tr>
+            <tr id="tr-granulite">
+                <td class="td-rocha" id="td-rocha-granulite">Granulite</td>
+                <td class="td-minimo td-valor" id="td-minimo-granulite">2530</td>
+                <td class="td-medio td-valor" id="td-medio-granulite">2765</td>
+                <td class="td-maximo td-valor" id="td-maximo-granulite">3000</td>
+            </tr>
+            <tr id="tr-marble">
+                <td class="td-rocha" id="td-rocha-marble">Marble</td>
+                <td class="td-minimo td-valor" id="td-minimo-marble">2510</td>
+                <td class="td-medio td-valor" id="td-medio-marble">2716</td>
+                <td class="td-maximo td-valor" id="td-maximo-marble">3140</td>
+            </tr>
+            <tr id="tr-greenschist">
+                <td class="td-rocha" id="td-rocha-greenschist">Greenschist</td>
+                <td class="td-minimo td-valor" id="td-minimo-greenschist">2620</td>
+                <td class="td-medio td-valor" id="td-medio-greenschist">2923</td>
+                <td class="td-maximo td-valor" id="td-maximo-greenschist">3130</td>
+            </tr>
+            <tr id="tr-quartzite">
+                <td class="td-rocha" id="td-rocha-quartzite">Quartzite</td>
+                <td class="td-minimo td-valor" id="td-minimo-quartzite">2490</td>
+                <td class="td-medio td-valor" id="td-medio-quartzite">2612</td>
+                <td class="td-maximo td-valor" id="td-maximo-quartzite">2780</td>
+            </tr>
+            <tr id="tr-schist">
+                <td class="td-rocha" id="td-rocha-schist">Schist</td>
+                <td class="td-minimo td-valor" id="td-minimo-schist">2120</td>
+                <td class="td-medio td-valor" id="td-medio-schist">2732</td>
+                <td class="td-maximo td-valor" id="td-maximo-schist">3100</td>
+            </tr>
+            <tr id="tr-serpent">
+                <td class="td-rocha" id="td-rocha-serpent">Serpentinite</td>
+                <td class="td-minimo td-valor" id="td-minimo-serpent">2240</td>
+                <td class="td-medio td-valor" id="td-medio-serpent">2634</td>
+                <td class="td-maximo td-valor" id="td-maximo-serpent">3270</td>
+            </tr>
+            <tr id="tr-greywack">
+                <td class="td-rocha" id="td-rocha-greywack">Greywack</td>
+                <td class="td-minimo td-valor" id="td-minimo-greywack">2090</td>
+                <td class="td-medio td-valor" id="td-medio-greywack">2639</td>
+                <td class="td-maximo td-valor" id="td-maximo-greywack">2940</td>
+            </tr>
+            <tr id="tr-mylonite">
+                <td class="td-rocha" id="td-rocha-mylonite">Mylonite</td>
+                <td class="td-minimo td-valor" id="td-minimo-mylonite">2620</td>
+                <td class="td-medio td-valor" id="td-medio-mylonite">2750</td>
+                <td class="td-maximo td-valor" id="td-maximo-mylonite">2930</td>
+            </tr>
+            <tr id="tr-hornfels">
+                <td class="td-rocha" id="td-rocha-hornfels">Hornfels</td>
+                <td class="td-minimo td-valor" id="td-minimo-hornfels">2590</td>
+                <td class="td-medio td-valor" id="td-medio-hornfels">2800</td>
+                <td class="td-maximo td-valor" id="td-maximo-hornfels">3080</td>
+            </tr>
+        
+        </table>
+    </main>
+    <span class="span-referencia"><strong>Source:</strong> 
+        <a href="https://doi.org/10.1016/j.cageo.2010.07.010" target="_blank">"Tenzer, R., et al. (2011). A digital rock density map of New Zealand. Computers & geosciences, 37(8), 1181-1191."</a>
+        <br><br>
+    </span>
+</body>
+<script>
+    window.onload = () => {
+        // Obtém as dimensões da tela
+        const largura_janela = window.screen.width
+        const altura_janela = window.screen.height
+
+        // Define as dimensões da janela do pop-up
+        const largura_pop_up = document.documentElement.clientWidth
+        const altura_pop_up = document.documentElement.clientHeight
+
+
+        // Calcula a posição para centralizar a janela
+        const esquerda = (largura_janela - largura_pop_up) / 2
+        const topo = (altura_janela - altura_pop_up) / 2
+
+        // Define as coordenadas para a janela do pop-up
+        window.moveTo(esquerda, topo)
+    }
+    Eventos()
+</script>
+
+</html>

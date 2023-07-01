@@ -13,9 +13,9 @@ function Retornar_valor(value) {
     //Obtém ob, hw, ou fw através da url. url[2] = ob, hw ou fw
     let url = (window.location.href).split("-")
     let id = {
-        "ob": "ucs-ob",
-        "hw": "ucs-hw",
-        "fw": "ucs-fw",
+        "ob": "densidade-ob",
+        "hw": "densidade-hw",
+        "fw": "densidade-fw",
     }
 
     const janela_principal = window.opener  // Acessa a janela principal através de window.opener

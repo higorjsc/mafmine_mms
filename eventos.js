@@ -31,9 +31,15 @@ function Open_pop_up_ahp() {
     window.open(encoded_id, "_blank", "width=650,height=750")
 }
 
-// ABRE POP UP DE CALCULO DO GSI
+// ABRE POP UP DE ESTIMATIVAS DE UCS
 function Open_pop_up_ucs(id) {
     const endereco = "ucs_calculadora\\ucs_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
+    window.open(endereco, "_blank", "width=600, height=650")
+}
+
+// ABRE POP UP DE ESTIMATIVAS DE DENSIDADE
+function Open_pop_up_densidade(id) {
+    const endereco = "densidade_calculadora\\densidade_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
     window.open(endereco, "_blank", "width=600, height=650")
 }
 
@@ -114,6 +120,11 @@ function Eventos(metodo) {
     const botao_calculadora_ucs = document.querySelectorAll(".botao-calculadora-ucs")
     botao_calculadora_ucs.forEach((elemento) => {
         elemento.onclick = () => Open_pop_up_ucs(elemento.id)
+    })
+    //BOTÃO CALCULADORA DENSIDADE
+    const botao_calculadora_densidade = document.querySelectorAll(".botao-calculadora-densidade")
+    botao_calculadora_densidade.forEach((elemento) => {
+        elemento.onclick = () => Open_pop_up_densidade(elemento.id)
     })
 
     //INPUT DOS FATORES DE PESOS E AHP NO MÉTODO DE NICHOLAS 1992
