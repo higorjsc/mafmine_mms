@@ -115,7 +115,7 @@ function Eventos(metodo) {
     botao_calculadora_gsi.forEach((elemento) => {
         elemento.onclick = () => Open_pop_up_gsi(elemento.id)
     })
-    
+
     //BOTÃO CALCULADORA UCS
     const botao_calculadora_ucs = document.querySelectorAll(".botao-calculadora-ucs")
     botao_calculadora_ucs.forEach((elemento) => {
@@ -130,9 +130,9 @@ function Eventos(metodo) {
     //INPUT DOS FATORES DE PESOS E AHP NO MÉTODO DE NICHOLAS 1992
     if (metodo == "nicholas_92") {
         const menu_pesos = document.querySelector("#menu-pesos")
-        menu_pesos.onchange = () => Mostrar_input_pesos
+        menu_pesos.addEventListener("change", Mostrar_input_pesos)
         const botao_ahp = document.querySelector("#botao-ahp")
-        botao_ahp.onclick = Open_pop_up_ahp
+        botao_ahp.onclick = () => Open_pop_up_ahp()
     }
 
     //BOTÃO MOSTRA TABELA COM OS PESOS

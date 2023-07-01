@@ -1,7 +1,9 @@
 function Mostrar_input_pesos() {
+
     const select = document.getElementById("menu-pesos").value
     const input_pesos = document.querySelectorAll(".input-pesos")
     const botao_ahp = document.querySelector("#botao-ahp")
+    console.log('oi')
     if (select == 4) {
         input_pesos.forEach(element => {
             element.style.display = "block"
@@ -235,7 +237,6 @@ function Balao_entra(entry, idioma) {
     Positions(entry, messages, positions)
 }
 
-
 function Balao_entra_shb(entry, idioma) {
     let messages
     //Verifica se o titulo da seção 1 está em ingles
@@ -274,7 +275,6 @@ function Balao_entra_shb(entry, idioma) {
     Positions(entry, messages, positions)
 
 }
-
 
 function Balao_entra_ubc(entry, idioma) {
     let messages
@@ -343,13 +343,11 @@ function Balao_entra_nicholas(entry, idioma) {
     Positions(entry, messages, positions)
 }
 
-
 //REMOVE O BALÃO DE TEXTO NO MOUSEOUT
 function Balao_sai() {
     const balao = document.getElementById("balao")
     balao.style.display = "none"
 }
-
 
 function Baloes(entry, metodo = "undefined") {
 
