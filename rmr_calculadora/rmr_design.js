@@ -41,12 +41,12 @@ function Inserir_titulo() {
     let url = (window.location.href).split("-")
     let idioma = "_" + Obter_idioma()
     let texto = {
-        "ob_pt": "Calculo RMR: Corpo de Minério",
-        "ob_en": "RMR calculation: Orebody",
-        "hw_pt": "Calculo RMR: Hanging Wall",
-        "hw_en": "RMR calculation: Hanging Wall",
-        "fw_pt": "Calculo RMR: Footwall",
-        "fw_en": "RMR calculation: Footwall",
+        "ob_pt": "CÁLCULO RMR: Corpo de Minério",
+        "ob_en": "RMR CALCULATION: Orebody",
+        "hw_pt": "CÁLCULO RMR: Hanging Wall",
+        "hw_en": "RMR CALCULATION: Hanging Wall",
+        "fw_pt": "CÁLCULO RMR: Footwall",
+        "fw_en": "RMR CALCULATION: Footwall",
     }
     let titulo = document.getElementById("titulo")
     titulo.innerText += texto[(url[2] + idioma)]
