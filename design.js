@@ -3,7 +3,6 @@ function Mostrar_input_pesos() {
     const select = document.getElementById("menu-pesos").value
     const input_pesos = document.querySelectorAll(".input-pesos")
     const botao_ahp = document.querySelector("#botao-ahp")
-    console.log('oi')
     if (select == 4) {
         input_pesos.forEach(element => {
             element.style.display = "block"
