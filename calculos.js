@@ -8,10 +8,9 @@ function Calculo_rss(metodo) {
     function Atribuir_resultado_ubc_shb(entry, ucs, densidade, profundidade) {
         let resultado_numero = (ucs * 1e6) / (densidade * profundidade * 9.81)
         let resultado_texto = document.getElementById(entry)
+        let idioma = Obter_idioma()
 
-        let titulo = document.getElementById("titulo-section-1").innerText
-
-        if (!titulo.includes("CHARACTERISTICS")) {
+        if (idioma == "pt") {
             //Caso o titulo da seção 1 esteja em pt-br
             if (resultado_numero < 5) {
                 resultado_texto.innerText = `Muito Fraca (${resultado_numero.toFixed(1)})`
@@ -39,10 +38,9 @@ function Calculo_rss(metodo) {
     function Atribuir_resultado_nicholas(entry, ucs, densidade, profundidade) {
         let resultado_numero = (ucs * 1e6) / (densidade * profundidade * 9.81)
         let resultado_texto = document.getElementById(entry)
-
-        let titulo = document.getElementById("titulo-section-1").innerText
-
-        if (!titulo.includes("CHARACTERISTICS")) {
+        let idioma = Obter_idioma()
+        
+        if (idioma == "pt") {
             //Caso o titulo da seção 1 esteja em pt-br
             if (resultado_numero < 8) {
                 resultado_texto.innerText = `Fraca (${resultado_numero.toFixed(1)})`
@@ -65,63 +63,37 @@ function Calculo_rss(metodo) {
 
     function Resultado_rss_nicholas(entry) {
         let elemento = document.getElementById(entry).innerText
-        let titulo = document.getElementById("titulo-section-1").innerText
         let resultado
 
-        if (!titulo.includes("CHARACTERISTICS")) {
-            if (elemento.includes("Fraca")) {
-                resultado = "fraca"
-            } else if (elemento.includes("Moderada")) {
-                resultado = "moderada"
-            } else if (elemento.includes("Forte")) {
-                resultado = "forte"
-            } else {
-                resultado = "moderada"
-            }
+        if (elemento.includes("Fraca") || elemento.includes("Weak")) {
+            resultado = "fraca"
+        } else if (elemento.includes("Moderada") || elemento.includes("Medium")) {
+            resultado = "moderada"
+        } else if (elemento.includes("Forte") || elemento.includes("Strong")) {
+            resultado = "forte"
         } else {
-            if (elemento.includes("Weak")) {
-                resultado = "fraca"
-            } else if (elemento.includes("Medium")) {
-                resultado = "moderada"
-            } else if (elemento.includes("Strong")) {
-                resultado = "forte"
-            } else {
-                resultado = "moderada"
-            }
+            resultado = "moderada"
         }
+
         return resultado
     }
 
     function Resultado_rss_ubc_shb(entry) {
         let elemento = document.getElementById(entry).innerText
-        let titulo = document.getElementById("titulo-section-1").innerText
         let resultado
 
-        if (!titulo.includes("CHARACTERISTICS")) {
-            if (elemento.includes("Muito Fraca")) {
-                resultado = "muito_fraco"
-            } else if (elemento.includes("Frágil")) {
-                resultado = "fragil"
-            } else if (elemento.includes("Moderada")) {
-                resultado = "moderada"
-            } else if (elemento.includes("Resistente")) {
-                resultado = "resistente"
-            } else {
-                resultado = "moderada"
-            }
+        if (elemento.includes("Muito Fraca") || elemento.includes("Very")) {
+            resultado = "muito_fraco"
+        } else if (elemento.includes("Frágil") || elemento.includes("Weak")) {
+            resultado = "fragil"
+        } else if (elemento.includes("Moderada") || elemento.includes("Medium")) {
+            resultado = "moderada"
+        } else if (elemento.includes("Resistente") || elemento.includes("Strong")) {
+            resultado = "resistente"
         } else {
-            if (elemento.includes("Very")) {
-                resultado = "muito_fraco"
-            } else if (elemento.includes("Weak")) {
-                resultado = "fragil"
-            } else if (elemento.includes("Medium")) {
-                resultado = "moderada"
-            } else if (elemento.includes("Strong")) {
-                resultado = "resistente"
-            } else {
-                resultado = "moderada"
-            }
+            resultado = "moderada"
         }
+
         return resultado
     }
 
@@ -271,7 +243,7 @@ function Obter_pesos() {
         peso = peso === "" ? 1.00 : peso
         return peso
     }
-    
+
     let pesos = {
         "geo": Input_peso("input-peso-geo"),
         "ob": Input_peso("input-peso-ob"),
@@ -290,7 +262,7 @@ function Obter_pesos_ubc_shb(metodo) {
         peso = peso === "" ? 1.00 : peso
         return peso
     }
-    
+
     let pesos = {
         "geo": Input_peso("input-peso-ubc-geo"),
         "ob": Input_peso("input-peso-ubc-ob"),

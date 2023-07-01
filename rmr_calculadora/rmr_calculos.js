@@ -56,13 +56,16 @@ function Pesos(valor) {
         "pesos_general": { "seco": 16, "umido": 10, "molhado": 7, "gotejando": 4, "fluindo": 0, "0": 0, "null": 0 },
 
         "pesos_strike_dip": {
-            "paralelo_20-45": 0, "paralelo_45-90": -2,
-            "perpendicular_20-45": -5, "perpendicular_45-90": -12,
-            "contrario_20-45": -10, "contrario_45-90": -5,
+            "paralelo_20-45": 0,
+            "paralelo_45-90": -2,
+            "perpendicular_20-45": -5,
+            "perpendicular_45-90": -12,
+            "contrario_20-45": -10,
+            "contrario_45-90": -5,
             "irrelevante_0-20": -5
         }
     }
-    
+
     //Calcula o RMR
     let rmr = (0
         + Number(pesos["pesos_point_load"][valor["point_load"]])
