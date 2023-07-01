@@ -28,7 +28,13 @@ function Obter_idioma() {
 // ABRE O POP UP PARA () =>{Calculo(metodo)} AHP
 function Open_pop_up_ahp() {
     encoded_id = "AHP\\pop_up_ahp_" + Obter_idioma() + ".html?"
-    window.open(encoded_id, "_blank", "width=650,height=650")
+    window.open(encoded_id, "_blank", "width=650,height=750")
+}
+
+// ABRE POP UP DE CALCULO DO GSI
+function Open_pop_up_ucs(id) {
+    const endereco = "ucs_calculadora\\ucs_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
+    window.open(endereco, "_blank", "width=600, height=650")
 }
 
 // ABRE POP UP DE CALCULO DO GSI
@@ -102,6 +108,12 @@ function Eventos(metodo) {
     const botao_calculadora_gsi = document.querySelectorAll(".botao-calculadora-gsi")
     botao_calculadora_gsi.forEach((elemento) => {
         elemento.onclick = () => Open_pop_up_gsi(elemento.id)
+    })
+    
+    //BOTÃO CALCULADORA UCS
+    const botao_calculadora_ucs = document.querySelectorAll(".botao-calculadora-ucs")
+    botao_calculadora_ucs.forEach((elemento) => {
+        elemento.onclick = () => Open_pop_up_ucs(elemento.id)
     })
 
     //INPUT DOS FATORES DE PESOS E AHP NO MÉTODO DE NICHOLAS 1992

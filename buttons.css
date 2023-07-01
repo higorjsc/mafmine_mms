@@ -176,6 +176,21 @@ label:hover {
   box-shadow: var( --shadow-blue);
 }
 
+/* ------------------BOTÃO CALCULADORA GSI (CANTO INFERIOR ESQUERDO) ----------------- */
+.botao-calculadora-ucs {
+  position: absolute;
+  right: 42%;
+  z-index: 2;
+  transform: translate(25%, -20%) scale(0.5);
+  background-color: rgb(255 255 255 / 0%);
+  border: none;
+}
+
+.botao-calculadora-ucs:hover {
+  cursor: pointer;
+  box-shadow: var( --shadow-blue);
+}
+
 /* --------------BOTAO AHP------------------------------- */
 #botao-ahp {
   grid-row: 5/6;
