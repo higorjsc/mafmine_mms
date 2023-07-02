@@ -9,7 +9,7 @@ function Calculo_rss(metodo) {
         let resultado_numero = (ucs * 1e6) / (densidade * profundidade * 9.81)
         let resultado_texto = document.getElementById(entry)
         let idioma = Obter_idioma()
-
+        
         if (idioma == "pt") {
             //Caso o titulo da seção 1 esteja em pt-br
             if (resultado_numero < 5) {
