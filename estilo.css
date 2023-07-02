@@ -520,6 +520,7 @@ select:hover {
 }
 
 #div-span-footer-2 {
+  display: none;
   position: absolute;
   grid-column: 4/5;
   left: 5%;
