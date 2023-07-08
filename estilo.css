@@ -12,7 +12,7 @@
   --shadow-apretada: -2px 0px 2px  rgb(0 0 0 / 95%);
   --shadow-blue: 0 0 10px var(--cor-2);
   --borda-simples: 1pt solid black;
-  --main-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
+  --main-columns: minmax(260px, 5fr) minmax(385px, 7fr) minmax(290px, 11fr) minmax(250px, 5fr);
 }
 
 
