@@ -260,6 +260,7 @@ function Balao_entra_shb(entry, idioma) {
             "profundidade": "\n- Shallow: between 0 m and 200 m\n\n- Intermediate: between 200 m and 500 m\n\n- Rarely Deep: between 500 m and 800 m\n\n- Deep: more than 800 m\n\n",
             "valor-minerio": "Relative value",
             "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
+            "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11.63) / 1.13\n\n",
             "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
         }
     } else {
@@ -294,7 +295,7 @@ function Balao_entra_ubc(entry, idioma) {
             "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
             "profundidade": "\n- Shallow: between 0 m and 100 m\n\n- Intermediate: between 100 m and 600 m\n\n- Deep: more than 600 m\n\n",
             "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
-            "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
+            "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11.63) / 1.13\n\n",
             "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n"
         }
     } else {
