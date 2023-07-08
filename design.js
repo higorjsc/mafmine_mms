@@ -184,6 +184,7 @@ function Positions(entry, messages, positions) {
     entry = entry.includes("calculadora-densidade") ? "calculadora-densidade" : entry
     entry = entry.includes("resultado-rss") ? "resultado-rock-substance-strenght" : entry
     entry = entry.includes("gsi") ? "gsi" : entry
+    entry = entry.includes("rmr") ? "rmr" : entry
     entry = entry.includes("q") ? "q" : entry
     entry = entry.includes("rss") ? "rss" : entry
     entry = entry.includes("fracture-spacing") ? "fracture-spacing" : entry
