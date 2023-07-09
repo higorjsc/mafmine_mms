@@ -11,9 +11,6 @@
   font-weight: normal;
 }
 
-body {
-  overflow: hidden;
-}
 
 main {
   position: absolute;
@@ -23,7 +20,7 @@ main {
   top: 10px;
   border: 1pt solid black;
   margin: auto;
-
+  overflow: hidden;
 }
 
 select {

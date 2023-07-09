@@ -17,7 +17,6 @@ function Positions(entry, messages, positions) {
 
 }
 
-
 function Balao_entra(entry) {
     const idioma = Obter_idioma()
     let messages 
