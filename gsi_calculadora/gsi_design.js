@@ -98,7 +98,6 @@ function Balao_gsi(entry, X, Y) {
     Y = (Y / pad.clientHeight) * 40 //2
     X > X === 45 ? X = 45 : X
     Y > Y === 40 ? Y = 40 : Y
-    console.log((X + Y))
     messages = {
         "pad": `${X.toFixed(0)}, ${Y.toFixed(0)}`
     }
