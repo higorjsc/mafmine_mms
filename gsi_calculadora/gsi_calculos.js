@@ -12,7 +12,7 @@ function Retornar_valor() {
     const janela_principal = window.opener  // Acessa a janela principal através de window.opener
 
     let valor = janela_principal.document.getElementById(id[url[2]])
-    
+
     let texto = document.querySelector("#resultado").innerText
     valor.value = texto
 
@@ -67,12 +67,12 @@ function Calculo_gsi_click(X, Y) {
 
     X = pad.clientWidth - X
     Y = pad.clientHeight - Y
-    X = (X / pad.clientWidth) * 45 + 4
-    Y = (Y / pad.clientHeight) * 40 + 1
+    X = (X / pad.clientWidth) * 45
+    Y = (Y / pad.clientHeight) * 40
 
     let gsi
 
-    gsi = X + Y
+    gsi = Math.round(X, 0) + Math.round(Y, 0)
 
     return gsi
 }

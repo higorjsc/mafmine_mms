@@ -11,13 +11,14 @@ function Inserir_idioma() {
 }
 
 function Desenhar_retas(X, Y) {
-
     const pad = document.getElementById("pad")
     pad.innerHTML = ""
     largura = pad.clientWidth
     altura = pad.clientHeight
-    X = X - 26
-    Y = Y - 15
+    X -= 5
+    Y -= 5
+    X = X > 312.5 ? 312.5 : X
+    Y = Y > 348 ? 348 : Y
 
     // Criar o ponto
     const ponto = document.createElement("div")
@@ -93,11 +94,10 @@ function Balao_gsi(entry, X, Y) {
     const balao = document.getElementById("balao")
 
     const pad = document.getElementById("pad")
-    X = ((X / pad.clientWidth) * 45) + 4
-    Y = (Y / pad.clientHeight) * 40 + 2
+    X = ((X / pad.clientWidth) * 45) //4
+    Y = (Y / pad.clientHeight) * 40 //2
     X > X === 45 ? X = 45 : X
     Y > Y === 40 ? Y = 40 : Y
-
     messages = {
         "pad": `${X.toFixed(0)}, ${Y.toFixed(0)}`
     }
@@ -126,3 +126,42 @@ function Balao_sai() {
 }
 
 
+
+function Positions(entry, messages, positions) {
+
+    //Mostra o balão de texto
+    const balao = document.getElementById("balao")
+    if (messages[entry]) {
+        balao.innerText = messages[entry]
+        balao.style.display = "block"
+    }
+
+    //Posiciona o balão conforme o dicionário de posições
+    if (positions[entry]) {
+        const { x, y } = positions[entry]
+        balao.style.transform = `translate(${x}px, ${y}px)`
+    } else {
+        balao.style.transform = "translate(-100px,-75px)"
+    }
+
+}
+
+function Balao_entra(entry) {
+    const idioma = Obter_idioma()
+    let messages
+    if (idioma == "en") {
+        messages = {
+        }
+    } else {
+        messages = {
+        }
+    }
+
+    const positions = {
+        "matriz": { x: -100, y: -50 },
+        "pesos": { x: -100, y: -50 },
+        "cons": { x: -100, y: -50 },
+    }
+    //Mostra e posiciona o balão conforme o dicionário de posições
+    Positions(entry, messages, positions)
+}
