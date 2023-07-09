@@ -1,4 +1,4 @@
- Dependências geradas pelo npm
+# Dependências geradas pelo npm
 /node_modules/
 
 # Arquivos gerados pelo build
@@ -36,11 +36,16 @@ package.json
 *.swo
 .DS_Store
 
-#eslint stylelint
-.eslintrc.js
-.stylelintrc.json
+# Arquivos de configuração do ESLint e Stylelint
+.eslintcache/
 .eslintignore
+.eslintrc.js
+.stylelintcache/
 
-#self
-.gitignore
-mms.code-workspace
+# Outros arquivos a serem ignorados
+node_modules/
+.coverage
+yarn.lock
+.vscode/settings.json
+.idea
+tmp/
