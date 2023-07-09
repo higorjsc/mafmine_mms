@@ -90,42 +90,30 @@ function Mostrar_inputs() {
 
 
 function Balao_gsi(entry, X, Y) {
-
-    const balao = document.getElementById("balao")
-
     const pad = document.getElementById("pad")
-    X = ((X / pad.clientWidth) * 45) //4
-    Y = (Y / pad.clientHeight) * 40 //2
+    X = ((X / pad.clientWidth) * 45)
+    Y = (Y / pad.clientHeight) * 40
+
+    // Impede que valores superiores aos limites sejam atribuidos
     X > X === 45 ? X = 45 : X
     Y > Y === 40 ? Y = 40 : Y
+
     messages = {
         "pad": `${X.toFixed(0)}, ${Y.toFixed(0)}`
     }
 
-
     const positions = {
-        "pad": { x: 5, y: -30 },
-
+        "pad": { x: 0, y: -50 },
     }
 
-    balao.innerText = messages[entry]
-    balao.style.display = "block"
-
-    if (positions[entry]) {
-        const { x, y } = positions[entry]
-        balao.style.transform = `translate(${x}px, ${y}px)`
-    } else {
-        balao.style.transform = "translate(100px,-100px)"
-    }
-
+    //Mostra e posiciona o balão conforme o dicionário de posições
+    Positions(entry, messages, positions)
 }
 
 function Balao_sai() {
     const balao = document.getElementById("balao")
     balao.style.display = "none"
 }
-
-
 
 function Positions(entry, messages, positions) {
 
