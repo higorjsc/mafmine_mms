@@ -80,14 +80,10 @@ th.style2 {
 
 td.style3 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
 }
 
 th.style3 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
 }
 
 td.style4 {
@@ -104,32 +100,26 @@ th.style4 {
 
 td.style5 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
   border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 th.style5 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
   border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 td.style6 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
   font-weight: bold;
+  width: 150px;
 }
 
 th.style6 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
   font-weight: bold;
+  width: 150px;
 }
 
 td.style7 {
@@ -172,16 +162,12 @@ th.style9 {
 
 td.style10 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
   border-top: 1px solid black;
   font-weight: bold;
 }
 
 th.style10 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
   border-top: 1px solid black;
   font-weight: bold;
 }

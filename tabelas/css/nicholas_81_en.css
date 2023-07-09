@@ -109,11 +109,13 @@ th.style5 {
 td.style6 {
   vertical-align: middle;
   font-weight: bold;
+  width: 150px;
 }
 
 th.style6 {
   vertical-align: middle;
   font-weight: bold;
+  width: 150px;
 }
 
 td.style7 {

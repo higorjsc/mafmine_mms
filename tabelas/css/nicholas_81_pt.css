@@ -79,70 +79,60 @@ th.style2 {
 
 td.style3 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
 }
 
 th.style3 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
 }
 
 td.style4 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
 }
 
 th.style4 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
 }
 
 td.style5 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 th.style5 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 td.style6 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 th.style6 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 td.style7 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
   font-weight: bold;
+  width: 150px;
 }
 
 th.style7 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
   font-weight: bold;
+  width: 150px;
 }
 
 td.style8 {
@@ -160,42 +150,42 @@ th.style8 {
 td.style9 {
   vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 th.style9 {
   vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 td.style10 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 th.style10 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 td.style11 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 th.style11 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
@@ -214,98 +204,94 @@ th.style12 {
 td.style13 {
   vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
 }
 
 th.style13 {
   vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
 }
 
 td.style14 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 th.style14 {
   vertical-align: middle;
-  ;
-  padding-left: 0;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 td.style15 {
   vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 th.style15 {
   vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 td.style16 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
-  border-top: 1px solid #000 !important;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 th.style16 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
-  border-top: 1px solid #000 !important;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 td.style17 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
-  border-top: 1px solid #000 !important;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 th.style17 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
-  border-top: 1px solid #000 !important;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 td.style18 {
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
 }
 
 th.style18 {
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
 }
 
 td.style19 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 th.style19 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
@@ -332,41 +318,41 @@ th.style21 {
 td.style22 {
   vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 th.style22 {
   vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 td.style23 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 th.style23 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 td.style24 {
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
   width: 150px;
 }
 
 th.style24 {
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
   width: 150px;
 }
@@ -384,49 +370,49 @@ th.style25 {
 td.style26 {
   vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 th.style26 {
   vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 td.style27 {
   text-align: center;
-  border-bottom: 1px solid #000 !important;
-  border-top: 1px solid #000 !important;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 th.style27 {
   text-align: center;
-  border-bottom: 1px solid #000 !important;
-  border-top: 1px solid #000 !important;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   font-weight: bold;
 }
 
 td.style28 {
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
 }
 
 th.style28 {
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
 }
 
 td.style29 {
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
 }
 
 th.style29 {
   text-align: center;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid black;
 }
 
 td.style30 {
