@@ -60,16 +60,8 @@ table {
   text-align: right
 }
 
-.inlineStr {
-  text-align: left
-}
-
 .n {
   text-align: right
-}
-
-.s {
-  text-align: left
 }
 
 td.style2 {
@@ -330,20 +322,22 @@ th.style23 {
 
 td.style24 {
   text-align: center;
+  width: 150px;
 }
 
 th.style24 {
   text-align: center;
+  width: 150px;
 }
 
 td.style25 {
   text-align: center;
-  font-size: 8pt;
+  font-size: 12pt;
 }
 
 th.style25 {
   text-align: center;
-  font-size: 8pt;
+  font-size: 12pt;
 }
 
 td.style26 {

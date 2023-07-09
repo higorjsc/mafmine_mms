@@ -60,17 +60,12 @@ table {
   text-align: right
 }
 
-.inlineStr {
-  text-align: left
-}
+
 
 .n {
   text-align: right
 }
 
-.s {
-  text-align: left
-}
 
 td.style2 {
   vertical-align: middle;
@@ -84,13 +79,13 @@ th.style2 {
 
 td.style3 {
   vertical-align: middle;
-  text-align: left;
+  ;
   padding-left: 0;
 }
 
 th.style3 {
   vertical-align: middle;
-  text-align: left;
+  ;
   padding-left: 0;
 }
 
@@ -108,7 +103,7 @@ th.style4 {
 
 td.style5 {
   vertical-align: middle;
-  text-align: left;
+  ;
   padding-left: 0;
   border-bottom: 1px solid #000 !important;
   font-weight: bold;
@@ -116,7 +111,7 @@ td.style5 {
 
 th.style5 {
   vertical-align: middle;
-  text-align: left;
+  ;
   padding-left: 0;
   border-bottom: 1px solid #000 !important;
   font-weight: bold;
@@ -138,14 +133,14 @@ th.style6 {
 
 td.style7 {
   vertical-align: middle;
-  text-align: left;
+  ;
   padding-left: 0;
   font-weight: bold;
 }
 
 th.style7 {
   vertical-align: middle;
-  text-align: left;
+  ;
   padding-left: 0;
   font-weight: bold;
 }
@@ -230,7 +225,7 @@ th.style13 {
 
 td.style14 {
   vertical-align: middle;
-  text-align: left;
+  ;
   padding-left: 0;
   border-top: 1px solid #000 !important;
   font-weight: bold;
@@ -238,7 +233,7 @@ td.style14 {
 
 th.style14 {
   vertical-align: middle;
-  text-align: left;
+  ;
   padding-left: 0;
   border-top: 1px solid #000 !important;
   font-weight: bold;
@@ -366,12 +361,14 @@ td.style24 {
   text-align: center;
   border-top: 1px solid #000 !important;
   font-weight: bold;
+  width: 150px;
 }
 
 th.style24 {
   text-align: center;
   border-top: 1px solid #000 !important;
   font-weight: bold;
+  width: 150px;
 }
 
 td.style25 {
@@ -474,12 +471,12 @@ th.style34 {
 
 td.style35 {
   text-align: center;
-  font-size: 8pt;
+  font-size: 12pt;
 }
 
 th.style35 {
   text-align: center;
-  font-size: 8pt;
+  font-size: 12pt;
 }
 
 td.style36 {

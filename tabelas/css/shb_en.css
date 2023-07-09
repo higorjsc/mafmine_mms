@@ -56,17 +56,13 @@ table {
   text-align: right
 }
 
-.inlineStr {
-  text-align: left
-}
+
 
 .n {
   text-align: right
 }
 
-.s {
-  text-align: left
-}
+
 
 td.style3 {
   vertical-align: middle;
@@ -80,14 +76,10 @@ th.style3 {
 
 td.style4 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
 }
 
 th.style4 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
 }
 
 td.style5 {
@@ -108,16 +100,14 @@ th.style5 {
 
 td.style6 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
   font-weight: bold;
+  width: 150px;
 }
 
 th.style6 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
   font-weight: bold;
+  width: 150px;
 }
 
 td.style7 {
@@ -144,16 +134,12 @@ th.style8 {
 
 td.style9 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
   border-bottom: 1px solid black;;
   font-weight: bold;
 }
 
 th.style9 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
   border-bottom: 1px solid black;;
   font-weight: bold;
 }
@@ -228,15 +214,11 @@ th.style15 {
 
 td.style16 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
   font-weight: bold;
 }
 
 th.style16 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
   font-weight: bold;
 }
 
@@ -251,11 +233,13 @@ th.style17 {
 td.style18 {
   text-align: center;
   border-bottom: 1px solid black;;
+  width: 150px;
 }
 
 th.style18 {
   text-align: center;
   border-bottom: 1px solid black;;
+  width: 150px;
 }
 
 td.style19 {
@@ -522,83 +506,6 @@ table.sheet0 col.col21 {
   width: 42pt
 }
 
-table.sheet0 tr {
+tr {
   height: 15pt
 }
-
-table.sheet0 tr.row0 {
-  height: 15pt
-}
-
-table.sheet0 tr.row1 {
-  height: 15pt
-}
-
-table.sheet0 tr.row5 {
-  height: 15pt
-}
-
-table.sheet0 tr.row6 {
-  height: 15pt
-}
-
-table.sheet0 tr.row7 {
-  height: 15pt
-}
-
-table.sheet0 tr.row8 {
-  height: 15pt
-}
-
-table.sheet0 tr.row9 {
-  height: 15pt
-}
-
-table.sheet0 tr.row10 {
-  height: 15pt
-}
-
-table.sheet0 tr.row11 {
-  height: 15pt
-}
-
-table.sheet0 tr.row12 {
-  height: 15pt
-}
-
-table.sheet0 tr.row13 {
-  height: 15pt
-}
-
-table.sheet0 tr.row14 {
-  height: 15pt
-}
-
-table.sheet0 tr.row15 {
-  height: 15pt
-}
-
-table.sheet0 tr.row16 {
-  height: 15pt
-}
-
-table.sheet0 tr.row17 {
-  height: 15pt
-}
-
-table.sheet0 tr.row18 {
-  height: 15pt
-}
-
-table.sheet0 tr.row19 {
-  height: 15pt
-}
-
-table.sheet0 tr.row20 {
-  height: 15pt
-}
-
-table.sheet0 tr.row21 {
-  height: 15pt
-}
-

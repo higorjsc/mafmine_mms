@@ -14,6 +14,10 @@ html {
   font-family: Calibri, Arial, Helvetica, sans-serif;
 }
 
+div.comment {
+  display: none
+}
+
 a.comment-indicator:hover+div.comment {
   background: #ffd;
   position: absolute;
@@ -28,10 +32,6 @@ a.comment-indicator {
   border: 1px solid black;
   width: 0.5em;
   height: 0.5em
-}
-
-div.comment {
-  display: none
 }
 
 table {
@@ -390,12 +390,14 @@ td.style30 {
   text-align: center;
   border-top: 1px solid black;
   font-weight: bold;
+  width: 150px;
 }
 
 th.style30 {
   text-align: center;
   border-top: 1px solid black;
   font-weight: bold;
+  width: 150px;
 }
 
 td.style31 {
@@ -522,12 +524,12 @@ th.style40 {
 
 td.style41 {
   text-align: center;
-  font-size: 9pt;
+  font-size: 12pt;
 }
 
 th.style41 {
   text-align: center;
-  font-size: 9pt;
+  font-size: 12pt;
 }
 
 td.style42 {
@@ -575,11 +577,11 @@ table.sheet0 col.col4 {
 }
 
 table.sheet0 col.col5 {
-  width: 98.27777665pt
+  width: 98.2777pt
 }
 
 table.sheet0 col.col6 {
-  width: 92.85555449pt
+  width: 92.8555pt
 }
 
 table.sheet0 col.col7 {

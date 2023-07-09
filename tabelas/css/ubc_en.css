@@ -64,33 +64,12 @@ table {
   text-align: right
 }
 
-.inlineStr {
-  text-align: left
-}
 
 .n {
   text-align: right
 }
 
-.s {
-  text-align: left
-}
 
-td.style0 {
-  border-bottom: none #000;
-}
-
-th.style0 {
-  border-bottom: none #000;
-}
-
-td.style1 {
-  border-bottom: none #000;
-}
-
-th.style1 {
-  border-bottom: none #000;
-}
 
 td.style2 {
   vertical-align: middle;
@@ -124,58 +103,44 @@ th.style3 {
 
 td.style4 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 th.style4 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 td.style5 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
 }
 
 th.style5 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
 }
 
 td.style6 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 th.style6 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 td.style7 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
   border-bottom: 1px solid black;;
   font-weight: bold;
 }
 
 th.style7 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
   border-bottom: 1px solid black;;
   font-weight: bold;
 }
@@ -194,48 +159,31 @@ th.style8 {
 
 td.style9 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
-  border-bottom: none #000;
 }
 
 th.style9 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
-  border-bottom: none #000;
 }
 
 td.style10 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-size: 10pt;
 }
 
 th.style10 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-size: 10pt;
 }
 
-td.style11 {
-  border-bottom: none #000;
-}
-
-th.style11 {
-  border-bottom: none #000;
-}
 
 td.style12 {
   text-align: center;
-  border-bottom: none #000;
 }
 
 th.style12 {
   text-align: center;
-  border-bottom: none #000;
 }
 
 td.style13 {
@@ -250,29 +198,21 @@ th.style13 {
 
 td.style14 {
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 th.style14 {
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 td.style15 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 th.style15 {
   vertical-align: middle;
-  text-align: left;
-  padding-left: 0;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
@@ -302,30 +242,27 @@ th.style17 {
 
 td.style18 {
   text-align: center;
-  border-bottom: none #000;
+  width: 150px;
 }
 
 th.style18 {
   text-align: center;
-  border-bottom: none #000;
+  width: 150px;
 }
 
 td.style19 {
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 th.style19 {
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 td.style20 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   border-top: 1px solid black;;
   font-weight: bold;
 }
@@ -333,7 +270,6 @@ td.style20 {
 th.style20 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   border-top: 1px solid black;;
   font-weight: bold;
 }
@@ -341,14 +277,12 @@ th.style20 {
 td.style21 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 th.style21 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
@@ -369,7 +303,6 @@ th.style22 {
 td.style23 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
   font-size: 18pt;
 }
@@ -377,7 +310,6 @@ td.style23 {
 th.style23 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
   font-size: 18pt;
 }
@@ -385,15 +317,13 @@ th.style23 {
 td.style24 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 th.style24 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 td.style25 {
@@ -407,7 +337,7 @@ td.style25 {
 th.style25 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: 1px solid black;;
+  border-bottom: 1px solid black;
   border-top: 1px solid black;;
   font-weight: bold;
 }
@@ -415,7 +345,6 @@ th.style25 {
 td.style26 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   border-top: 1px solid black;;
   font-weight: bold;
 }
@@ -423,7 +352,6 @@ td.style26 {
 th.style26 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   border-top: 1px solid black;;
   font-weight: bold;
 }
@@ -431,7 +359,6 @@ th.style26 {
 td.style27 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   border-top: 1px solid black;;
   font-weight: bold;
 }
@@ -439,7 +366,6 @@ td.style27 {
 th.style27 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   border-top: 1px solid black;;
   font-weight: bold;
 }
@@ -447,14 +373,12 @@ th.style27 {
 td.style28 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
 th.style28 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
 }
 
@@ -488,26 +412,22 @@ th.style30 {
 
 td.style31 {
   text-align: center;
-  border-bottom: none #000;
   border-top: 1px solid black;;
   font-weight: bold;
 }
 
 th.style31 {
   text-align: center;
-  border-bottom: none #000;
   border-top: 1px solid black;;
   font-weight: bold;
 }
 
 td.style32 {
   text-align: center;
-  border-bottom: none #000;
 }
 
 th.style32 {
   text-align: center;
-  border-bottom: none #000;
 }
 
 td.style33 {
@@ -523,7 +443,6 @@ th.style33 {
 td.style34 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
   font-size: 12pt;
 }
@@ -531,7 +450,6 @@ td.style34 {
 th.style34 {
   vertical-align: middle;
   text-align: center;
-  border-bottom: none #000;
   font-weight: bold;
   font-size: 12pt;
 }
@@ -620,10 +538,6 @@ table.sheet0 col.col20 {
   width: 42pt
 }
 
-table.sheet0 tr {
+tr {
   height: 15pt
-}
-
-table.sheet0 tr.row4 {
-  height: 15.75pt
 }
