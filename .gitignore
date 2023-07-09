@@ -13,6 +13,8 @@
 
 # Arquivos de configuração local
 config.local.js
+package-lock.json
+package.json
 
 # Arquivos de cache
 .cache/
