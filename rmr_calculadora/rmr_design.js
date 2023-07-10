@@ -12,6 +12,7 @@ function Display_none(id) {
 //EVENTO de troca do select visível da rock strenght
 function Display_strenght() {
     const strenght = document.getElementById("select-strenght").value
+    
     Display_none("point-load")
     Display_none("ucs")
     Display_block(strenght)
