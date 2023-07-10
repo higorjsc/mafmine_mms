@@ -175,3 +175,16 @@ select:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
+
+#balao {
+  position: fixed;
+  z-index: 2;
+  font: bold 9pt;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 1%;
+  display: none;
+}
