@@ -1,7 +1,6 @@
 function Escrever(id, texto, op) {
     const elemento = document.getElementById(id)
     if (op === undefined) {
-
         elemento.innerHTML = texto
     } else {
         elemento.options[op].text = texto

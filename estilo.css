@@ -15,8 +15,6 @@
   --main-columns: minmax(260px, 5fr) minmax(385px, 7fr) minmax(290px, 11fr) minmax(250px, 5fr);
 }
 
-
-
 .head {
   min-width: 100%;
   width: 100%;
@@ -53,7 +51,6 @@
   grid-column: 1/2;
   left: 1%;
   z-index: 2;
-
 }
 
 #img-simbolo-mineracao-direita {
@@ -62,7 +59,6 @@
   right: 1%;
   z-index: 2;
 }
-
 
 input {
   all: unset;
@@ -74,7 +70,6 @@ input {
   border: var(--borda-simples);
   border-radius: 10px;
   box-shadow: var(--shadow-apretada);
-
 }
 
 span {
@@ -386,7 +381,6 @@ select:hover {
   height: 100%;
   right: 0%;
   padding: 0;
-
 }
 
 .input-pesos {
@@ -502,7 +496,6 @@ select:hover {
   color: white;
   font-size: 10pt;
   opacity: 0.8;
-
 }
 
 #img-ufrgs {

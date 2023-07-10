@@ -73,6 +73,7 @@ function Pesos(valor) {
         + Number(pesos["pesos_rqd"][valor["rqd"]])
         + Number(pesos["pesos_spacing"][valor["spacing"]])
         + Number(pesos["pesos_comprimento"][valor["comprimento"]])
+        + Number(pesos["pesos_separacao"][valor["separacao"]])
         + Number(pesos["pesos_rugosidade"][valor["rugosidade"]])
         + Number(pesos["pesos_preenchimento"][valor["preenchimento"]])
         + Number(pesos["pesos_alteracao"][valor["alteracao"]])
@@ -142,8 +143,7 @@ function Calculo_pop_up() {
     //Obtém os parâmetros de orientação
     const strike = document.getElementById("select-strike").value
     const id_dip = (strike !== "irrelevante") ? "dip-1" : "dip-2"
-
-
+    
     let valor = {
         "point_load": Strenght_value["point-load"],
         "ucs": Strenght_value["ucs"],
