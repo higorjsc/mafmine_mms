@@ -1,0 +1,281 @@
+* {
+  --cor-1: #304454;
+  --cor-2: #112536;
+  --shadow-apretada: -5px 0 5px  rgb(0 0 0 / 95%);
+  --shadow-blue: 0 0 10px var(--cor-2);
+  --borda-simples: 1pt solid black;
+
+  margin: 0%;
+  padding: 0%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+}
+
+
+main {
+  position: absolute;
+  width: 715px;
+  height: 700px;
+  left: 20px;
+  top: 10px;
+  border: 1pt solid black;
+  margin: auto;
+  overflow: hidden;
+}
+
+select {
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+  line-height: 25%; /* 25px */
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: -0 0 10px rgb(104 62 62 / 42.5%);
+}
+
+select:hover {
+  font-weight: bold;
+  box-shadow: var(--shadow-blue);
+}
+
+#img-gsi-picker {
+  position: absolute;
+  top: 0%;
+  transform: translate(-185px, -125px)scale(0.65);
+  z-index: 0;
+}
+
+#pad {
+  position: absolute;
+  background: rgb(255 0 0 / 6.8%);
+  border: 2pt solid red;
+  z-index: 3;
+  top: 231px;
+  right: 58px;
+  width: 314px;
+  height: 348px;
+  margin: 0;
+}
+
+#pad:hover {
+  cursor: cell;
+}
+
+#div-metodo-calculo {
+  position: absolute;
+  left: 13px;
+  top: 10px;
+  width: 90.2%;
+  height: 30px;
+  display: flex;
+  align-items: center
+}
+
+#span-metodo-calculo {
+  position: absolute;
+  font-weight: bold;
+  left: 50px;
+  height: 25px;
+  transform: translate(0, 5px);
+}
+
+#select-metodo-calculo {
+  position: absolute;
+  width: 300px;
+  right: 10px;
+  color: red;
+}
+
+#input-container {
+  display: block;
+  width: 100%;
+  height: 550px;
+  position: absolute;
+  top: 50px;
+}
+
+#span-referencia {
+  position: absolute;
+  left: 15px;
+  width: 96%;
+  text-align: justify;
+}
+
+#img-equacao-gsi {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  left: 0;
+}
+
+#div-inputs {
+  position: absolute;
+  width: 40%;
+  height: 200px;
+  left: 15px;
+  bottom: 100px;
+  display: block;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#select-jc {
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  right: 0;
+  top: 122px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1pt solid black;
+}
+
+#span-rqd {
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  align-self: center;
+  justify-self: center;
+}
+
+#input-jc {
+  width: 100%;
+  height: 25px;
+  border-radius: 20px;
+  position: absolute;
+  left: 0%;
+  top: 150px;
+  text-align: center;
+  border: 1pt solid black;
+
+}
+
+#input-rqd {
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  left: 0%;
+  top: 15%;
+  text-align: center;
+  border-radius: 20px;
+  border: 1pt solid black;
+
+}
+
+
+#div-calculo-jc {
+  position: absolute;
+  top: 370px;
+  left: 400px;
+  height: 120px;
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+}
+
+#div-calculo-jc select {
+  grid-column: 2/3;
+  height: 22px;
+  width: 100%;
+}
+
+#div-calculo-jc span {
+  grid-column: 1/2;
+  width: 100%;
+}
+
+#persistencia {
+  grid-row: 1/2;
+  width: 100%;
+}
+
+#separacao {
+  grid-row: 2/3;
+  width: 100%;
+}
+
+#rugosidade {
+  grid-row: 3/4;
+  width: 100%;
+}
+
+#preenchimento {
+  grid-row: 4/5;
+  width: 100%;
+}
+
+#alteracao {
+  grid-row: 5/6;
+  width: 100%;
+}
+
+
+#div-inferior {
+  display: flex;
+  width: 35%;
+  height: 70px;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#span-gsi {
+  position: absolute;
+  left: 10px;
+  color: red;
+  font-size: 20pt;
+  font-weight: bold;
+  transform: translate(0, 5px);
+}
+
+#resultado {
+  position: absolute;
+  right: 130px;
+  color: red;
+  font-size: 20pt;
+  font-weight: bold;
+  transform: translate(0, 5px);
+}
+
+#balao {
+  position: fixed;
+  z-index: 5;
+  font-weight: bold; 
+  font-size: 9pt;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 1%;
+  display: none;
+}
+
+/* ------------------BOTÃO ADICIONAR VALOR ----------------- */
+
+#botao-input {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  background: black;
+  color: white;
+  width: 100px;
+  height: 50px;
+  border: 1pt solid black;
+  border-radius: 10px;
+  columns: 4/5;
+  transform: translateX(10px);
+}
+
+#botao-input:hover {
+  box-shadow: var(--shadow-blue);
+  transform: scale(1.05);
+  cursor: pointer;
+}
