@@ -1,0 +1,536 @@
+
+
+@page {
+  margin-left: 0.51in;
+  margin-right: 0.51in;
+  margin-bottom: 0.79in;
+}
+
+body {
+  margin-left: 0.51in;
+  margin-right: 0.51in;
+  margin-bottom: 0.79in;
+}
+
+html {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+
+div.comment {
+  display: none
+}
+
+a.comment-indicator:hover+div.comment {
+  background: #ffd;
+  position: absolute;
+  display: block;
+  border: 1px solid black;
+  padding: 0.5em
+}
+
+a.comment-indicator {
+  background: red;
+  border: 1px solid black;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em
+}
+
+
+
+table {
+  border-collapse: collapse;
+  page-break-after: always
+}
+
+.gridlines td {
+  border: 1px dotted black
+}
+
+.gridlines th {
+  border: 1px dotted black
+}
+
+.b {
+  text-align: center
+}
+
+.e {
+  text-align: center
+}
+
+.f {
+  text-align: right
+}
+
+
+.n {
+  text-align: right
+}
+
+
+td.style2 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+th.style2 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+td.style3 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+th.style3 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+td.style4 {
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+th.style4 {
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+td.style5 {
+  vertical-align: middle;
+  text-align: center;
+}
+
+th.style5 {
+  vertical-align: middle;
+  text-align: center;
+}
+
+td.style6 {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+}
+
+th.style6 {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+}
+
+td.style7 {
+  vertical-align: middle;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+th.style7 {
+  vertical-align: middle;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+td.style8 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+th.style8 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+td.style9 {
+  vertical-align: middle;
+}
+
+th.style9 {
+  vertical-align: middle;
+}
+
+td.style10 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 10pt;
+}
+
+th.style10 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 10pt;
+}
+
+td.style12 {
+  text-align: center;
+}
+
+th.style12 {
+  text-align: center;
+}
+
+td.style13 {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+th.style13 {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+td.style14 {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+th.style14 {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+td.style15 {
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+th.style15 {
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+td.style16 {
+  text-align: center;
+}
+
+th.style16 {
+  text-align: center;
+}
+
+td.style17 {
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+th.style17 {
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+td.style18 {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  width: 150px;
+}
+
+th.style18 {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  width: 150px;
+}
+
+td.style19 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+th.style19 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+td.style20 {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18pt;
+}
+
+th.style20 {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18pt;
+}
+
+td.style21 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 10pt;
+}
+
+th.style21 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 10pt;
+}
+
+td.style22 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+th.style22 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+td.style23 {
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+th.style23 {
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+td.style24 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 12pt;
+}
+
+th.style24 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 12pt;
+}
+
+td.style25 {
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+th.style25 {
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid black;
+  font-weight: bold;
+}
+
+td.style26 {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+}
+
+th.style26 {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+}
+
+td.style27 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+th.style27 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+td.style28 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+th.style28 {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+td.style29 {
+  text-align: center;
+  font-weight: bold;
+}
+
+th.style29 {
+  text-align: center;
+  font-weight: bold;
+}
+
+td.style30 {
+  text-align: center;
+  border-top: 1px solid black;
+  font-weight: bold;
+  width: 150px;
+}
+
+th.style30 {
+  text-align: center;
+  border-top: 1px solid black;
+  font-weight: bold;
+  width: 150px;
+}
+
+td.style31 {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+}
+
+th.style31 {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+}
+
+td.style32 {
+  text-align: center;
+}
+
+th.style32 {
+  text-align: center;
+}
+
+td.style33 {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+th.style33 {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+table.sheet0 col.col0 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col1 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col2 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col3 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col4 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col5 {
+  width: 98.2777pt
+}
+
+table.sheet0 col.col6 {
+  width: 92.8555pt
+}
+
+table.sheet0 col.col7 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col8 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col9 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col10 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col11 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col12 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col13 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col14 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col15 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col16 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col17 {
+  width: 43.3778pt
+}
+
+table.sheet0 col.col18 {
+  width: 42pt
+}
+
+table.sheet0 col.col19 {
+  width: 42pt
+}
+
+table.sheet0 col.col20 {
+  width: 42pt
+}
+
+table.sheet0 tr {
+  height: 15pt
+}
+
+table.sheet0 tr.row4 {
+  height: 15.75pt
+}

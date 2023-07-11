@@ -11,7 +11,6 @@
   font-weight: normal;
 }
 
-
 main {
   position: absolute;
   width: 715px;
@@ -21,6 +20,7 @@ main {
   border: 1pt solid black;
   margin: auto;
   overflow: hidden;
+  zoom: 100%;
 }
 
 select {
@@ -152,7 +152,6 @@ select:hover {
   top: 150px;
   text-align: center;
   border: 1pt solid black;
-
 }
 
 #input-rqd {
@@ -164,7 +163,6 @@ select:hover {
   text-align: center;
   border-radius: 20px;
   border: 1pt solid black;
-
 }
 
 

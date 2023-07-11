@@ -1,10 +1,4 @@
-:root {
-  --cor-1: #304454;
-  --cor-2: #112536;
-  --shadow-apretada: -5px 0 5px  rgb(0 0 0 / 95%);
-  --shadow-blue: 0 0 10px blue;
-  --borda-simples: 1pt solid black;
-}
+
 
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -12,16 +6,21 @@
   font-size: 11pt;
   line-height: 1.5;
   color: black;
+
+  --cor-1: #304454;
+  --cor-2: #112536;
+  --shadow-apretada: -2px 0px 2px  rgb(0 0 0 / 95%);
+  --shadow-blue: 0 0 10px var(--cor-2);
+  --borda-simples: 1pt solid black;
+  --main-columns: minmax(260px, 5fr) minmax(385px, 7fr) minmax(290px, 11fr) minmax(250px, 5fr);
 }
-
-
 
 .head {
   min-width: 100%;
   width: 100%;
   max-width: 100%;
   display: grid;
-  grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
+  grid-template-columns: var(--main-columns);
   align-items: center;
   position: relative;
   height: 58.31px;
@@ -52,7 +51,6 @@
   grid-column: 1/2;
   left: 1%;
   z-index: 2;
-
 }
 
 #img-simbolo-mineracao-direita {
@@ -61,7 +59,6 @@
   right: 1%;
   z-index: 2;
 }
-
 
 input {
   all: unset;
@@ -73,7 +70,6 @@ input {
   border: var(--borda-simples);
   border-radius: 10px;
   box-shadow: var(--shadow-apretada);
-
 }
 
 span {
@@ -106,7 +102,7 @@ body {
   min-width: 100%;
   width: 100%;
   max-width: 100%;
-  grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
+  grid-template-columns: var(--main-columns);
   height: auto;
   position: relative;
   padding-bottom: 0.2%;
@@ -245,11 +241,11 @@ h3 {
 }
 
 select {
-  width: 40%; /* 150px */
+  width: 40.69%; /* 150px */
   position: absolute;
   cursor: pointer;
   right: 1%;
-  height: 22px; 
+  height: 22.66px; 
   text-align: center;
   border-radius: 10px;
   border: var(--borda-simples);
@@ -385,7 +381,6 @@ select:hover {
   height: 100%;
   right: 0%;
   padding: 0;
-
 }
 
 .input-pesos {
@@ -474,7 +469,7 @@ select:hover {
   min-width: 100%;
   width: 100%;
   max-width: 100%;
-  grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
+  grid-template-columns: var(--main-columns);
   height: auto;
   position: relative;
 }
@@ -483,7 +478,7 @@ select:hover {
   background-color: var(--cor-1);
   border: var(--borda-simples);
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr);
+  grid-template-columns: minmax(150px, 1fr) minmax(600px, 5fr) minmax(150px, 1fr) minmax(200px, 3fr);
   position: absolute;
   grid-column: 1/5;
   min-width: 100%;
@@ -501,7 +496,6 @@ select:hover {
   color: white;
   font-size: 10pt;
   opacity: 0.8;
-
 }
 
 #img-ufrgs {
@@ -519,8 +513,10 @@ select:hover {
 }
 
 #div-span-footer-2 {
+  display: none;
+  position: absolute;
   grid-column: 4/5;
-  left: 0%;
+  left: 5%;
 }
 
 #img-laprom {

@@ -28,7 +28,19 @@ function Obter_idioma() {
 // ABRE O POP UP PARA () =>{Calculo(metodo)} AHP
 function Open_pop_up_ahp() {
     encoded_id = "AHP\\pop_up_ahp_" + Obter_idioma() + ".html?"
-    window.open(encoded_id, "_blank", "width=650,height=650")
+    window.open(encoded_id, "_blank", "width=650,height=750")
+}
+
+// ABRE POP UP DE ESTIMATIVAS DE UCS
+function Open_pop_up_ucs(id) {
+    const endereco = "ucs_calculadora\\ucs_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
+    window.open(endereco, "_blank", "width=600, height=650")
+}
+
+// ABRE POP UP DE ESTIMATIVAS DE DENSIDADE
+function Open_pop_up_densidade(id) {
+    const endereco = "densidade_calculadora\\densidade_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
+    window.open(endereco, "_blank", "width=600, height=650")
 }
 
 // ABRE POP UP DE CALCULO DO GSI
@@ -104,12 +116,23 @@ function Eventos(metodo) {
         elemento.onclick = () => Open_pop_up_gsi(elemento.id)
     })
 
+    //BOTÃO CALCULADORA UCS
+    const botao_calculadora_ucs = document.querySelectorAll(".botao-calculadora-ucs")
+    botao_calculadora_ucs.forEach((elemento) => {
+        elemento.onclick = () => Open_pop_up_ucs(elemento.id)
+    })
+    //BOTÃO CALCULADORA DENSIDADE
+    const botao_calculadora_densidade = document.querySelectorAll(".botao-calculadora-densidade")
+    botao_calculadora_densidade.forEach((elemento) => {
+        elemento.onclick = () => Open_pop_up_densidade(elemento.id)
+    })
+
     //INPUT DOS FATORES DE PESOS E AHP NO MÉTODO DE NICHOLAS 1992
     if (metodo == "nicholas_92") {
         const menu_pesos = document.querySelector("#menu-pesos")
         menu_pesos.addEventListener("change", Mostrar_input_pesos)
         const botao_ahp = document.querySelector("#botao-ahp")
-        botao_ahp.onclick = Open_pop_up_ahp
+        botao_ahp.onclick = () => Open_pop_up_ahp()
     }
 
     //BOTÃO MOSTRA TABELA COM OS PESOS
@@ -135,6 +158,13 @@ function Eventos(metodo) {
             element.blur()
         }
         element.onmouseover = () => Baloes(element.id, metodo)
+        element.onmouseout = () => Balao_sai()
+    })
+
+    // SPAN RESULTADO RSS
+    const span_resultado_rss = document.querySelectorAll(".resultado-rss")
+    span_resultado_rss.forEach((element) => {
+        element.onmouseover = () => Baloes(element.id)
         element.onmouseout = () => Balao_sai()
     })
 

@@ -79,7 +79,6 @@ function Calculo_gsi_click(X, Y) {
 
 
 function Calculo_gsi_input() {
-
     let input_jc = document.getElementById("input-jc")
     let input_rqd = document.getElementById("input-rqd").value
     const select_jc = document.getElementById("select-jc").value
@@ -113,9 +112,8 @@ function Calculo_gsi(X = 0, Y = 0) {
     } else if (tipo_calculo == "input") {
         gsi = Calculo_gsi_input()
     }
-    if (gsi > 85) {
-        gsi = 85
-    }
+
+    gsi = gsi > 85 ? 85 : gsi
 
     Escrever_resultado_gsi(gsi)
 }

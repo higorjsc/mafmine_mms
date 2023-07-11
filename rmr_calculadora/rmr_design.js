@@ -12,6 +12,7 @@ function Display_none(id) {
 //EVENTO de troca do select visível da rock strenght
 function Display_strenght() {
     const strenght = document.getElementById("select-strenght").value
+
     Display_none("point-load")
     Display_none("ucs")
     Display_block(strenght)
@@ -41,13 +42,69 @@ function Inserir_titulo() {
     let url = (window.location.href).split("-")
     let idioma = "_" + Obter_idioma()
     let texto = {
-        "ob_pt": "Calculo RMR: Corpo de Minério",
-        "ob_en": "RMR calculation: Orebody",
-        "hw_pt": "Calculo RMR: Hanging Wall",
-        "hw_en": "RMR calculation: Hanging Wall",
-        "fw_pt": "Calculo RMR: Footwall",
-        "fw_en": "RMR calculation: Footwall",
+        "ob_pt": "CÁLCULO RMR: Corpo de Minério",
+        "ob_en": "RMR CALCULATION: Orebody",
+        "hw_pt": "CÁLCULO RMR: Hanging Wall",
+        "hw_en": "RMR CALCULATION: Hanging Wall",
+        "fw_pt": "CÁLCULO RMR: Footwall",
+        "fw_en": "RMR CALCULATION: Footwall",
     }
     let titulo = document.getElementById("titulo")
     titulo.innerText += texto[(url[2] + idioma)]
+}
+
+function Balao_sai() {
+    const balao = document.getElementById("balao")
+    balao.style.display = "none"
+}
+
+function Positions(entry, messages, positions) {
+
+    //Mostra o balão de texto
+    const balao = document.getElementById("balao")
+    if (messages[entry]) {
+        balao.innerText = messages[entry]
+        balao.style.display = "block"
+    }
+    //Posiciona o balão conforme o dicionário de posições
+    if (positions[entry]) {
+        const { x, y } = positions[entry]
+        balao.style.transform = `translate(${x}px, ${y}px)`
+    } else {
+        balao.style.transform = "translate(-200px,-80px)"
+    }
+
+}
+
+function Balao_entra(entry) {
+    const idioma = Obter_idioma()
+    let messages
+    if (idioma == "pt") {
+        messages = {
+            "select-strenght": "Calcular por UCS ou Carga Pontual?",
+            "ucs": "Resistência a compressão uniaxial/simples.",
+            "point-load": "Resistência a compressão por cargas concentradas.",
+            "spacing": "Espaçamento entre as juntas/fraturas.",
+            "comprimento": "Comprimento das descontinuidades.",
+            "separacao": "Espessura da abertura (ranhura) da fratura.",
+            "preenchimento": "Duro: quartzo, piritas, rochas ígneas, etc.\n\nMacio: argilas, siltes, materiais decompostos, etc.\n\n",
+        }
+    } else {
+        messages = {
+            "select-strenght": "Calcular por UCS ou Carga Pontual?",
+            "ucs": "Resistência a compressão uniaxial/simples.",
+            "point-load": "Resistência a compressão por cargas concentradas.",
+            "spacing": "Espaçamento entre as juntas/fraturas.",
+            "comprimento": "Comprimento das descontinuidades.",
+            "separacao": "Espessura da abertura (ranhura) da fratura.",
+            "preenchimento": "Duro: quartzo, piritas, rochas ígneas, etc.\n\nMacio: argilas, siltes, materiais decompostos, etc.\n\n",
+        }
+    }
+    const positions = {
+        "select-strenght": { x: -200, y: -75 },
+        "point-load": { x: -200, y: -75 },
+        "preenchimento": { x: -250, y: -75 },
+    }
+    //Mostra e posiciona o balão conforme o dicionário de posições
+    Positions(entry, messages, positions)
 }

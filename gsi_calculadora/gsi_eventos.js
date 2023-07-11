@@ -2,42 +2,45 @@
 function Eventos_pop_gsi() {
 
     Inserir_idioma()
+
     const balao = document.getElementById("balao")
-    //OBS: o off-set do balão é configurado na função Balao_entra() em design.js
     document.addEventListener("mousemove", function (event) {
         balao.style.top = event.clientY + "px"
         balao.style.left = event.clientX + "px"
     })
 
-
+    // BALÃO SOBRE O PAD
     const pad = document.getElementById("pad")
     pad.onmousemove = function (event) {
-        let rect = pad.getBoundingClientRect() // Obter o retângulo delimitador da div "pad"
-        let mouseX = event.clientX - rect.left // Posição X do mouse em relação à div "pad"
-        let mouseY = event.clientY - rect.top + pad.scrollTop // Posição Y invertida do mouse em relação à div "pad" com consideração ao scroll vertical
-        mouseX = pad.clientWidth - mouseX // Inverter a posição X
-        mouseY = pad.clientHeight - mouseY // Inverter a posição Y
+        // Obter o retângulo delimitador da div "pad"
+        let rect = pad.getBoundingClientRect()
+        // Posição X do mouse em relação ao  "pad"
+        let mouseX = event.clientX - rect.left
+        // Posição Y invertida do mouse em relação ao pad
+        let mouseY = event.clientY - rect.top + pad.scrollTop
+        // Inverter a posição X
+        mouseX = pad.clientWidth - mouseX
+        // Inverter a posição Y
+        mouseY = pad.clientHeight - mouseY
         Balao_gsi("pad", mouseX, mouseY)
     }
-
     pad.onmouseout = () => Balao_sai()
     pad.onclick = function (event) {
-        let rect = pad.getBoundingClientRect() // Obter o retângulo delimitador da div "pad"
-        let X = event.clientX - rect.left // Posição X do clique em relação à div "pad"
-        let Y = event.clientY - rect.top - pad.scrollTop // Posição Y corrigida do clique em relação à div "pad" com consideração ao scroll vertical
+        let rect = pad.getBoundingClientRect() 
+        let X = event.clientX - rect.left
+        let Y = event.clientY - rect.top - pad.scrollTop
         Calculo_gsi(X, Y)
     }
 
-
-
+    // TODOS OS SELECTS
     const select = document.querySelectorAll("select")
     select.forEach(element => {
         element.onchange = () => blur()
         element.onchange = () => Calculo_gsi()
         element.onchange = () => Mostrar_inputs()
-
     })
 
+    // TODOS OS INPUTS
     const inputs = document.querySelectorAll("input")
     inputs.forEach(element => {
         element.oninput = () => Calculo_gsi()
@@ -48,6 +51,7 @@ function Eventos_pop_gsi() {
         element.onchange = () => Calculo_gsi()
     })
 
+    // BOTÃO ADICIONAR VALOR
     const botao = document.getElementById("botao-input")
     botao.onclick = () => Retornar_valor()
 }

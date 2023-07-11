@@ -128,106 +128,106 @@
 <body>
     <main>
         <h1>
-            APLICAÇÂO DE AHP<br/><br/>
+            AHP APPLICATION<br/><br/>
         </h1>
         <ul id="l1">
             <!-- PASSO 1 -->
             <h2>
-                1º - CRIAÇÃO DA MATRIZ DE COMPARAÇÃO DE PARES
+                1st - CREATION OF PAIRWISE COMPARISON MATRIX
             </h2>
             <li>
                 <p>
-                    Utilizar a escala de comparação de pares AHP.
+                    Use the AHP pairwise comparison scale.
                 </p>
             </li>
             <li>
                 <p>
-                    Julgar cada item das linhas da matriz em relação ao item da coluna.
+                    Judge each item in the rows of the matrix in relation to the item in the column.
                 </p>
             </li>
             <!-- PASSO 2 -->
             <h2>
-                2º - SOMATÓRIO DAS COLUNAS DA MATRIZ DE JULGAMENTO
+                2nd - SUMMING THE COLUMNS OF THE JUDGMENT MATRIX
             </h2>
             <li>
                 <p>
-                    Somar cada coluna individualmente (um valor de soma para cada critério).
+                    Sum each column individually (one sum value for each criterion).
                 </p>
             </li>
             <!-- PASSO 3 -->
             <h2>
-                3º - NORMATIZAR A MATRIZ DE JULGAMENTO
+                3rd - NORMALIZE THE JUDGMENT MATRIX
             </h2>
             <li>
                 <p>
-                    Dividir cada item das colunas da matriz pela soma de sua própria coluna
+                    Divide each item in the columns of the matrix by the sum of its own column.
                 </p>
             </li>
             <!-- PASSO 4 -->
             <h2>
-                4º - CALCULAR O VETOR DOS PESOS DE CADA CRITÉRIO (W)
+                4th - CALCULATE THE WEIGHT VECTOR FOR EACH CRITERION (W)
             </h2>
             <li>
                 <p>
-                    O peso de cadacritério é igual a média aritmética da linha, correspondente ao critério, na matriz normalizada.
+                    The weight of each criterion is equal to the arithmetic mean of the row corresponding to the criterion in the normalized matrix.
                 </p>
             </li>
             <!-- PASSO 5 -->
             <h2>
-                5º - CALCULAR O VETOR SOMA PONDERADA (WS)
+                5th - CALCULATE THE WEIGHTED SUM VECTOR (WS)
             </h2>
             <li>
                 <p>
-                    O vetor WS é o resultado da multiplicação da matriz de julgamento inicial pelo vetor dos pesos dos critérios.
+                    The WS vector is the result of multiplying the initial judgment matrix by the criterion weights vector.
                 </p>
             </li>
             <!-- PASSO 6 -->
             <h2>
-                6º - CALCULAR O VETOR CONSISTENCIA
+                6th - CALCULATE THE CONSISTENCY VECTOR
             </h2>
             <li>
                 <p>
-                    O vetor consistência é resultado da divisão do vetor WS pelo vetor dos pesos dos critérios (W)
+                    The consistency vector is the result of dividing the WS vector by the criterion weights vector (W).
                 </p>
             </li>
             <!-- PASSO 7 -->
             <h2>    
-                7º - CALCULAR O MÁXIMO AUTOVALOR DA MATRIZ DE JULGAMENTO
+                7th - CALCULATE THE MAXIMUM EIGENVALUE OF THE JUDGMENT MATRIX
             </h2>
             <li>
                 <p class="s1">
-                    O máximo autovalor (<span class="s2">𝜆</span><span class="s3">max</span>) é igual à média aritmética dos elementos do vetor consistência.</p>
+                    The maximum eigenvalue (<span class="s2">𝜆</span><span class="s3">max</span>) is equal to the arithmetic mean of the elements in the consistency vector.</p>
             </li>
             <!-- PASSO 8 -->
             <h2>
-                8º - CALCULAR OÍNDICE DE CONSISTENCIA DO JULGAMENTO (CI)
+                8th - CALCULATE THE JUDGMENT CONSISTENCY INDEX (CI)
             </h2>
             <li>
                 <p class="s5">
-                    𝐶𝐼 = (𝜆<span class="s6">max </span>− 𝑛)/(𝑛 − 1)>, onde n é a ordem da matriz.
+                    𝐶𝐼 = (𝜆<span class="s6">max </span>− 𝑛)/(𝑛 − 1)>, where n is the order of the matrix.
                 </p>
             </li>
             <li>
                 <p>
-                    Exemplo de inconsistência: A&gt;B, B&gt;C e C&gt;A
+                    Inconsistency example: A&gt;B, B&gt;C e C&gt;A
                 </p>
             </li>
             <!-- PASSO 9 -->
             <h2>
-                9º - OBTER O ÍNDICE DE ALEATÓRIEDADE PARA A MATRIZ DE JULGAMENTO (RI)
+                9th - OBTAIN THE RANDOM INDEX FOR THE JUDGMENT MATRIX (RI)
             </h2>
             <li>
                 <p>
-                    O índice de aleatoriedade é um valor tabelado (Saaty, 1991), que representa o índice de consistência médio de matrizes recíprocas, geradas por valores aleatórios.
+                    The random index is a tabulated value (Saaty, 1991) representing the average consistency index of randomly generated reciprocal matrices.
                 </p>
             </li>
             <!-- PASSO 10 -->
             <h2>
-                10º - CALCULAR A RAZÃO DE CONSISTENCIA (CR)
+                10th - CALCULATE THE CONSISTENCY RATIO (CR)
             </h2>
             <li>
                 <p>
-                    O CR índica o quão consistente a matriz de julgamento está em relação a matrizes geradas aleatoriamente.
+                    The CR indicates how consistent the judgment matrix is compared to randomly generated matrices.
                 </p>
             </li>
             <li>
@@ -237,20 +237,20 @@
             </li>
             <!-- PASSO 11 -->
             <h2>
-                11º - ANÁLISAR OS RESULTADOS
+                11th - ANALYZE THE RESULTS
             </h2>
             <li>
                 <p>
-                    Se CR &lt; 0.1, a matriz de julgamento foi construída com sucesso e os pesos podem ser utilizados.
+                    If CR &lt; 0.1, the judgment matrix has been successfully constructed, and the weights can be used.
                 </p>
             </li>
             <li>
                 <p>
-                    Se CR &gt;= 0.1, a matriz de julgamento está inconsistente e o processo deve ser reiniciado (voltar ao passo 1)<br><br><br>
+                    If CR &gt;= 0.1, the judgment matrix is inconsistent, and the process should be restarted (go back to step 1).<br><br><br>
                 </p>
             </li>
         </ul>
-        <h2>MAIS SOBRE AHP:<br><br></h2>
+        <h2>MORE ABOUT AHP:<br><br></h2>
         <ul class="ref">
             <li>
                 <a href="https://doi.org/10.1016/0377-2217(90)90057-I" target="_blank">
@@ -259,7 +259,7 @@
             </li>
             <li>
                 <a href="https://doi.org/10.20985/1980-5160.2016.v11n3.988" target="_blank">
-                    Ribeiro, M. C. D. C. R., & da Silva Alves, A. (2016). Aplicação do método Analytic Hierarchy Process (AHP) com a mensuração absoluta num problema de seleção qualitativa. Sistemas & Gestão, 11(3), 270-281.
+                    Ribeiro, M. C. D. C. R., & da Silva Alves, A. (2016). Application of the Analytic Hierarchy Process (AHP) with absolute measurement in a qualitative selection problem. Sistemas & Gestão, 11(3), 270-281.
                 </a><br>
             </li>
         </ul>

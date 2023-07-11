@@ -1,9 +1,26 @@
+function Positions(entry, messages, positions) {
+
+    //Mostra o balão de texto
+    const balao = document.getElementById("balao")
+    if (messages[entry]) {
+        balao.innerText = messages[entry]
+        balao.style.display = "block"
+    }
+
+    //Posiciona o balão conforme o dicionário de posições
+    if (positions[entry]) {
+        const { x, y } = positions[entry]
+        balao.style.transform = `translate(${x}px, ${y}px)`
+    } else {
+        balao.style.transform = "translate(-100px,-75px)"
+    }
+
+}
+
 function Balao_entra(entry) {
-
-    let url = window.location.href
-
-    let messages = {}
-    if (url.includes("en")) { //Verifica se o titulo da seção 1 está em ingles
+    const idioma = Obter_idioma()
+    let messages 
+    if (idioma == "en") {
         messages = {
             "matriz": "Pair-wise comparision matrix",
             "pesos": "AHP calculated weights",
@@ -20,7 +37,7 @@ function Balao_entra(entry) {
             "slider-ob-fw": "Importance of ore body\nrelative to footwall",
             "slider-hw-fw": "Importance of hanging wall\nrelative to footwall"
         }
-    } else { //caso o titulo da seção 1 esteja em português
+    } else {
         messages = {
             "matriz": "Matriz de julgamento",
             "pesos": "Pesos calculados pelo método",
@@ -44,17 +61,8 @@ function Balao_entra(entry) {
         "pesos": { x: -100, y: -50 },
         "cons": { x: -100, y: -50 },
     }
-
-    const balao = document.getElementById("balao")
-    balao.innerText = messages[entry]
-    balao.style.display = "block"
-
-    if (positions[entry]) {
-        const { x, y } = positions[entry]
-        balao.style.transform = `translate(${x}px, ${y}px)`
-    } else {
-        balao.style.transform = "translate(-100px,-75px)"
-    }
+    //Mostra e posiciona o balão conforme o dicionário de posições
+    Positions(entry, messages, positions)
 }
 
 function Balao_sai() {
