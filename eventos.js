@@ -36,24 +36,43 @@ function Open_pop_up_ucs(id) {
     const endereco = "ucs_calculadora\\ucs_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
     window.open(endereco, "_blank", "width=600, height=650")
 }
-
-// ABRE POP UP DE ESTIMATIVAS DE DENSIDADE
-function Open_pop_up_densidade(id) {
-    const endereco = "densidade_calculadora\\densidade_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
-    window.open(endereco, "_blank", "width=600, height=650")
+// DESABILITA O DISPLAY DE TODOS OS IFRAMES
+function Desabilitar_iframe() {
+    const iframes = document.querySelectorAll('iframe')
+    iframes.forEach(element => {
+        element.style.display = "none"
+    })
 }
 
-// ABRE POP UP DE CALCULO DO GSI
-function Open_pop_up_gsi(id) {
-    const endereco = "gsi_calculadora\\pop_up_gsi_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
-    window.open(endereco, "_blank", "width=770,height=730")
+// FECHA A DIV QUE CONTÉM OS IFRAMES-POP-UPS
+function Fechar_pop_up() {
+    const pop_up = document.getElementById('main-pop-up')
+    pop_up.style.display = 'none'
+}
+// ABRE A DIV QUE CONTÉM OS IFRAMES-POP-UPS
+function Abrir_pop_up() {
+    const pop_up = document.getElementById('main-pop-up')
+    pop_up.style.display = 'block'
 }
 
-// ABRE POP UP DE  CALCULO RMR
-function Open_pop_up_rmr(id) {
-    const endereco = "rmr_calculadora\\pop_up_rmr_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
-    window.open(endereco, "_blank", "width=600,height=650")
+// OBTÉM O ENDREÇO DE CADA POP UP E RETORNA PARA Open_ifrme
+function Obter_endereco(calculadora) {
+    calculadora = calculadora.split('-')[1]
+    const endereco = calculadora + "_" + "calculadora/" + calculadora + "_" + Obter_idioma() + ".html"
+    return endereco
 }
+
+// ABRE QUALQUER IFRAME-POP-UP
+function Open_iframe(id_calc) {
+    Desabilitar_iframe()
+    let id_input = id_calc.split('-')[1] + '-' + id_calc.split('-')[2]
+    let frame = document.getElementById(("iframe-" + id_input))
+    Abrir_pop_up()
+    const endereco = Obter_endereco(id_calc)
+    frame.src = endereco
+    frame.style.display = "block"
+}
+
 
 // MOSTRA A PLANILHA COM PESOS DO MÉTODO UBC
 function Open_pop_up_pesos(metodo) {
@@ -107,24 +126,24 @@ function Eventos(metodo) {
     //BOTÃO CALCULADORA RMR
     const botao_calculadora_rmr = document.querySelectorAll(".botao-calculadora-rmr")
     botao_calculadora_rmr.forEach((elemento) => {
-        elemento.onclick = () => Open_pop_up_rmr(elemento.id)
+        elemento.onclick = () => Open_iframe(elemento.id)
     })
 
     //BOTÃO CALCULADORA GSI
     const botao_calculadora_gsi = document.querySelectorAll(".botao-calculadora-gsi")
     botao_calculadora_gsi.forEach((elemento) => {
-        elemento.onclick = () => Open_pop_up_gsi(elemento.id)
+        elemento.onclick = () => Open_iframe(elemento.id)
     })
 
     //BOTÃO CALCULADORA UCS
     const botao_calculadora_ucs = document.querySelectorAll(".botao-calculadora-ucs")
     botao_calculadora_ucs.forEach((elemento) => {
-        elemento.onclick = () => Open_pop_up_ucs(elemento.id)
+        elemento.onclick = () => Open_iframe(elemento.id)
     })
     //BOTÃO CALCULADORA DENSIDADE
     const botao_calculadora_densidade = document.querySelectorAll(".botao-calculadora-densidade")
     botao_calculadora_densidade.forEach((elemento) => {
-        elemento.onclick = () => Open_pop_up_densidade(elemento.id)
+        elemento.onclick = () => Open_iframe(elemento.id)
     })
 
     //INPUT DOS FATORES DE PESOS E AHP NO MÉTODO DE NICHOLAS 1992
@@ -185,6 +204,12 @@ function Eventos(metodo) {
             }
         }
     })
+
+    // FECHAR POP UP
+    let pop_ups = document.getElementById("fechar-pop-up")
+    pop_ups.onclick = () => Fechar_pop_up()
+
+
 
     // Mostra_ahp(metodo)
     Switch_language(metodo)
