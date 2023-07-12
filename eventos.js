@@ -56,7 +56,7 @@ function Abrir_pop_up(id) {
     const pop_up = document.getElementById("main-pop-up")
     const litologia = id.split("-")[2]
     if (id.includes("gsi")) {
-        pop_up.style.width = "780px"
+        pop_up.style.width = "750px"
         pop_up.style.height = "740px"
         Titulo_pop_up("GSI:", litologia)
     } if (id.includes("rmr")) {
@@ -64,12 +64,12 @@ function Abrir_pop_up(id) {
         pop_up.style.height = "650px"
         Titulo_pop_up("RMR:", litologia)
     } else if (id.includes("densidade")) {
-        pop_up.style.width = "520px"
-        pop_up.style.height = "740px"
+        pop_up.style.width = "420px"
+        pop_up.style.height = "650px"
         Titulo_pop_up("DENSIDADE:", litologia)
     } else if (id.includes("ucs")) {
-        pop_up.style.width = "550px"
-        pop_up.style.height = "740px"
+        pop_up.style.width = "420px"
+        pop_up.style.height = "650px"
         Titulo_pop_up("UCS:", litologia)
     } else if (id.includes("ahp")) {
         pop_up.style.width = "680px"
@@ -117,7 +117,7 @@ window.onload = function Mover_pop_up() {
     document.onkeydown = () => Interromper()
     document.onclick = () => Interromper()
 
-    barra_pop_up.addEventListener("mousedown", () => {
+    main_pop_up.addEventListener("mousedown", () => {
         overlay.style.display = "block"
         overlay_div.style.display = "block"
         document.body.style.userSelect = "none"
@@ -127,9 +127,9 @@ window.onload = function Mover_pop_up() {
     })
 
     let Move_element = (event) => {
-  
         let x = event.clientX - position.x
         let y = event.clientY - position.y - 80 + document.documentElement.scrollTop
+        y = y < -20 ? -20 : y
         main_pop_up.style.transform = `translate(${x}px, ${y}px)`
     }
 

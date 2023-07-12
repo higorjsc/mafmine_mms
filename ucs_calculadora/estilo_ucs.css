@@ -17,9 +17,7 @@
 main {
   position: relative;
   margin: auto;
-  min-height: 620px;
-  height: 100%;
-  width: 100;
+  width: 100%;
   border: var(--borda-simples);
   display: flex;
   flex-direction: column;
@@ -29,8 +27,8 @@ main {
 #titulo-tabela-rochas {
   text-align: left;
   font-weight: bold;
-  font-size: 12pt;
-  margin-left: 8%;
+  font-size: 10pt;
+  margin-left: 2%;
 }
 
 #select-tipo-rocha {
@@ -42,13 +40,11 @@ main {
   text-align: center;
   line-height: 24px;
   color: red;
-
 }
 
 #select-tipo-rocha:hover {
   cursor: pointer;
   box-shadow: var(--shadow-blue);
-
 }
 
 #span-help {
@@ -78,6 +74,7 @@ a {
   text-align: center;
   font-weight: normal;
   align-self: center;
+  padding-bottom: 2.5%;
 }
 
 #tabela-sedimentar, #tabela-metamorfica, #tabela-solos {
@@ -85,10 +82,11 @@ a {
 }
 
 .tabela-rochas .th-rocha, .td-rocha {
-  width: 250px;
+  width: 150px;
   display: block;
   border-radius: 10px;
   text-align: left;
+  padding-left: 5%;
 }
 
 .th-minimo, .td-minimo {

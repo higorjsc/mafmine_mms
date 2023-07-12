@@ -94,6 +94,8 @@ span {
 body {
   align-items: center;
   position: absolute;
+  height: 1000px;
+  max-height: 100px;
 }
 
 /* <main> */
@@ -107,6 +109,7 @@ body {
   position: relative;
   padding-bottom: 0.2%;
   padding-top: 0.25%;
+  overflow: hidden;
 }
 
 section {

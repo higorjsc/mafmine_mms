@@ -337,10 +337,11 @@
             <iframe class="iframe-gsi" id='iframe-gsi-fw' frameborder="0" display="none"></iframe>
 
         </div>
+        
     </main>
 
-    
-    
+
+
     <footer class="rodape">
 
         <div class="div-footer">
@@ -370,6 +371,14 @@
 </body>
 
 <script>
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  
+        if (scrollTop > 1000) {
+          window.scrollTo(window.pageXOffset, 1000);
+        }
+
+      });
     Checkbox("checkbox-rmr")
     Eventos("ubc")
     Mostra_ahp('ubc')
