@@ -97,10 +97,10 @@ function Open_iframe(id_calc) {
     frame.src = endereco
     frame.style.display = "block"
 }
-
 window.onload = function Mover_pop_up() {
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
+    const titulo_pop_up = document.getElementById("titulo-pop-up")
     let offset = { x: 0, y: 0 }
 
     let isDragging = false
@@ -123,14 +123,24 @@ window.onload = function Mover_pop_up() {
         document.body.style.userSelect = "none"
     })
 
+    titulo_pop_up.addEventListener("mousedown", function (event) {
+        offset.x = event.clientX - main_pop_up.offsetLeft
+        offset.y = event.clientY - main_pop_up.offsetTop
+        isDragging = true
+        document.addEventListener("mousemove", Move_element)
+        document.body.style.userSelect = "none"
+    })
+
     let Move_element = (event) => {
         if (!isDragging) return
         const x = event.clientX - offset.x
         const y = event.clientY - offset.y
-        main_pop_up.style.left = x + "px"
-        main_pop_up.style.top = y + "px"
+        main_pop_up.style.transform = `translate(${x}px, ${y}px)`
     }
 }
+
+
+
 
 
 
@@ -251,6 +261,11 @@ function Eventos(metodo) {
     // FECHAR POP UP
     let pop_ups = document.getElementById("fechar-pop-up")
     pop_ups.onclick = () => Fechar_pop_up()
+
+    const imagens = document.querySelectorAll("img")
+    imagens.forEach((element) => {
+        element.draggable = false
+    })
 
     // Mostra_ahp(metodo)
     Switch_language(metodo)

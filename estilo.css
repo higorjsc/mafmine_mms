@@ -93,7 +93,7 @@ span {
 
 body {
   align-items: center;
-  position: relative;
+  position: absolute;
 }
 
 /* <main> */
@@ -305,7 +305,6 @@ select:hover {
   position: absolute;
   width: 95%;
   top: 3%;
-  z-index: 1;
 }
 
 #div-ilustracao {
