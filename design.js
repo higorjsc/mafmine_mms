@@ -2,17 +2,17 @@ function Mostrar_input_pesos() {
 
     const select = document.getElementById("menu-pesos").value
     const input_pesos = document.querySelectorAll(".input-pesos")
-    const botao_ahp = document.querySelector("#botao-ahp")
+    const botao_ahp_nicholas = document.querySelector("#botao-ahp-nicholas")
     if (select == 4) {
         input_pesos.forEach(element => {
             element.style.display = "block"
         })
-        botao_ahp.style.display = "block"
+        botao_ahp_nicholas.style.display = "block"
     } else {
         input_pesos.forEach(element => {
             element.style.display = "none"
         })
-        botao_ahp.style.display = "none"
+        botao_ahp_nicholas.style.display = "none"
     }
 }
 

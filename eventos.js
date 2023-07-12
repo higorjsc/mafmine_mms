@@ -72,9 +72,9 @@ function Abrir_pop_up(id) {
         pop_up.style.height = "740px"
         Titulo_pop_up("UCS:", litologia)
     } else if (id.includes("ahp")) {
-        pop_up.style.width = "600px"
-        pop_up.style.height = "740px"
-        Titulo_pop_up("AHP:")
+        pop_up.style.width = "680px"
+        pop_up.style.height = "670px"
+        Titulo_pop_up("AHP", " ")
     }
     pop_up.style.display = "block"
 }
@@ -183,26 +183,9 @@ function Eventos(metodo) {
         })
     }
 
-    //BOTÃO CALCULADORA RMR
-    const botao_calculadora_rmr = document.querySelectorAll(".botao-calculadora-rmr")
-    botao_calculadora_rmr.forEach((elemento) => {
-        elemento.onclick = () => Open_iframe(elemento.id)
-    })
-
-    //BOTÃO CALCULADORA GSI
-    const botao_calculadora_gsi = document.querySelectorAll(".botao-calculadora-gsi")
-    botao_calculadora_gsi.forEach((elemento) => {
-        elemento.onclick = () => Open_iframe(elemento.id)
-    })
-
-    //BOTÃO CALCULADORA UCS
-    const botao_calculadora_ucs = document.querySelectorAll(".botao-calculadora-ucs")
-    botao_calculadora_ucs.forEach((elemento) => {
-        elemento.onclick = () => Open_iframe(elemento.id)
-    })
-    //BOTÃO CALCULADORA DENSIDADE
-    const botao_calculadora_densidade = document.querySelectorAll(".botao-calculadora-densidade")
-    botao_calculadora_densidade.forEach((elemento) => {
+    // BOTÕES CALCULADORA 
+    const calculadoras = document.querySelectorAll(".botao-calculadora")
+    calculadoras.forEach((elemento) => {
         elemento.onclick = () => Open_iframe(elemento.id)
     })
 
@@ -210,8 +193,8 @@ function Eventos(metodo) {
     if (metodo == "nicholas_92") {
         const menu_pesos = document.querySelector("#menu-pesos")
         menu_pesos.addEventListener("change", Mostrar_input_pesos)
-        const botao_ahp = document.querySelector("#botao-ahp")
-        botao_ahp.onclick = () => Open_pop_up_ahp()
+        const botao_ahp = document.querySelector("#botao-ahp-nicholas")
+        botao_ahp.onclick = () => Open_iframe(botao_ahp.id)
     }
 
     //BOTÃO MOSTRA TABELA COM OS PESOS
@@ -268,9 +251,6 @@ function Eventos(metodo) {
     // FECHAR POP UP
     let pop_ups = document.getElementById("fechar-pop-up")
     pop_ups.onclick = () => Fechar_pop_up()
-
-
-
 
     // Mostra_ahp(metodo)
     Switch_language(metodo)

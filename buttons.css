@@ -162,7 +162,7 @@ label:hover {
 
 
 /* --------------BOTAO AHP------------------------------- */
-#botao-ahp {
+#botao-ahp-nicholas {
   grid-row: 5/6;
   grid-column: 1/5;
   width: 100%;
@@ -176,7 +176,7 @@ label:hover {
   display: none;
 }
 
-#botao-ahp:hover {
+#botao-ahp-nicholas:hover {
   box-shadow: var( --shadow-blue);
   transform: scale(1.05);
   cursor: pointer;
