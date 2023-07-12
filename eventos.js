@@ -96,7 +96,43 @@ function Open_iframe(id_calc) {
     const endereco = Obter_endereco(id_calc)
     frame.src = endereco
     frame.style.display = "block"
-} 
+}
+
+window.onload = function Mover_pop_up() {
+    const main_pop_up = document.getElementById("main-pop-up")
+    const barra_pop_up = document.getElementById("barra-pop-up")
+    let offset = { x: 0, y: 0 }
+
+    let isDragging = false
+
+    const stopDragging = () => {
+        isDragging = false
+        document.removeEventListener("mousemove", Move_element)
+        document.body.style.userSelect = ""
+    }
+
+    document.addEventListener("mouseup", stopDragging)
+    document.addEventListener("scroll", stopDragging)
+    document.addEventListener("keydown", stopDragging)
+
+    barra_pop_up.addEventListener("mousedown", function (event) {
+        offset.x = event.clientX - main_pop_up.offsetLeft
+        offset.y = event.clientY - main_pop_up.offsetTop
+        isDragging = true
+        document.addEventListener("mousemove", Move_element)
+        document.body.style.userSelect = "none"
+    })
+
+    let Move_element = (event) => {
+        if (!isDragging) return
+        const x = event.clientX - offset.x
+        const y = event.clientY - offset.y
+        main_pop_up.style.left = x + "px"
+        main_pop_up.style.top = y + "px"
+    }
+}
+
+
 
 // MOSTRA A PLANILHA COM PESOS DO MÉTODO UBC
 function Open_pop_up_pesos(metodo) {
