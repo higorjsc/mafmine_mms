@@ -116,7 +116,6 @@ window.onload = function Mover_pop_up() {
     document.onscroll = () => Interromper()
     document.onkeydown = () => Interromper()
     document.onclick = () => Interromper()
-    document.onmouseout = () => Interromper()
 
     barra_pop_up.addEventListener("mousedown", () => {
         overlay.style.display = "block"
@@ -128,8 +127,9 @@ window.onload = function Mover_pop_up() {
     })
 
     let Move_element = (event) => {
+  
         let x = event.clientX - position.x
-        let y = event.clientY - position.y - 80
+        let y = event.clientY - position.y - 80 + document.documentElement.scrollTop
         main_pop_up.style.transform = `translate(${x}px, ${y}px)`
     }
 
