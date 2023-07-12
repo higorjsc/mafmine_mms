@@ -97,52 +97,53 @@ function Open_iframe(id_calc) {
     frame.src = endereco
     frame.style.display = "block"
 }
+
 window.onload = function Mover_pop_up() {
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
-    const titulo_pop_up = document.getElementById("titulo-pop-up")
-    let offset = { x: 0, y: 0 }
+    const overlay = document.getElementById("overlay")
 
-    let isDragging = false
+    let position = { x: 0, y: 0 }
 
-    const stopDragging = () => {
-        isDragging = false
+    document.addEventListener("mouseup", () => {
         document.removeEventListener("mousemove", Move_element)
-        document.body.style.userSelect = ""
-    }
+        overlay.style.display = "none"
+    })
+    document.addEventListener("scroll", () => {
+        document.removeEventListener("mousemove", Move_element)
+        overlay.style.display = "none"
 
-    document.addEventListener("mouseup", stopDragging)
-    document.addEventListener("scroll", stopDragging)
-    document.addEventListener("keydown", stopDragging)
+    })
+    document.addEventListener("keydown", () => {
+        document.removeEventListener("mousemove", Move_element)
+        overlay.style.display = "none"
 
-    barra_pop_up.addEventListener("mousedown", function (event) {
-        offset.x = event.clientX - main_pop_up.offsetLeft
-        offset.y = event.clientY - main_pop_up.offsetTop
-        isDragging = true
-        document.addEventListener("mousemove", Move_element)
-        document.body.style.userSelect = "none"
+    })
+    document.addEventListener("mouseout", () => {
+        document.removeEventListener("mousemove", Move_element)
+        overlay.style.display = "none"
+
+    })
+    document.addEventListener("click", () => {
+        document.removeEventListener("mousemove", Move_element)
+        overlay.style.display = "none"
+
     })
 
-    titulo_pop_up.addEventListener("mousedown", function (event) {
-        offset.x = event.clientX - main_pop_up.offsetLeft
-        offset.y = event.clientY - main_pop_up.offsetTop
-        isDragging = true
-        document.addEventListener("mousemove", Move_element)
+    barra_pop_up.addEventListener("mousedown", () => {
+        overlay.style.display = "block"
         document.body.style.userSelect = "none"
+        position.x = main_pop_up.offsetLeft + (main_pop_up.clientWidth / 2)
+        position.y = main_pop_up.offsetTop
+        document.addEventListener("mousemove", Move_element)
     })
 
     let Move_element = (event) => {
-        if (!isDragging) return
-        const x = event.clientX - offset.x
-        const y = event.clientY - offset.y
+        let x = event.clientX - position.x
+        let y = event.clientY - position.y - 80
         main_pop_up.style.transform = `translate(${x}px, ${y}px)`
     }
 }
-
-
-
-
-
 
 // MOSTRA A PLANILHA COM PESOS DO MÉTODO UBC
 function Open_pop_up_pesos(metodo) {
