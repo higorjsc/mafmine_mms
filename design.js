@@ -168,8 +168,8 @@ function Formatar_entry(entry) {
             //Se o input for UCS, 'Mpa' é adicionado ao texto númerico
             entrada.value = numero.toString() + " Mpa"
         } else if (entry.includes("peso") || entry.includes("q") || entry.includes("gsi")) {
-            //Se o input for os pesos da section central, duas casas decimais são adicionados ao texto númerico
-            entrada.value = numero.toFixed(1).toString()
+            //Se o input for os pesos da section central, duas casas decimais são adicionadas ao texto númerico
+            entrada.value = numero.toFixed(2).toString()
         }
 
     }

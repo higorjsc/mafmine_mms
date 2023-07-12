@@ -13,7 +13,6 @@
   --borda-simples: 1pt solid black;
 }
 
-
 main {
   position: relative;
   margin: auto;
@@ -42,13 +41,11 @@ main {
   text-align: center;
   line-height: 24px;
   color: red;
-
 }
 
 #select-tipo-rocha:hover {
   cursor: pointer;
   box-shadow: var(--shadow-blue);
-
 }
 
 #span-help {
@@ -67,7 +64,7 @@ main {
 }
 
 a {
-  color: blue;
+  color: var(--cor-1);
 }
 
 /* --------------------------------------------------TABELA------------------------------------------------- */
