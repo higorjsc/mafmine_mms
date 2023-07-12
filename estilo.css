@@ -529,9 +529,9 @@ select:hover {
 
 /* -------------------------IFRAMES------------------------------------ */
 
-#main-pop-up{
-  height:auto;
-  width:500px;
+#main-pop-up {
+  height: auto;
+  width: 500px;
   position: absolute;
   top: 2.5%;
   left: 45%;
@@ -542,7 +542,7 @@ select:hover {
   overflow: hidden;
 }
 
-#barra-pop-up{
+#barra-pop-up {
   width: 100%;
   background-color: var(--cor-1);
   height: 25px;
@@ -550,12 +550,20 @@ select:hover {
   position: relative;
 }
 
-#titulo-pop-up{
+#barra-pop-up:hover {
+  cursor: move;
+}
+
+#titulo-pop-up {
   color: white;
   padding-left: 2%;
 }
 
-#fechar-pop-up{
+#titulo-pop-up:hover {
+  cursor: move;
+}
+
+#fechar-pop-up {
   position: absolute;
   display: flex;
   align-items: center;
@@ -564,17 +572,17 @@ select:hover {
   box-sizing: border-box;
   width: 20px;
   right: 0%;
-  top:0%;
+  top: 0%;
   color: white;
   font-size: 15pt;
 }
 
-#fechar-pop-up:hover{
+#fechar-pop-up:hover {
   color: red;
   cursor: default;
 }
 
-.iframe-densidade{
+.iframe-densidade {
   z-index: 999;
   width: 100%;
   height: 100%;
@@ -582,7 +590,7 @@ select:hover {
   background-color: white;
 }
 
-.iframe-ucs{
+.iframe-ucs {
   z-index: 999;
   width: 100%;
   height: 100%;
@@ -590,7 +598,7 @@ select:hover {
   background-color: white;
 }
 
-.iframe-rmr{
+.iframe-rmr {
   z-index: 999;
   width: 100%;
   height: 100%;
@@ -598,7 +606,7 @@ select:hover {
   background-color: white;
 }
 
-.iframe-gsi{
+.iframe-gsi {
   z-index: 999;
   width: 100%;
   height: 100%;

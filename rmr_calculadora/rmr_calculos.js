@@ -1,11 +1,18 @@
 function Retornar_valor() {
 
+    //Obtém ob, hw, ou fw através da url. url[2] = ob, hw ou fw
+    let url = (window.location.href).split("?")
+    let id = {
+        "ob": "rmr-ob",
+        "hw": "rmr-hw",
+        "fw": "rmr-fw",
+    }
+
+    // OBTÉM O INPUT DA JANELA PRINCIPAL
+    let seletor = parent.document.getElementById(id[url[1]])
+    
     //Obtém o valor do RMR calculado na janela popup
     const classe_rmr = document.getElementById("classe-rmr").innerText
-
-    //Obtém o selector que vai receber o valor
-    const id = "rmr-" + Onde_retornar()
-    const seletor = parent.document.getElementById(id)
 
     let escrever_rmr = {
         "Muito Pobre": 0,
@@ -25,14 +32,12 @@ function Retornar_valor() {
 
     // Fechar a janela popup
     const botao_fechar = parent.document.getElementById("fechar-pop-up")
-
     // Cria um evento "click"
     let Click = new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
         view: window
     })
-
     // Dispara o "click" no elemento
     botao_fechar.dispatchEvent(Click)
 }

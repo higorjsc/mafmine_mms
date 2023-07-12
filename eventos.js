@@ -96,12 +96,7 @@ function Open_iframe(id_calc) {
     const endereco = Obter_endereco(id_calc)
     frame.src = endereco
     frame.style.display = "block"
-}
-
-function Mover_pop_up() {
-
-}
-
+} 
 
 // MOSTRA A PLANILHA COM PESOS DO MÉTODO UBC
 function Open_pop_up_pesos(metodo) {
@@ -110,7 +105,7 @@ function Open_pop_up_pesos(metodo) {
 }
 
 // MOSTRA O BOTÃO PARA TESTE DO AHP NO UBC E SHB
-function Mostra_ahp(metodo) {
+function Mostra_ahp() {
 
     const div_select_pesos = document.querySelector("#div-select-pesos-ubc")
     document.addEventListener("keydown", (event) => {
@@ -238,9 +233,8 @@ function Eventos(metodo) {
     let pop_ups = document.getElementById("fechar-pop-up")
     pop_ups.onclick = () => Fechar_pop_up()
 
-    // MOVER POP UP
-    let main_pop_up = document.getElementById("main-pop-up")
-    pop_ups.onclick = () => Fechar_pop_up()
+
+
 
     // Mostra_ahp(metodo)
     Switch_language(metodo)
