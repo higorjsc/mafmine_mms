@@ -14,10 +14,10 @@ main {
   justify-content: center;
   border: 1pt solid black;
   line-height: 25px;
-  width: 90%;
-  height: 100%;
+  width: 95%;
+  height: 600px;
   padding: 5px;
-  margin-left: 5%;
+  margin-left: 2.5%;
   border-radius: 20px;
   box-sizing: border-box;
 }

@@ -194,24 +194,6 @@
 </body>
 
 <script>
-    window.onload = function () {
-        // Obtém as dimensões da tela
-        const largura_janela = window.screen.width
-        const altura_janela = window.screen.height
-
-        // Define as dimensões da janela do pop-up
-        const largura_pop_up = document.documentElement.clientWidth
-        const altura_pop_up = document.documentElement.clientHeight
-
-
-        // Calcula a posição para centralizar a janela
-        const esquerda = (largura_janela - largura_pop_up) / 2
-        const topo = (altura_janela - altura_pop_up) / 2
-
-        // Define as coordenadas para a janela do pop-up
-        window.moveTo(esquerda, topo)
-    }
-    Inserir_titulo()
     Eventos_pop_rmr()
     Calculo_pop_up()
 </script>

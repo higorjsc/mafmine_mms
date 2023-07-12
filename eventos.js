@@ -25,61 +25,81 @@ function Obter_idioma() {
     return idioma
 }
 
-// ABRE O POP UP PARA () =>{Calculo(metodo)} AHP
-function Open_pop_up_ahp() {
-    encoded_id = "AHP\\pop_up_ahp_" + Obter_idioma() + ".html?"
-    window.open(encoded_id, "_blank", "width=650,height=750")
-}
-
-// ABRE POP UP DE ESTIMATIVAS DE UCS
-function Open_pop_up_ucs(id) {
-    const endereco = "ucs_calculadora\\ucs_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
-    window.open(endereco, "_blank", "width=600, height=650")
-}
 // DESABILITA O DISPLAY DE TODOS OS IFRAMES
 function Desabilitar_iframe() {
-    const iframes = document.querySelectorAll('iframe')
+    const iframes = document.querySelectorAll("iframe")
     iframes.forEach(element => {
         element.style.display = "none"
     })
 }
 
+// ESCREVE O TÍTULO DO POP UP
+function Titulo_pop_up(calculo, id = "none") {
+    const titulo = document.getElementById("titulo-pop-up")
+
+    id == "ob" ? (id = Obter_idioma() == "pt" ? "Corpo de Minério" : "Orebody") : id
+    id = id == "hw" ? "Hanging Wall" : id
+    id = id == "fw" ? "Footwall" : id
+    calculo == "DENSIDADE:" ? (calculo = Obter_idioma() == "pt" ? "DENSIDADE:" : "DENSITY") : calculo
+
+    titulo.innerText = calculo + " " + id
+}
+
 // FECHA A DIV QUE CONTÉM OS IFRAMES-POP-UPS
 function Fechar_pop_up() {
-    const pop_up = document.getElementById('main-pop-up')
-    pop_up.style.display = 'none'
+    const pop_up = document.getElementById("main-pop-up")
+    pop_up.style.display = "none"
 }
 
 // ABRE A DIV QUE CONTÉM OS IFRAMES-POP-UPS E DEFINE AS DIMENSÓES
 function Abrir_pop_up(id) {
-    const pop_up = document.getElementById('main-pop-up')
-    if(id == "gsi"){
+    const pop_up = document.getElementById("main-pop-up")
+    const litologia = id.split("-")[2]
+    if (id.includes("gsi")) {
         pop_up.style.width = "780px"
         pop_up.style.height = "740px"
-    }else{
+        Titulo_pop_up("GSI:", litologia)
+    } if (id.includes("rmr")) {
+        pop_up.style.width = "520px"
+        pop_up.style.height = "650px"
+        Titulo_pop_up("RMR:", litologia)
+    } else if (id.includes("densidade")) {
+        pop_up.style.width = "520px"
+        pop_up.style.height = "740px"
+        Titulo_pop_up("DENSIDADE:", litologia)
+    } else if (id.includes("ucs")) {
+        pop_up.style.width = "550px"
+        pop_up.style.height = "740px"
+        Titulo_pop_up("UCS:", litologia)
+    } else if (id.includes("ahp")) {
         pop_up.style.width = "600px"
         pop_up.style.height = "740px"
+        Titulo_pop_up("AHP:")
     }
-    pop_up.style.display = 'block'
-
+    pop_up.style.display = "block"
 }
 
 // OBTÉM O ENDREÇO DE CADA POP UP E RETORNA PARA Open_ifrme
 function Obter_endereco(calculadora) {
-    calculadora = calculadora.split('-')[1]
-    const endereco = calculadora + "_" + "calculadora/" + calculadora + "_" + Obter_idioma() + ".html"
-    return endereco
+    calculadora.split("-")[1]
+    const endereco = calculadora.split("-")[1] + "_" + "calculadora/" + calculadora.split("-")[1] + "_" + Obter_idioma() + ".html"
+    const argumento = "?" + calculadora.split("-")[2]
+    return (endereco + argumento)
 }
 
 // ABRE QUALQUER IFRAME-POP-UP
 function Open_iframe(id_calc) {
     Desabilitar_iframe()
-    let id_input = id_calc.split('-')[1] + '-' + id_calc.split('-')[2]
+    let id_input = id_calc.split("-")[1] + "-" + id_calc.split("-")[2]
     let frame = document.getElementById(("iframe-" + id_input))
-    Abrir_pop_up(id_calc.split('-')[1])
+    Abrir_pop_up(id_calc)
     const endereco = Obter_endereco(id_calc)
     frame.src = endereco
     frame.style.display = "block"
+}
+
+function Mover_pop_up() {
+
 }
 
 
@@ -218,7 +238,9 @@ function Eventos(metodo) {
     let pop_ups = document.getElementById("fechar-pop-up")
     pop_ups.onclick = () => Fechar_pop_up()
 
-
+    // MOVER POP UP
+    let main_pop_up = document.getElementById("main-pop-up")
+    pop_ups.onclick = () => Fechar_pop_up()
 
     // Mostra_ahp(metodo)
     Switch_language(metodo)

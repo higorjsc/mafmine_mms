@@ -1,20 +1,11 @@
 function Retornar_valor() {
 
-    //Obtém ob, hw, ou fw através da url. url[2] = ob, hw ou fw
-    let url = (window.location.href).split("-")
-    let id = {
-        "ob": "rmr-ob",
-        "hw": "rmr-hw",
-        "fw": "rmr-fw",
-    }
-
     //Obtém o valor do RMR calculado na janela popup
     const classe_rmr = document.getElementById("classe-rmr").innerText
 
-    // Acessa a janela principal através de window.opener
-    const janela_principal = window.opener
-    //Obtém o selector que vai receber o valor através do dicionário 'id' e do valor da url[2]
-    const seletor = janela_principal.document.getElementById(id[url[2]])
+    //Obtém o selector que vai receber o valor
+    const id = "rmr-" + Onde_retornar()
+    const seletor = parent.document.getElementById(id)
 
     let escrever_rmr = {
         "Muito Pobre": 0,
@@ -33,7 +24,17 @@ function Retornar_valor() {
     seletor.selectedIndex = escrever_rmr[classe_rmr]
 
     // Fechar a janela popup
-    window.close()
+    const botao_fechar = parent.document.getElementById("fechar-pop-up")
+
+    // Cria um evento "click"
+    let Click = new MouseEvent("click", {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    })
+
+    // Dispara o "click" no elemento
+    botao_fechar.dispatchEvent(Click)
 }
 
 function Pesos(valor) {
@@ -143,7 +144,7 @@ function Calculo_pop_up() {
     //Obtém os parâmetros de orientação
     const strike = document.getElementById("select-strike").value
     const id_dip = (strike !== "irrelevante") ? "dip-1" : "dip-2"
-    
+
     let valor = {
         "point_load": Strenght_value["point-load"],
         "ucs": Strenght_value["ucs"],

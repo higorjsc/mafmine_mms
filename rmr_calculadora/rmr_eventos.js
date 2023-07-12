@@ -9,6 +9,13 @@ function Obter_idioma() {
     }
 }
 
+//Obtém o parâmetro incluso na URL para saber se o calculo é para OB, HW ou FW
+function Onde_retornar() {
+    let url = (window.location.href)
+    url = url.split("?")
+    return url[1]
+}
+
 //Adiciona eventos ao selementos do Pop Up
 function Eventos_pop_rmr() {
     const balao = document.getElementById("balao")
@@ -16,7 +23,7 @@ function Eventos_pop_rmr() {
         balao.style.top = event.clientY + "px"
         balao.style.left = event.clientX + "px"
     })
-    
+
     let select = document.querySelectorAll("select")
     select.forEach(elemento => {
         elemento.onchange = () => Calculo_pop_up()

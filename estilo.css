@@ -539,6 +539,7 @@ select:hover {
   border: 1px solid black;
   z-index: 999;
   display: none;
+  overflow: hidden;
 }
 
 #barra-pop-up{
