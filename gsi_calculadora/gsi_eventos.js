@@ -24,6 +24,7 @@ function Eventos_pop_gsi() {
         mouseY = pad.clientHeight - mouseY
         Balao_gsi("pad", mouseX, mouseY)
     }
+    
     pad.onmouseout = () => Balao_sai()
     pad.onclick = function (event) {
         let rect = pad.getBoundingClientRect() 
