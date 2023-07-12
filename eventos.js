@@ -101,37 +101,26 @@ function Open_iframe(id_calc) {
 window.onload = function Mover_pop_up() {
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
-    const overlay = document.getElementById("overlay")
+    // const overlay = document.getElementById("overlay")
+    const overlay_div = document.getElementById("overlay-div")
 
     let position = { x: 0, y: 0 }
 
-    document.addEventListener("mouseup", () => {
+    let Interromper = () => {
         document.removeEventListener("mousemove", Move_element)
         overlay.style.display = "none"
-    })
-    document.addEventListener("scroll", () => {
-        document.removeEventListener("mousemove", Move_element)
-        overlay.style.display = "none"
+        overlay_div.style.display = "none"
+    }
 
-    })
-    document.addEventListener("keydown", () => {
-        document.removeEventListener("mousemove", Move_element)
-        overlay.style.display = "none"
-
-    })
-    document.addEventListener("mouseout", () => {
-        document.removeEventListener("mousemove", Move_element)
-        overlay.style.display = "none"
-
-    })
-    document.addEventListener("click", () => {
-        document.removeEventListener("mousemove", Move_element)
-        overlay.style.display = "none"
-
-    })
+    document.onmouseup = () => Interromper()
+    document.onscroll = () => Interromper()
+    document.onkeydown = () => Interromper()
+    document.onclick = () => Interromper()
+    document.onmouseout = () => Interromper()
 
     barra_pop_up.addEventListener("mousedown", () => {
         overlay.style.display = "block"
+        overlay_div.style.display = "block"
         document.body.style.userSelect = "none"
         position.x = main_pop_up.offsetLeft + (main_pop_up.clientWidth / 2)
         position.y = main_pop_up.offsetTop
@@ -143,6 +132,7 @@ window.onload = function Mover_pop_up() {
         let y = event.clientY - position.y - 80
         main_pop_up.style.transform = `translate(${x}px, ${y}px)`
     }
+
 }
 
 // MOSTRA A PLANILHA COM PESOS DO MÉTODO UBC
