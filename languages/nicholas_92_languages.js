@@ -91,7 +91,7 @@ function English() {
     Escrever("h2-fatores-peso", "Weighting Factors")
     Escrever("span-cm", "OB")
     Escrever("menu-pesos", "Input values", 3)
-    Escrever("botao-ahp", "CALCULATE BY AHP")
+    Escrever("botao-ahp-nicholas", "CALCULATE BY AHP")
     
     // RODAPÉ
     Escrever("universidade", "Universidade Federal do Rio Grande do Sul")
@@ -184,7 +184,7 @@ function Portuguese() {
     Escrever("h2-fatores-peso", "Fatores de Peso")
     Escrever("span-cm", "CM")
     Escrever("menu-pesos", "Inserir valores", 3)
-    Escrever("botao-ahp", "CALCULAR POR AHP")
+    Escrever("botao-ahp-nicholas", "CALCULAR POR AHP")
 
     // RODAPÉ
     Escrever("universidade", "Universidade Federal do Rio Grande do Sul")

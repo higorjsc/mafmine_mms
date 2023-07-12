@@ -25,34 +25,114 @@ function Obter_idioma() {
     return idioma
 }
 
-// ABRE O POP UP PARA () =>{Calculo(metodo)} AHP
-function Open_pop_up_ahp() {
-    encoded_id = "AHP\\pop_up_ahp_" + Obter_idioma() + ".html?"
-    window.open(encoded_id, "_blank", "width=650,height=750")
+// DESABILITA O DISPLAY DE TODOS OS IFRAMES
+function Desabilitar_iframe() {
+    const iframes = document.querySelectorAll("iframe")
+    iframes.forEach(element => {
+        element.style.display = "none"
+    })
 }
 
-// ABRE POP UP DE ESTIMATIVAS DE UCS
-function Open_pop_up_ucs(id) {
-    const endereco = "ucs_calculadora\\ucs_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
-    window.open(endereco, "_blank", "width=600, height=650")
+// ESCREVE O TÍTULO DO POP UP
+function Titulo_pop_up(calculo, id = "none") {
+    const titulo = document.getElementById("titulo-pop-up")
+
+    id == "ob" ? (id = Obter_idioma() == "pt" ? "Corpo de Minério" : "Orebody") : id
+    id = id == "hw" ? "Hanging Wall" : id
+    id = id == "fw" ? "Footwall" : id
+    calculo == "DENSIDADE:" ? (calculo = Obter_idioma() == "pt" ? "DENSIDADE:" : "DENSITY") : calculo
+
+    titulo.innerText = calculo + " " + id
 }
 
-// ABRE POP UP DE ESTIMATIVAS DE DENSIDADE
-function Open_pop_up_densidade(id) {
-    const endereco = "densidade_calculadora\\densidade_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
-    window.open(endereco, "_blank", "width=600, height=650")
+// FECHA A DIV QUE CONTÉM OS IFRAMES-POP-UPS
+function Fechar_pop_up() {
+    const pop_up = document.getElementById("main-pop-up")
+    pop_up.style.display = "none"
 }
 
-// ABRE POP UP DE CALCULO DO GSI
-function Open_pop_up_gsi(id) {
-    const endereco = "gsi_calculadora\\pop_up_gsi_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
-    window.open(endereco, "_blank", "width=770,height=730")
+// ABRE A DIV QUE CONTÉM OS IFRAMES-POP-UPS E DEFINE AS DIMENSÓES
+function Abrir_pop_up(id) {
+    const pop_up = document.getElementById("main-pop-up")
+    const litologia = id.split("-")[2]
+    if (id.includes("gsi")) {
+        pop_up.style.width = "750px"
+        pop_up.style.height = "740px"
+        Titulo_pop_up("GSI:", litologia)
+    } if (id.includes("rmr")) {
+        pop_up.style.width = "520px"
+        pop_up.style.height = "650px"
+        Titulo_pop_up("RMR:", litologia)
+    } else if (id.includes("densidade")) {
+        pop_up.style.width = "420px"
+        pop_up.style.height = "650px"
+        Titulo_pop_up("DENSIDADE:", litologia)
+    } else if (id.includes("ucs")) {
+        pop_up.style.width = "420px"
+        pop_up.style.height = "650px"
+        Titulo_pop_up("UCS:", litologia)
+    } else if (id.includes("ahp")) {
+        pop_up.style.width = "680px"
+        pop_up.style.height = "670px"
+        Titulo_pop_up("AHP", " ")
+    }
+    pop_up.style.display = "block"
 }
 
-// ABRE POP UP DE  CALCULO RMR
-function Open_pop_up_rmr(id) {
-    const endereco = "rmr_calculadora\\pop_up_rmr_" + Obter_idioma() + ".html?" + encodeURIComponent(id)
-    window.open(endereco, "_blank", "width=600,height=650")
+// OBTÉM O ENDREÇO DE CADA POP UP E RETORNA PARA Open_ifrme
+function Obter_endereco(calculadora) {
+    calculadora.split("-")[1]
+    const endereco = calculadora.split("-")[1] + "_" + "calculadora/" + calculadora.split("-")[1] + "_" + Obter_idioma() + ".html"
+    const argumento = "?" + calculadora.split("-")[2]
+    return (endereco + argumento)
+}
+
+// ABRE QUALQUER IFRAME-POP-UP
+function Open_iframe(id_calc) {
+    Desabilitar_iframe()
+    let id_input = id_calc.split("-")[1] + "-" + id_calc.split("-")[2]
+    let frame = document.getElementById(("iframe-" + id_input))
+    Abrir_pop_up(id_calc)
+    const endereco = Obter_endereco(id_calc)
+    frame.src = endereco
+    frame.style.display = "block"
+}
+
+window.onload = function Mover_pop_up() {
+    const main_pop_up = document.getElementById("main-pop-up")
+    const barra_pop_up = document.getElementById("barra-pop-up")
+    // const overlay = document.getElementById("overlay")
+    const overlay_div = document.getElementById("overlay-div")
+
+    let position = { x: 0, y: 0 }
+
+    let Interromper = () => {
+        document.removeEventListener("mousemove", Move_element)
+        overlay.style.display = "none"
+        overlay_div.style.display = "none"
+    }
+
+    document.onmouseup = () => Interromper()
+    document.onscroll = () => Interromper()
+    document.onkeydown = () => Interromper()
+    document.onclick = () => Interromper()
+
+    main_pop_up.addEventListener("mousedown", () => {
+        overlay.style.display = "block"
+        overlay_div.style.display = "block"
+        document.body.style.userSelect = "none"
+        position.x = main_pop_up.offsetLeft + (main_pop_up.clientWidth / 2)
+        position.y = main_pop_up.offsetTop
+        document.addEventListener("mousemove", Move_element)
+    })
+
+    let Move_element = (event) => {
+        let x = event.clientX - position.x
+        let y = event.clientY - position.y - 80 + document.documentElement.scrollTop
+        y = y < -20 ? -20 : y
+        main_pop_up.style.transform = `translate(${x}px, ${y}px)`
+    }
+
 }
 
 // MOSTRA A PLANILHA COM PESOS DO MÉTODO UBC
@@ -62,7 +142,7 @@ function Open_pop_up_pesos(metodo) {
 }
 
 // MOSTRA O BOTÃO PARA TESTE DO AHP NO UBC E SHB
-function Mostra_ahp(metodo) {
+function Mostra_ahp() {
 
     const div_select_pesos = document.querySelector("#div-select-pesos-ubc")
     document.addEventListener("keydown", (event) => {
@@ -104,35 +184,18 @@ function Eventos(metodo) {
         })
     }
 
-    //BOTÃO CALCULADORA RMR
-    const botao_calculadora_rmr = document.querySelectorAll(".botao-calculadora-rmr")
-    botao_calculadora_rmr.forEach((elemento) => {
-        elemento.onclick = () => Open_pop_up_rmr(elemento.id)
-    })
-
-    //BOTÃO CALCULADORA GSI
-    const botao_calculadora_gsi = document.querySelectorAll(".botao-calculadora-gsi")
-    botao_calculadora_gsi.forEach((elemento) => {
-        elemento.onclick = () => Open_pop_up_gsi(elemento.id)
-    })
-
-    //BOTÃO CALCULADORA UCS
-    const botao_calculadora_ucs = document.querySelectorAll(".botao-calculadora-ucs")
-    botao_calculadora_ucs.forEach((elemento) => {
-        elemento.onclick = () => Open_pop_up_ucs(elemento.id)
-    })
-    //BOTÃO CALCULADORA DENSIDADE
-    const botao_calculadora_densidade = document.querySelectorAll(".botao-calculadora-densidade")
-    botao_calculadora_densidade.forEach((elemento) => {
-        elemento.onclick = () => Open_pop_up_densidade(elemento.id)
+    // BOTÕES CALCULADORA 
+    const calculadoras = document.querySelectorAll(".botao-calculadora")
+    calculadoras.forEach((elemento) => {
+        elemento.onclick = () => Open_iframe(elemento.id)
     })
 
     //INPUT DOS FATORES DE PESOS E AHP NO MÉTODO DE NICHOLAS 1992
     if (metodo == "nicholas_92") {
         const menu_pesos = document.querySelector("#menu-pesos")
         menu_pesos.addEventListener("change", Mostrar_input_pesos)
-        const botao_ahp = document.querySelector("#botao-ahp")
-        botao_ahp.onclick = () => Open_pop_up_ahp()
+        const botao_ahp = document.querySelector("#botao-ahp-nicholas")
+        botao_ahp.onclick = () => Open_iframe(botao_ahp.id)
     }
 
     //BOTÃO MOSTRA TABELA COM OS PESOS
@@ -184,6 +247,15 @@ function Eventos(metodo) {
                 input[nextIndex].focus()
             }
         }
+    })
+
+    // FECHAR POP UP
+    let pop_ups = document.getElementById("fechar-pop-up")
+    pop_ups.onclick = () => Fechar_pop_up()
+
+    const imagens = document.querySelectorAll("img")
+    imagens.forEach((element) => {
+        element.draggable = false
     })
 
     // Mostra_ahp(metodo)

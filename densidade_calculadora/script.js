@@ -11,25 +11,36 @@ function Exibir_Tabela(value) {
 function Retornar_valor(value) {
 
     //Obtém ob, hw, ou fw através da url. url[2] = ob, hw ou fw
-    let url = (window.location.href).split("-")
+    let url = (window.location.href).split("?")
     let id = {
         "ob": "densidade-ob",
         "hw": "densidade-hw",
         "fw": "densidade-fw",
     }
 
-    const janela_principal = window.opener  // Acessa a janela principal através de window.opener
-
-    let valor = janela_principal.document.getElementById(id[url[2]])
+    // OBTÉM O INPUT DA JANELA PRINCIPAL
+    let input_densidade = parent.document.getElementById(id[url[1]])
 
     if (value != "?") {
-        valor.value = value
+        input_densidade.value = value
         let evento_1 = new Event("blur")
-        valor.dispatchEvent(evento_1)
+        input_densidade.dispatchEvent(evento_1)
         let evento_2 = new Event("input")
-        valor.dispatchEvent(evento_2)
-        window.close()  // Fechar a janela popup
+        input_densidade.dispatchEvent(evento_2)
+
+        // FECHA O POP-UP
+        const botao_fechar = parent.document.getElementById("fechar-pop-up")
+        // Cria um evento "click"
+        let Click = new MouseEvent("click", {
+            bubbles: true,
+            cancelable: true,
+            view: window
+        })
+        // Dispara o "click" no elemento
+        botao_fechar.dispatchEvent(Click)
     }
+
+
 }
 
 function Eventos() {

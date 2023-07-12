@@ -1,27 +1,35 @@
 
 function Retornar_valor() {
 
-    //Obtém ob, hw, ou fw através da url. url[2] = ob, hw ou fw
-    let url = (window.location.href).split("-")
+    //Obtém ob, hw, ou fw através da url. url[1] = ob, hw ou fw
+    let url = (window.location.href).split("?")
     let id = {
         "ob": "gsi-ob",
         "hw": "gsi-hw",
         "fw": "gsi-fw",
     }
 
-    const janela_principal = window.opener  // Acessa a janela principal através de window.opener
-
-    let valor = janela_principal.document.getElementById(id[url[2]])
+    // OBTÉM O INPUT DA JANELA PRINCIPAL
+    let input_gsi = parent.document.getElementById(id[url[1]])
 
     let texto = document.querySelector("#resultado").innerText
-    valor.value = texto
+    input_gsi.value = texto
 
     let evento_1 = new Event("blur")
-    valor.dispatchEvent(evento_1)
+    input_gsi.dispatchEvent(evento_1)
     let evento_2 = new Event("input")
-    valor.dispatchEvent(evento_2)
+    input_gsi.dispatchEvent(evento_2)
 
-    window.close()  // Fechar a janela popup
+    // FECHA O POP-UP
+    const botao_fechar = parent.document.getElementById("fechar-pop-up")
+    // Cria um evento "click"
+    let Click = new MouseEvent("click", {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    })
+    // Dispara o "click" no elemento
+    botao_fechar.dispatchEvent(Click)
 }
 
 function Escrever_resultado_gsi(gsi) {

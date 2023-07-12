@@ -260,13 +260,35 @@
                     <option value='3'>1.00&emsp;&emsp;1.00&emsp;&emsp;0.80&emsp;&emsp;0.50</option>
                     <option value='4'>Inserir valores</option>
                 </select>
-                <input class="input-pesos" id="input-peso-geo" name="input-peso-geo" placeholder="1.0">
-                <input class="input-pesos" id="input-peso-ob" name="input-peso-ob" placeholder="1.0">
-                <input class="input-pesos" id="input-peso-hw" name="input-peso-hw" placeholder="1.0">
-                <input class="input-pesos" id="input-peso-fw" name="input-peso-fw" placeholder="1.0">
-                <button id="botao-ahp">CALCULAR POR AHP</button>
+                <input class="input-pesos" id="input-peso-geo" name="input-peso-geo" placeholder="1.00">
+                <input class="input-pesos" id="input-peso-ob" name="input-peso-ob" placeholder="1.00">
+                <input class="input-pesos" id="input-peso-hw" name="input-peso-hw" placeholder="1.00">
+                <input class="input-pesos" id="input-peso-fw" name="input-peso-fw" placeholder="1.00">
+                <button id="botao-ahp-nicholas">CALCULAR POR AHP</button>
             </div>
         </section>
+
+        <!-- ----------------------------------------IFRAMES---------------------------------------- -->
+        <div class=div-pop-up id="main-pop-up" display="none">
+
+            <div class='div-pop-up' id="barra-pop-up">
+                <span id="titulo-pop-up">Exemplo</span>
+                <div class="div-pop-up" id="fechar-pop-up">&times;</div>
+            </div>
+            <div class="overlay" id="overlay-div"></div>
+
+            <iframe class="iframe-densidade" id='iframe-densidade-ob' frameborder="0" display="none"></iframe>
+            <iframe class="iframe-densidade" id='iframe-densidade-hw' frameborder="0" display="none"></iframe>
+            <iframe class="iframe-densidade" id='iframe-densidade-fw' frameborder="0" display="none"></iframe>
+
+            <iframe class="iframe-ucs" id='iframe-ucs-ob' frameborder="0" display="none"></iframe>
+            <iframe class="iframe-ucs" id='iframe-ucs-hw' frameborder="0" display="none"></iframe>
+            <iframe class="iframe-ucs" id='iframe-ucs-fw' frameborder="0" display="none"></iframe>
+
+
+            <iframe class="iframe-ahp" id='iframe-ahp-nicholas' frameborder="0" display="none"></iframe>
+
+        </div>
 
     </main>
     <footer class="rodape">
@@ -294,6 +316,7 @@
 
     </footer>
     <span class=balao id='balao'> </span> <!-- Balão de ajuda -->
+    <div class="overlay" id="overlay"></div>
 
 </body>
 

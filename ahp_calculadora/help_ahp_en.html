@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HELP AHP</title>
+    <meta name="author" content="hh121" />
+    <style type="text/css">
+        * {
+          margin: 0;
+          padding: 0;
+          text-indent: 1.75;
+          line-height: 1.5;
+          font: 12pt system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+      
+        body {
+          position: relative;
+          display: flex;
+          margin: auto;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+          justify-items: center;
+        }
+      
+        main {
+          width: 100%;
+          text-align: justify;
+          height: 100%;
+          padding: 10px 10px 10px 15px;
+          box-sizing: border-box;
+        }
+      
+        h1, h2 {
+          color: black;
+          font-family: "Times New Roman", serif;
+          font-style: normal;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      
+        h1 {
+          font-size: 14pt;
+          text-align: center;
+        }
+      
+        h2 {
+          font-size: 12pt;
+          text-align: left;
+          margin-top: 15px;
+          
+        }
+      
+        .p, p {
+          font-family: "Times New Roman", serif;
+          font-size: 12pt;
+          margin: 0;
+          padding-top: 5pt;
+          padding-left: 41pt;
+          text-indent: -18pt;
+          text-align: left;
+          line-height: 1.5;
+        }
+        
+        span {
+            font-size: 12pt;
+        }
+        .s1, .s4 {
+          color: black;
+          font-family: "Times New Roman", serif;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: none;
+          vertical-align: 1pt;
+        }
+      
+        .s2, .s5 {
+          color: black;
+          font-family: Cambria, serif;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: none;
+        }
+      
+        .s3 {
+          color: black;
+          font-family: "Times New Roman", serif;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: none;
+          font-size: 6.5pt;
+        }
+      
+        .s6 {
+          color: black;
+          font-family: Cambria, serif;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: none;
+          font-size: 6.5pt;
+          vertical-align: -2pt;
+        }
+      
+        li {
+          display: block;
+        }
+      
+        #l1 {
+          padding-left: 0;
+        }
+      
+        #l1 > li > *:first-child:before {
+          content: " ";
+          color: black;
+          font-family: Symbol, serif;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: none;
+          font-size: 10pt;
+        }
+        .ref{
+            padding-left: 18pt;
+        }
+      </style>
+</head>
+
+<body>
+    <main>
+        <h1>
+            AHP APPLICATION<br/><br/>
+        </h1>
+        <ul id="l1">
+            <!-- PASSO 1 -->
+            <h2>
+                1st - CREATION OF PAIRWISE COMPARISON MATRIX
+            </h2>
+            <li>
+                <p>
+                    Use the AHP pairwise comparison scale.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Judge each item in the rows of the matrix in relation to the item in the column.
+                </p>
+            </li>
+            <!-- PASSO 2 -->
+            <h2>
+                2nd - SUMMING THE COLUMNS OF THE JUDGMENT MATRIX
+            </h2>
+            <li>
+                <p>
+                    Sum each column individually (one sum value for each criterion).
+                </p>
+            </li>
+            <!-- PASSO 3 -->
+            <h2>
+                3rd - NORMALIZE THE JUDGMENT MATRIX
+            </h2>
+            <li>
+                <p>
+                    Divide each item in the columns of the matrix by the sum of its own column.
+                </p>
+            </li>
+            <!-- PASSO 4 -->
+            <h2>
+                4th - CALCULATE THE WEIGHT VECTOR FOR EACH CRITERION (W)
+            </h2>
+            <li>
+                <p>
+                    The weight of each criterion is equal to the arithmetic mean of the row corresponding to the criterion in the normalized matrix.
+                </p>
+            </li>
+            <!-- PASSO 5 -->
+            <h2>
+                5th - CALCULATE THE WEIGHTED SUM VECTOR (WS)
+            </h2>
+            <li>
+                <p>
+                    The WS vector is the result of multiplying the initial judgment matrix by the criterion weights vector.
+                </p>
+            </li>
+            <!-- PASSO 6 -->
+            <h2>
+                6th - CALCULATE THE CONSISTENCY VECTOR
+            </h2>
+            <li>
+                <p>
+                    The consistency vector is the result of dividing the WS vector by the criterion weights vector (W).
+                </p>
+            </li>
+            <!-- PASSO 7 -->
+            <h2>    
+                7th - CALCULATE THE MAXIMUM EIGENVALUE OF THE JUDGMENT MATRIX
+            </h2>
+            <li>
+                <p class="s1">
+                    The maximum eigenvalue (<span class="s2">𝜆</span><span class="s3">max</span>) is equal to the arithmetic mean of the elements in the consistency vector.</p>
+            </li>
+            <!-- PASSO 8 -->
+            <h2>
+                8th - CALCULATE THE JUDGMENT CONSISTENCY INDEX (CI)
+            </h2>
+            <li>
+                <p class="s5">
+                    𝐶𝐼 = (𝜆<span class="s6">max </span>− 𝑛)/(𝑛 − 1)>, where n is the order of the matrix.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Inconsistency example: A&gt;B, B&gt;C e C&gt;A
+                </p>
+            </li>
+            <!-- PASSO 9 -->
+            <h2>
+                9th - OBTAIN THE RANDOM INDEX FOR THE JUDGMENT MATRIX (RI)
+            </h2>
+            <li>
+                <p>
+                    The random index is a tabulated value (Saaty, 1991) representing the average consistency index of randomly generated reciprocal matrices.
+                </p>
+            </li>
+            <!-- PASSO 10 -->
+            <h2>
+                10th - CALCULATE THE CONSISTENCY RATIO (CR)
+            </h2>
+            <li>
+                <p>
+                    The CR indicates how consistent the judgment matrix is compared to randomly generated matrices.
+                </p>
+            </li>
+            <li>
+                <p class="s5">
+                    𝐶𝑅 = 𝐶𝐼/𝑅𝐼
+                </p>
+            </li>
+            <!-- PASSO 11 -->
+            <h2>
+                11th - ANALYZE THE RESULTS
+            </h2>
+            <li>
+                <p>
+                    If CR &lt; 0.1, the judgment matrix has been successfully constructed, and the weights can be used.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If CR &gt;= 0.1, the judgment matrix is inconsistent, and the process should be restarted (go back to step 1).<br><br><br>
+                </p>
+            </li>
+        </ul>
+        <h2>MORE ABOUT AHP:<br><br></h2>
+        <ul class="ref">
+            <li>
+                <a href="https://doi.org/10.1016/0377-2217(90)90057-I" target="_blank">
+                    Saaty, T. L. (1990). How to make a decision: the analytic hierarchy process. European journal of operational research, 48(1), 9-26.
+                </a><br><br>
+            </li>
+            <li>
+                <a href="https://doi.org/10.20985/1980-5160.2016.v11n3.988" target="_blank">
+                    Ribeiro, M. C. D. C. R., & da Silva Alves, A. (2016). Application of the Analytic Hierarchy Process (AHP) with absolute measurement in a qualitative selection problem. Sistemas & Gestão, 11(3), 270-281.
+                </a><br>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>

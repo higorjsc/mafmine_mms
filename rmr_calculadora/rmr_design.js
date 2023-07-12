@@ -37,21 +37,7 @@ function Display_dip() {
     Display_block(id_dip)
 }
 
-//Obtém o parâmetro incluso na URL para saber se o calculo é para OB, HW ou FW
-function Inserir_titulo() {
-    let url = (window.location.href).split("-")
-    let idioma = "_" + Obter_idioma()
-    let texto = {
-        "ob_pt": "CÁLCULO RMR: Corpo de Minério",
-        "ob_en": "RMR CALCULATION: Orebody",
-        "hw_pt": "CÁLCULO RMR: Hanging Wall",
-        "hw_en": "RMR CALCULATION: Hanging Wall",
-        "fw_pt": "CÁLCULO RMR: Footwall",
-        "fw_en": "RMR CALCULATION: Footwall",
-    }
-    let titulo = document.getElementById("titulo")
-    titulo.innerText += texto[(url[2] + idioma)]
-}
+
 
 function Balao_sai() {
     const balao = document.getElementById("balao")

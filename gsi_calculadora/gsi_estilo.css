@@ -12,15 +12,12 @@
 }
 
 main {
-  position: absolute;
+  position: relative;
   width: 715px;
   height: 700px;
-  left: 20px;
-  top: 10px;
   border: 1pt solid black;
   margin: auto;
   overflow: hidden;
-  zoom: 100%;
 }
 
 select {

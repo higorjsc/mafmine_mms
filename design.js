@@ -2,17 +2,17 @@ function Mostrar_input_pesos() {
 
     const select = document.getElementById("menu-pesos").value
     const input_pesos = document.querySelectorAll(".input-pesos")
-    const botao_ahp = document.querySelector("#botao-ahp")
+    const botao_ahp_nicholas = document.querySelector("#botao-ahp-nicholas")
     if (select == 4) {
         input_pesos.forEach(element => {
             element.style.display = "block"
         })
-        botao_ahp.style.display = "block"
+        botao_ahp_nicholas.style.display = "block"
     } else {
         input_pesos.forEach(element => {
             element.style.display = "none"
         })
-        botao_ahp.style.display = "none"
+        botao_ahp_nicholas.style.display = "none"
     }
 }
 
@@ -168,8 +168,8 @@ function Formatar_entry(entry) {
             //Se o input for UCS, 'Mpa' é adicionado ao texto númerico
             entrada.value = numero.toString() + " Mpa"
         } else if (entry.includes("peso") || entry.includes("q") || entry.includes("gsi")) {
-            //Se o input for os pesos da section central, duas casas decimais são adicionados ao texto númerico
-            entrada.value = numero.toFixed(1).toString()
+            //Se o input for os pesos da section central, duas casas decimais são adicionadas ao texto númerico
+            entrada.value = numero.toFixed(2).toString()
         }
 
     }

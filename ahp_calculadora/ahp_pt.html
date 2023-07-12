@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js"></script>
+    <script src="design.js"></script>
+    <title>Calculadora AHP</title>
+</head>
+<body>
+
+    <main>
+
+        <section id = 'section-1'>
+
+            <button id="help-button">HELP</button>
+            <h1 id="h1-section-1">ANALYTIC HIERARCHY PROCESS</h1>
+
+            <h2 id="h2-slider">COMPARAÇÃO DE PARES</h2>
+            <div class="slider-container" id = 'slider-geometria'>
+
+                <!-- SLIDER GEOMETRIA -->
+                <span class="span-titulo-slider">GEOMETRIA vs MINÉRIO</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-geo-ob">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+                
+                <span class="span-titulo-slider">GEOMETRIA vs HANGING WALL</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-geo-hw">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+
+                <span class="span-titulo-slider">GEOMETRIA vs FOOTWALL</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-geo-fw">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+
+                <!-- SLIDER MINÉRIO -->
+                <span class="span-titulo-slider">MINÉRIO vs HANGING WALL</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-ob-hw">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+                
+                <span class="span-titulo-slider">MINÉRIO vs FOOTWALL</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-ob-fw">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+
+                <!-- SLIDER HANGING WALL -->
+                <span class="span-titulo-slider">HANGING WALL vs FOOTWALL</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider-hw-fw">
+                <div class="slider-labels">
+                    <span class="slider-span">1/9</span>
+                    <span class="slider-span">0</span>
+                    <span class="slider-span">9</span>
+                </div>
+
+            </div>
+            <div id="div-img">
+                <img src="Imagens\ahp_pt2.png" id="img-ahp-escala">
+            </div>
+            
+            <table id = 'matriz'>
+                <tr>
+                    <th class="th-coluna-matriz"></th>
+                    <th  class="th-linha">GEO</th>
+                    <th  class="th-linha">OB</th>
+                    <th  class="th-linha">HW</th>
+                    <th  class="th-linha">FW</th>
+                </tr>
+                <tr>
+                    <th class="th-coluna-matriz">GEO</th>
+                    <td id="geo-geo">1</td>
+                    <td id="geo-ob">1</td>
+                    <td id="geo-hw">1</td>
+                    <td id="geo-fw">1</td>
+                </tr>
+                <tr>
+                    <th class="th-coluna-matriz">OB</th>
+                    <td id="ob-geo">1</td>
+                    <td id="ob-ob">1</td>
+                    <td id="ob-hw">1</td>
+                    <td id="ob-fw">1</td>
+                </tr>
+                <tr>
+                    <th class="th-coluna-matriz">HW</th>
+                    <td id="hw-geo">1</td>
+                    <td id="hw-ob">1</td>
+                    <td id="hw-hw">1</td>
+                    <td id="hw-fw">1</td>
+                </tr>
+                <tr>
+                    <th class="th-coluna-matriz">FW</th>
+                    <td id="fw-geo">1</td>
+                    <td id="fw-ob">1</td>
+                    <td id="fw-hw">1</td>
+                    <td id="fw-fw">1</td>
+                </tr>
+            </table>
+
+            <table id="vetores-peso">
+
+                <tr>
+                    <th  class="th-linha-vetores-peso">&ensp;</th>
+                    <td class = 'td-vetores-peso' id="titulo-pesos">PESOS</td>
+                </tr>
+                <tr>
+                    <th  class="th-coluna-vetores-peso">GEO</th>
+                    <td class = 'td-vetores-peso' id="td-peso-geo">1</td>                           
+                </tr>
+                <tr>
+                    <th  class="th-coluna-vetores-peso">OB</th>
+                    <td  class = 'td-vetores-peso' id="td-peso-ob">1</td>                          
+                </tr>
+                <tr>
+                    <th  class="th-coluna-vetores-peso">HW</th>
+                    <td  class = 'td-vetores-peso' id="td-peso-hw">1</td>                            
+                </tr>
+                <tr>
+                    <th  class="th-coluna-vetores-peso">FW</th>
+                    <td  class = 'td-vetores-peso' id="td-peso-fw">1</td>                   
+                </tr>
+                
+            </table>
+
+            <table id="vetores-cons">
+
+                <tr>
+                    <th  class="th-linha-vetores-cons">&ensp;</th>
+                    <td class = 'td-vetores-cons' id="titulo-cons">CONS.</td>
+                </tr>
+                <tr>                      
+                    <th  class="th-coluna-vetores">GEO</th>
+                    <td class = 'td-vetores-cons' id="td-cons-geo">1</td>                        
+                </tr>
+                <tr>                    
+                    <th  class="th-coluna-vetores">OB</th>
+                    <td  class = 'td-vetores-cons' id="td-cons-ob">1</td>                        
+                </tr>
+                <tr>   
+                    <th  class="th-coluna-vetores">HW</th>                   
+                    <td  class = 'td-vetores-cons' id="td-cons-hw">1</td>                        
+                </tr>
+                <tr>                      
+                    <th  class="th-coluna-vetores">FW</th>
+                    <td  class = 'td-vetores-cons' id="td-cons-fw">1</td>                        
+                </tr>
+                
+            </table>
+            <div id="div-resultados">
+                <span class="span-texto-resultado" id="lambda">Coeficiente <strong>&lambda;</strong>: </span>
+                <span class = 'span-resultado' id="resultado-lambda"> x</span>
+                
+                <span class="span-texto-resultado" id="ci">Índice de consistencia: </span>
+                <span class = 'span-resultado' id="resultado-ci"> x</span>
+                
+                <span class="span-texto-resultado" id="ri">índice de aleatoriedade: </span>
+                <span class = 'span-resultado' id="resultado-ri">0.90</span>
+
+                <span class="span-texto-resultado" id="cr">Razão de consistencia: </span>
+                <span class = 'span-resultado' id="resultado-cr"> x</span>
+            </div>
+
+            <div id="div-balao-warn">
+                <span id="span-warn"></span>
+                <img id="seta-img">
+            </div>
+
+            <button id="botao-input"> ADICIONAR<br/>VALOR</button>
+
+        </section>
+        <!-- FIM SECTION 1 -->
+        
+        <span class = balao id = 'balao'> </span> <!-- Balão de ajuda -->
+    </main>
+
+
+
+</body>
+<script>
+ 
+    window.onload = function(){
+        // Obtém as dimensões da tela
+        const largura_janela = window.screen.width
+        const altura_janela = window.screen.height
+        
+        // Define as dimensões da janela do pop-up
+        const largura_pop_up = document.documentElement.clientWidth
+        const altura_pop_up = document.documentElement.clientHeight
+
+        
+        // Calcula a posição para centralizar a janela
+        const esquerda = (largura_janela - largura_pop_up) / 2
+        const topo = (altura_janela - altura_pop_up) /2 
+        
+        // Define as coordenadas para a janela do pop-up
+        window.moveTo(esquerda, topo)
+        }
+    
+
+    
+    Evento()
+    Matriz_maker()
+    Calculos()
+</script>
+
+</html>
