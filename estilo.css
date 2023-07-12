@@ -529,27 +529,6 @@ select:hover {
 
 /* -------------------------IFRAMES------------------------------------ */
 
-/* .popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  background-color: white;
-}
-
-.popup-topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: lightgray;
-}
-
-.popup-close {
-  cursor: pointer;
-} */
-
 #main-pop-up{
   height:auto;
   width:500px;
@@ -559,6 +538,7 @@ select:hover {
   box-shadow: 0 0 10px var(--cor-1);
   border: 1px solid black;
   z-index: 999;
+  display: none;
 }
 
 #barra-pop-up{

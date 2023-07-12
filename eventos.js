@@ -49,10 +49,19 @@ function Fechar_pop_up() {
     const pop_up = document.getElementById('main-pop-up')
     pop_up.style.display = 'none'
 }
-// ABRE A DIV QUE CONTÉM OS IFRAMES-POP-UPS
-function Abrir_pop_up() {
+
+// ABRE A DIV QUE CONTÉM OS IFRAMES-POP-UPS E DEFINE AS DIMENSÓES
+function Abrir_pop_up(id) {
     const pop_up = document.getElementById('main-pop-up')
+    if(id == "gsi"){
+        pop_up.style.width = "780px"
+        pop_up.style.height = "740px"
+    }else{
+        pop_up.style.width = "600px"
+        pop_up.style.height = "740px"
+    }
     pop_up.style.display = 'block'
+
 }
 
 // OBTÉM O ENDREÇO DE CADA POP UP E RETORNA PARA Open_ifrme
@@ -67,7 +76,7 @@ function Open_iframe(id_calc) {
     Desabilitar_iframe()
     let id_input = id_calc.split('-')[1] + '-' + id_calc.split('-')[2]
     let frame = document.getElementById(("iframe-" + id_input))
-    Abrir_pop_up()
+    Abrir_pop_up(id_calc.split('-')[1])
     const endereco = Obter_endereco(id_calc)
     frame.src = endereco
     frame.style.display = "block"
