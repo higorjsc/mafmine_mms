@@ -106,7 +106,7 @@ function English() {
 function Portuguese() {
 
     //HEADER
-    Escrever("titulo-pagina", "SELEÇÃO DE METODOS DE LAVRA: Método UBC")
+    Escrever("titulo-pagina", "SELEÇÃO DE METODOS DE LAVRA: Método UBC (1995)")
 
     //SEÇÃO 1
     const paragrafo_explicacao = "O UBC Mining Method Selection (1995) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia em Vancouver, B.C., Canada.<br><br>" +
