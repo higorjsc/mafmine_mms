@@ -1,14 +1,4 @@
-function Inserir_idioma() {
-    let url = window.location.href
-    const imagem = document.getElementById("img-gsi-picker")
 
-    if (url.includes("pt")) {
-        imagem.src = "Imagens\\gsi_portuguese.png"
-    } else {
-        imagem.src = "Imagens\\gsi_english.png"
-    }
-    imagem.style.display = "block"
-}
 
 function Desenhar_retas(X, Y) {
     const pad = document.getElementById("pad")

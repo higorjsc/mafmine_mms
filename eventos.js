@@ -17,6 +17,15 @@ function Switch_language(metodo) {
 
     // Calculo é chamada para alterar o valor do resultado do RSS
     Calculo(metodo)
+
+    const iframes = document.querySelectorAll("iframe")
+    iframes.forEach((element) => {
+        if (element.style.display === "block") {
+            let frame = document.getElementById(element.id)
+            frame.contentWindow.postMessage("CallLanguage", "*")
+        }
+    })
+
 }
 
 function Obter_idioma() {
@@ -82,7 +91,7 @@ function Abrir_pop_up(id) {
 // OBTÉM O ENDREÇO DE CADA POP UP E RETORNA PARA Open_ifrme
 function Obter_endereco(calculadora) {
     calculadora.split("-")[1]
-    const endereco = calculadora.split("-")[1] + "_" + "calculadora/" + calculadora.split("-")[1] + "_" + Obter_idioma() + ".html"
+    const endereco = calculadora.split("-")[1] + "_" + "calculadora/" + calculadora.split("-")[1] + ".html"
     const argumento = "?" + calculadora.split("-")[2]
     return (endereco + argumento)
 }
@@ -117,7 +126,7 @@ window.onload = function Mover_pop_up() {
     document.onkeydown = () => Interromper()
     document.onclick = () => Interromper()
 
-    main_pop_up.addEventListener("mousedown", () => {
+    barra_pop_up.addEventListener("mousedown", () => {
         overlay.style.display = "block"
         overlay_div.style.display = "block"
         document.body.style.userSelect = "none"
