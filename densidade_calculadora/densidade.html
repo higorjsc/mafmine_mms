@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo_densidade.css">
     <script src="script.js"></script>
+    <script src="densidade_languages.js"></script>
     <title>ESTIMATIVAS DENSIDADES</title>
 </head>
 
@@ -13,13 +14,12 @@
     <main>
         <!-- <button id="help-button">SOBRE</button> -->
         <span id="span-help">CLIQUE NO VALOR DESEJADO</span>
-        <h1 id="titulo-tabela-rochas">TABELA DE MASSAS ESPECÍFCIAS: &ensp;&ensp;
-            <select id="select-tipo-rocha">
-                <option value="ignea">Rochas Ígneas</option>
-                <option value="sedimentar">Rochas Sedimentares</option>
-                <option value="metamorfica">Rochas Metamórficas</option>
-            </select>
-        </h1>
+        <h1 id="titulo-tabela-rochas">TABELA DE MASSAS ESPECÍFCIAS: &ensp;&ensp;</h1>
+        <select id="select-tipo-rocha">
+            <option value="ignea">Rochas Ígneas</option>
+            <option value="sedimentar">Rochas Sedimentares</option>
+            <option value="metamorfica">Rochas Metamórficas</option>
+        </select>
         <!-- -----------------------IGNEAS----------------------------------- -->
         <table class="tabela-rochas" id='tabela-ignea'>
             <tr id="tr-titulo">
@@ -224,7 +224,7 @@
                 <td class="td-medio td-valor" id="td-medio-lignite">1390</td>
                 <td class="td-maximo td-valor" id="td-maximo-lignite">1670</td>
             </tr>
-          
+
         </table>
 
         <!-- -----------------------METAMORFICAS----------------------------------- -->
@@ -301,11 +301,12 @@
                 <td class="td-medio td-valor" id="td-medio-hornfels">2800</td>
                 <td class="td-maximo td-valor" id="td-maximo-hornfels">3080</td>
             </tr>
-        
+
         </table>
     </main>
-    <span class="span-referencia"><strong>Fonte:</strong> 
-        <a href="https://doi.org/10.1016/j.cageo.2010.07.010" target="_blank">"Tenzer, R., et al. (2011). A digital rock density map of New Zealand. Computers & geosciences, 37(8), 1181-1191."</a>
+    <span class="span-referencia"><strong>Fonte:</strong>
+        <a href="https://doi.org/10.1016/j.cageo.2010.07.010" target="_blank">"Tenzer, R., et al. (2011). A digital rock
+            density map of New Zealand. Computers & geosciences, 37(8), 1181-1191."</a>
         <br><br>
     </span>
 </body>

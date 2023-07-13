@@ -20,7 +20,7 @@ function Language() {
             td_minimo_titulo: "Mínimo<br>(Kg/m³)",
             td_medio_titulo: "Médio<br>(Kg/m³)",
             td_maximo_titulo: "Máximo<br>(Kg/m³)",
-            td_rocha_andesito: "Rocha",
+            td_rocha_andesito: "Andesito",
             td_rocha_basalto: "Basalto",
             td_rocha_dacito: "Dacito",
             td_rocha_diorito: "Diorito",
@@ -63,16 +63,16 @@ function Language() {
             td_rocha_hornfels: "Hornfels",
         },
         "en": {
-            span_help: "CLIQUE NO VALOR DESEJADO",
-            titulo_tabela_rochas: "TABELA DE MASSAS ESPECÍFCIAS: &ensp;&ensp;",
-            select_tipo_rocha_0: "Rochas Ígneas",
-            select_tipo_rocha_1: "Rochas Sedimentares",
-            select_tipo_rocha_2: "Rochas Metamórficas",
-            th_rocha_titulo: "Rocha",
-            td_minimo_titulo: "Mínimo<br>(Kg/m³)",
-            td_medio_titulo: "Médio<br>(Kg/m³)",
-            td_maximo_titulo: "Máximo<br>(Kg/m³)",
-            td_rocha_andesito: "Rocha",
+            span_help: "CLICK ON VALUE",
+            titulo_tabela_rochas: "ROCK DENSITY TABLE: &ensp;&ensp;",
+            select_tipo_rocha_0: "Igneous Rocks",
+            select_tipo_rocha_1: "Sedimentary Rocks",
+            select_tipo_rocha_2: "Metamorphic Rocks",
+            th_rocha_titulo: "Rock",
+            td_minimo_titulo: "Low<br>(Kg/m³)",
+            td_medio_titulo: "Average<br>(Kg/m³)",
+            td_maximo_titulo: "High<br>(Kg/m³)",
+            td_rocha_andesito: "Andesito",
             td_rocha_basalto: "Basalto",
             td_rocha_dacito: "Dacito",
             td_rocha_diorito: "Diorito",
@@ -125,12 +125,11 @@ function Language() {
             elemento.options[op].text = idioma_selecionado[texto]
         }
     }
-
     Escrever("span-help", "span_help")
     Escrever("titulo-tabela-rochas", "titulo_tabela_rochas")
-    Escrever("select-tipo-rocha", "select_tipo_rocha_0")
-    Escrever("select-tipo-rocha", "select_tipo_rocha_1")
-    Escrever("select-tipo-rocha", "select_tipo_rocha_2")
+    Escrever("select-tipo-rocha", "select_tipo_rocha_0", 0)
+    Escrever("select-tipo-rocha", "select_tipo_rocha_1", 1)
+    Escrever("select-tipo-rocha", "select_tipo_rocha_2", 2)
     Escrever("th-rocha-titulo", "th_rocha_titulo")
     Escrever("td-minimo-titulo", "td_minimo_titulo")
     Escrever("td-medio-titulo", "td_medio_titulo")
