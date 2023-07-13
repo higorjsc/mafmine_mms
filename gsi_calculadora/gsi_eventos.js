@@ -1,8 +1,6 @@
 
 function Eventos_pop_gsi() {
-
-    Inserir_idioma()
-
+    Language()
     const balao = document.getElementById("balao")
     document.addEventListener("mousemove", function (event) {
         balao.style.top = event.clientY + "px"
@@ -24,9 +22,10 @@ function Eventos_pop_gsi() {
         mouseY = pad.clientHeight - mouseY
         Balao_gsi("pad", mouseX, mouseY)
     }
+
     pad.onmouseout = () => Balao_sai()
     pad.onclick = function (event) {
-        let rect = pad.getBoundingClientRect() 
+        let rect = pad.getBoundingClientRect()
         let X = event.clientX - rect.left
         let Y = event.clientY - rect.top - pad.scrollTop
         Calculo_gsi(X, Y)

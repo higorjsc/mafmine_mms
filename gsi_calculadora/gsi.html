@@ -6,6 +6,7 @@
   <script src="gsi_eventos.js"></script>
   <script src="gsi_design.js"></script>
   <script src="gsi_calculos.js"></script>
+  <script src="gsi_languages.js"></script>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
     <div id="input-container">
       <span id="span-referencia">
         <strong>Fonte:</strong>
-        <a href="https://onepetro.org/ARMAUSRMS/proceedings-abstract/ARMA13/All-ARMA13/ARMA-2013-672/121184" target="_blank">
+        <a href="https://onepetro.org/ARMAUSRMS/proceedings-abstract/ARMA13/All-ARMA13/ARMA-2013-672/121184" target="_blank" id="referencia-artigo">
           Hoek, E., Carter, T. G., & Diederichs, M. S. (2013). 
           Quantification of the geological strength index chart. 
           In 47th US rock mechanics/geomechanics symposium. OnePetro.
@@ -58,7 +59,7 @@
 
         <span class = 'span-calculo-jc' id="span-separacao">Separação:</span>
         <select class = 'select-calculo-jc' id = 'separacao'>
-            <option value="none">Nenhuma</option>
+            <option value="none">0</option>
             <option value="<0.1">< 0.1 mm </option>
             <option value="0.1-1.0">(0.1-1.0) mm</option>
             <option value="1-5">(1-5) mm</option>
@@ -106,23 +107,6 @@
 </body>
 
     <script>
-      window.onload = function(){
-        // Obtém as dimensões da tela
-        const largura_janela = window.screen.width
-        const altura_janela = window.screen.height
-        
-        // Define as dimensões da janela do pop-up
-        const largura_pop_up = document.documentElement.clientWidth
-        const altura_pop_up = document.documentElement.clientHeight
-
-        
-        // Calcula a posição para centralizar a janela
-        const esquerda = (largura_janela - largura_pop_up) / 2
-        const topo = (altura_janela - altura_pop_up) /2 
-        
-        // Define as coordenadas para a janela do pop-up
-        window.moveTo(esquerda, topo)
-        }
         Eventos_pop_gsi()
         Mostrar_inputs()
     </script>

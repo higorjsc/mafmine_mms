@@ -31,14 +31,15 @@ main {
 }
 
 #select-tipo-rocha {
+  position: absolute;
   width: 32%;
-  justify-self: center;
-  align-self: center;
   margin-bottom: 10px;
   border-radius: 20px;
   text-align: center;
   line-height: 24px;
   color: red;
+  right: 2%;
+  top: 6.2%;
 }
 
 #select-tipo-rocha:hover {
