@@ -109,7 +109,7 @@ function Language(idioma_janela) {
             menu_fracture_spacing_3: "Very wide",
             subtitulo_fracture_strenght: "Fracture Stenght",
             span_fracture_strenght_ob: "Orebody:",
-            menu_fracture_strenght_0: "Wak",
+            menu_fracture_strenght_0: "Weak",
             menu_fracture_strenght_1: "Moderate",
             menu_fracture_strenght_2: "Strongh",
             h2_fatores_peso: "Weighting Factors",
