@@ -338,7 +338,7 @@ function Balao_entra_nicholas(entry, idioma) {
             "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
             "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
             "fracture-spacing": "\n- Muito perto: menos de 16 fraturas por metro\n\n- Perto: entre 10 e 16 fraturas por metro\n\n-Longe: entre 3 e 10 fraturas por metro\n\n- Muito onge: 3 fraturas por metro ou menos\n\n",
-            "fracture-strenght": "\n- Fraca: fraturas \"limpas\" com uma superfície\n ou preenchimento de resistencia menor\n do que a RSS da rocha\n\n- Fraturas: \"limpas\" e com uma superfície rugosa\n\n- Fraturas preenchidas com material de\n resistencia igual ou superior a RSS da rocha\n\n",
+            "fracture-strenght": "\n- Fraca: fraturas \"limpas\" com uma superfície\n ou preenchimento de resistencia menor\n do que a RSS da rocha\n\n- Média: Fraturas \"limpas\" e com uma superfície rugosa\n\n- Forte: Fraturas preenchidas com material de\n resistencia igual ou superior a RSS da rocha\n\n",
         }
     }
     const positions = {
