@@ -34,17 +34,26 @@ function Language(idioma_janela) {
             distribuicao_0: "Uniforme",
             distribuicao_1: "Gradacional",
             distribuicao_2: "Errática",
-           
             subtitulo_densidade: "Densidade",
             span_densidade_ob: "Corpo de minério:",
             subtitulo_profundidade: "Profundidade",
             span_profundidade_ob: "Corpo de minério:",
             span_ucs_ob: "Corpo de minério:",
             span_resultado_rss_ob: "Corpo de minério:",
-            
-            h2_fatores_peso_ubc: "Fatores de Peso",
-            span_cm_ubc: "OB",
-            botao_ahp_ubc: "CALCULAR POR AHP",
+            subtitulo_fracture_spacing: "Espaçamento das Fraturas",
+            span_fracture_spacing_ob: "Corpo de minério:",
+            menu_fracture_spacing_0: "Muito próximas",
+            menu_fracture_spacing_1: "Próximas",
+            menu_fracture_spacing_2: "Distantes",
+            menu_fracture_spacing_3: "Muito distantes",
+            subtitulo_fracture_strenght: "Espaçamento das Fraturas",
+            span_fracture_strenght_ob: "Corpo de minério:",
+            menu_fracture_strenght_0: "Fraca",
+            menu_fracture_strenght_1: "Moderada",
+            menu_fracture_strenght_2: "Forte",
+            h2_fatores_peso: "Fatores de Peso",
+            span_cm: "OB",
+            botao_ahp_nicholas: "CALCULAR POR AHP",
             universidade: "UFRGS Universidade Federal do Rio Grande do Sul",
             laboratorio: "LAPROM Laboratório de Processamento Mineral",
             localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
@@ -75,47 +84,37 @@ function Language(idioma_janela) {
             forma_geral_2: "Irregular",
             span_mergulho: "Plunge:",
             mergulho_0: "Flat",
-            mergulho_1: "Low",
-            mergulho_2: "Intermediate",
-            mergulho_3: "Rarely steep",
-            mergulho_4: "Steep",
+            mergulho_1: "Intermediate",
+            mergulho_2: "Steep",
             span_espessura: "Ore thickness:",
-            espessura_0: "Very narrow",
-            espessura_1: "Narrow",
-            espessura_2: "Intermediate",
-            espessura_3: "Thick",
-            espessura_4: "Very thick",
+            espessura_0: "Narrow",
+            espessura_1: "Intermediate",
+            espessura_2: "Thick",
+            espessura_3: "Very thick",
             span_distribuicao: "Grade distribution:",
             distribuicao_0: "Uniform",
             distribuicao_1: "Gradational",
             distribuicao_2: "Erratic",
-            span_profundidade: "Depth:",
-            profundidade_0: "Shallow",
-            profundidade_1: "Intermediate",
-            profundidade_2: "Rarely deep",
-            profundidade_3: "Deep",
-            subtitulo_valor_minerio: "Economic factors",
-            span_valor_minerio: "Grade value:",
-            valor_minerio_0: "Low",
-            valor_minerio_1: "Medium",
-            valor_minerio_2: "High",
             subtitulo_densidade: "Density",
             span_densidade_ob: "Orebody:",
-            subtitulo_profundidade: "Profundidade",
+            subtitulo_profundidade: "Depth",
             span_profundidade_ob: "Orebody:",
             span_ucs_ob: "Orebody:",
             span_resultado_rss_ob: "Orebody:",
-            span_rmr_ob: "Orebody:",
-            span_gsi_ob: "Orebody:",
-            span_q_ob: "Orebody:",
-            menu_rmr_0: "Very poor",
-            menu_rmr_1: "Poor",
-            menu_rmr_2: "Fair",
-            menu_rmr_3: "Good",
-            menu_rmr_4: "Very good",
-            h2_fatores_peso_ubc: "Weighting Factors",
-            span_cm_ubc: "OB",
-            botao_ahp_ubc: "CALCULATE BY AHP",
+            subtitulo_fracture_spacing: "Fracture Spacing",
+            span_fracture_spacing_ob: "Orebody:",
+            menu_fracture_spacing_0: "Very close",
+            menu_fracture_spacing_1: "Close",
+            menu_fracture_spacing_2: "Wide",
+            menu_fracture_spacing_3: "Very wide",
+            subtitulo_fracture_strenght: "Fracture Stenght",
+            span_fracture_strenght_ob: "Orebody:",
+            menu_fracture_strenght_0: "Wak",
+            menu_fracture_strenght_1: "Moderate",
+            menu_fracture_strenght_2: "Strongh",
+            h2_fatores_peso: "Weighting Factors",
+            span_cm: "OB",
+            botao_ahp_nicholas: "CALCULATE BY AHP",
             universidade: "UFRGS Universidade Federal do Rio Grande do Sul",
             laboratorio: "LAPROM Laboratório de Processamento Mineral",
             localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
@@ -159,8 +158,6 @@ function Language(idioma_janela) {
     Escrever("mergulho", "mergulho_0", 0)
     Escrever("mergulho", "mergulho_1", 1)
     Escrever("mergulho", "mergulho_2", 2)
-    Escrever("mergulho", "mergulho_3", 3)
-    Escrever("mergulho", "mergulho_4", 4)
 
     // ESPESSURA
     Escrever("span-espessura", "span_espessura")
@@ -168,27 +165,12 @@ function Language(idioma_janela) {
     Escrever("espessura", "espessura_1", 1)
     Escrever("espessura", "espessura_2", 2)
     Escrever("espessura", "espessura_3", 3)
-    Escrever("espessura", "espessura_4", 4)
 
     // DISTRIBUIÇÃO DE TEORES
     Escrever("span-distribuicao", "span_distribuicao")
     Escrever("distribuicao", "distribuicao_0", 0)
     Escrever("distribuicao", "distribuicao_1", 1)
     Escrever("distribuicao", "distribuicao_2", 2)
-
-    // PROFUNDIDADE
-    Escrever("span-profundidade", "span_profundidade")
-    Escrever("profundidade", "profundidade_0", 0)
-    Escrever("profundidade", "profundidade_1", 1)
-    Escrever("profundidade", "profundidade_2", 2)
-    Escrever("profundidade", "profundidade_3", 3)
-
-    // FATORES ECONOMICOS
-    Escrever("subtitulo-valor-minerio", "subtitulo_valor_minerio")
-    Escrever("span-valor-minerio", "span_valor_minerio")
-    Escrever("valor-minerio", "valor_minerio_0", 0)
-    Escrever("valor-minerio", "valor_minerio_1", 1)
-    Escrever("valor-minerio", "valor_minerio_2", 2)
 
     // INPUTS RSS
     Escrever("subtitulo-densidade", "subtitulo_densidade")
@@ -197,26 +179,32 @@ function Language(idioma_janela) {
     Escrever("span-profundidade-ob", "span_profundidade_ob")
     Escrever("span-ucs-ob", "span_ucs_ob")
     Escrever("span-resultado-rss-ob", "span_resultado_rss_ob")
+    
+    //ESPAÇAMENTO FRATURAS
+    Escrever("subtitulo-fracture-spacing", "subtitulo_fracture_spacing")
+    Escrever("span-fracture-spacing-ob", "span_fracture_spacing_ob")
+    const menu_fracture_spacing = document.querySelectorAll(".menu-fracture-spacing")
+    menu_fracture_spacing.forEach(element => {
+        Escrever(element.id, "menu_fracture_spacing_0", 0)
+        Escrever(element.id, "menu_fracture_spacing_1", 1)
+        Escrever(element.id, "menu_fracture_spacing_2", 2)
+        Escrever(element.id, "menu_fracture_spacing_3", 3)
+    })
 
-    // SPANS RMR-GSI-Q
-    Escrever("span-rmr-ob", "span_rmr_ob")
-    Escrever("span-gsi-ob", "span_gsi_ob")
-    Escrever("span-q-ob", "span_q_ob")
-
-    // MENU RMR
-    const menu_rmr = document.querySelectorAll(".menu-rmr")
-    menu_rmr.forEach((element) => {
-        Escrever(element.id, "menu_rmr_0", 0)
-        Escrever(element.id, "menu_rmr_1", 1)
-        Escrever(element.id, "menu_rmr_2", 2)
-        Escrever(element.id, "menu_rmr_3", 3)
-        Escrever(element.id, "menu_rmr_4", 4)
+    //QUALIDADE FRATURAS
+    Escrever("subtitulo-fracture-strenght", "subtitulo_fracture_strenght")
+    Escrever("span-fracture-strenght-ob", "span_fracture_strenght_ob")
+    const menu_fracture_strenght = document.querySelectorAll(".menu-fracture-strenght")
+    menu_fracture_strenght.forEach(element => {
+        Escrever(element.id, "menu_fracture_strenght_0", "0")
+        Escrever(element.id, "menu_fracture_strenght_1", "1")
+        Escrever(element.id, "menu_fracture_strenght_2", "2")
     })
 
     // FATORES DE PESO 
-    Escrever("h2-fatores-peso-ubc", "h2_fatores_peso_ubc")
-    Escrever("span-cm-ubc", "span_cm_ubc")
-    Escrever("botao-ahp-ubc", "botao_ahp_ubc")
+    Escrever("h2-fatores-peso", "h2_fatores_peso")
+    Escrever("span-cm", "span_cm")
+    Escrever("botao-ahp-nicholas", "botao_ahp_nicholas")
 
     //FOOTER
     Escrever("universidade", "universidade")
