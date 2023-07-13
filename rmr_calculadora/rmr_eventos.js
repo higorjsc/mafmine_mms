@@ -1,8 +1,8 @@
 
 //Obtém o idioma da janela principal através da URL
 function Obter_idioma() {
-    let url = window.location.href
-    if (url.includes("pt")) {
+    let titulo = document.getElementById("condicoes-gerais")
+    if (titulo.includes("Gerais")) {
         return "pt"
     } else {
         return "en"
