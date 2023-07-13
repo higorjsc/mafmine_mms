@@ -1,12 +1,9 @@
 
 //Obtém o idioma da janela principal através da URL
 function Obter_idioma() {
-    let titulo = document.getElementById("condicoes-gerais")
-    if (titulo.includes("Gerais")) {
-        return "pt"
-    } else {
-        return "en"
-    }
+    let idioma_janela = parent.document.getElementById("titulo-pagina").innerText
+    idioma_janela = idioma_janela.includes("SELEÇÃO") ? "pt" : "en"   
+    return idioma_janela
 }
 
 //Obtém o parâmetro incluso na URL para saber se o calculo é para OB, HW ou FW

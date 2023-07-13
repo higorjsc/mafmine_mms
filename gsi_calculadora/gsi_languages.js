@@ -34,7 +34,7 @@ function Language() {
             select_preenchimento_2: "Duro: >5 mm",
             select_preenchimento_3: "Macio: <5 mm",
             select_preenchimento_4: "Macio: >5 mm",
-            span_alteracao: "Preenchimento:",
+            span_alteracao: "Grau de alteração:",
             select_alteraco_0: "Sem alteração",
             select_alteraco_1: "Baixo",
             select_alteraco_2: "Moderado",

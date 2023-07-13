@@ -37,8 +37,6 @@ function Display_dip() {
     Display_block(id_dip)
 }
 
-
-
 function Balao_sai() {
     const balao = document.getElementById("balao")
     balao.style.display = "none"
