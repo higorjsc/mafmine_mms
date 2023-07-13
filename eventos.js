@@ -18,16 +18,21 @@ function Switch_language(metodo) {
     // Calculo é chamada para alterar o valor do resultado do RSS
     Calculo(metodo)
 
-    const iframes = document.querySelectorAll("iframe")
-    iframes.forEach((element) => {
-        if (element.style.display === "block") {
-            let frame = document.getElementById(element.id)
-            frame.contentWindow.postMessage("CallLanguage", "*")
-        }
-    })
+    const frame = Iframe_ativo()
+    // Envia uma mensagem para o Iframe ativo para trocar de idioma também
+    if (frame) frame.contentWindow.postMessage("CallLanguage", "*")
 
 }
 
+// OBTÉM O ID DO IFRAME ATIVO NO POP UP
+function Iframe_ativo() {
+    const iframes = Array.from(document.querySelectorAll("iframe"))
+    const iframeAtivo = iframes.find(element => element.style.display === "block")
+    return iframeAtivo || null
+}
+
+
+// OBTÉM O IDIOMA DA JANELA PRINCIPAL A PARTIR DO TÍTULO DA SEÇÃO 1
 function Obter_idioma() {
     let idioma = document.getElementById("titulo-section-1").innerText
     idioma = idioma.includes("CHARACTERISTICS") ? "en" : "pt"
@@ -67,6 +72,7 @@ function Abrir_pop_up(id) {
     if (id.includes("gsi")) {
         pop_up.style.width = "750px"
         pop_up.style.height = "740px"
+        pop_up.style.left = "35%"
         Titulo_pop_up("GSI:", litologia)
     } if (id.includes("rmr")) {
         pop_up.style.width = "520px"
@@ -110,16 +116,18 @@ function Open_iframe(id_calc) {
 window.onload = function Mover_pop_up() {
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
-    // const overlay = document.getElementById("overlay")
+    const overlay = document.getElementById("overlay")
     const overlay_div = document.getElementById("overlay-div")
 
     let position = { x: 0, y: 0 }
+    let y_min_max = { min: -85, max: 215 }
 
     let Interromper = () => {
         document.removeEventListener("mousemove", Move_element)
         overlay.style.display = "none"
         overlay_div.style.display = "none"
     }
+
 
     document.onmouseup = () => Interromper()
     document.onscroll = () => Interromper()
@@ -132,13 +140,17 @@ window.onload = function Mover_pop_up() {
         document.body.style.userSelect = "none"
         position.x = main_pop_up.offsetLeft + (main_pop_up.clientWidth / 2)
         position.y = main_pop_up.offsetTop
+        // define o maior valor possível para o ofset do top não fazer body.style.height aumentar
+        let iframe = Iframe_ativo().id
+        y_min_max.max = iframe.includes("gsi") ? 130 : y_min_max.max
         document.addEventListener("mousemove", Move_element)
     })
 
     let Move_element = (event) => {
         let x = event.clientX - position.x
         let y = event.clientY - position.y - 80 + document.documentElement.scrollTop
-        y = y < -20 ? -20 : y
+        y = y < y_min_max.min ? y_min_max.min : y
+        y = y > y_min_max.max ? y_min_max.max : y
         main_pop_up.style.transform = `translate(${x}px, ${y}px)`
     }
 

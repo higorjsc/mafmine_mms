@@ -24,7 +24,7 @@ function Language() {
             td_rocha_basalto: "Basalto",
             td_rocha_dacito: "Dacito",
             td_rocha_diorito: "Diorito",
-            td_rocha_diabasio: "Diabásio",
+            td_rocha_diabasio: "Diabásio (Dolerito)",
             td_rocha_gabro: "Gabro",
             td_rocha_granito: "Granito",
             td_rocha_granodiorito: "Granodiorito",

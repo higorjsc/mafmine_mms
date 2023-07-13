@@ -338,7 +338,10 @@ function Resultado_mouse_leave(id) {
 
 
 function Evento() {
-
+    Language()
+    Matriz_maker()
+    Calculos()
+    
     var balao = document.getElementById("balao")
     document.addEventListener("mousemove", function (event) {
         //OBS: o off-set do balão é configurado na função Balao_entra() em design.js
@@ -475,6 +478,8 @@ function Evento() {
         Balao_sai("ri")
         Resultado_mouse_leave("ri")
     }
+
+
 
 }
 

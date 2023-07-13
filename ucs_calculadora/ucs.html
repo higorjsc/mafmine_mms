@@ -14,13 +14,12 @@
     <main>
         <!-- <button id="help-button">SOBRE</button> -->
         <span id="span-help">CLIQUE NO VALOR DESEJADO</span>
-        <h1 id="titulo-tabela-rochas">UNIAXIAL COMPRESSIVE STRENGHT: &ensp;&ensp;
-            <select id="select-tipo-rocha">
-                <option value="ignea">Rochas Ígneas</option>
-                <option value="sedimentar">Rochas Sedimentares</option>
-                <option value="metamorfica">Rochas Metamórficas</option>
-            </select>
-        </h1>
+        <h1 id="titulo-tabela-rochas">UNIAXIAL COMPRESSIVE STRENGHT: &ensp;&ensp;</h1>
+        <select id="select-tipo-rocha">
+            <option value="ignea">Rochas Ígneas</option>
+            <option value="sedimentar">Rochas Sedimentares</option>
+            <option value="metamorfica">Rochas Metamórficas</option>
+        </select>
         <!-- -----------------------IGNEAS----------------------------------- -->
         <table class="tabela-rochas" id='tabela-ignea'>
             <tr id="tr-titulo">
@@ -242,7 +241,7 @@
                 <td class="td-maximo td-valor" id="td-maximo-granito_gnaisse">155</td>
             <tr id="tr-granulito">
                 <td class="td-rocha" id="td-rocha-granulito">Granulito</td>
-                <td class="td-minimo td-valor" id="td-minimo-granulito"G>80</td>
+                <td class="td-minimo td-valor" id="td-minimo-granulito" G>80</td>
                 <td class="td-medio td-valor" id="td-medio-granulito">150</td>
                 <td class="td-maximo td-valor" id="td-maximo-granulito">280</td>
             </tr>
@@ -350,29 +349,16 @@
             </tr>
         </table>
     </main>
-    <span class="span-referencia" id="referencia"><strong>Fonte:</strong> valores derivados de medições realizadas pelo SINTEF Norway e apresentados por Palmström (2009), disponível em formato de planilha Excel, como produto de seu trabalho intitulado
+    <div id="div-referencia">
+        <span id="span-referencia">
+            <strong>Fonte:</strong> valores derivados de medições realizadas pelo SINTEF Norway e apresentados por
+            Palmström (2009), disponível em formato de planilha Excel, como produto de seu trabalho intitulado
+        </span>
         <a href="https://doi.org/10.1016/j.tust.2008.12.002" target="_blank">"Combining The RMR, Q and RMI Systems"</a>
         <br><br>
-    </span>
+    </div>
 </body>
 <script>
-    window.onload = () => {
-        // Obtém as dimensões da tela
-        const largura_janela = window.screen.width
-        const altura_janela = window.screen.height
-
-        // Define as dimensões da janela do pop-up
-        const largura_pop_up = document.documentElement.clientWidth
-        const altura_pop_up = document.documentElement.clientHeight
-
-
-        // Calcula a posição para centralizar a janela
-        const esquerda = (largura_janela - largura_pop_up) / 2
-        const topo = (altura_janela - altura_pop_up) / 2
-
-        // Define as coordenadas para a janela do pop-up
-        window.moveTo(esquerda, topo)
-    }
     Eventos()
 </script>
 
