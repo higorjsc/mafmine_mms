@@ -204,7 +204,7 @@ function Preferencias_nicholas_92(geometria, resultado_rss, resultado_fracture_s
 }
 
 //Calculo o valor de cada método de lavra e retorna para Calculo em Calculos.js 2.10,
-function Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr, pesos) {
+function Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr) {
     let pesos_forma_geral = {
         open_pit:           { massivo: 4.00, tabular: 3.00, irregular: 3.00 },
         block_caving:       { massivo: 4.00, tabular: 2.00, irregular: 0.00 },
@@ -380,18 +380,18 @@ function Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr
     //Calculo os valores de cada método de lavra e guarda no dicionário
     for (const key in preferencias) {
         preferencias[key] = 0
-            + (pesos_forma_geral[key][geometria[0].value] * pesos["geo"])       //Forma geral
-            + (pesos_mergulho[key][geometria[1].value] * pesos["geo"])          //Mergulho
-            + (pesos_espessura[key][geometria[2].value] * pesos["geo"])         //Espessura
-            + (pesos_distribuicao[key][geometria[3].value] * pesos["geo"])      //Distribuição
-            + (pesos_profundidade[key][geometria[4].value] * pesos["geo"])      //Profundidade
-            + (pesos_valor_minerio[key][valor_minerio.value] * pesos["economico"])   //Valor do minerio
-            + (pesos_rss_ob[key][resultado_rss["rss_ob"]] * pesos["ob"])        //RSS Corpo de minério
-            + (pesos_rss_hw[key][resultado_rss["rss_hw"]] * pesos["hw"])        //RSS Hanging Wall
-            + (pesos_rss_fw[key][resultado_rss["rss_fw"]] * pesos["fw"])        //RSS Footwall
-            + (pesos_rmr_ob[key][resultado_rmr["rmr_ob"]] * pesos["ob"])        //RMR Corpo de minério
-            + (pesos_rmr_hw[key][resultado_rmr["rmr_hw"]] * pesos["hw"])        //RMR Hanging Wall
-            + (pesos_rmr_fw[key][resultado_rmr["rmr_fw"]] * pesos["fw"])        //RMR Footwall
+            + (pesos_forma_geral[key][geometria[0].value] )       //Forma geral
+            + (pesos_mergulho[key][geometria[1].value])          //Mergulho
+            + (pesos_espessura[key][geometria[2].value])         //Espessura
+            + (pesos_distribuicao[key][geometria[3].value])      //Distribuição
+            + (pesos_profundidade[key][geometria[4].value])      //Profundidade
+            + (pesos_valor_minerio[key][valor_minerio.value])   //Valor do minerio
+            + (pesos_rss_ob[key][resultado_rss["rss_ob"]])        //RSS Corpo de minério
+            + (pesos_rss_hw[key][resultado_rss["rss_hw"]])        //RSS Hanging Wall
+            + (pesos_rss_fw[key][resultado_rss["rss_fw"]])        //RSS Footwall
+            + (pesos_rmr_ob[key][resultado_rmr["rmr_ob"]])        //RMR Corpo de minério
+            + (pesos_rmr_hw[key][resultado_rmr["rmr_hw"]])        //RMR Hanging Wall
+            + (pesos_rmr_fw[key][resultado_rmr["rmr_fw"]])        //RMR Footwall
         preferencias[key] = preferencias[key].toFixed(2)
     }
 
@@ -400,7 +400,7 @@ function Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr
 }
 
 //Calculo o valor de cada método de lavra e retorna para Calculo em Calculos.js
-function Preferencias_ubc(geometria, resultado_rss, resultado_rmr, pesos) {
+function Preferencias_ubc(geometria, resultado_rss, resultado_rmr) {
     let pesos_forma_geral = {
         open_pit:           { massivo: 4.00, tabular: 2.00, irregular: 3.00 },
         block_caving:       { massivo: 4.00, tabular: 2.00, irregular: 0.00 },
@@ -561,17 +561,17 @@ function Preferencias_ubc(geometria, resultado_rss, resultado_rmr, pesos) {
     //Calculo os valores de cada método de lavra e guarda no dicionário
     for (const key in preferencias) {
         preferencias[key] = 0
-            + (pesos_forma_geral[key][geometria[0].value] * pesos["geo"])    //Forma geral
-            + (pesos_mergulho[key][geometria[1].value] * pesos["geo"])      //Mergulho
-            + (pesos_espessura[key][geometria[2].value] * pesos["geo"])     //Espessura
-            + (pesos_distribuicao[key][geometria[3].value] * pesos["geo"]) //Distribuição
-            + (pesos_profundidade[key][geometria[4].value] * pesos["geo"])   //Profundidade
-            + (pesos_rss_ob[key][resultado_rss["rss_ob"]] * pesos["ob"])    //RSS Corpo de minério
-            + (pesos_rss_hw[key][resultado_rss["rss_hw"]] * pesos["hw"])   //RSS Hanging Wall
-            + (pesos_rss_fw[key][resultado_rss["rss_fw"]] * pesos["fw"])   //RSS Footwall
-            + (pesos_rmr_ob[key][resultado_rmr["rmr_ob"]] * pesos["ob"])   //RMR Corpo de minério
-            + (pesos_rmr_hw[key][resultado_rmr["rmr_hw"]] * pesos["hw"])   //RMR Hanging Wall
-            + (pesos_rmr_fw[key][resultado_rmr["rmr_fw"]] * pesos["fw"])    //RMR Footwall
+            + (pesos_forma_geral[key][geometria[0].value])    //Forma geral
+            + (pesos_mergulho[key][geometria[1].value])      //Mergulho
+            + (pesos_espessura[key][geometria[2].value])     //Espessura
+            + (pesos_distribuicao[key][geometria[3].value]) //Distribuição
+            + (pesos_profundidade[key][geometria[4].value])   //Profundidade
+            + (pesos_rss_ob[key][resultado_rss["rss_ob"]])    //RSS Corpo de minério
+            + (pesos_rss_hw[key][resultado_rss["rss_hw"]])   //RSS Hanging Wall
+            + (pesos_rss_fw[key][resultado_rss["rss_fw"]])   //RSS Footwall
+            + (pesos_rmr_ob[key][resultado_rmr["rmr_ob"]])   //RMR Corpo de minério
+            + (pesos_rmr_hw[key][resultado_rmr["rmr_hw"]])   //RMR Hanging Wall
+            + (pesos_rmr_fw[key][resultado_rmr["rmr_fw"]])    //RMR Footwall
         preferencias[key] = preferencias[key].toFixed(2)
     }
     return preferencias //Retorna o dicionário com o valor atribuido a cada método de lavra para a função Calculo em Calculos.js

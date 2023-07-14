@@ -62,9 +62,6 @@ function Language(idioma_janela) {
             menu_rmr_2: "Razoável",
             menu_rmr_3: "Boa",
             menu_rmr_4: "Muito boa",
-            h2_fatores_peso_ubc: "Fatores de Peso",
-            span_cm_ubc: "OB",
-            botao_ahp_ubc: "CALCULAR POR AHP",
             universidade: "UFRGS Universidade Federal do Rio Grande do Sul",
             laboratorio: "LAPROM Laboratório de Processamento Mineral",
             localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
@@ -133,9 +130,6 @@ function Language(idioma_janela) {
             menu_rmr_2: "Fair",
             menu_rmr_3: "Good",
             menu_rmr_4: "Very good",
-            h2_fatores_peso_ubc: "Weighting Factors",
-            span_cm_ubc: "OB",
-            botao_ahp_ubc: "CALCULATE BY AHP",
             universidade: "UFRGS Universidade Federal do Rio Grande do Sul",
             laboratorio: "LAPROM Laboratório de Processamento Mineral",
             localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
@@ -232,11 +226,6 @@ function Language(idioma_janela) {
         Escrever(element.id, "menu_rmr_3", 3)
         Escrever(element.id, "menu_rmr_4", 4)
     })
-
-    // FATORES DE PESO 
-    Escrever("h2-fatores-peso-ubc", "h2_fatores_peso_ubc")
-    Escrever("span-cm-ubc", "span_cm_ubc")
-    Escrever("botao-ahp-ubc", "botao_ahp_ubc")
 
     //FOOTER
     Escrever("universidade", "universidade")

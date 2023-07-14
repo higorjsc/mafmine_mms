@@ -159,17 +159,6 @@ function Imprimir_relatorio(metodo) {
             doc.text(fw + Texto_input("input-peso-fw"), identacao, y_coord += line_spacing)
         }
     }
-    // if (metodo == "ubc") {
-    //     y_coord += 5
-    //     doc.setFontStyle("bold")
-    //     doc.text(Texto("h2-fatores-peso-ubc"), identacao, y_coord += line_spacing)
-    //     y_coord += 2
-    //     doc.setFontStyle("normal")
-    //     doc.text(geo + Texto_input("input-peso-ubc-geo"), identacao, y_coord += line_spacing)
-    //     doc.text(ob + Texto_input("input-peso-ubc-ob"), identacao, y_coord += line_spacing)
-    //     doc.text(hw + Texto_input("input-peso-ubc-hw"), identacao, y_coord += line_spacing)
-    //     doc.text(fw + Texto_input("input-peso-ubc-fw"), identacao, y_coord += line_spacing)
-    // }
 
     //RESULTADOS
     y_coord += 10

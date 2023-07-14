@@ -408,60 +408,6 @@ select:hover {
   grid-column: 4/5;
 }
 
-/* ------------------PESOS UBC---------------------------- */
-
-#div-select-pesos-ubc {
-  position: absolute;
-  align-items: center;
-  align-content: center;
-  left: 10%;
-  width: 80%;
-  bottom: 10%;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-items: center;
-}
-
-#div-select-pesos-ubc h2 {
-  grid-column: 1/5;
-  grid-row: 1/2;
-  text-align: center;
-  font-size: 11pt;
-  width: 100%;
-  margin-bottom: 2%;
-}
-
-#div-select-pesos-ubc span {
-  grid-row: 2/3
-}
-
-.input-pesos-ubc {
-  grid-row: 3/4;
-  width: 90%;
-  height: 85%;
-  display: block;
-  box-shadow: none;
-  position: absolute;
-  top: 3%;
-}
-
-#input-peso-ubc-geo {
-  grid-column: 1/2;
-}
-
-#input-peso-ubc-ob {
-  grid-column: 2/3;
-}
-
-#input-peso-ubc-hw {
-  grid-column: 3/4;
-}
-
-#input-peso-ubc-fw {
-  grid-column: 4/5;
-}
-
 /* -----------------------FOOTER----------------------------- */
 .rodape {
   display: grid;

@@ -181,26 +181,3 @@ label:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
-
-/* --------------BOTAO AHP UBC------------------------------- */
-#botao-ahp-ubc {
-  grid-row: 4/5;
-  grid-column: 1/5;
-  width: 100%;
-  height: 100%;
-  align-self: center;
-  border: var(--borda-simples);
-  background-color: black;
-  color: white;
-  border-radius: 20px;
-  justify-self: center;
-  display: none;
-}
-
-#botao-ahp-ubc:hover {
-  box-shadow: var( --shadow-blue);
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-

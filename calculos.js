@@ -243,6 +243,7 @@ function Obter_pesos() {
         peso = peso === "" ? 1.00 : peso
         return peso
     }
+
     let select_pesos = document.getElementById("menu-pesos").value
     let pesos
     if (select_pesos == 1) {
@@ -278,25 +279,6 @@ function Obter_pesos() {
     return pesos
 }
 
-//OBTÉM OS INPUTS DE PESOS INSERIDOS OU CALCULADOS POR AHP
-function Obter_pesos_ubc_shb(metodo) {
-
-    function Input_peso(id) {
-        let peso = document.getElementById(id).value
-        peso = peso === "" ? 1.00 : peso
-        return peso
-    }
-
-    let pesos = {
-        "geo": Input_peso("input-peso-ubc-geo"),
-        "ob": Input_peso("input-peso-ubc-ob"),
-        "hw": Input_peso("input-peso-ubc-hw"),
-        "fw": Input_peso("input-peso-ubc-fw"),
-        "economico": 1
-    }
-
-    return pesos
-}
 
 //Função chamada a cada entrada do usuario. Conecta todos os calculos com a impressão dos resultados
 function Calculo(metodo) {
@@ -325,15 +307,13 @@ function Calculo(metodo) {
     } else if (metodo == "ubc") {
         resultado_rmr = Calculo_rmr()
         resultado_rss = Calculo_rss(metodo)
-        pesos = Obter_pesos_ubc_shb()
-        preferencias = Preferencias_ubc(geometria, resultado_rss, resultado_rmr, pesos)
+        preferencias = Preferencias_ubc(geometria, resultado_rss, resultado_rmr)
 
     } else if (metodo == "shb") {
         resultado_rmr = Calculo_rmr()
         resultado_rss = Calculo_rss(metodo)
         valor_minerio = document.querySelector("#valor-minerio")
-        pesos = Obter_pesos_ubc_shb()
-        preferencias = Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr, pesos)
+        preferencias = Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr)
 
     }
 

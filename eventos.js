@@ -167,23 +167,6 @@ function Open_pop_up_pesos(metodo) {
     window.open("tabelas\\" + tabela_nome, "_blank")
 }
 
-// MOSTRA O BOTÃO PARA TESTE DO AHP NO UBC E SHB
-function Mostra_ahp() {
-
-    const div_select_pesos = document.querySelector("#div-select-pesos-ubc")
-    document.addEventListener("keydown", (event) => {
-        if (event.ctrlKey && event.key === "x") {
-            div_select_pesos.style.display = "grid"
-            botao_ahp.style.display = "block"
-        } else if (event.ctrlKey && event.key === "b") {
-            div_select_pesos.style.display = "none"
-            botao_ahp.style.display = "none"
-
-        }
-    })
-
-}
-
 
 function Eventos(metodo) {
 
