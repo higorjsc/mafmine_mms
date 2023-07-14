@@ -265,8 +265,8 @@ function Balao_entra_shb(entry, idioma) {
     } else {
         messages = {
             "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
-            "mergulho": "\n- Plano: <15º de inclinação \n\n- Baixo: 15º-30º de inclinação\n\n- Intermediário: 30º-45º de inclinação\n\n- Pouco inclinado: 45º-60º de inclinação\n\n- Inclinado: > 60º de inclinação\n\n",
-            "espessura": "\n- Muito Estreito: menos de 3 m- Estreito: entre 3 m e 10 m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
+            "mergulho": "\n- Plano: <15º de inclinação\n\n- Baixo: 15º-30º de inclinação\n\n- Intermediário: 30º-45º de inclinação\n\n- Pouco inclinado: 45º-60º de inclinação\n\n- Inclinado: > 60º de inclinação\n\n",
+            "espessura": "\n- Muito Estreito: menos de 3 m\n\n- Estreito: entre 3 m e 10 m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
             "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
             "profundidade": "\n- Rasa: entre 0 m e 200 m\n\n- Intermediária: entre 200 m e 500 m\n\n- Pouco profunda: entre 500 m e 800 m\n\n- Profunda: superior a 800 m\n\n",
             "valor-minerio": "Valores relativos",
@@ -304,7 +304,7 @@ function Balao_entra_ubc(entry, idioma) {
         messages = {
             "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
             "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-50º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
-            "espessura": "\n- Muito Estreito: menos de 3 m- Estreito: entre 3 m e 10 m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
+            "espessura": "\n- Muito Estreito: menos de 3 m\n\n- Estreito: entre 3 m e 10 m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
             "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
             "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
             "substance": "\n- Muito fraca: <5\n\n- Fraca: 5,00 a 10,00\n\n- Moderada: 10,00 a 15,00\n\n - Resistente: >15,00\n\n\nUCS (Pa)\n----------------------------------\nDensidade(N/m³) x Profundidade(m)\n\n",
