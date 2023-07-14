@@ -199,7 +199,6 @@ function Preferencias_nicholas_92(geometria, resultado_rss, resultado_fracture_s
             + fracture_strenght_fw[key][resultado_fracture_strenght[2].value] * pesos["fw"]  //Fracture Strenght Footwall
         preferencias[key] = preferencias[key].toFixed(2)
     }
-
     //Retorna o dicionário com o valor atribuido a cada método de lavra para a função Calculo em Calculos.js
     return preferencias
 }

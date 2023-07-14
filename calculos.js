@@ -9,7 +9,7 @@ function Calculo_rss(metodo) {
         let resultado_numero = (ucs * 1e6) / (densidade * profundidade * 9.81)
         let resultado_texto = document.getElementById(entry)
         let idioma = Obter_idioma()
-        
+
         if (idioma == "pt") {
             //Caso o titulo da seção 1 esteja em pt-br
             if (resultado_numero < 5) {
@@ -39,7 +39,7 @@ function Calculo_rss(metodo) {
         let resultado_numero = (ucs * 1e6) / (densidade * profundidade * 9.81)
         let resultado_texto = document.getElementById(entry)
         let idioma = Obter_idioma()
-        
+
         if (idioma == "pt") {
             //Caso o titulo da seção 1 esteja em pt-br
             if (resultado_numero < 8) {
@@ -243,17 +243,41 @@ function Obter_pesos() {
         peso = peso === "" ? 1.00 : peso
         return peso
     }
-
-    let pesos = {
-        "geo": Input_peso("input-peso-geo"),
-        "ob": Input_peso("input-peso-ob"),
-        "hw": Input_peso("input-peso-hw"),
-        "fw": Input_peso("input-peso-fw"),
-        "economico": 1
+    let select_pesos = document.getElementById("menu-pesos").value
+    let pesos
+    if (select_pesos == 1) {
+        pesos = {
+            "geo": 1.00,
+            "ob": 1.33,
+            "hw": 1.33,
+            "fw": 1.33
+        }
+    } else if (select_pesos == 2) {
+        pesos = {
+            "geo": 1.00,
+            "ob": 0.75,
+            "hw": 0.60,
+            "fw": 0.38,
+        }
+    } else if (select_pesos == 3) {
+        pesos = {
+            "geo": 1.00,
+            "ob": 1.00,
+            "hw": 0.80,
+            "fw": 0.50,
+        }
+    } else if (select_pesos == 4) {
+        pesos = {
+            "geo": Input_peso("input-peso-geo"),
+            "ob": Input_peso("input-peso-ob"),
+            "hw": Input_peso("input-peso-hw"),
+            "fw": Input_peso("input-peso-fw"),
+        }
     }
 
     return pesos
 }
+
 //OBTÉM OS INPUTS DE PESOS INSERIDOS OU CALCULADOS POR AHP
 function Obter_pesos_ubc_shb(metodo) {
 
