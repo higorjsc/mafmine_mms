@@ -282,6 +282,11 @@ function Eventos(metodo) {
     // FECHAR POP UP
     let pop_ups = document.getElementById("fechar-pop-up")
     pop_ups.addEventListener("click", Fechar_pop_up, false)
+    document.addEventListener("keydown", function (event) {
+        if (event.code === "Escape") {
+            Fechar_pop_up()
+        }
+    })
 
     const imagens = document.querySelectorAll("img")
     imagens.forEach((element) => {
