@@ -1,5 +1,5 @@
 
-//Obtém o idioma da janela principal através da URL
+//Obtém o idioma da janela principal 
 function Obter_idioma() {
     let idioma_janela = parent.document.getElementById("titulo-pagina").innerText
     idioma_janela = idioma_janela.includes("SELEÇÃO") ? "pt" : "en"   

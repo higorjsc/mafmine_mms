@@ -216,13 +216,12 @@ function Matriz_maker() {
     Pega_elemento_indireto("fw-ob")
     Pega_elemento_indireto("fw-hw")
 }
+
+//Obtém o idioma da janela principal 
 function Obter_idioma() {
-    let url = window.location.href
-    if (url.includes("pt")) {
-        return "pt"
-    } else {
-        return "en"
-    }
+    let idioma_janela = parent.document.getElementById("titulo-pagina").innerText
+    idioma_janela = idioma_janela.includes("SELEÇÃO") ? "pt" : "en"   
+    return idioma_janela
 }
 
 function Consistencia() {
