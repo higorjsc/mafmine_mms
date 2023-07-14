@@ -2,7 +2,7 @@
 function Language(idioma_janela) {
     const idiomas = {
         pt: {
-            titulo_pagina: "SELEÇÃO DE METODOS DE LAVRA: Método UBC (1995)",
+            titulo_pagina: "SELEÇÃO DE METODOS DE LAVRA: UBC (1995)",
             li_titulo: "SELECIONE O MÉTODO",
             paragrafo_explicacao:
                 "O UBC Mining Method Selection (1995) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia em Vancouver, B.C., Canada.<br><br>" +
