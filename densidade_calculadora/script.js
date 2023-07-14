@@ -46,7 +46,10 @@ function Retornar_valor(value) {
 function Eventos() {
     const selects = document.querySelectorAll("select")
     selects.forEach(element => {
-        element.onchange = () => Exibir_Tabela(element.value)
+        element.onchange = () => {
+            Exibir_Tabela(element.value)
+            element.blur()
+        }
     })
 
     const valores = document.querySelectorAll(".td-valor")
