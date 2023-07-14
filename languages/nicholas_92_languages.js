@@ -25,7 +25,7 @@ function Language(idioma_janela) {
             mergulho_0: "Plano",
             mergulho_1: "Intermediário",
             mergulho_2: "Inclinado",
-            span_espessura: "Espessusra do minério:",
+            span_espessura: "Espessura do minério:",
             espessura_0: "Estreito",
             espessura_1: "Intermediário",
             espessura_2: "Espesso",
