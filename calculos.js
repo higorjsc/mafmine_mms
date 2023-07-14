@@ -15,7 +15,7 @@ function Calculo_rss(metodo) {
             if (resultado_numero < 5) {
                 resultado_texto.innerText = `Muito Fraca (${resultado_numero.toFixed(1)})`
             } else if (resultado_numero < 10) {
-                resultado_texto.innerText = `Frágil (${resultado_numero.toFixed(1)})`
+                resultado_texto.innerText = `Fraca (${resultado_numero.toFixed(1)})`
             } else if (resultado_numero < 15) {
                 resultado_texto.innerText = `Moderada (${resultado_numero.toFixed(1)})`
             } else {
@@ -84,7 +84,7 @@ function Calculo_rss(metodo) {
 
         if (elemento.includes("Muito Fraca") || elemento.includes("Very")) {
             resultado = "muito_fraco"
-        } else if (elemento.includes("Frágil") || elemento.includes("Weak")) {
+        } else if (elemento.includes("Fraca") || elemento.includes("Weak")) {
             resultado = "fragil"
         } else if (elemento.includes("Moderada") || elemento.includes("Medium")) {
             resultado = "moderada"

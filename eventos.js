@@ -257,7 +257,7 @@ function Eventos(metodo) {
     // SPAN RESULTADO RSS
     const span_resultado_rss = document.querySelectorAll(".resultado-rss")
     span_resultado_rss.forEach((element) => {
-        element.onmouseover = () => Baloes(element.id)
+        element.onmouseover = () => Baloes(element.id, metodo)
         element.onmouseout = () => Balao_sai()
     })
 
