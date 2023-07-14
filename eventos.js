@@ -110,21 +110,29 @@ function Open_iframe(id_calc) {
     frame.style.display = "block"
 }
 
-window.onload = function Mover_pop_up() {
+function Mover_pop_up(metodo) {
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
     const overlay = document.getElementById("overlay")
     const overlay_div = document.getElementById("overlay-div")
 
     let position = { x: 0, y: 0 }
-    let y_min_max = { min: -85, max: 215 }
+    const y_min_max = {
+        min: -85,
+        max_ubc: 215,
+        max_shb: 275,
+        max_nicholas_81: 295,
+        max_nicholas_92: 295,
+    }
+
+    const key = "max_" + metodo
+    let limite_inferior
 
     let Interromper = () => {
         document.removeEventListener("mousemove", Move_element)
         overlay.style.display = "none"
         overlay_div.style.display = "none"
     }
-
 
     document.onmouseup = () => Interromper()
     document.onscroll = () => Interromper()
@@ -139,7 +147,7 @@ window.onload = function Mover_pop_up() {
         position.y = main_pop_up.offsetTop
         // define o maior valor possível para o ofset do top não fazer body.style.height aumentar
         let iframe = Iframe_ativo().id
-        y_min_max.max = iframe.includes("gsi") ? 130 : y_min_max.max
+        limite_inferior = iframe.includes("gsi") ? y_min_max[key] - 85 : y_min_max[key]
         document.addEventListener("mousemove", Move_element)
     })
 
@@ -147,7 +155,7 @@ window.onload = function Mover_pop_up() {
         let x = event.clientX - position.x
         let y = event.clientY - position.y - 80 + document.documentElement.scrollTop
         y = y < y_min_max.min ? y_min_max.min : y
-        y = y > y_min_max.max ? y_min_max.max : y
+        y = y > limite_inferior ? limite_inferior : y
         main_pop_up.style.transform = `translate(${x}px, ${y}px)`
     }
 
@@ -175,6 +183,7 @@ function Mostra_ahp() {
     })
 
 }
+
 
 function Eventos(metodo) {
 
@@ -278,6 +287,8 @@ function Eventos(metodo) {
     imagens.forEach((element) => {
         element.draggable = false
     })
+
     Switch_language()
+    Mover_pop_up(metodo)
     Calculo(metodo)
 }
