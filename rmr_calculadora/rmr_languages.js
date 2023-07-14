@@ -4,7 +4,7 @@ window.addEventListener("message", function (event) {
     }
 })
 
-function Language() {
+window.onload = function Language() {
 
     let idioma_janela = parent.document.getElementById("titulo-pagina").innerText
     idioma_janela = idioma_janela.includes("SELEÇÃO") ? "pt" : "en"
@@ -15,7 +15,7 @@ function Language() {
             span_parametro_1: "Resistência da rocha intacta:",
             select_strenght_1: "Point Load",
             span_espacamento: "Espaçamento das descontinuidades:",
-            condicionamento_descontinuidades: "Condicionamento das descontinuidades",
+            condicionamento_descontinuidades: "Condicionamento das Descontinuidades",
             span_comprimento: "Persistencia/Continuiade:",
             span_separacao: "Separação:",
             span_rugosidade: "Rugosidade:",
@@ -36,7 +36,7 @@ function Language() {
             select_alteraco_2: "Moderado",
             select_alteraco_3: "Alto",
             select_alteraco_4: "Muito alto",
-            agua_subterranea: "Água subterrânea",
+            agua_subterranea: "Água Subterrânea",
             select_gw_0: "Condições gerais",
             select_gw_1: "Fluxo por 10m comp. túnel",
             select_gw_2: "Joint Water/&sigma;1",
@@ -45,7 +45,7 @@ function Language() {
             general_2: "Molhado",
             general_3: "Gotejando",
             general_4: "Vertendo",
-            strike_dip: "Orientação do Strike e Dip",
+            strike_dip: "Orientação do Strike e Dip das Descontinuidades",
             span_strike: "Orientação do Strike",
             select_strike_0: "Perpend. ao eixo do túnel",
             select_strike_1: "Paralelo. ao eixo do túnel",
@@ -90,7 +90,7 @@ function Language() {
             general_2: "Wet",
             general_3: "Dripping",
             general_4: "Flowing",
-            strike_dip: "Dip and Strike orientations of Discontinuities",
+            strike_dip: "Dip and Strike Orientations of Discontinuities",
             span_strike: "Strike orientation",
             select_strike_0: "Perpendicular to tunnel axis",
             select_strike_1: "Paralel to tunnel axis",
