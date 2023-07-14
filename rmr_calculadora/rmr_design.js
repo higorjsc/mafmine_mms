@@ -71,7 +71,7 @@ function Balao_entra(entry) {
             "spacing": "Espaçamento entre as juntas/fraturas.",
             "comprimento": "Comprimento das descontinuidades.",
             "separacao": "Espessura da abertura (ranhura) da fratura.",
-            "preenchimento": "Duro: quartzo, piritas, rochas ígneas, etc.\n\nMacio: argilas, siltes, materiais decompostos, etc.\n\n",
+            "preenchimento": "Duro: quartzo, piritas, rochas ígneas, etc.\n\nMacio: argilas, siltes, materiais\n decompostos, etc.\n\n",
         }
     } else {
         messages = {
@@ -81,13 +81,13 @@ function Balao_entra(entry) {
             "spacing": "Espaçamento entre as juntas/fraturas.",
             "comprimento": "Comprimento das descontinuidades.",
             "separacao": "Espessura da abertura (ranhura) da fratura.",
-            "preenchimento": "Duro: quartzo, piritas, rochas ígneas, etc.\n\nMacio: argilas, siltes, materiais decompostos, etc.\n\n",
+            "preenchimento": "Duro: quartzo, piritas, rochas ígneas, etc.\n\nMacio: argilas, siltes, materiais\n decompostos, etc.\n\n",
         }
     }
     const positions = {
         "select-strenght": { x: -200, y: -75 },
         "point-load": { x: -200, y: -75 },
-        "preenchimento": { x: -250, y: -75 },
+        "preenchimento": { x: -200, y: -175 },
     }
     //Mostra e posiciona o balão conforme o dicionário de posições
     Positions(entry, messages, positions)

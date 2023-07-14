@@ -161,7 +161,7 @@ select:hover {
 /* ------------------BOTÃO ADICIONAR VALOR ----------------- */
 
 #botao-input {
-  background: black;
+  background: var(--cor-1);
   color: white;
   width: 100px;
   height: 50px;
@@ -176,11 +176,12 @@ select:hover {
   cursor: pointer;
 }
 
-#balao {
+.balao {
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   font: bold 9pt;
   background-color: white;
+  min-width: 200px;
   align-items: center;
   text-align: center;
   border-radius: 15px;
