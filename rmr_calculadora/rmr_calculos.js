@@ -10,7 +10,7 @@ function Retornar_valor() {
 
     // OBTÉM O INPUT DA JANELA PRINCIPAL
     let seletor = parent.document.getElementById(id[url[1]])
-    
+
     //Obtém o valor do RMR calculado na janela popup
     const classe_rmr = document.getElementById("classe-rmr").innerText
 
@@ -57,21 +57,20 @@ function Pesos(valor) {
         "pesos_preenchimento": { "none": 6, "duro:<5": 4, "duro:>5": 2, "macio:<5": 2, "macio:>5": 0 },
         "pesos_alteracao": { "none": 6, "baixo": 5, "moderado": 3, "alto": 1, "muito_alto": 0 },
 
-        "pesos_inflow": { "0": 16, "<10": 10, "10-25": 7, "25-125": 4, ">125": 0, "null": 0 },
-        "pesos_ratio": { "0": 16, "<0.1": 10, "0.1-0.2": 7, "0.2-0.5": 4, ">0.5": 0, "null": 0 },
-        "pesos_general": { "seco": 16, "umido": 10, "molhado": 7, "gotejando": 4, "fluindo": 0, "0": 0, "null": 0 },
+        "pesos_inflow": { "0": 15, "<10": 10, "10-25": 7, "25-125": 4, ">125": 0, "null": 0 },
+        "pesos_ratio": { "0": 15, "<0.1": 10, "0.1-0.2": 7, "0.2-0.5": 4, ">0.5": 0, "null": 0 },
+        "pesos_general": { "seco": 15, "umido": 10, "molhado": 7, "gotejando": 4, "fluindo": 0, "0": 0, "null": 0 },
 
         "pesos_strike_dip": {
-            "paralelo_20-45": 0,
-            "paralelo_45-90": -2,
-            "perpendicular_20-45": -5,
-            "perpendicular_45-90": -12,
-            "contrario_20-45": -10,
-            "contrario_45-90": -5,
+            "paralelo_20-45": (-5),
+            "paralelo_45-90": (-12),
+            "perpendicular_afavor_20-45": -2,
+            "perpendicular_afavor_45-90": -0,
+            "perpendicular_contra_20-45": -10,
+            "perpendicular_contra_45-90": -5,
             "irrelevante_0-20": -5
         }
     }
-
     //Calcula o RMR
     let rmr = (0
         + Number(pesos["pesos_point_load"][valor["point_load"]])
@@ -147,8 +146,8 @@ function Calculo_pop_up() {
     Ground_water_value[select_gw] = window[select_gw].value
 
     //Obtém os parâmetros de orientação
-    const strike = document.getElementById("select-strike").value
-    const id_dip = (strike !== "irrelevante") ? "dip-1" : "dip-2"
+    let strike = document.getElementById("select-strike").value
+    let id_dip = (strike !== "irrelevante") ? "dip-1" : "dip-2"
 
     let valor = {
         "point_load": Strenght_value["point-load"],
@@ -165,6 +164,7 @@ function Calculo_pop_up() {
         "general": Ground_water_value["general"],
         "orientacao": (strike + "_" + document.getElementById(id_dip).value)
     }
+    console.log(valor)
 
     let rmr = Pesos(valor)
     Escrever_resultado(rmr)

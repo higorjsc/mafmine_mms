@@ -4,11 +4,11 @@ window.addEventListener("message", function (event) {
     }
 })
 
-window.onload = function Language() {
+function Language() {
 
-    let idioma_janela = parent.document.getElementById("titulo-pagina").innerText
-    idioma_janela = idioma_janela.includes("SELEÇÃO") ? "pt" : "en"
-
+    // let idioma_janela = parent.document.getElementById("titulo-pagina").innerText
+    // idioma_janela = idioma_janela.includes("SELEÇÃO") ? "pt" : "en"
+    idioma_janela = "pt"
     const idiomas = {
         "pt": {
             condicoes_gerais: "Condições Gerais",
@@ -39,7 +39,7 @@ window.onload = function Language() {
             agua_subterranea: "Água Subterrânea",
             select_gw_0: "Condições gerais",
             select_gw_1: "Fluxo por 10m comp. túnel",
-            select_gw_2: "Joint Water/&sigma;1",
+            select_gw_2: "Joint Water/Sigma1",
             general_0: "Seco",
             general_1: "Úmido",
             general_2: "Molhado",
@@ -47,10 +47,10 @@ window.onload = function Language() {
             general_4: "Vertendo",
             strike_dip: "Orientação do Strike e Dip das Descontinuidades",
             span_strike: "Orientação do Strike",
-            select_strike_0: "Perpend. ao eixo do túnel",
-            select_strike_1: "Paralelo. ao eixo do túnel",
-            select_strike_2: "Em sentido contrário ao dip",
-            select_strike_3: "Independentemente",
+            select_strike_0: "Perpend. no sentido do dip",
+            select_strike_1: "Perpend. no contrário ao dip",
+            select_strike_2: "Paralelo. ao eixo do túnel",
+            select_strike_3: "Qualquer strike ou vários",
             span_dip: "Angulo de mergulho",
             resultados: "Resultados:",
             botao_input: "ADICIONAR VALOR"
@@ -84,7 +84,7 @@ window.onload = function Language() {
             agua_subterranea: "Ground Water Conditions",
             select_gw_0: "General conditions",
             select_gw_1: "Inflow per 10m tunnel lenght",
-            select_gw_2: "Joint Water/&sigma;1",
+            select_gw_2: "Joint Water/Sigma1",
             general_0: "Dry",
             general_1: "Damp",
             general_2: "Wet",
@@ -92,9 +92,9 @@ window.onload = function Language() {
             general_4: "Flowing",
             strike_dip: "Dip and Strike Orientations of Discontinuities",
             span_strike: "Strike orientation",
-            select_strike_0: "Perpendicular to tunnel axis",
-            select_strike_1: "Paralel to tunnel axis",
-            select_strike_2: "Drive against dip",
+            select_strike_0: "Perpendicular with dip",
+            select_strike_1: "Perpendicular against dip",
+            select_strike_2: "Paralel to tunnel axis",
             select_strike_3: "Irrespective of strike",
             span_dip: "Dip angle",
             resultados: "Results:",

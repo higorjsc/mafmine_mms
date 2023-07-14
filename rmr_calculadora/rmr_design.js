@@ -11,7 +11,7 @@ function Display_none(id) {
 
 //EVENTO de troca do select visível da rock strenght
 function Display_strenght() {
-    const strenght = document.getElementById("select-strenght").value
+    let strenght = document.getElementById("select-strenght").value
 
     Display_none("point-load")
     Display_none("ucs")
@@ -29,11 +29,11 @@ function Display_grownd_water() {
 
 //EVENTO de troca do select visível do dip e strike
 function Display_dip() {
-    const strike = document.getElementById("select-strike").value
+    let strike = document.getElementById("select-strike").value
     Display_none("dip-1")
     Display_none("dip-2")
 
-    const id_dip = (strike !== "irrelevante") ? "dip-1" : "dip-2"
+    let id_dip = (strike !== "irrelevante") ? "dip-1" : "dip-2"
     Display_block(id_dip)
 }
 
@@ -72,22 +72,25 @@ function Balao_entra(entry) {
             "comprimento": "Comprimento das descontinuidades.",
             "separacao": "Espessura da abertura (ranhura) da fratura.",
             "preenchimento": "Duro: quartzo, piritas, rochas ígneas, etc.\n\nMacio: argilas, siltes, materiais\n decompostos, etc.\n\n",
+            "select-strike": " ", //Imagem
         }
     } else {
         messages = {
             "select-strenght": "Calcular por UCS ou Carga Pontual?",
-            "ucs": "Resistência a compressão uniaxial/simples.",
-            "point-load": "Resistência a compressão por cargas concentradas.",
-            "spacing": "Espaçamento entre as juntas/fraturas.",
-            "comprimento": "Comprimento das descontinuidades.",
-            "separacao": "Espessura da abertura (ranhura) da fratura.",
-            "preenchimento": "Duro: quartzo, piritas, rochas ígneas, etc.\n\nMacio: argilas, siltes, materiais\n decompostos, etc.\n\n",
+            "ucs": "Uniaxial compressive strenght",
+            "point-load": "Point load strenght",
+            "spacing": "Distance between discontinuities",
+            "comprimento": "Discontinuity lenght",
+            "separacao": "Thickness of discontinuity",
+            "preenchimento": "Hard: quartzo, piritas, igneous rocks...\n\nSoft: Clay, silt, decomposed materials...\n\n",
+            "select-strike": " ", //Imagem
         }
     }
     const positions = {
         "select-strenght": { x: -200, y: -75 },
         "point-load": { x: -200, y: -75 },
         "preenchimento": { x: -200, y: -175 },
+        "select-strike": { x: -200, y: -175 },
     }
     //Mostra e posiciona o balão conforme o dicionário de posições
     Positions(entry, messages, positions)
