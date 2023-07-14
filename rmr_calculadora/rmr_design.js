@@ -62,7 +62,7 @@ function Positions(entry, messages, positions) {
         const { x, y } = positions[entry]
         balao.style.transform = `translate(${x}px, ${y}px)`
     } else {
-        balao.style.transform = "translate(-200px,-30px)"
+        balao.style.transform = "translate(-200px,-50px)"
     }
 
 }
@@ -100,8 +100,8 @@ function Balao_entra(entry) {
         }
     }
     const positions = {
-        "select-strenght": { x: -200, y: -30 },
-        "point-load": { x: -200, y: -30 },
+        "select-strenght": { x: -200, y: -50 },
+        "point-load": { x: -200, y: -50 },
         "preenchimento": { x: -250, y: -75 },
         "select-strike": { x: -320, y: -250 },
     }
