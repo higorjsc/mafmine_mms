@@ -5,10 +5,8 @@ window.addEventListener("message", function (event) {
 })
 
 function Language() {
-
-    // let idioma_janela = parent.document.getElementById("titulo-pagina").innerText
-    // idioma_janela = idioma_janela.includes("SELEÇÃO") ? "pt" : "en"
-    idioma_janela = "pt"
+    let idioma_janela = parent.document.getElementById("titulo-pagina").innerText
+    idioma_janela = idioma_janela.includes("SELEÇÃO") ? "pt" : "en"
     const idiomas = {
         "pt": {
             condicoes_gerais: "Condições Gerais",
@@ -48,7 +46,7 @@ function Language() {
             strike_dip: "Orientação do Strike e Dip das Descontinuidades",
             span_strike: "Orientação do Strike",
             select_strike_0: "Perpend. no sentido do dip",
-            select_strike_1: "Perpend. no contrário ao dip",
+            select_strike_1: "Perpend. contrário ao dip",
             select_strike_2: "Paralelo. ao eixo do túnel",
             select_strike_3: "Qualquer strike ou vários",
             span_dip: "Angulo de mergulho",
