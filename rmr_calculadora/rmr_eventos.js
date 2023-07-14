@@ -16,6 +16,7 @@ function Onde_retornar() {
 //Adiciona eventos ao selementos do Pop Up
 function Eventos_pop_rmr() {
     Language()
+    Mudar_imagem()
     const balao = document.getElementById("balao")
     document.addEventListener("mousemove", function (event) {
         balao.style.top = event.clientY + "px"
@@ -31,6 +32,9 @@ function Eventos_pop_rmr() {
             elemento.addEventListener("mouseout", () => Balao_sai())
         })
     })
+
+    const select_strike = document.getElementById("select-strike")
+    select_strike.addEventListener("change", () => Mudar_imagem())
 
     const select_strenght = document.getElementById("select-strenght")
     select_strenght.addEventListener("change", Display_strenght)

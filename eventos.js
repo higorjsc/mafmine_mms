@@ -281,7 +281,7 @@ function Eventos(metodo) {
 
     // FECHAR POP UP
     let pop_ups = document.getElementById("fechar-pop-up")
-    pop_ups.onclick = () => Fechar_pop_up()
+    pop_ups.addEventListener("click", Fechar_pop_up, false)
 
     const imagens = document.querySelectorAll("img")
     imagens.forEach((element) => {

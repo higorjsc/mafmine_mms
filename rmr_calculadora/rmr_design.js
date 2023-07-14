@@ -1,3 +1,9 @@
+function Mudar_imagem() {
+    let select_strike = document.getElementById("select-strike").value
+    const imagem = document.getElementById("img-strike")
+    imagem.src = `Imagens\\${select_strike}.png`
+}
+
 //MOSTRA elementos
 function Display_block(id) {
     let elemento = document.getElementById(id)
@@ -46,6 +52,7 @@ function Positions(entry, messages, positions) {
 
     //Mostra o balão de texto
     const balao = document.getElementById("balao")
+    balao.style.width = entry == "select-strike" ? "300px" : balao.style.width
     if (messages[entry]) {
         balao.innerText = messages[entry]
         balao.style.display = "block"
@@ -55,7 +62,7 @@ function Positions(entry, messages, positions) {
         const { x, y } = positions[entry]
         balao.style.transform = `translate(${x}px, ${y}px)`
     } else {
-        balao.style.transform = "translate(-200px,-80px)"
+        balao.style.transform = "translate(-200px,-30px)"
     }
 
 }
@@ -71,8 +78,14 @@ function Balao_entra(entry) {
             "spacing": "Espaçamento entre as juntas/fraturas.",
             "comprimento": "Comprimento das descontinuidades.",
             "separacao": "Espessura da abertura (ranhura) da fratura.",
-            "preenchimento": "Duro: quartzo, piritas, rochas ígneas, etc.\n\nMacio: argilas, siltes, materiais\n decompostos, etc.\n\n",
-            "select-strike": " ", //Imagem
+            "preenchimento": ""
+                + "Duro: quartzo, piritas, rochas ígneas, etc.\n\n"
+                + "Macio: argilas, siltes, materiais decompostos, etc.\n\n",
+            "select-strike": ""
+                + "- Perpendicular no sentido do dip: fraturas perpendiculares\nao eixo da galeria, que avança em sentido\ncontrário ao mergulho das descontinuidades.\n\n"
+                + "- Perpendicular contra o dip: fraturas perpendiculares\nao eixo da galeria, que avança no sentido\ndo mergulho das descontinuidades.\n\n"
+                + "- Paralela ao eixo: descontinuidades\nparalelas ao eixo da galeria.\n\n"
+                + "- Paralela ao eixo: descontinuidades\ncom diversas orientações de strike.\n\n",
         }
     } else {
         messages = {
@@ -87,10 +100,10 @@ function Balao_entra(entry) {
         }
     }
     const positions = {
-        "select-strenght": { x: -200, y: -75 },
-        "point-load": { x: -200, y: -75 },
-        "preenchimento": { x: -200, y: -175 },
-        "select-strike": { x: -200, y: -175 },
+        "select-strenght": { x: -200, y: -30 },
+        "point-load": { x: -200, y: -30 },
+        "preenchimento": { x: -250, y: -75 },
+        "select-strike": { x: -320, y: -250 },
     }
     //Mostra e posiciona o balão conforme o dicionário de posições
     Positions(entry, messages, positions)

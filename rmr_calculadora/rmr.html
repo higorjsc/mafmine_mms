@@ -14,7 +14,7 @@
     <span class="balao" id="balao"> </span> <!-- Balão de ajuda -->
     <main>
         <h2 id="condicoes-gerais">Condições Gerais</h2>
-        <div class="parametro-1">
+        <div class="parametros parametro-1">
             <span class='coluna-1' id='span-parametro-1'>Resistência da rocha intacta</span>
             <select id = 'select-strenght'>
                 <option value ='ucs'>UCS</option>
@@ -36,7 +36,7 @@
                 <option value ='<1'>< 1 Mpa</option>
             </select>
         </div>
-        <div class="parametro-2">
+        <div class="parametros parametro-2">
             <span class='coluna-1' id='span-parametro-2'>Rock Quality Designation Index:</span>
             <select class='coluna-2' id='rqd'>
                 <option value="90-100">(90-100) %</option>
@@ -47,7 +47,7 @@
                     < 25 %</option>
             </select>
         </div>
-        <div class="parametro-3" name="Spacing">
+        <div class="parametros parametro-3" name="Spacing">
             <span class='coluna-1' id='span-espacamento'>Espaçamento das descontinuidades</span>
             <select class='coluna-2' id='spacing'>
                 <option value=">2">> 2 m</option>
@@ -62,7 +62,7 @@
         <h2 id="condicionamento-descontinuidades">Condicionamento das descontinuidades</h2>
 
 
-        <div class="parametro-4">
+        <div class="parametros parametro-4">
             <span class='coluna-1' id="span-comprimento">Persistencia/Continuiade:</span>
             <select class='coluna-2' id='comprimento'>
                 <option value="<1">
@@ -75,7 +75,7 @@
             </select>
         </div>
 
-        <div class="parametro-4">
+        <div class="parametros parametro-4">
             <span class='coluna-1' id="span-separacao">Separação:</span>
             <select class='coluna-2' id='separacao'>
                 <option value="none">0</option>
@@ -86,7 +86,7 @@
             </select>
         </div>
 
-        <div class="parametro-4">
+        <div class="parametros parametro-4">
             <span class='coluna-1' id="span-rugosidade">Rugosidade:</span>
             <select class='coluna-2' id='rugosidade'>
                 <option value="muito_rugosa">Muito rugosa</option>
@@ -97,7 +97,7 @@
             </select>
         </div>
 
-        <div class="parametro-4">
+        <div class="parametros parametro-4">
             <span class='coluna-1' id='span-preenchimento'>Preenchimento:</span>
             <select class='coluna-2' id='preenchimento'>
                 <option value="none">Nenhum</option>
@@ -108,7 +108,7 @@
             </select>
         </div>
 
-        <div class="parametro-4">
+        <div class="parametros parametro-4">
             <span class='coluna-1' id="span-alteracao">Grau de Alteração:</span>
             <select class='coluna-2' id='alteracao'>
                 <option value="none">Sem alteração</option>
@@ -120,7 +120,7 @@
         </div>
 
         <h2 id="agua-subterranea"> Água subterrânea</h2>
-        <div class="parametro-5">
+        <div class="parametros parametro-5">
 
             <select class='coluna-1' id='select-gw'>
                 <option value="general">Condições gerais </option>
@@ -155,7 +155,7 @@
 
         <h2 id="strike-dip">Orientação do strike e dip das descontinuidades</h2>
 
-        <div class="parametro-6">
+        <div class="parametros parametro-61">
             <span class="coluna-1" id="span-strike">Orientação do Strike</span>
 
             <select class="coluna-2" id="select-strike">
@@ -166,8 +166,11 @@
             </select>
 
         </div>
-
-        <div class="parametro-6" id='div-dip-1'>
+        <div id = "div-img-strike">
+            <img id="img-strike" src="" alt="Ilustração da orientacao das fraturas">
+        </div>
+        
+        <div class="parametros parametro-62" id='div-dip-1'>
             <span class="coluna-1" id="span-dip">Angulo de mergulho</span>
 
             <select class="coluna-2" id="dip-1">
