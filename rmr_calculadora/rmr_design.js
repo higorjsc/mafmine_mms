@@ -85,7 +85,7 @@ function Balao_entra(entry) {
                 + "- Perpendicular no sentido do dip: fraturas perpendiculares\nao eixo da galeria, que avança em sentido\ncontrário ao mergulho das descontinuidades.\n\n"
                 + "- Perpendicular contra o dip: fraturas perpendiculares\nao eixo da galeria, que avança no sentido\ndo mergulho das descontinuidades.\n\n"
                 + "- Paralela ao eixo: descontinuidades\nparalelas ao eixo da galeria.\n\n"
-                + "- Paralela ao eixo: descontinuidades\ncom diversas orientações de strike.\n\n",
+                + "- Qualquer strike ou vários: descontinuidades\ncom diversas orientações de strike.\n\n",
         }
     } else {
         messages = {
