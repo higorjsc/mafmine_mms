@@ -1,23 +1,20 @@
 //BOTÃO SWITCH DE TROCAR IDIOMAS
-function Switch_language(metodo) {
+function Switch_language() {
     const switch_botao = document.getElementById("checkbox-switch")
     const switch_texto = document.getElementById("switch-texto")
-
-    //Configura a posição to texto PT se switch on (página em ingles)
-    //Configura a posição to texto EN se switch on (página em portugues)
+    let idioma
     if (switch_botao.checked) {
+        //Configura a posição to texto PT se switch on (página em ingles)
         switch_texto.innerHTML = "PT"
         switch_texto.style.transform = "translate(5px, -6px)"
-        English()
+        idioma = "en"
     } else {
+        //Configura a posição to texto EN se switch on (página em portugues)
         switch_texto.innerHTML = "EN"
         switch_texto.style.transform = "translate(21px, -6px)"
-        Portuguese()
+        idioma = "pt"
     }
-
-    // Calculo é chamada para alterar o valor do resultado do RSS
-    Calculo(metodo)
-
+    Language(idioma)
     const frame = Iframe_ativo()
     // Envia uma mensagem para o Iframe ativo para trocar de idioma também
     if (frame) frame.contentWindow.postMessage("CallLanguage", "*")
@@ -190,7 +187,10 @@ function Eventos(metodo) {
 
     //BOTÃO SWITCH LANGUAGE
     const switch_language = document.querySelector("#checkbox-switch")
-    switch_language.onchange = () => Switch_language(metodo)
+    switch_language.onchange = () => {
+        Switch_language(metodo)
+        Calculo(metodo) // Calculo é chamada para alterar o valor do resultado do RSS
+    }
 
     //label do switch
     const switch_label = document.querySelector(".switch-label") //mouseover no label, não na checkbox invisível
@@ -278,8 +278,6 @@ function Eventos(metodo) {
     imagens.forEach((element) => {
         element.draggable = false
     })
-
-    // Mostra_ahp(metodo)
-    Switch_language(metodo)
+    Switch_language()
     Calculo(metodo)
 }
