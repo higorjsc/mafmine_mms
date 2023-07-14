@@ -164,7 +164,6 @@ function Calculo_pop_up() {
         "general": Ground_water_value["general"],
         "orientacao": (strike + "_" + document.getElementById(id_dip).value)
     }
-    console.log(valor)
 
     let rmr = Pesos(valor)
     Escrever_resultado(rmr)
