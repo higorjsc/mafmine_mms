@@ -42,7 +42,7 @@ function Language() {
             td_rocha_dolomito: "Dolomito",
             td_rocha_calcario: "Calcário",
             td_rocha_lamito: "Lamito",
-            td_rocha_folhelho: "Folhelho",
+            td_rocha_shale: "Folhelho",
             td_rocha_arenito: "Arenito",
             td_rocha_siltito: "Siltito",
             td_rocha_tufo: "Tufo",
@@ -104,7 +104,7 @@ function Language() {
             td_rocha_dolomito: "Dolomite",
             td_rocha_calcario: "Limestone",
             td_rocha_lamito: "Mudstone",
-            td_rocha_folhelho: "Shale",
+            td_rocha_shale: "Shale",
             td_rocha_arenito: "Sandstone",
             td_rocha_siltito: "Siltstone",
             td_rocha_tufo: "Tuff",
@@ -177,7 +177,7 @@ function Language() {
     Escrever("td-rocha-dolomito", "td_rocha_dolomito")
     Escrever("td-rocha-calcario", "td_rocha_calcario")
     Escrever("td-rocha-lamito", "td_rocha_lamito")
-    Escrever("td-rocha-folhelho", "td_rocha_folhelho")
+    Escrever("td-rocha-shale", "td_rocha_shale")
     Escrever("td-rocha-arenito", "td_rocha_arenito")
     Escrever("td-rocha-siltito", "td_rocha_siltito")
     Escrever("td-rocha-tufo", "td_rocha_tufo")
