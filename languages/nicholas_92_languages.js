@@ -4,15 +4,15 @@ function Language(idioma_janela) {
         pt: {
             titulo_pagina: "SELEÇÃO DE METODOS DE LAVRA: Nicholas (1992)",
             li_titulo: "SELECIONE O MÉTODO",
-            paragrafo_explicacao:
-                "O Método de Nicholas de 1992 é uma versão modificada do método de Nicholas de 1981, publicada pelo mesmo autor." +
-                "A nova versão tem o objetivo de corrigir o  &ldquo;problema&rdquo; clássico do procedimento orignal, onde todos os critérios de seleção possuem a mesma importância.<br><br>" +
-                "<strong>As modificações incluem:<br></strong>" +
-                "&ensp;&ensp;- O somatório das notas de cada critério de seleção é multiplicado por um  &ldquo;Fator de peso&rdquo;.<br>" +
-                "&ensp;&ensp;-  &ldquo;Fatores de pesos&rdquo; são sugeridos pelo autor para a geometria do depósito, e características geotécnicas do corpo de minério, hanging wall e footwall.<br><br>" +
-                "<strong>Observações:<br></strong>" +
-                "&ensp;&ensp; - Nicholas afirma que os valores propostos para cada característica em seu método  &ldquo;pode ser&rdquo; alterado, conforme a  nossa expertise tecnica, equipamentos de mineração, e o processo de mineração em geral evoluem e melhoram.<br>"
-            ,
+            paragrafo_explicacao: ""
+                + "O Método de Nicholas de 1992 é uma versão modificada do método de Nicholas de 1981, publicada pelo mesmo autor."
+                + "A nova versão tem o objetivo de corrigir o  &ldquo;problema&rdquo; clássico do procedimento orignal, onde todos os critérios de seleção possuem a mesma importância.<br><br>"
+                + "<strong>As modificações incluem:<br></strong>"
+                + "&ensp;&ensp;- O somatório das notas de cada critério de seleção é multiplicado por um  &ldquo;Fator de peso&rdquo;.<br>"
+                + "&ensp;&ensp;-  &ldquo;Fatores de pesos&rdquo; são sugeridos pelo autor para a geometria do depósito, e características geotécnicas do corpo de minério, hanging wall e footwall.<br><br>"
+                + "<strong>Observações:<br></strong>"
+                + "&ensp;&ensp; - Nicholas afirma que os valores propostos para cada característica em seu método"
+                + "&ldquo;pode ser&rdquo; alterado, conforme a  nossa expertise tecnica, equipamentos de mineração, e o processo de mineração em geral evoluem e melhoram.<br>",
             titulo_section_1: "CARACTERÍSTICAS GERAIS",
             titulo_section_2: "SIMULAÇÃO DO DEPÓSITO",
             titulo_section_3: "PREFERENCIAS",
@@ -64,16 +64,15 @@ function Language(idioma_janela) {
         en: {
             titulo_pagina: "MINING METHOD SELECTION: Shahriar and Bakhtavar (2007)",
             li_titulo: "SELECT METHOD",
-            paragrafo_explicacao:
-                "The Shahriar and Bakhtavar (Sh&B) mining method selection procedure is a modifiedy version of the UBC (1996) method.<br><br>"
-                + "<strong>The modifications include:</strong><br>"
-                + "&ensp;&ensp;- The weights of each selection criterion were adjusted, and decimal values were used.<br>"
-                + "&ensp;&ensp;- &ldquo;Ore value&rdquo; was introduced as additional new criteria in the selection process<br>"
-                + "&ensp;&ensp;- &ldquo;Low&rdquo; and &ldquo;Rarely Steep&rdquo; were included as options in the &ldquo;Plunge&rdquo; selection criteria<br>"
-                + "&ensp;&ensp;- &ldquo;Rarely Deep&rdquo; was included as an option in the &ldquo;Depth&rdquo; selection criteria<br><br>"
-                + "<strong>Observações:</strong><br>"
-                + "&ensp;&ensp;- Shahriar and Bakhtavar (2007) suggest the application of MCDM methods to mining methods with higher rankings in the Sh&B procedure."
-            ,
+            paragrafo_explicacao: ""
+                + "The Nicholas selection procedure of 1992 is an modified version of the Nicholas approach from 1981, published by the same author."
+                + "The 1992 edition aims to correct the classic issue in the original approach where all criteria were assigned equal importance.<br><br>"
+                + "<strong>The modifications include:<br></strong>"
+                + "&ensp;&ensp;- The sum of each value assigned to the selection criteria is multiplied by a  &ldquo;Weighting Factor&rdquo;.<br>"
+                + "&ensp;&ensp;- Weighting Factors are suggested by the author for deposit geometry, and rock mechanics characteristics of the orebody, hanging wall and footwall.<br><br>"
+                + "<strong>Notes:<br></strong>"
+                + "&ensp;&ensp; - Nicholas states that the proposed values for each characteristic in this method  &ldquo;can be&rdquo;"
+                + "adjusted as our technical expertise, mining equipment, and overall mining processes evolve and improve.<br>",
             titulo_section_1: "GENERAL CHARACTERISTICS",
             titulo_section_2: "DEPOSIT SIMULATION",
             titulo_section_3: "RANKING",
@@ -179,7 +178,7 @@ function Language(idioma_janela) {
     Escrever("span-profundidade-ob", "span_profundidade_ob")
     Escrever("span-ucs-ob", "span_ucs_ob")
     Escrever("span-resultado-rss-ob", "span_resultado_rss_ob")
-    
+
     //ESPAÇAMENTO FRATURAS
     Escrever("subtitulo-fracture-spacing", "subtitulo_fracture_spacing")
     Escrever("span-fracture-spacing-ob", "span_fracture_spacing_ob")

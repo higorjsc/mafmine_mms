@@ -4,18 +4,17 @@ function Language(idioma_janela) {
         pt: {
             titulo_pagina: "SELEÇÃO DE METODOS DE LAVRA: UBC (1995)",
             li_titulo: "SELECIONE O MÉTODO",
-            paragrafo_explicacao:
-                "O UBC Mining Method Selection (1995) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia em Vancouver, B.C., Canada.<br><br>" +
-                "<strong>As modificações incluem:<br></strong>" +
-                "&ensp;&ensp;- Ajuste dos pesos atribuidos a cada critério de seleção;<br>" +
-                "&ensp;&ensp;- O valor &ldquo;-10&rdquo; foi adicionado para descontar fortemente um método de lavra sem elimina-lo completamente;<br>" +
-                "&ensp;&ensp;- &ldquo;Profundidade&rdquo; e &ldquo;RMR (Bieniawski, 1989)&rdquo; foram adicionados como critérios de seleção;<br>" +
-                "&ensp;&ensp;- Remoção dos critérios de seleção &ldquo;Espaçamento das Fraturas&rdquo; e &ldquo;Características das inter-fraturas';<br>" +
-                "&ensp;&ensp;- Adição do valor &ldquo;muito estreito&rdquo; como opção para a espessura do minério;<br>" +
-                "&ensp;&ensp;- Adição do valor &ldquo;muito fraca&rdquo; como opção para a Rock Substance Strenght.<br><br>" +
-                "<strong>Observações:<br></strong>" +
-                "&ensp;&ensp; - O método UBC foi desenvolvido para priorizar os métodos de &ldquo;stope', adaptando-se ao cenário da mineração Canadense da época."
-            ,
+            paragrafo_explicacao: ""
+                + "O UBC Mining Method Selection (1995) é uma versão modificada do método de Nicholas (1981), criada pela University of British Columbia em Vancouver, B.C., Canada.<br><br>"
+                + "<strong>As modificações incluem:<br></strong>"
+                + "&ensp;&ensp;- Ajuste dos pesos atribuidos a cada critério de seleção;<br>"
+                + "&ensp;&ensp;- O valor &ldquo;-10&rdquo; foi adicionado para descontar fortemente um método de lavra sem elimina-lo completamente;<br>"
+                + "&ensp;&ensp;- &ldquo;Profundidade&rdquo; e &ldquo;RMR (Bieniawski, 1989)&rdquo; foram adicionados como critérios de seleção;<br>"
+                + "&ensp;&ensp;- Remoção dos critérios de seleção &ldquo;Espaçamento das Fraturas&rdquo; e &ldquo;Características das inter-fraturas';<br>"
+                + "&ensp;&ensp;- Adição do valor &ldquo;muito estreito&rdquo; como opção para a espessura do minério;<br>"
+                + "&ensp;&ensp;- Adição do valor &ldquo;muito fraca&rdquo; como opção para a Rock Substance Strenght.<br><br>"
+                + "<strong>Observações:<br></strong>"
+                + "&ensp;&ensp; - O método UBC foi desenvolvido para priorizar os métodos de &ldquo;stope', adaptando-se ao cenário da mineração Canadense da época.",
             titulo_section_1: "CARACTERÍSTICAS GERAIS",
             titulo_section_2: "SIMULAÇÃO DO DEPÓSITO",
             titulo_section_3: "PREFERENCIAS",
@@ -66,18 +65,17 @@ function Language(idioma_janela) {
         en: {
             titulo_pagina: "MINING METHOD SELECTION: UBC (1995)",
             li_titulo: "SELECT METHOD",
-            paragrafo_explicacao:
-                "The UBC mining method selection is a modified version of the Nicholas (1981) approach developed by the University of British Columbia in Vancouver, B.C., Canada.<br><br>" +
-                "<strong>The modifications include:<br></strong>" +
-                "&ensp;&ensp;- The weights of each selection criteria were adjusted;<br>" +
-                "&ensp;&ensp;- A value of &quot;-10&quot; is assigned to significantly discount a mining method without completely eliminating it;<br>" +
-                "&ensp;&ensp;- &ldquo;Depth&rdquo; and Bieniawski (1989) RMR were introduced as additional new criteria in the selection process;<br>" +
-                "&ensp;&ensp;- &ldquo;Fracture Spacing&rdquo; and &ldquo;Fracture Strenght&rdquo; were removed from the selection criteria;<br>" +
-                "&ensp;&ensp;- &ldquo;Very Narrow&rdquo; was included as an option in the &ldquo;Ore thickness&rdquo; selection criteria;<br>" +
-                "&ensp;&ensp;- &ldquo;Very Weak&rdquo; was included as an option in the &ldquo;Rock Substance Strength&rdquo; selection criteria.<br><br>" +
-                "<strong>Notes:<br></strong>" +
-                "&ensp;&ensp; - The UBC procedure modifies Nicholas approach to put emphasis  on stope mining rather than caving techniques"
-            ,
+            paragrafo_explicacao: ""
+                + "The UBC mining method selection is a modified version of the Nicholas (1981) approach developed by the University of British Columbia in Vancouver, B.C., Canada.<br><br>"
+                + "<strong>The modifications include:<br></strong>"
+                + "&ensp;&ensp;- The weights of each selection criteria were adjusted;<br>"
+                + "&ensp;&ensp;- A value of &quot;-10&quot; is assigned to significantly discount a mining method without completely eliminating it;<br>"
+                + "&ensp;&ensp;- &ldquo;Depth&rdquo; and Bieniawski (1989) RMR were introduced as additional new criteria in the selection process;<br>"
+                + "&ensp;&ensp;- &ldquo;Fracture Spacing&rdquo; and &ldquo;Fracture Strenght&rdquo; were removed from the selection criteria;<br>"
+                + "&ensp;&ensp;- &ldquo;Very Narrow&rdquo; was included as an option in the &ldquo;Ore thickness&rdquo; selection criteria;<br>"
+                + "&ensp;&ensp;- &ldquo;Very Weak&rdquo; was included as an option in the &ldquo;Rock Substance Strength&rdquo; selection criteria.<br><br>"
+                + "<strong>Notes:<br></strong>"
+                + "&ensp;&ensp; - The UBC procedure modifies Nicholas approach to put emphasis  on stope mining rather than caving techniques",
             titulo_section_1: "GENERAL CHARACTERISTICS",
             titulo_section_2: "DEPOSIT SIMULATION",
             titulo_section_3: "RANKING",

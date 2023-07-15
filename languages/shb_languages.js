@@ -4,16 +4,15 @@ function Language(idioma_janela) {
         pt: {
             titulo_pagina: "SELEÇÃO DE METODOS DE LAVRA: Shahriar e Bakhtavar (2007)",
             li_titulo: "SELECIONE O MÉTODO",
-            paragrafo_explicacao:
-                "O procedimento de seleção de métodos de lavra de Shahriar e Bakhtavar (Sh&B) é mais uma grande modificação do método UBC (1996).<br><br>"
+            paragrafo_explicacao: ""
+                + "O procedimento de seleção de métodos de lavra de Shahriar e Bakhtavar (Sh&B) é mais uma grande modificação do método UBC (1996).<br><br>"
                 + "<strong>As modificações incluem:</strong><br>"
                 + "&ensp;&ensp;- Ajuste dos valores atribuidos a cada critério de seleção que não seguem mais um padrão de números inteiros;<br>"
                 + "&ensp;&ensp;- &ldquo;Valor do minério&rdquo; foi adicionado como critério de seleção<br>"
                 + "&ensp;&ensp;- Adição dos valores &ldquo;Baixo&rdquo; e &ldquo;Pouco inclinado&rdquo; como opções para o mergulho do minério<br>"
                 + "&ensp;&ensp;- Adição do valor &ldquo;Pouco profunda&rdquo; como opção para a Profundidade do depósito<br><br>"
                 + "<strong>Observações:</strong><br>"
-                + "&ensp;&ensp;- Shahriar e Bakhtavar (2007) sugerem a aplicação de métodos de MCDM nos métodos de lavra com melhores classificações no procedimento Sh&B."
-            ,
+                + "&ensp;&ensp;- Shahriar e Bakhtavar (2007) sugerem a aplicação de métodos de MCDM nos métodos de lavra com melhores classificações no procedimento Sh&B.",
             titulo_section_1: "CARACTERÍSTICAS GERAIS",
             titulo_section_2: "SIMULAÇÃO DO DEPÓSITO",
             titulo_section_3: "PREFERENCIAS",
@@ -72,16 +71,15 @@ function Language(idioma_janela) {
         en: {
             titulo_pagina: "MINING METHOD SELECTION: Shahriar and Bakhtavar (2007)",
             li_titulo: "SELECT METHOD",
-            paragrafo_explicacao:
-                "The Shahriar and Bakhtavar (Sh&B) mining method selection procedure is a modifiedy version of the UBC (1996) method.<br><br>"
+            paragrafo_explicacao: ""
+                + "The Shahriar and Bakhtavar (Sh&B) mining method selection procedure is a modifiedy version of the UBC (1996) method.<br><br>"
                 + "<strong>The modifications include:</strong><br>"
                 + "&ensp;&ensp;- The weights of each selection criterion were adjusted, and decimal values were used.<br>"
                 + "&ensp;&ensp;- &ldquo;Ore value&rdquo; was introduced as additional new criteria in the selection process<br>"
                 + "&ensp;&ensp;- &ldquo;Low&rdquo; and &ldquo;Rarely Steep&rdquo; were included as options in the &ldquo;Plunge&rdquo; selection criteria<br>"
                 + "&ensp;&ensp;- &ldquo;Rarely Deep&rdquo; was included as an option in the &ldquo;Depth&rdquo; selection criteria<br><br>"
                 + "<strong>Observações:</strong><br>"
-                + "&ensp;&ensp;- Shahriar and Bakhtavar (2007) suggest the application of MCDM methods to mining methods with higher rankings in the Sh&B procedure."
-            ,
+                + "&ensp;&ensp;- Shahriar and Bakhtavar (2007) suggest the application of MCDM methods to mining methods with higher rankings in the Sh&B procedure.",
             titulo_section_1: "GENERAL CHARACTERISTICS",
             titulo_section_2: "DEPOSIT SIMULATION",
             titulo_section_3: "RANKING",
@@ -196,7 +194,7 @@ function Language(idioma_janela) {
     Escrever("profundidade", "profundidade_1", 1)
     Escrever("profundidade", "profundidade_2", 2)
     Escrever("profundidade", "profundidade_3", 3)
-    
+
     // FATORES ECONOMICOS
     Escrever("subtitulo-valor-minerio", "subtitulo_valor_minerio")
     Escrever("span-valor-minerio", "span_valor_minerio")

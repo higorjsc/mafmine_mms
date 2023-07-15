@@ -140,7 +140,7 @@ label:hover {
 }
 
 .switch-label:hover {
-  box-shadow: blue;
+  box-shadow: var(--shadow-blue);
   font: 12pt;
   font-weight: bold;
 }
