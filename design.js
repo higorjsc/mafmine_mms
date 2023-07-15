@@ -339,7 +339,7 @@ function Balao_entra_nicholas(entry, idioma) {
         messages = {
             "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
             "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-50º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
-            "espessura": "\n- Muito Estreito: inferior a 3m\n\n-Estreito: entre 3m e 10m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
+            "espessura": "\n-Estreito: menos de 10 m\n\n- Intermediário: entre 10 m e 30 m\n\n- Espesso: entre 30 m e 100m\n\n- Muito espesso: superior a 100m\n\n",
             "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
             "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
             "substance": "\n- Fraca: <8,00\n\n- Moderada: 8,00 a 15,00\n\n - Forte: >15,00\n\n\nUCS (Pa)\n----------------------------------\nDensidade(N/m³) x Profundidade(m)\n\n",
