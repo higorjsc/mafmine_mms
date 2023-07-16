@@ -291,7 +291,7 @@ function Balao_entra_ubc(entry, idioma) {
     if (idioma == "en") {
         messages = {
             "forma-geral": "\n- Equi-dimensional: all dimensions are onthe same\n order of magnitude\n\n- Platy-tabular: two dimensions are many times the\nthickness, which does not usually exceed 35m \n\n- Irregular: dimensions vary over short distances\n\n",
-            "mergulho": "\n- Flat: inclination bellow 20º\n\n- Intermediate: inclination between 20º-50º\n\n- Steep: more than 55º of inclination\n\n",
+            "mergulho": "\n- Flat: inclination bellow 20º\n\n- Intermediate: inclination between 20º-55º\n\n- Steep: more than 55º of inclination\n\n",
             "espessura": "\n-Very narrow: bellow 3 m thick\n\n-Narrow: between 3 m and 10 m thick\n\n- Intermediate: between 10m an 30m thick\n\n- Thick: between 30 m and 100 m thick\n\n- Very Thick: more than 100m thick\n\n",
             "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
             "profundidade": "\n- Shallow: between 0 m and 100 m\n\n- Intermediate: between 100 m and 600 m\n\n- Deep: more than 600 m\n\n\nUCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
@@ -303,7 +303,7 @@ function Balao_entra_ubc(entry, idioma) {
     } else {
         messages = {
             "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
-            "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-50º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
+            "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-55º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
             "espessura": "\n- Muito Estreito: menos de 3 m\n\n- Estreito: entre 3 m e 10 m\n\n- Intermediário: entre 10m e 30m\n\n- Espesso: entre 30m e 100m\n\n- Muito espesso: superior a 100m\n\n",
             "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
             "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
@@ -327,7 +327,7 @@ function Balao_entra_nicholas(entry, idioma) {
     if (idioma == "en") {
         messages = {
             "forma-geral": "\n- Equi-dimensional: all dimensions are onthe same\n order of magnitude\n\n- Platy-tabular: two dimensions are many times the\nthickness, which does not usually exceed 35m \n\n- Irregular: dimensions vary over short distances\n\n",
-            "mergulho": "\n- Flat: inclination bellow 20º\n\n- Intermediate: inclination between 20º-50º\n\n- Steep: more than 55º of inclination\n\n",
+            "mergulho": "\n- Flat: inclination bellow 20º\n\n- Intermediate: inclination between 20º-55º\n\n- Steep: more than 55º of inclination\n\n",
             "espessura": "\n\n-Narrow: less than 10 m thick\n\n- Intermediate: between 10 m an 30 m thick\n\n- Thick: between 30m and 100m thick\n\n- Very Thick: more than 100m thick\n\n",
             "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
             "profundidade": "\n- Shallow: between 0 m and 100 m\n\n- Intermediate: between 100 m and 600 m\n\n- Deep: more than 600 m\n\n",
@@ -338,7 +338,7 @@ function Balao_entra_nicholas(entry, idioma) {
     } else {
         messages = {
             "forma-geral": "\n- Massivo: todas as dimensões são da\n mesma ordem de magnitude\n\n- Tabular: duas das dimensões são muito\n maiores que a espessur\n\n- Irregular: dimensões variam\n a pequenas distâncias\n\n",
-            "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-50º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
+            "mergulho": "\n- Plano: <20º de inclinação \n\n- Intermediário: 20º-55º de inclinação\n\n- Inclinado: > 55º de inclinação\n\n",
             "espessura": "\n-Estreito: menos de 10 m\n\n- Intermediário: entre 10 m e 30 m\n\n- Espesso: entre 30 m e 100m\n\n- Muito espesso: superior a 100m\n\n",
             "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
             "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
