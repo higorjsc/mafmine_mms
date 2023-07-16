@@ -41,7 +41,7 @@ function Imprimir_relatorio(metodo) {
     const identacao = 40
     const line_spacing = 5
     const left_margin = 30
-    let y_coord = 30
+    let y_coord = 20
 
 
     //INICIA O PDF
@@ -59,12 +59,12 @@ function Imprimir_relatorio(metodo) {
     doc.setFontStyle("normal")
     doc.text(dataHoraFormatada, left_margin, y_coord += line_spacing)
 
-    y_coord += 10
+    y_coord += 4
     doc.setFontSize(12)
     doc.setFontStyle("bold")
     doc.text(titulo_user_input, left_margin, y_coord += line_spacing)
 
-    y_coord += 10
+    y_coord += 4
     doc.setFontStyle("bold")
     doc.text(Texto("subtitulo-geometria"), identacao, y_coord += line_spacing)
 
@@ -86,7 +86,7 @@ function Imprimir_relatorio(metodo) {
         doc.text(Texto("span-valor-minerio") + " " + Texto_select("valor-minerio"), identacao, y_coord += line_spacing)
     }
 
-    y_coord += 5
+    y_coord += 4
     doc.setFontStyle("bold")
     doc.text(Texto("subtitulo-rss"), identacao, y_coord += line_spacing)
 
@@ -98,7 +98,7 @@ function Imprimir_relatorio(metodo) {
 
     if (metodo == "nicholas_81" || metodo == "nicholas_92") {
         //FRACUTRE SPACING
-        y_coord += 5
+        y_coord += 4
         doc.setFontStyle("bold")
         doc.text(Texto("subtitulo-fracture-spacing"), identacao, y_coord += line_spacing)
         y_coord += 2
@@ -108,7 +108,7 @@ function Imprimir_relatorio(metodo) {
         doc.text(fw + Texto_select("fracture-spacing-fw", 1), identacao, y_coord += line_spacing)
 
         // FRACUTRE STRENGHT
-        y_coord += 5
+        y_coord += 4
         doc.setFontStyle("bold")
         doc.text(Texto("subtitulo-fracture-strenght"), identacao, y_coord += line_spacing)
         y_coord += 2
@@ -118,7 +118,7 @@ function Imprimir_relatorio(metodo) {
         doc.text(fw + Texto_select("fracture-strenght-fw"), identacao, y_coord += line_spacing)
     }
     if (metodo == "ubc" || metodo == "shb") {
-        y_coord += 5
+        y_coord += 4
         doc.setFontStyle("bold")
         doc.text(Texto("subtitulo-rmr"), identacao, y_coord += line_spacing)
         y_coord += 2
@@ -131,7 +131,7 @@ function Imprimir_relatorio(metodo) {
     //PESOS
 
     if (metodo == "nicholas_92") {
-        y_coord += 5
+        y_coord += 4
         doc.setFontStyle("bold")
         doc.text(Texto("h2-fatores-peso"), identacao, y_coord += line_spacing)
         y_coord += 2
@@ -161,11 +161,11 @@ function Imprimir_relatorio(metodo) {
     }
 
     //RESULTADOS
-    y_coord += 10
+    y_coord += 4
     doc.setFontStyle("bold")
     doc.text(titulo_resultados, left_margin, y_coord += line_spacing)
 
-    y_coord += 10
+    y_coord += 4
     doc.setFontStyle("normal")
     doc.text(Texto("div-section-3"), identacao, y_coord += line_spacing)
 

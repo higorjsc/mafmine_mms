@@ -206,9 +206,9 @@ function Calculo_rmr() {
 function Escrever_preferencias(preferencias) {
     let div_section_3 = document.getElementById("div-section-3") //obtém a div da seção 3
     div_section_3.innerHTML = ""
-    //Recebe texto como "room_and_pilar" e devolve "Room & Pillar"
-    let Formatar = (key) => {
 
+    //Exemplo de formatação: recebe "room_and_pilar" e devolve "Room & Pillar"
+    let Formatar = (key) => {
         let formatada = ""
         key = key.replace(/_/g, " ") //Substitui '_' por ' '
         let palavras = key.split(" ")
@@ -223,15 +223,8 @@ function Escrever_preferencias(preferencias) {
         id.replace(/_/g, "-") //Substitui '_' por '-' para o id do span
         // Criar o ponto
         const span = document.createElement("span")
-        span.style.width = "95%"
-        span.style.height = "80%"
-        span.style.position = "relative"
-        span.style.marginRight = "10%"
-        span.style.display = "block"
-        span.style.textAlign = "center"
-        span.style.zIndex = "-1"
         span.id = id
-        span.classList.add("metodo-lavra")
+        span.classList.add("span-metodos-lavra") //Estilo definido em "estilos.css"
         div_section_3.appendChild(span)
         return span
     }

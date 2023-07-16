@@ -340,7 +340,16 @@ select:hover {
 }
 
 #div-section-3 {
-  line-height: 50px;
+  line-height: 45px;
+}
+
+.span-metodos-lavra {
+  width: 95%;
+  position: relative;
+  margin-right: 10%;
+  display: block;
+  text-align: center;
+  z-index: -1;
 }
 
 /* ------------------PESOS---------------------------- */
