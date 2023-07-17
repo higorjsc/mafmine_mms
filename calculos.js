@@ -202,33 +202,46 @@ function Calculo_rmr() {
     return resultado_rmr //Retorna o valor textual do RMR para a função Calculo
 }
 
+// ESCREVE O RANKING DE MÉTODOS DE LAVRA NA TELA
 function Escrever_preferencias(preferencias) {
-    let texto = document.getElementById("div-section-3") //obtém a div da seção 3
-    texto.innerText = "" //limpa todo o texto da div da seção 3
+    let div_section_3 = document.getElementById("div-section-3") //obtém a div da seção 3
+    div_section_3.innerHTML = ""
 
-    //Formata as chaves do dicionário com os resultados.   
-    function Formatar(key) {
-
+    //Exemplo de formatação: recebe "room_and_pilar" e devolve "Room & Pillar"
+    let Formatar = (key) => {
         let formatada = ""
         key = key.replace(/_/g, " ") //Substitui '_' por ' '
         let palavras = key.split(" ")
         for (let i in palavras) {
             formatada += palavras[i].charAt(0).toUpperCase() + palavras[i].slice(1) + " " //Coloca a primeira letra da palavra em UpperCase
         }
+        formatada = formatada.replace("And", "&") //Substitui 'And' por '&'
         return formatada //Retorna a chave do dicionário para o Loop de impressão
+    }
 
+    let Criar_span = (id) => {
+        id.replace(/_/g, "-") //Substitui '_' por '-' para o id do span
+        // Criar o ponto
+        const span = document.createElement("span")
+        span.id = id
+        span.classList.add("span-metodos-lavra") //Estilo definido em "estilos.css"
+        div_section_3.appendChild(span)
+        return span
     }
 
     let key_formatada
+    let span_metodo_lavra
     //Imprime o valor do dicionário resultado seguido por sua chave. Cada chave é um metodo de lavra
     for (const [key, value] of preferencias) {
-
+        // Obtém o span que vai conter o método de lavra correspondente a key
+        span_metodo_lavra = Criar_span(key)
+        // formata a key para obter o texto a ser escrito
         key_formatada = Formatar(key)
         //Condição para manter a tabulação dos ifens, caso o numeral tenha menos de dois caracteres
         if (Number(value) < 10) {
-            texto.innerText += value + "   " + "-" + "  " + key_formatada + "\n"
+            span_metodo_lavra.innerText += value + " " + "-" + " " + key_formatada + "\n"
         } else {
-            texto.innerText += value + "  " + "-" + "  " + key_formatada + "\n"
+            span_metodo_lavra.innerText += value  + " " + "-" + " " + key_formatada + "\n"
         }
 
     }
