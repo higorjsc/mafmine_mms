@@ -348,7 +348,7 @@ select:hover {
   position: relative;
   margin-right: 10%;
   display: block;
-  text-align: center;
+  text-align: left;
   z-index: -1;
 }
 
