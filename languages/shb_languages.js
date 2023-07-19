@@ -226,11 +226,11 @@ function Language(idioma_janela) {
     })
 
     //FOOTER
-    Escrever("universidade", "universidade")
-    Escrever("laboratorio", "laboratorio")
-    Escrever("localizacao", "localizacao")
-    Escrever("contato", "contato")
-    Escrever("desenvolvedor", "desenvolvedor")
-    Escrever("contato-desenvolvedor", "contato_desenvolvedor")
+    // Escrever("universidade", "universidade")
+    // Escrever("laboratorio", "laboratorio")
+    // Escrever("localizacao", "localizacao")
+    // Escrever("contato", "contato")
+    // Escrever("desenvolvedor", "desenvolvedor")
+    // Escrever("contato-desenvolvedor", "contato_desenvolvedor")
 
 }
