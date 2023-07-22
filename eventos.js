@@ -244,15 +244,29 @@ function Eventos(metodo) {
     })
 
     // EVENTOS SELECTS
-    const select = document.querySelectorAll("select")
-    select.forEach((element) => {
-        element.onchange = () => {
+    const selects = document.querySelectorAll("select")
+    selects.forEach((seletor) => {
+        // Evento onchange para o select
+        seletor.onchange = () => {
             Calculo()
-            element.blur()
+            seletor.blur()
         }
-        element.onmouseover = () => Baloes(element.id, metodo)
-        element.onmouseout = () => Balao_sai()
+
+        // Evento mouseover e mouseout para o select
+        seletor.onmouseover = () => Baloes(seletor.id, metodo)
+        seletor.onmouseout = () => Balao_sai()
+
+        // Eventos mouseover e mouseout para as opções do select
+        const opcoes = seletor.getElementsByTagName("option")
+        for (const option of opcoes) {
+            option.onmouseover = (e) => {
+                e.stopPropagation()
+                Baloes(seletor.id, metodo)
+            }
+            option.onmouseout = () => Balao_sai()
+        }
     })
+
 
     // SPAN RESULTADO RSS
     const span_resultado_rss = document.querySelectorAll(".resultado-rss")
