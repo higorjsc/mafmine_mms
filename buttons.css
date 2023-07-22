@@ -5,19 +5,19 @@
   --borda-simples: 1pt solid black;
 }
 
-/* ------------------BOTÃO TRIPLO CHECKBOX ----------------- */
-.checkbox-rmr-q-gsi {
+/* ------------------BOTÃO TRIPLO RADIO ----------------- */
+.radio-rmr-q-gsi {
   display: none;
 }
 
 /* DIV dos botões (RMR) (GSI) (Q) */
-
-.checkbox-container {
+.radio-container {
   position: absolute;
   display: flex;
   background: var(--cor-1);
   width: auto;
-  right: 4%;
+  right: 5%;
+  top: 85.5%;
   height: 5.1%;
   border-radius: 10px;
   align-items: center;
@@ -26,23 +26,23 @@
   box-shadow: var(--shadow-apretada);
 }
 
-#checkbox-container-ubc {
+#radio-container-ubc {
   bottom: 10%;
 }
 
-#checkbox-container-shb {
+#radio-container-shb {
   bottom: 9%;
 }
 
 /* Texto dentro dos botões (RMR) (GSI) (Q) */
-.span-checkbox {
+.span-radio {
   position: relative;
   font: 10pt;
   font-weight: bold;
 }
 
 /* Label branco que contém o texto dos botões (RMR) (GSI) (Q) */
-.label-checkbox-rmr-q-gsi {
+.label-radio-rmr-q-gsi {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -178,20 +178,23 @@
                 <span class='resultado-rss' id='resultado-rss-fw'> </span><br />
             </div>
 
-            <!-- CHECKBOX CONTAINER -->
-            <div class="checkbox-container" id="checkbox-container-ubc">
-                <input type="checkbox" class="checkbox-rmr-q-gsi" id="checkbox-rmr">
-                <input type="checkbox" class="checkbox-rmr-q-gsi" id="checkbox-gsi">
-                <input type="checkbox" class="checkbox-rmr-q-gsi" id="checkbox-q">
+            <!-- RADIO CONTAINER -->
+            <div class="radio-container" id="radio-container-ubc">
 
-                <label for="checkbox-rmr" class="label-checkbox-rmr-q-gsi">
-                    <span id='span-checkbox-rmr' class="span-checkbox">RMR</span>
+                <input type="radio" class="radio-rmr-q-gsi" value='rmr' name="radio-rmr-q-gsi" id="radio-rmr"
+                    checked="true">
+                <label for="radio-rmr" class="label-radio-rmr-q-gsi">
+                    <span id='span-radio-rmr' class="span-radio">RMR</span>
                 </label>
-                <label for="checkbox-gsi" class="label-checkbox-rmr-q-gsi">
-                    <span id='span-checkbox-gsi' class="span-checkbox">GSI</span>
+
+                <input type="radio" class="radio-rmr-q-gsi" value='gsi' name="radio-rmr-q-gsi" id="radio-gsi">
+                <label for="radio-gsi" class="label-radio-rmr-q-gsi">
+                    <span id='span-radio-gsi' class="span-radio">GSI</span>
                 </label>
-                <label for="checkbox-q" class="label-checkbox-rmr-q-gsi" id="label-checkbox-q">
-                    <span id='span-checkbox-q' class="span-checkbox">Q</span>
+
+                <input type="radio" class="radio-rmr-q-gsi" value='q' name="radio-rmr-q-gsi" id="radio-q">
+                <label for="radio-q" class="label-radio-rmr-q-gsi" id="label-radio-q">
+                    <span id='span-radio-q' class="span-radio">Q</span>
                 </label>
             </div>
 
@@ -325,7 +328,7 @@
             <iframe class="iframe-gsi" id='iframe-gsi-fw' frameborder="0" display="none"></iframe>
 
         </div>
-        
+
     </main>
 
 
@@ -345,9 +348,15 @@
             <img id="img-ufrgs" src="Imagens\ufrgs.png" alt="logo_ufrgs_img">
 
             <div class="div-span-footer" id="div-span-footer-2">
+                <h4>Links</h4>
+                <span class='span-footer' id="contato-desenvolvedor"><a href="">Créditos/Referências</a></span>
                 <span class='span-footer' id="desenvolvedor"></span>
-                <span class='span-footer' id="contato-desenvolvedor"></span>
+                <span class='span-footer' id="desenvolvedor"><a href="">Reportar Bug</a></span>
+                <span class='span-footer' id="desenvolvedor"><a href="">X</a></span>
             </div>
+
+            <!-- <img id="img-mafmine" src="Imagens\mafmine_logao.png" alt="logo_mafmie_img"> -->
+
         </div>
 
     </footer>
@@ -357,11 +366,8 @@
     <div class="overlay" id="overlay"></div>
 
 </body>
-
 <script>
-    Checkbox("checkbox-rmr")
-    Eventos("ubc")
+    Eventos('ubc')
 </script>
-
 
 </html>

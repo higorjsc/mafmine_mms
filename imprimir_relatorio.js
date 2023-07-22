@@ -1,7 +1,9 @@
 
-function Imprimir_relatorio(metodo) {
+function Imprimir_relatorio() {
 
     let idioma = Obter_idioma() //pt ou en
+    let metodo = Obter_metodo()
+    
     //Define os possíveis titulos
     let titulo = {
         "nicholas_81": "Nicholas (1981) Mining Method Selection Procedure",
