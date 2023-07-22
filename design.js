@@ -3,6 +3,7 @@ function Mostrar_input_pesos() {
     const select = document.getElementById("menu-pesos").value
     const input_pesos = document.querySelectorAll(".input-pesos")
     const botao_ahp_nicholas = document.querySelector("#botao-ahp-nicholas")
+
     if (select == 4) {
         input_pesos.forEach(element => {
             element.style.display = "block"
@@ -16,60 +17,43 @@ function Mostrar_input_pesos() {
     }
 }
 
-function Checkbox(x) {
-    const checkbox_x = document.getElementById(x)
-    const checkboxes = document.querySelectorAll(".checkbox-rmr-q-gsi")
+function Rock_mass() {
+    // Obtém o radio marcado
+    let radio = document.querySelector("input[name='radio-rmr-q-gsi']:checked").value
 
-    if (checkbox_x.checked) {
-        //desmarca 2 checkbox quando uma é marcada
-        checkboxes.forEach(element => {
-            if (element != checkbox_x) {
-                element.checked = false
-            }
-        })
-    } else {   
-        //garante que pelo menos uma checkbox esteja sempre marcada
-        checkboxes.forEach(element => {
-            element.checked = false
-        })
-        checkbox_x.checked = true
-    }
-
-    let Hide = (classes = []) => {
-        // Esconde as divs Q, RMR e GSI quando desmarcadas
-        classes.forEach(classe => {
-            let elementos = document.querySelectorAll(`.${classe}`)
-            elementos.forEach(elemento => {
-                elemento.style.display = "none"
-            })
-        })
-    }
-
-    //Mostra as divs Q, RMR e GSI quando marcadas
-    let Show = (classe) => {
-        const elementos = document.querySelectorAll(`.${classe}`)
+    // MOSTRA OS INPUTS SELECIONADOS
+    const Show = (classe) => {
+        let elementos = document.querySelectorAll(`.${classe}`)
         elementos.forEach(element => {
             element.style.display = "block"
         })
     }
 
-    //Verifica qual parâmetro (Q, RMR ou GSI) deve ser exibido e esconde os demais
+    // OCULTA OS INPUTS NÃO SELECIONADOS
+    const Hide = (classes) => {
+        classes.forEach(classe => {
+            document.querySelectorAll(`.${classe}`).forEach(element => {
+                element.style.display = "none"
+            })
+        })
+    }
+
     Hide(["rmr", "gsi", "q"])
-    if (checkboxes[0].checked) {
-        Show("rmr")
-    } else if (checkboxes[1].checked) {
+    if (radio == "gsi") {
         Show("gsi")
-    } else if (checkboxes[2].checked) {
+    } else if (radio == "q") {
         Show("q")
     } else {
         Show("rmr")
     }
 
-    //A função calculo é chamada porque os valores não são vinculados uns aos outros
+    // A função calculo é chamada porque os valores não são vinculados uns aos outros
     Calculo()
 }
 
+
 function Mudar_imagem() {
+
     const metodo = Obter_metodo()
     const forma_geral = document.getElementById("forma-geral").value
     const mergulho = document.getElementById("mergulho").value
@@ -144,18 +128,15 @@ function Mudar_imagem() {
     ilustracao.style.transform = transformacoes
 }
 
-
 //Recebe um texto específico informando o parâmetro.
 function Formatar_entry(entry) {
 
-    const entrada = document.getElementById(entry)
-    const entrada_valor = entrada.value
-
+    let entrada = document.getElementById(entry)
     //Verifica se o input está vazio ou nulo
-    if (entrada_valor != 0) {
+    if (entrada.value != 0) {
 
         //Retira do input APENAS um texto númerico com 2 casas decimais
-        let numero = parseFloat(entrada_valor.match(/\d+(\.\d{0,2})?/)[0])
+        let numero = parseFloat((entrada.value).match(/\d+(\.\d{0,2})?/)[0])
 
         if (entry.includes("densidade")) {
             //Se o input for DENSIDADE, 'kg/m³' é adicionado ao texto númerico
@@ -256,7 +237,7 @@ function Balao_entra_shb(entry, idioma) {
             "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
             "profundidade": "\n- Shallow: between 0 m and 200 m\n\n- Intermediate: between 200 m and 500 m\n\n- Rarely Deep: between 500 m and 800 m\n\n- Deep: more than 800 m\n\n",
             "valor-minerio": "Relative value",
-            "substance": "\n- Very weak: <5\n\n- Weak: 5,00 a 10,00\n\n- Moderate: 10,00 a 15,00\n\n - Strongh: >15,00\n\n\nUCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
+            "substance": "\n- Very weak: <5\n\n- Weak: 5,00 a 10,00\n\n- Moderate: 10,00 a 15,00\n\n - strong: >15,00\n\n\nUCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
             "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
             "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11.63) / 1.13\n\n",
             "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
@@ -294,7 +275,7 @@ function Balao_entra_ubc(entry, idioma) {
             "espessura": "\n-Very narrow: bellow 3 m thick\n\n-Narrow: between 3 m and 10 m thick\n\n- Intermediate: between 10m an 30m thick\n\n- Thick: between 30 m and 100 m thick\n\n- Very Thick: more than 100m thick\n\n",
             "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
             "profundidade": "\n- Shallow: between 0 m and 100 m\n\n- Intermediate: between 100 m and 600 m\n\n- Deep: more than 600 m\n\n\nUCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
-            "substance": "\n- Very weak: <5\n\n- Weak: 5,00 a 10,00\n\n- Moderate: 10,00 a 15,00\n\n - Strongh: >15,00\n\n",
+            "substance": "\n- Very weak: <5\n\n- Weak: 5,00 a 10,00\n\n- Moderate: 10,00 a 15,00\n\n - strong: >15,00\n\n",
             "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
             "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11.63) / 1.13\n\n",
             "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n"
@@ -330,7 +311,7 @@ function Balao_entra_nicholas(entry, idioma) {
             "espessura": "\n\n-Narrow: less than 10 m thick\n\n- Intermediate: between 10 m an 30 m thick\n\n- Thick: between 30m and 100m thick\n\n- Very Thick: more than 100m thick\n\n",
             "distribuicao": "\n- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n- Erratic:  grade values change radically over short distances\n\n",
             "profundidade": "\n- Shallow: between 0 m and 100 m\n\n- Intermediate: between 100 m and 600 m\n\n- Deep: more than 600 m\n\n",
-            "substance": "\n- Weak: <8,00\n\n- Moderate: 8,00 a 15,00\n\n - Strongh: >15,00\n\n\nUCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
+            "substance": "\n- Weak: <8,00\n\n- Moderate: 8,00 a 15,00\n\n - strong: >15,00\n\n\nUCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
             "fracture-spacing": "\n-Very close - more than 16 fractures per meter \n\n- Close: 10 to 16 fracture per meter\n\n-Wide: 3 to 10 fracture per meter\n\n- Very wide: 3 fracture per meter or less\n\n",
             "fracture-strenght": "\n- Weak: clean joint with a smooth surface\nor fill with material whose strenght is less\n than rock RSS\n\n- Moderate: clean joint with a rough surface\n\n- Strong: joint is filled with a material that is\n equal to or stronger than rock RSS\n\n",
         }
@@ -341,7 +322,7 @@ function Balao_entra_nicholas(entry, idioma) {
             "espessura": "\n-Estreito: menos de 10 m\n\n- Intermediário: entre 10 m e 30 m\n\n- Espesso: entre 30 m e 100m\n\n- Muito espesso: superior a 100m\n\n",
             "distribuicao": "\n- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n- Errático: teores variam radicalmente \nem curtas distâncias\n\n",
             "profundidade": "\n- Rasa: entre 0 m e 100 m\n\n- Intermediária: entre 100 m e 600 m\n\n- Profunda: superior a 600 m\n\n",
-            "substance": "\n- Fraca: <8,00\n\n- Moderada: 8,00 a 15,00\n\n - Forte: >15,00\n\n\nUCS (Pa)\n----------------------------------\nDensidade(N/m³) x Profundidade(m)\n\n",
+            "substance": "\n- Fraca: <8,00\n\n- Moderada: 8,00 a 15,00\n\n - Resistente: >15,00\n\n\nUCS (Pa)\n----------------------------------\nDensidade(N/m³) x Profundidade(m)\n\n",
             "fracture-spacing": "\n- Muito próximas: menos de 16 fraturas por metro\n\n- Próximas: entre 10 e 16 fraturas por metro\n\n- Distantes: entre 3 e 10 fraturas por metro\n\n- Muito distantes: 3 fraturas por metro ou menos\n\n",
             "fracture-strenght": "\n- Fraca: fraturas \"limpas\" com uma superfície\n ou preenchimento de resistencia menor\n do que a RSS da rocha\n\n- Média: fraturas \"limpas\" e com uma superfície rugosa\n\n- Forte: fraturas preenchidas com material de\n resistencia igual ou superior a RSS da rocha\n\n",
         }

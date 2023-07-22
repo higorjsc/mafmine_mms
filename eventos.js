@@ -28,27 +28,6 @@ function Iframe_ativo() {
     return iframeAtivo || null
 }
 
-
-// DESABILITA O DISPLAY DE TODOS OS IFRAMES
-function Desabilitar_iframe() {
-    const iframes = document.querySelectorAll("iframe")
-    iframes.forEach(element => {
-        element.style.display = "none"
-    })
-}
-
-// ESCREVE O TÍTULO DO POP UP
-function Titulo_pop_up(calculo, id = "none") {
-    const titulo = document.getElementById("titulo-pop-up")
-
-    id == "ob" ? (id = Obter_idioma() == "pt" ? "Corpo de Minério" : "Orebody") : id
-    id = id == "hw" ? "Hanging Wall" : id
-    id = id == "fw" ? "Footwall" : id
-    calculo == "DENSIDADE:" ? (calculo = Obter_idioma() == "pt" ? "DENSIDADE:" : "DENSITY") : calculo
-
-    titulo.innerText = calculo + " " + id
-}
-
 // FECHA A DIV QUE CONTÉM OS IFRAMES-POP-UPS
 function Fechar_pop_up() {
     const pop_up = document.getElementById("main-pop-up")
@@ -56,7 +35,18 @@ function Fechar_pop_up() {
 }
 
 // ABRE A DIV QUE CONTÉM OS IFRAMES-POP-UPS E DEFINE AS DIMENSÓES
-function Abrir_pop_up(id) {
+function Configurar_pop_up(id) {
+
+    // Escreve o titulo na barra superior do pop up
+    let Titulo_pop_up = (calculo, id = "none") => {
+        const titulo = document.getElementById("titulo-pop-up")
+        id == "ob" ? (id = Obter_idioma() == "pt" ? "Corpo de Minério" : "Orebody") : id
+        id = id == "hw" ? "Hanging Wall" : id
+        id = id == "fw" ? "Footwall" : id
+        calculo == "DENSIDADE:" ? (calculo = Obter_idioma() == "pt" ? "DENSIDADE:" : "DENSITY") : calculo
+        titulo.innerText = calculo + " " + id
+    }
+
     const pop_up = document.getElementById("main-pop-up")
     const litologia = id.split("-")[2]
     if (id.includes("gsi")) {
@@ -84,25 +74,35 @@ function Abrir_pop_up(id) {
     pop_up.style.display = "block"
 }
 
-// OBTÉM O ENDREÇO DE CADA POP UP E RETORNA PARA Open_ifrme
-function Obter_endereco(calculadora) {
-    calculadora.split("-")[1]
-    const endereco = calculadora.split("-")[1] + "_" + "calculadora/" + calculadora.split("-")[1] + ".html"
-    const argumento = "?" + calculadora.split("-")[2]
-    return (endereco + argumento)
-}
-
 // ABRE QUALQUER IFRAME-POP-UP
 function Open_iframe(id_calc) {
+
+    // Desabilita o display de todos os iframes
+    let Desabilitar_iframe = () => {
+        const iframes = document.querySelectorAll("iframe")
+        iframes.forEach(element => {
+            element.style.display = "none"
+        })
+    }
+
+    // Cria a url do pop up que será aberto
+    let Obter_endereco = (calculadora) => {
+        calculadora.split("-")[1]
+        const endereco = calculadora.split("-")[1] + "_" + "calculadora/" + calculadora.split("-")[1] + ".html"
+        const argumento = "?" + calculadora.split("-")[2]
+        return (endereco + argumento)
+    }
+
     Desabilitar_iframe()
     let id_input = id_calc.split("-")[1] + "-" + id_calc.split("-")[2]
     let frame = document.getElementById(("iframe-" + id_input))
-    Abrir_pop_up(id_calc)
+    Configurar_pop_up(id_calc)
     const endereco = Obter_endereco(id_calc)
     frame.src = endereco
     frame.style.display = "block"
 }
 
+// CONFIGURA O MOVIMENTO DOS POP UPS
 function Mover_pop_up(metodo) {
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
@@ -154,13 +154,14 @@ function Mover_pop_up(metodo) {
 
 }
 
-// MOSTRA A PLANILHA COM PESOS DO MÉTODO UBC
+// MOSTRA A PLANILHA COM OS PESOS DE CADA MÉTODO 
 function Open_pop_up_pesos() {
-    const metodo = Obter_metodo()
+    let metodo = Obter_metodo()
     const tabela_nome = metodo + "_" + Obter_idioma() + ".html"
     window.open("tabelas\\" + tabela_nome, "_blank")
 }
 
+// OBTÉM O MÉTODO DE ESCOLHA DE MÉTODOS DE LAVRA
 function Obter_metodo() {
     let titulo = document.getElementById("titulo-pagina").innerText
     if (titulo.includes("1995")) {
@@ -172,6 +173,7 @@ function Obter_metodo() {
     } else if (titulo.includes("1992")) {
         return "nicholas_92"
     }
+
 }
 
 // OBTÉM O IDIOMA DA JANELA PRINCIPAL A PARTIR DO TÍTULO DA SEÇÃO 1
@@ -181,8 +183,8 @@ function Obter_idioma() {
     return idioma
 }
 
-window.onload = function Eventos () {
-    let metodo = Obter_metodo()
+function Eventos(metodo) {
+
     //POSICIONA O BALÃO DE AJUDA NA POSIÇÃO DO CURSOR
     const balao = document.getElementById("balao")
     document.addEventListener("mousemove", function (event) {
@@ -202,13 +204,14 @@ window.onload = function Eventos () {
     switch_label.onmouseover = () => Balao_entra("switch-language")
     switch_label.onmouseout = () => Balao_sai()
 
+
     //BOTAO RMR_Q_GSI
     if (metodo == "ubc" || metodo == "shb") {
-        const checkbox = document.querySelectorAll(".checkbox-rmr-q-gsi")
-        checkbox.forEach((element) => {
-            element.onchange = () => Checkbox(element.id)
+        const radios = document.querySelectorAll(".radio-rmr-q-gsi")
+        radios.forEach((element) => {
+            element.onchange = () => Rock_mass()
         })
-        Checkbox("checkbox-rmr", )
+        Rock_mass()
     }
 
     // BOTÕES CALCULADORA 
@@ -231,7 +234,7 @@ window.onload = function Eventos () {
 
     //BOTÃO IMPRIMIR RELATÓRIO
     const botao_imprimir = document.querySelector("#botao-imprimir")
-    botao_imprimir.onclick = () => Imprimir_relatorio(metodo)
+    botao_imprimir.onclick = () => Imprimir_relatorio()
 
     // EVENTOS BUTTONS
     const button = document.querySelectorAll("button")

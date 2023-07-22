@@ -60,7 +60,7 @@
   z-index: 2;
 }
 
-input {
+input[type='text'] {
   all: unset;
   position: absolute;
   height: 20px; 
@@ -393,12 +393,15 @@ select:hover {
 
 .input-pesos {
   grid-row: 4/5;
-  width: 90%;
-  height: 85%;
+  width: 99%;
+  height: 95%;
   display: none;
   box-shadow: none;
   position: absolute;
   top: 3%;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 #input-peso-geo {

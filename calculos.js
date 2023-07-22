@@ -2,7 +2,6 @@ function Calculo_rss() {
     let metodo = Obter_metodo()
     let idioma = Obter_idioma()
 
-
     // ATRIBUI UM VALOR PADRÃO AOS INPUTS RSS, CASO NENHUM VALOR TENHA SIDO INSERIDO
     let Obter_valores = (id, padrao) => {
         const value = document.getElementById(id).value
@@ -82,65 +81,55 @@ function Calculo_rss() {
 
 function Calculo_rmr() {
 
-    let Calculo_gsi = (entry) => {
-        //Converte um valor Q-System para RMR
-        let gsi = Number(document.getElementById(entry).value)
-        gsi = gsi === 0 ? 10.00 : gsi //atribui 10 como valor padrão caso nenhum seja informado
-        let rmr_num = (gsi + 11.63) / 1.13
-        let rmr
-        if (rmr_num <= 20) {
-            rmr = "muito_pobre"
-        } else if (rmr_num > 20 && rmr_num <= 40) {
-            rmr = "pobre"
-        } else if (rmr_num > 40 && rmr_num <= 60) {
-            rmr = "razoavel"
-        } else if (rmr_num > 60 && rmr_num <= 80) {
-            rmr = "boa"
-        } else if (rmr_num > 80) {
-            rmr = "muito_boa"
+    // Converte um valor númerico do RMR em sua respectiva classe
+    let Rmr_classe = (rmr_numerico) => {
+        if (rmr_numerico <= 20) {
+            return "muito_pobre"
+        } else if (rmr_numerico > 20 && rmr_numerico <= 40) {
+            return "pobre"
+        } else if (rmr_numerico > 40 && rmr_numerico <= 60) {
+            return "razoavel"
+        } else if (rmr_numerico > 60 && rmr_numerico <= 80) {
+            return "boa"
+        } else if (rmr_numerico > 80) {
+            return "muito_boa"
         }
-        return rmr
     }
 
+    //Converte um valor GSI para RMR
+    let Calculo_gsi = (entry) => {
+        let gsi = Number(document.getElementById(entry).value)
+        gsi = gsi === 0 ? 10.00 : gsi //atribui 10 como valor padrão caso nenhum seja informado
+        let rmr_numerico = (gsi + 11.63) / 1.13
+        return Rmr_classe(rmr_numerico)
+    }
+
+    //Converte um valor Q-System para RMR
     let Calculo_q = (entry) => {
-        //Converte um valor Q-System para RMR
         let q = Number(document.getElementById(entry).value)
         q = q === 0 ? 5.00 : q    //atribui 5 como valor padrão caso nenhum seja informado
-        let rmr_num = ((9 * Math.log(q)) + 44)
-        let rmr
-        if (rmr_num <= 20) {
-            rmr = "muito_pobre"
-        } else if (rmr_num > 20 && rmr_num <= 40) {
-            rmr = "pobre"
-        } else if (rmr_num > 40 && rmr_num <= 60) {
-            rmr = "razoavel"
-        } else if (rmr_num > 60 && rmr_num <= 80) {
-            rmr = "boa"
-        } else if (rmr_num > 80) {
-            rmr = "muito_boa"
-        }
-        return rmr
+        let rmr_numerico = ((9 * Math.log(q)) + 44)
+        return Rmr_classe(rmr_numerico)
     }
 
     let resultado_rmr = {}
-    const checkbox_gsi = document.getElementById("checkbox-gsi")
-    const checkbox_rmr = document.getElementById("checkbox-rmr")
-    const checkbox_q = document.getElementById("checkbox-q")
+    // Obtém o valor do radio-button RMR-GSI-Q
+    let radio = document.querySelector("input[name='radio-rmr-q-gsi']:checked").value
 
     //Condição para verificar qual botão foi acionado, Q-system, GSI ou RMR.
-    if (checkbox_gsi.checked) {
+    if (radio == "gsi") {
         resultado_rmr = {
             "rmr_ob": Calculo_gsi("gsi-ob"), //Chama a função para converter o GSI do Orebody para RMR
             "rmr_hw": Calculo_gsi("gsi-hw"),
             "rmr_fw": Calculo_gsi("gsi-fw")
         }
-    } else if (checkbox_rmr.checked) {
+    } else if (radio == "rmr") {
         resultado_rmr = {
             "rmr_ob": document.getElementById("rmr-ob").value, //Atribui o valor de RMR selecionado pelo usuário
             "rmr_hw": document.getElementById("rmr-hw").value,
             "rmr_fw": document.getElementById("rmr-fw").value
         }
-    } else if (checkbox_q.checked) {
+    } else if (radio == "q") {
         resultado_rmr = {
             "rmr_ob": Calculo_q("q-ob"), //Chama a função para converter o GSI do Orebody para RMR
             "rmr_hw": Calculo_q("q-hw"),
@@ -231,14 +220,12 @@ function Obter_pesos() {
     return pesos
 }
 
-
-
 //Função chamada a cada entrada do usuario. Conecta todos os calculos com a impressão dos resultados
 function Calculo() {
 
     // Obtém os selects com as propriedades da geometria
     let geometria = document.querySelectorAll(".menu-geometria")
-    let resultado_rss = Calculo_rss()   
+    let resultado_rss = Calculo_rss()
     let fracture_spacing = document.querySelectorAll(".menu-fracture-spacing") ?? null
     let fracture_strenght = document.querySelectorAll(".menu-fracture-strenght") ?? null
     let valor_minerio = document.querySelector("#valor-minerio") ?? null

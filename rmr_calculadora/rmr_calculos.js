@@ -30,6 +30,10 @@ function Retornar_valor() {
     // Escreve no seletor da janela principal
     seletor.selectedIndex = escrever_rmr[classe_rmr]
 
+    // Dispara o evento sobre o select da janela principal para forçar o cálculo dos métodos de lavra
+    let evento_1 = new Event("change")
+    seletor.dispatchEvent(evento_1)
+
     // Fechar a janela popup
     const botao_fechar = parent.document.getElementById("fechar-pop-up")
     // Cria um evento "click"
@@ -38,6 +42,7 @@ function Retornar_valor() {
         cancelable: true,
         view: window
     })
+
     // Dispara o "click" no elemento
     botao_fechar.dispatchEvent(Click)
 }

@@ -206,10 +206,10 @@ function Language(idioma_janela) {
     Escrever("botao-ahp-nicholas", "botao_ahp_nicholas")
 
     //FOOTER
-    // Escrever("universidade", "universidade")
-    // Escrever("laboratorio", "laboratorio")
-    // Escrever("localizacao", "localizacao")
-    // Escrever("contato", "contato")
+    Escrever("universidade", "universidade")
+    Escrever("laboratorio", "laboratorio")
+    Escrever("localizacao", "localizacao")
+    Escrever("contato", "contato")
     // Escrever("desenvolvedor", "desenvolvedor")
     // Escrever("contato-desenvolvedor", "contato_desenvolvedor")
 

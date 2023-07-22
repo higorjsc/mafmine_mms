@@ -225,11 +225,11 @@ function Language(idioma_janela) {
         Escrever(element.id, "menu_rmr_4", 4)
     })
 
-    //FOOTER
-    // Escrever("universidade", "universidade")
-    // Escrever("laboratorio", "laboratorio")
-    // Escrever("localizacao", "localizacao")
-    // Escrever("contato", "contato")
+    // FOOTER
+    Escrever("universidade", "universidade")
+    Escrever("laboratorio", "laboratorio")
+    Escrever("localizacao", "localizacao")
+    Escrever("contato", "contato")
     // Escrever("desenvolvedor", "desenvolvedor")
     // Escrever("contato-desenvolvedor", "contato_desenvolvedor")
 
