@@ -16,7 +16,7 @@ function Mostrar_input_pesos() {
     }
 }
 
-function Checkbox(x, metodo) {
+function Checkbox(x) {
     const checkbox_x = document.getElementById(x)
     const checkboxes = document.querySelectorAll(".checkbox-rmr-q-gsi")
 
@@ -27,51 +27,50 @@ function Checkbox(x, metodo) {
                 element.checked = false
             }
         })
-    } else {   //garante que pelo menos uma checkbox esteja sempre marcada
+    } else {   
+        //garante que pelo menos uma checkbox esteja sempre marcada
         checkboxes.forEach(element => {
             element.checked = false
         })
         checkbox_x.checked = true
     }
 
-    function Hide(id) {
-        //Esconde as divs Q, RMR e GSI quando desmarcadas
-        const elementos = document.querySelectorAll(`.${id}`)
-        elementos.forEach(element => {
-            element.style.display = "none"
+    let Hide = (classes = []) => {
+        // Esconde as divs Q, RMR e GSI quando desmarcadas
+        classes.forEach(classe => {
+            let elementos = document.querySelectorAll(`.${classe}`)
+            elementos.forEach(elemento => {
+                elemento.style.display = "none"
+            })
         })
     }
+
     //Mostra as divs Q, RMR e GSI quando marcadas
-    function Show(id) {
-        const elementos = document.querySelectorAll(`.${id}`)
+    let Show = (classe) => {
+        const elementos = document.querySelectorAll(`.${classe}`)
         elementos.forEach(element => {
             element.style.display = "block"
         })
     }
+
     //Verifica qual parâmetro (Q, RMR ou GSI) deve ser exibido e esconde os demais
+    Hide(["rmr", "gsi", "q"])
     if (checkboxes[0].checked) {
         Show("rmr")
-        Hide("gsi")
-        Hide("q")
     } else if (checkboxes[1].checked) {
         Show("gsi")
-        Hide("rmr")
-        Hide("q")
     } else if (checkboxes[2].checked) {
         Show("q")
-        Hide("rmr")
-        Hide("gsi")
     } else {
         Show("rmr")
-        Hide("gsi")
-        Hide("q")
     }
+
     //A função calculo é chamada porque os valores não são vinculados uns aos outros
-    Calculo(metodo)
+    Calculo()
 }
 
-function Mudar_imagem(metodo = "nicholas") {
-
+function Mudar_imagem() {
+    const metodo = Obter_metodo()
     const forma_geral = document.getElementById("forma-geral").value
     const mergulho = document.getElementById("mergulho").value
     const espessura = document.getElementById("espessura").value
@@ -366,18 +365,14 @@ function Baloes(entry, metodo = "undefined") {
     const idioma = Obter_idioma()
     if (metodo == "nicholas_81") {
         Balao_entra_nicholas(entry, idioma)
-
     } else if (metodo == "nicholas_92") {
         Balao_entra_nicholas(entry, idioma)
-
     } else if (metodo == "ubc") {
         Balao_entra_ubc(entry, idioma)
-
     } else if (metodo == "shb") {
         Balao_entra_shb(entry, idioma)
     } else {
         Balao_entra(entry, idioma)
     }
-
 
 }

@@ -29,13 +29,6 @@ function Iframe_ativo() {
 }
 
 
-// OBTÉM O IDIOMA DA JANELA PRINCIPAL A PARTIR DO TÍTULO DA SEÇÃO 1
-function Obter_idioma() {
-    let idioma = document.getElementById("titulo-section-1").innerText
-    idioma = idioma.includes("CHARACTERISTICS") ? "en" : "pt"
-    return idioma
-}
-
 // DESABILITA O DISPLAY DE TODOS OS IFRAMES
 function Desabilitar_iframe() {
     const iframes = document.querySelectorAll("iframe")
@@ -162,14 +155,34 @@ function Mover_pop_up(metodo) {
 }
 
 // MOSTRA A PLANILHA COM PESOS DO MÉTODO UBC
-function Open_pop_up_pesos(metodo) {
+function Open_pop_up_pesos() {
+    const metodo = Obter_metodo()
     const tabela_nome = metodo + "_" + Obter_idioma() + ".html"
     window.open("tabelas\\" + tabela_nome, "_blank")
 }
 
+function Obter_metodo() {
+    let titulo = document.getElementById("titulo-pagina").innerText
+    if (titulo.includes("1995")) {
+        return "ubc"
+    } else if (titulo.includes("2007")) {
+        return "shb"
+    } else if (titulo.includes("1981")) {
+        return "nicholas_81"
+    } else if (titulo.includes("1992")) {
+        return "nicholas_92"
+    }
+}
 
-function Eventos(metodo) {
+// OBTÉM O IDIOMA DA JANELA PRINCIPAL A PARTIR DO TÍTULO DA SEÇÃO 1
+function Obter_idioma() {
+    let idioma = document.getElementById("titulo-section-1").innerText
+    idioma = idioma.includes("CHARACTERISTICS") ? "en" : "pt"
+    return idioma
+}
 
+window.onload = function Eventos () {
+    let metodo = Obter_metodo()
     //POSICIONA O BALÃO DE AJUDA NA POSIÇÃO DO CURSOR
     const balao = document.getElementById("balao")
     document.addEventListener("mousemove", function (event) {
@@ -181,7 +194,7 @@ function Eventos(metodo) {
     const switch_language = document.querySelector("#checkbox-switch")
     switch_language.onchange = () => {
         Switch_language(metodo)
-        Calculo(metodo) // Calculo é chamada para alterar o valor do resultado do RSS
+        Calculo() // Calculo é chamada para alterar o valor do resultado do RSS
     }
 
     //label do switch
@@ -193,8 +206,9 @@ function Eventos(metodo) {
     if (metodo == "ubc" || metodo == "shb") {
         const checkbox = document.querySelectorAll(".checkbox-rmr-q-gsi")
         checkbox.forEach((element) => {
-            element.onchange = () => Checkbox(element.id, metodo)
+            element.onchange = () => Checkbox(element.id)
         })
+        Checkbox("checkbox-rmr", )
     }
 
     // BOTÕES CALCULADORA 
@@ -213,7 +227,7 @@ function Eventos(metodo) {
 
     //BOTÃO MOSTRA TABELA COM OS PESOS
     const botao_pesos = document.querySelector("#botao-pesos")
-    botao_pesos.onclick = () => Open_pop_up_pesos(metodo)
+    botao_pesos.onclick = () => Open_pop_up_pesos()
 
     //BOTÃO IMPRIMIR RELATÓRIO
     const botao_imprimir = document.querySelector("#botao-imprimir")
@@ -230,7 +244,7 @@ function Eventos(metodo) {
     const select = document.querySelectorAll("select")
     select.forEach((element) => {
         element.onchange = () => {
-            Calculo(metodo)
+            Calculo()
             element.blur()
         }
         element.onmouseover = () => Baloes(element.id, metodo)
@@ -247,7 +261,7 @@ function Eventos(metodo) {
     // EVENTOS INPUTS
     const input = document.querySelectorAll("input")
     input.forEach((element, index) => {
-        element.oninput = () => Calculo(metodo)
+        element.oninput = () => Calculo()
         element.onblur = () => Formatar_entry(element.id)
         element.onmouseover = () => Baloes(element.id, metodo)
         element.onmouseout = () => Balao_sai()
@@ -278,5 +292,6 @@ function Eventos(metodo) {
 
     Switch_language()
     Mover_pop_up(metodo)
-    Calculo(metodo)
+    Calculo()
+
 }

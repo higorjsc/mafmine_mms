@@ -1,140 +1,88 @@
-function Calculo_rss(metodo) {
+function Calculo_rss() {
+    let metodo = Obter_metodo()
+    let idioma = Obter_idioma()
 
-    function Get_value(id, defaultValue) {
+
+    // ATRIBUI UM VALOR PADRÃO AOS INPUTS RSS, CASO NENHUM VALOR TENHA SIDO INSERIDO
+    let Obter_valores = (id, padrao) => {
         const value = document.getElementById(id).value
-        return value ? Number(value.match(/\d+/)[0]) : defaultValue
+        return value ? Number(value.match(/\d+/)[0]) : padrao
     }
 
-    function Atribuir_resultado_ubc_shb(entry, ucs, densidade, profundidade) {
+    // OBTÉM OS INPUTS PARA O CÁLCULO DA RSS OU ATRIBUI OS VALORES PADRÃO
+    const densidade_ob = Obter_valores("densidade-ob", 2600)
+    const densidade_hw = Obter_valores("densidade-hw", 2800)
+    const densidade_fw = Obter_valores("densidade-fw", 2650)
+
+    const profundidade_ob = Obter_valores("profundidade-ob", 600)
+    const profundidade_hw = Obter_valores("profundidade-hw", 400)
+    const profundidade_fw = Obter_valores("profundidade-fw", 800)
+
+    const ucs_ob = Obter_valores("ucs-ob", 185)
+    const ucs_hw = Obter_valores("ucs-hw", 220)
+    const ucs_fw = Obter_valores("ucs-fw", 200)
+
+
+    // ESCREVE OS RESULTADOS DO CÁLCULO DA RSS
+    let Atribuir_resultado = (entry, ucs, densidade, profundidade) => {
+
         let resultado_numero = (ucs * 1e6) / (densidade * profundidade * 9.81)
         let resultado_texto = document.getElementById(entry)
-        let idioma = Obter_idioma()
 
-        if (idioma == "pt") {
-            //Caso o titulo da seção 1 esteja em pt-br
-            if (resultado_numero < 5) {
-                resultado_texto.innerText = `Muito Fraca (${resultado_numero.toFixed(1)})`
-            } else if (resultado_numero < 10) {
-                resultado_texto.innerText = `Fraca (${resultado_numero.toFixed(1)})`
-            } else if (resultado_numero < 15) {
-                resultado_texto.innerText = `Moderada (${resultado_numero.toFixed(1)})`
-            } else {
-                resultado_texto.innerText = `Resistente (${resultado_numero.toFixed(1)})`
-            }
-        } else {
-            //Caso o titulo da seção 1 esteja em ingles
-            if (resultado_numero < 5) {
-                resultado_texto.innerText = `Very Weak (${resultado_numero.toFixed(1)})`
-            } else if (resultado_numero < 10) {
-                resultado_texto.innerText = `Weak (${resultado_numero.toFixed(1)})`
-            } else if (resultado_numero < 15) {
-                resultado_texto.innerText = `Medium (${resultado_numero.toFixed(1)})`
-            } else {
-                resultado_texto.innerText = `Strong (${resultado_numero.toFixed(1)})`
+        const texto = {
+            pt: {
+                muito_fraco: `Muito Fraca (${resultado_numero.toFixed(1)})`,
+                fraca: `Fraca (${resultado_numero.toFixed(1)})`,
+                moderada: `Moderada (${resultado_numero.toFixed(1)})`,
+                forte: `Resistente (${resultado_numero.toFixed(1)})`
+            },
+            en: {
+                muito_fraco: `Very Weak (${resultado_numero.toFixed(1)})`,
+                fraca: `Weak (${resultado_numero.toFixed(1)})`,
+                moderada: `Medium (${resultado_numero.toFixed(1)})`,
+                forte: `Strong (${resultado_numero.toFixed(1)})`
             }
         }
-    }
 
-    function Atribuir_resultado_nicholas(entry, ucs, densidade, profundidade) {
-        let resultado_numero = (ucs * 1e6) / (densidade * profundidade * 9.81)
-        let resultado_texto = document.getElementById(entry)
-        let idioma = Obter_idioma()
+        // VERIFICA QUAL VALOR TEXTUAL DE RSS DEVE SER ESCRITO NA TELA
+        let resultado_final
 
-        if (idioma == "pt") {
-            //Caso o titulo da seção 1 esteja em pt-br
-            if (resultado_numero < 8) {
-                resultado_texto.innerText = `Fraca (${resultado_numero.toFixed(1)})`
-            } else if (resultado_numero >= 8 && resultado_numero <= 15) {
-                resultado_texto.innerText = `Moderada (${resultado_numero.toFixed(1)})`
-            } else {
-                resultado_texto.innerText = `Forte (${resultado_numero.toFixed(1)})`
-            }
+        if ((metodo == "ubc" || metodo == "shb") && resultado_numero < 5) {
+            resultado_final = "muito_fraco"
+        } else if ((metodo == "ubc" || metodo == "shb") && resultado_numero < 10) {
+            resultado_final = "fraca"
+        } else if ((metodo == "ubc" || metodo == "shb") && resultado_numero < 15) {
+            resultado_final = "moderada"
+        } else if ((metodo == "ubc" || metodo == "shb") && resultado_numero >= 15) {
+            resultado_final = "forte"
+        } else if ((metodo == "nicholas_92" || metodo == "nicholas_81") && resultado_numero < 8) {
+            resultado_final = "fraca"
+        } else if ((metodo == "nicholas_92" || metodo == "nicholas_81") && resultado_numero <= 15) {
+            resultado_final = "moderada"
         } else {
-            //Caso o titulo da seção 1 esteja em ingles
-            if (resultado_numero < 8) {
-                resultado_texto.innerText = `Weak (${resultado_numero.toFixed(1)})`
-            } else if (resultado_numero >= 8 && resultado_numero <= 15) {
-                resultado_texto.innerText = `Medium (${resultado_numero.toFixed(1)})`
-            } else {
-                resultado_texto.innerText = `Strong (${resultado_numero.toFixed(1)})`
-            }
+            resultado_final = "forte"
         }
+
+        resultado_texto.innerText = texto[idioma][resultado_final]
+
+        // retorna a chave dos pesos para calcular o método de lavra
+        return resultado_final
     }
 
-    function Resultado_rss_nicholas(entry) {
-        let elemento = document.getElementById(entry).innerText
-        let resultado
-
-        if (elemento.includes("Fraca") || elemento.includes("Weak")) {
-            resultado = "fraca"
-        } else if (elemento.includes("Moderada") || elemento.includes("Medium")) {
-            resultado = "moderada"
-        } else if (elemento.includes("Forte") || elemento.includes("Strong")) {
-            resultado = "forte"
-        } else {
-            resultado = "moderada"
-        }
-
-        return resultado
+    // REALIZA O CÁLCULO E ESCREVE OS RESULTADOS
+    let resultado_rss = {
+        "rss_ob": Atribuir_resultado("resultado-rss-ob", ucs_ob, densidade_ob, profundidade_ob),
+        "rss_hw": Atribuir_resultado("resultado-rss-hw", ucs_hw, densidade_hw, profundidade_hw),
+        "rss_fw": Atribuir_resultado("resultado-rss-fw", ucs_fw, densidade_fw, profundidade_fw)
     }
 
-    function Resultado_rss_ubc_shb(entry) {
-        let elemento = document.getElementById(entry).innerText
-        let resultado
-
-        if (elemento.includes("Muito Fraca") || elemento.includes("Very")) {
-            resultado = "muito_fraco"
-        } else if (elemento.includes("Fraca") || elemento.includes("Weak")) {
-            resultado = "fragil"
-        } else if (elemento.includes("Moderada") || elemento.includes("Medium")) {
-            resultado = "moderada"
-        } else if (elemento.includes("Resistente") || elemento.includes("Strong")) {
-            resultado = "resistente"
-        } else {
-            resultado = "moderada"
-        }
-
-        return resultado
-    }
-
-    const densidade_ob = Get_value("densidade-ob", 2600)
-    const densidade_hw = Get_value("densidade-hw", 2800)
-    const densidade_fw = Get_value("densidade-fw", 2650)
-
-    const profundidade_ob = Get_value("profundidade-ob", 600)
-    const profundidade_hw = Get_value("profundidade-hw", 400)
-    const profundidade_fw = Get_value("profundidade-fw", 800)
-
-    const ucs_ob = Get_value("ucs-ob", 185)
-    const ucs_hw = Get_value("ucs-hw", 220)
-    const ucs_fw = Get_value("ucs-fw", 200)
-
-    let resultado_rss
-    if (metodo == "nicholas_81" || metodo == "nicholas_92") {
-        Atribuir_resultado_nicholas("resultado-rss-ob", ucs_ob, densidade_ob, profundidade_ob)
-        Atribuir_resultado_nicholas("resultado-rss-hw", ucs_hw, densidade_hw, profundidade_hw)
-        Atribuir_resultado_nicholas("resultado-rss-fw", ucs_fw, densidade_fw, profundidade_fw)
-        resultado_rss = {
-            "rss_ob": Resultado_rss_nicholas("resultado-rss-ob"),
-            "rss_hw": Resultado_rss_nicholas("resultado-rss-hw"),
-            "rss_fw": Resultado_rss_nicholas("resultado-rss-fw")
-        }
-    } else {
-        Atribuir_resultado_ubc_shb("resultado-rss-ob", ucs_ob, densidade_ob, profundidade_ob)
-        Atribuir_resultado_ubc_shb("resultado-rss-hw", ucs_hw, densidade_hw, profundidade_hw)
-        Atribuir_resultado_ubc_shb("resultado-rss-fw", ucs_fw, densidade_fw, profundidade_fw)
-        resultado_rss = {
-            "rss_ob": Resultado_rss_ubc_shb("resultado-rss-ob"),
-            "rss_hw": Resultado_rss_ubc_shb("resultado-rss-hw"),
-            "rss_fw": Resultado_rss_ubc_shb("resultado-rss-fw")
-        }
-    }
-    return resultado_rss //Retorna o valor textual do RSS para a função Calculo
+    //Retorna o valor textual do RSS para a função Calculo
+    return resultado_rss
 }
 
 function Calculo_rmr() {
 
-    function Calculo_gsi(entry) {
+    let Calculo_gsi = (entry) => {
         //Converte um valor Q-System para RMR
         let gsi = Number(document.getElementById(entry).value)
         gsi = gsi === 0 ? 10.00 : gsi //atribui 10 como valor padrão caso nenhum seja informado
@@ -154,7 +102,7 @@ function Calculo_rmr() {
         return rmr
     }
 
-    function Calculo_q(entry) {
+    let Calculo_q = (entry) => {
         //Converte um valor Q-System para RMR
         let q = Number(document.getElementById(entry).value)
         q = q === 0 ? 5.00 : q    //atribui 5 como valor padrão caso nenhum seja informado
@@ -241,7 +189,7 @@ function Escrever_preferencias(preferencias) {
         if (Number(value) < 10) {
             span_metodo_lavra.innerText += value + " " + "-" + " " + key_formatada + "\n"
         } else {
-            span_metodo_lavra.innerText += value  + " " + "-" + " " + key_formatada + "\n"
+            span_metodo_lavra.innerText += value + " " + "-" + " " + key_formatada + "\n"
         }
 
     }
@@ -250,84 +198,65 @@ function Escrever_preferencias(preferencias) {
 
 //OBTÉM OS INPUTS DE PESOS INSERIDOS OU CALCULADOS POR AHP
 function Obter_pesos() {
-
     function Input_peso(id) {
         let peso = document.getElementById(id).value
-        peso = peso === "" ? 1.00 : peso
-        return peso
+        return peso === "" ? 1.00 : parseFloat(peso)
     }
 
-    let select_pesos = document.getElementById("menu-pesos").value
-    let pesos
+    let select_pesos = document.getElementById("menu-pesos") ? document.getElementById("menu-pesos").value : null
+
+    let pesos = {
+        "geo": 1.00,
+        "ob": 1.00,
+        "hw": 1.00,
+        "fw": 1.00,
+    }
+
     if (select_pesos == 1) {
-        pesos = {
-            "geo": 1.00,
-            "ob": 1.33,
-            "hw": 1.33,
-            "fw": 1.33
-        }
+        pesos["ob"] = pesos["hw"] = pesos["fw"] = 1.33
     } else if (select_pesos == 2) {
-        pesos = {
-            "geo": 1.00,
-            "ob": 0.75,
-            "hw": 0.60,
-            "fw": 0.38,
-        }
+        pesos["ob"] = 0.75
+        pesos["hw"] = 0.60
+        pesos["fw"] = 0.38
     } else if (select_pesos == 3) {
-        pesos = {
-            "geo": 1.00,
-            "ob": 1.00,
-            "hw": 0.80,
-            "fw": 0.50,
-        }
+        pesos["hw"] = 0.80
+        pesos["fw"] = 0.50
     } else if (select_pesos == 4) {
-        pesos = {
-            "geo": Input_peso("input-peso-geo"),
-            "ob": Input_peso("input-peso-ob"),
-            "hw": Input_peso("input-peso-hw"),
-            "fw": Input_peso("input-peso-fw"),
-        }
+        pesos["geo"] = Input_peso("input-peso-geo")
+        pesos["ob"] = Input_peso("input-peso-ob")
+        pesos["hw"] = Input_peso("input-peso-hw")
+        pesos["fw"] = Input_peso("input-peso-fw")
     }
 
     return pesos
 }
 
 
-//Função chamada a cada entrada do usuario. Conecta todos os calculos com a impressão dos resultados
-function Calculo(metodo) {
-    //Obtém os selects com as propriedades da geometria
-    let geometria = document.querySelectorAll(".menu-geometria")
-    let resultado_rss
-    let pesos
-    let fracture_spacing
-    let fracture_strenght
-    let resultado_rmr
 
-    //Inicializa o dicionário com os resultados (preferências)
+//Função chamada a cada entrada do usuario. Conecta todos os calculos com a impressão dos resultados
+function Calculo() {
+
+    // Obtém os selects com as propriedades da geometria
+    let geometria = document.querySelectorAll(".menu-geometria")
+    let resultado_rss = Calculo_rss()   
+    let fracture_spacing = document.querySelectorAll(".menu-fracture-spacing") ?? null
+    let fracture_strenght = document.querySelectorAll(".menu-fracture-strenght") ?? null
+    let valor_minerio = document.querySelector("#valor-minerio") ?? null
+    let pesos = Obter_pesos()
+    let metodo = Obter_metodo()
+
+    // Inicializa o dicionário com os resultados (preferências)
     let preferencias = {}
     if (metodo == "nicholas_81") {
-        fracture_spacing = document.querySelectorAll(".menu-fracture-spacing")
-        fracture_strenght = document.querySelectorAll(".menu-fracture-strenght")
-        resultado_rss = Calculo_rss(metodo)
         preferencias = Preferencias_nicholas_81(geometria, resultado_rss, fracture_spacing, fracture_strenght)
-
     } else if (metodo == "nicholas_92") {
-        fracture_spacing = document.querySelectorAll(".menu-fracture-spacing")
-        fracture_strenght = document.querySelectorAll(".menu-fracture-strenght")
-        resultado_rss = Calculo_rss(metodo)
-        pesos = Obter_pesos()
         preferencias = Preferencias_nicholas_92(geometria, resultado_rss, fracture_spacing, fracture_strenght, pesos)
     } else if (metodo == "ubc") {
-        resultado_rmr = Calculo_rmr()
-        resultado_rss = Calculo_rss(metodo)
+        let resultado_rmr = Calculo_rmr()
         preferencias = Preferencias_ubc(geometria, resultado_rss, resultado_rmr)
-
     } else if (metodo == "shb") {
-        resultado_rmr = Calculo_rmr()
-        resultado_rss = Calculo_rss(metodo)
-        valor_minerio = document.querySelector("#valor-minerio")
+        let resultado_rmr = Calculo_rmr()
         preferencias = Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr)
-
     }
 
     // Converte o dicionário de resultados em uma matriz
@@ -341,7 +270,7 @@ function Calculo(metodo) {
     Escrever_preferencias(preferencias)
 
     //Altera a imagem da tela
-    Mudar_imagem(metodo)
+    Mudar_imagem()
 
 }
 
