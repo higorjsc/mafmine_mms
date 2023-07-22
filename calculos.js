@@ -1,3 +1,5 @@
+
+// CALCULA O VALOR DA RSS A PARTIR DOS INPUTS DE DENSIDADE, PROFUNDIDADE E UCS. RETORNA O VALOR PARA A FUNÇÃO CÁLCULO.
 function Calculo_rss() {
     let metodo = Obter_metodo()
     let idioma = Obter_idioma()
@@ -79,6 +81,7 @@ function Calculo_rss() {
     return resultado_rss
 }
 
+// DEFINE O VALOR DO RMR, DIRETAMENTE OU POR CONVERSÃO, E RETORNA PARA A FUNÇÃO CÁLCULO
 function Calculo_rmr() {
 
     // Converte um valor númerico do RMR em sua respectiva classe
@@ -185,7 +188,7 @@ function Escrever_preferencias(preferencias) {
 
 }
 
-//OBTÉM OS INPUTS DE PESOS INSERIDOS OU CALCULADOS POR AHP
+//OBTÉM OS INPUTS DE PESOS INSERIDOS OU CALCULADOS POR AHP NO MÉTODO DE NICHOLAS 1992 E RETORNA PARA A FUNÇÃO CÁLCULO
 function Obter_pesos() {
     function Input_peso(id) {
         let peso = document.getElementById(id).value
@@ -220,7 +223,7 @@ function Obter_pesos() {
     return pesos
 }
 
-//Função chamada a cada entrada do usuario. Conecta todos os calculos com a impressão dos resultados
+//CONECTA TODOS OS CÁLCULOS RELACIONADOS AO MÉTODO DE LAVRA. A FUNÇÃO É CHAMADA A CADA INPUT DO USUÁRIO.
 function Calculo() {
 
     // Obtém os selects com as propriedades da geometria

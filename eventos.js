@@ -1,4 +1,4 @@
-//BOTÃO SWITCH DE TROCAR IDIOMAS
+//TROCA O IDIOMA DA PÁGINA
 function Switch_language() {
     const switch_botao = document.getElementById("checkbox-switch")
     const switch_texto = document.getElementById("switch-texto")
@@ -15,6 +15,7 @@ function Switch_language() {
         idioma = "pt"
     }
     Language(idioma)
+    Language_footer(idioma)
     const frame = Iframe_ativo()
     // Envia uma mensagem para o Iframe ativo para trocar de idioma também
     if (frame) frame.contentWindow.postMessage("CallLanguage", "*")
@@ -70,12 +71,17 @@ function Configurar_pop_up(id) {
         pop_up.style.width = "680px"
         pop_up.style.height = "670px"
         Titulo_pop_up("AHP", " ")
+    } else if (id.includes("creditos")) {
+        pop_up.style.width = "750px"
+        pop_up.style.height = "740px"
+        pop_up.style.left = "35%"
+        Titulo_pop_up("CRÉDITOS", " ")
     }
     pop_up.style.display = "block"
 }
 
 // ABRE QUALQUER IFRAME-POP-UP
-function Open_iframe(id_calc) {
+function Open_iframe(id_trigger) {
 
     // Desabilita o display de todos os iframes
     let Desabilitar_iframe = () => {
@@ -94,15 +100,18 @@ function Open_iframe(id_calc) {
     }
 
     Desabilitar_iframe()
-    let id_input = id_calc.split("-")[1] + "-" + id_calc.split("-")[2]
-    let frame = document.getElementById(("iframe-" + id_input))
-    Configurar_pop_up(id_calc)
-    const endereco = Obter_endereco(id_calc)
+    let frame = document.getElementById(("iframe-" + id_trigger))
+
+    // Chama a função que configura largura, altura e titulo da janela pop up
+    Configurar_pop_up(id_trigger)
+
+    // Verifica se o pop up é uma calculadora e cria uma URL
+    const endereco = id_trigger.includes("calculadora") ? Obter_endereco(id_trigger) : (id_trigger + ".html")
     frame.src = endereco
     frame.style.display = "block"
 }
 
-// CONFIGURA O MOVIMENTO DOS POP UPS
+// CONFIGURA O MOVIMENTO DOS POP UPS. OBS: ESSA FUNÇÃO DEVE SER APRIMORADA.
 function Mover_pop_up(metodo) {
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
@@ -183,6 +192,7 @@ function Obter_idioma() {
     return idioma
 }
 
+// DEFINE TODOS OS EVENTOS DO PROGRAMA COM BASE NO MÉTODO DE SELEÇÃO DE MÉTODOS DE LAVRA
 function Eventos(metodo) {
 
     //POSICIONA O BALÃO DE AJUDA NA POSIÇÃO DO CURSOR
@@ -224,8 +234,8 @@ function Eventos(metodo) {
     if (metodo == "nicholas_92") {
         const menu_pesos = document.querySelector("#menu-pesos")
         menu_pesos.addEventListener("change", Mostrar_input_pesos)
-        const botao_ahp = document.querySelector("#botao-ahp-nicholas")
-        botao_ahp.onclick = () => Open_iframe(botao_ahp.id)
+        const calculadora_ahp_nicholas = document.querySelector("#calculadora-ahp-nicholas")
+        calculadora_ahp_nicholas.onclick = () => Open_iframe(calculadora_ahp_nicholas.id)
     }
 
     //BOTÃO MOSTRA TABELA COM OS PESOS
@@ -306,6 +316,9 @@ function Eventos(metodo) {
     imagens.forEach((element) => {
         element.draggable = false
     })
+
+    const creditos = document.getElementById("creditos")
+    creditos.onclick = () => Open_iframe(creditos.id)
 
     Switch_language()
     Mover_pop_up(metodo)

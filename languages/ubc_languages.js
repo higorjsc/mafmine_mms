@@ -55,12 +55,6 @@ function Language(idioma_janela) {
             menu_rmr_2: "Razoável",
             menu_rmr_3: "Boa",
             menu_rmr_4: "Muito boa",
-            universidade: "UFRGS Universidade Federal do Rio Grande do Sul",
-            laboratorio: "LAPROM Laboratório de Processamento Mineral",
-            localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
-            contato: "Contato: email@ufrgs.com",
-            desenvolvedor: "Desenvolvedor: Higor Campos",
-            contato_desenvolvedor: "Contato: hhigor1217@gmail.com",
         },
         en: {
             titulo_pagina: "MINING METHOD SELECTION: UBC (1995)",
@@ -116,12 +110,6 @@ function Language(idioma_janela) {
             menu_rmr_2: "Fair",
             menu_rmr_3: "Good",
             menu_rmr_4: "Very good",
-            universidade: "UFRGS Universidade Federal do Rio Grande do Sul",
-            laboratorio: "LAPROM Laboratório de Processamento Mineral",
-            localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
-            contato: "Contato: email@ufrgs.com",
-            desenvolvedor: "Desenvolvedor: Higor Campos",
-            contato_desenvolvedor: "Contato: hhigor1217@gmail.com",
         }
     }
 
@@ -202,12 +190,4 @@ function Language(idioma_janela) {
         Escrever(element.id, "menu_rmr_3", 3)
         Escrever(element.id, "menu_rmr_4", 4)
     })
-    //FOOTER
-    Escrever("universidade", "universidade")
-    Escrever("laboratorio", "laboratorio")
-    Escrever("localizacao", "localizacao")
-    Escrever("contato", "contato")
-    // Escrever("desenvolvedor", "desenvolvedor")
-    // Escrever("contato-desenvolvedor", "contato_desenvolvedor")
-
 }

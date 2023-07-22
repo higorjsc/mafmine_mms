@@ -1,8 +1,9 @@
-function Mostrar_input_pesos() {
 
+// MOSTRA OU OCULTA OS INPUTS DE PESOS PERSONALIZADOS DO MÉTODO DE NICHOLAS 1992
+function Mostrar_input_pesos() {
     const select = document.getElementById("menu-pesos").value
     const input_pesos = document.querySelectorAll(".input-pesos")
-    const botao_ahp_nicholas = document.querySelector("#botao-ahp-nicholas")
+    const botao_ahp_nicholas = document.querySelector("#calculadora-ahp-nicholas")
 
     if (select == 4) {
         input_pesos.forEach(element => {
@@ -17,9 +18,8 @@ function Mostrar_input_pesos() {
     }
 }
 
+// CONFIGURA O RADIO-BUTTON RMR-GSI-Q
 function Rock_mass() {
-    // Obtém o radio marcado
-    let radio = document.querySelector("input[name='radio-rmr-q-gsi']:checked").value
 
     // MOSTRA OS INPUTS SELECIONADOS
     const Show = (classe) => {
@@ -38,20 +38,16 @@ function Rock_mass() {
         })
     }
 
-    Hide(["rmr", "gsi", "q"])
-    if (radio == "gsi") {
-        Show("gsi")
-    } else if (radio == "q") {
-        Show("q")
-    } else {
-        Show("rmr")
-    }
+    // Obtém o valor do radio-button marcado ("rmr", "q", ou "gsi")
+    let radio = document.querySelector("input[name='radio-rmr-q-gsi']:checked").value
 
+    Hide(["rmr", "gsi", "q"])
+    Show(radio)
     // A função calculo é chamada porque os valores não são vinculados uns aos outros
     Calculo()
 }
 
-
+// TROCA AS IMAGENS VISÍVEIS EM "SIMULAÇÃO DO DEPÓSITO" (SEÇÃO 2 - CENTRO)
 function Mudar_imagem() {
 
     const metodo = Obter_metodo()
@@ -187,6 +183,7 @@ function Positions(entry, messages, positions) {
 
 }
 
+// CONFIGURA BALÕES DE TEXTO QUE VALEM PARA TODOS OS MÉTODOS
 function Balao_entra(entry, idioma) {
     let messages
     if (idioma == "en") {
@@ -226,6 +223,7 @@ function Balao_entra(entry, idioma) {
     Positions(entry, messages, positions)
 }
 
+// CONFIGURA BALÕES DE TEXTO EXCLUSIVOS DO MÉTODO SHB
 function Balao_entra_shb(entry, idioma) {
     let messages
     //Verifica se o titulo da seção 1 está em ingles
@@ -312,6 +310,7 @@ function Balao_entra_shb(entry, idioma) {
 
 }
 
+// CONFIGURA BALÕES DE TEXTO EXCLUSIVOS DO MÉTODO UBC
 function Balao_entra_ubc(entry, idioma) {
     let messages
     if (idioma == "en") {
@@ -388,6 +387,7 @@ function Balao_entra_ubc(entry, idioma) {
 
 }
 
+// CONFIGURA BALÕES DE TEXTO EXCLUSIVOS DOS MÉTODOS NICHOLAS 81 E NICHOLAS 92
 function Balao_entra_nicholas(entry, idioma) {
     let messages
     if (idioma == "en") {
@@ -481,6 +481,7 @@ function Balao_sai() {
     balao.style.display = "none"
 }
 
+// COORDENA QUAL FUNÇÃO DE CONFIGURAÇÃO DE BALÕES SERÁ CHAMADA, COM BASE NO MÉTODO DE SELEÇÃO
 function Baloes(entry, metodo = "undefined") {
 
     let idioma = Obter_idioma()
