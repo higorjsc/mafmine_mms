@@ -74,11 +74,17 @@ function Configurar_pop_up(id) {
         pop_up.style.height = "670px"
         Titulo_pop_up("AHP", " ")
     } else if (id.includes("creditos")) {
-        pop_up.style.width = "750px"
-        pop_up.style.height = "740px"
+        pop_up.style.width = "550px"
+        pop_up.style.height = "500px"
         pop_up.style.left = "35%"
         pop_up.style.top = "5%"
         Titulo_pop_up("CRÉDITOS", " ")
+    } else if (id.includes("referencias")) {
+        pop_up.style.width = "550px"
+        pop_up.style.height = "500px"
+        pop_up.style.left = "35%"
+        pop_up.style.top = "5%"
+        Titulo_pop_up("REFERENCIAS", " ")
     } else if (id.includes("bug_report")) {
         pop_up.style.width = "420px"
         pop_up.style.height = "400px"
@@ -129,9 +135,9 @@ function Mover_pop_up() {
 
     let position = { x: 0, y: 0 }
     let limite_superior = -85
-    let limite_inferior 
+    let limite_inferior
     let body_height = document.body.clientHeight
-    
+
     let Interromper = () => {
         document.removeEventListener("mousemove", Move_element)
         overlay.style.display = "none"
@@ -152,7 +158,7 @@ function Mover_pop_up() {
         limite_inferior = body_height - main_pop_up.clientHeight + limite_superior
         document.addEventListener("mousemove", Move_element)
     })
-    
+
     let Move_element = (event) => {
         let x = event.clientX - position.x
         let y = event.clientY - position.y - 80 + document.documentElement.scrollTop
@@ -317,11 +323,11 @@ function Eventos(metodo) {
         element.draggable = false
     })
 
-    const creditos = document.getElementById("creditos")
-    creditos.onclick = () => Open_iframe(creditos.id)
+    const spans_footer = document.querySelectorAll(".span-footer-2")
+    spans_footer.forEach((element) => {
+        element.onclick = () => Open_iframe(element.id)
+    })
 
-    const bug_report = document.getElementById("bug_report")
-    bug_report.onclick = () => Open_iframe(bug_report.id)
 
     Switch_language()
     Mover_pop_up()
