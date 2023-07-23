@@ -7,21 +7,91 @@
     <title>Document</title>
 
 </head>
+<style>
+    * {
+        --cor-1: #304454;
+        --cor-2: #112536;
+        --shadow-apretada: -2px 0px 2px rgb(0 0 0 / 95%);
+        --shadow-blue: 0 0 10px var(--cor-2);
+        --borda-simples: 1pt solid black;
+    }
+
+    main {
+        width: 99%;
+        height: 100%;
+        border: var(--borda-simples);
+        border-radius: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    form {
+        display: block;
+    }
+
+    #dados {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2px;
+        line-height: 1.2;
+    }
+
+    #dados span {
+        display: block;
+        grid-column: 1/2;
+    }
+
+    #dados input {
+        display: block;
+        grid-column: 2/3;
+        border: var(--borda-simples);
+    }
+
+    #area-message {
+        width: 95%;
+        height: 200px;
+    }
+
+    button {
+        width: 100px;
+        height: 20px;
+        border: var(--borda-simples);
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        display: block;
+        text-align: center;
+    }
+
+    button:hover {
+        box-shadow: var(--shadow-blue);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+</style>
 
 <body>
     <!-- modify this form HTML and place wherever you want your form -->
-    <form action="https://formspree.io/f/xvojgwnn" method="POST">
-        <label>
-            Your email:
-            <input type="email" name="email">
-        </label>
-        <label>
-            Your message:
-            <textarea name="message"></textarea>
-        </label>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
-    </form>
+    <main>
+
+        <form id='formulario' action="https://formspree.io/f/xvojgwnn" method="POST">
+            <div id="dados">
+                <span id="span-name"> Your name: </span>
+                <input type="name" name="name" id="name">
+
+                <span id="span-email"> Your e-mail: </span>
+                <input type="email" name="email">
+
+            </div>
+            <div>
+                <span id="span-message"><br><br>Your message:<br></span>
+                <textarea id='area-message' name="message"></textarea>
+            </div>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+        </form>
+
+    </main>
 </body>
 
 </html>

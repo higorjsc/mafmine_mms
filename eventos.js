@@ -55,6 +55,7 @@ function Configurar_pop_up(id) {
         pop_up.style.width = "750px"
         pop_up.style.height = "740px"
         pop_up.style.left = "35%"
+        pop_up.style.top = "0%"
         Titulo_pop_up("GSI:", litologia)
     } if (id.includes("rmr")) {
         pop_up.style.width = "520px"
@@ -76,11 +77,14 @@ function Configurar_pop_up(id) {
         pop_up.style.width = "750px"
         pop_up.style.height = "740px"
         pop_up.style.left = "35%"
+        pop_up.style.top = "5%"
         Titulo_pop_up("CRÉDITOS", " ")
-    }else if (id.includes("bug_report")) {
+    } else if (id.includes("bug_report")) {
         pop_up.style.width = "420px"
         pop_up.style.height = "400px"
-        Titulo_pop_up("CRÉDITOS", " ")
+        pop_up.style.left = "45%"
+        pop_up.style.top = "25%"
+        Titulo_pop_up("REPORTAR BUG", " ")
     }
     pop_up.style.display = "block"
 }
@@ -117,24 +121,17 @@ function Open_iframe(id_trigger) {
 }
 
 // CONFIGURA O MOVIMENTO DOS POP UPS. OBS: ESSA FUNÇÃO DEVE SER APRIMORADA.
-function Mover_pop_up(metodo) {
+function Mover_pop_up() {
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
     const overlay = document.getElementById("overlay")
     const overlay_div = document.getElementById("overlay-div")
 
     let position = { x: 0, y: 0 }
-    const y_min_max = {
-        min: -85,
-        max_ubc: 215,
-        max_shb: 275,
-        max_nicholas_81: 295,
-        max_nicholas_92: 295,
-    }
-
-    const key = "max_" + metodo
-    let limite_inferior
-
+    let limite_superior = -85
+    let limite_inferior 
+    let body_height = document.body.clientHeight
+    
     let Interromper = () => {
         document.removeEventListener("mousemove", Move_element)
         overlay.style.display = "none"
@@ -152,16 +149,14 @@ function Mover_pop_up(metodo) {
         document.body.style.userSelect = "none"
         position.x = main_pop_up.offsetLeft + (main_pop_up.clientWidth / 2)
         position.y = main_pop_up.offsetTop
-        // define o maior valor possível para o ofset do top não fazer body.style.height aumentar
-        let iframe = Iframe_ativo().id
-        limite_inferior = iframe.includes("gsi") ? y_min_max[key] - 85 : y_min_max[key]
+        limite_inferior = body_height - main_pop_up.clientHeight + limite_superior
         document.addEventListener("mousemove", Move_element)
     })
-
+    
     let Move_element = (event) => {
         let x = event.clientX - position.x
         let y = event.clientY - position.y - 80 + document.documentElement.scrollTop
-        y = y < y_min_max.min ? y_min_max.min : y
+        y = y < limite_superior ? limite_superior : y
         y = y > limite_inferior ? limite_inferior : y
         main_pop_up.style.transform = `translate(${x}px, ${y}px)`
     }
@@ -324,11 +319,11 @@ function Eventos(metodo) {
 
     const creditos = document.getElementById("creditos")
     creditos.onclick = () => Open_iframe(creditos.id)
-    
+
     const bug_report = document.getElementById("bug_report")
     bug_report.onclick = () => Open_iframe(bug_report.id)
 
     Switch_language()
-    Mover_pop_up(metodo)
+    Mover_pop_up()
     Calculo()
 }

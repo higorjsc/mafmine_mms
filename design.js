@@ -256,7 +256,7 @@ function Balao_entra_shb(entry, idioma) {
             "substance": "\n"
                 + "- Very weak: <5\n\n- Weak: 5,00 a 10,00\n\n"
                 + "- Moderate: 10,00 a 15,00\n\n "
-                + "- strong: >15,00\n\n\n"
+                + "- Strong: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
             "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
             "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11.63) / 1.13\n\n",
@@ -339,7 +339,7 @@ function Balao_entra_ubc(entry, idioma) {
             "substance": "\n- Very weak: <5\n\n"
                 + "- Weak: 5,00 a 10,00\n\n"
                 + "- Moderate: 10,00 a 15,00\n\n"
-                + "- strong: >15,00\n\n"
+                + "- Strong: >15,00\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
             "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
             "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11.63) / 1.13\n\n",
@@ -416,7 +416,7 @@ function Balao_entra_nicholas(entry, idioma) {
             "substance": "\n"
                 + "- Weak: <8,00\n\n"
                 + "- Moderate: 8,00 a 15,00\n\n"
-                + "- strong: >15,00\n\n\n"
+                + "- Strong: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
             "fracture-spacing": "\n"
                 + "- Very close - more than 16 fractures per meter \n\n"
