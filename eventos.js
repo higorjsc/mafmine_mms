@@ -330,6 +330,23 @@ function Eventos(metodo) {
         element.onmouseout = () => Balao_sai()
     })
 
+    
+    // Verifica se o valor armazenado em Session Storage corresponde a uma das opções do select
+    let Verificar_option = (seletor) => {
+        let Valor_armazenado = Verificar_memoria(seletor.id)
+        if (Valor_armazenado != null) {
+            let op = seletor.options
+            let valor_valido = false
+            for (let i = 0; i < op.length; i++) {
+                if (op[i].value === Valor_armazenado) {
+                    valor_valido = true
+                    break
+                }
+            }
+            return valor_valido
+        }
+    }
+
     // EVENTOS SELECTS
     const selects = document.querySelectorAll("select")
     selects.forEach((seletor) => {
@@ -340,7 +357,7 @@ function Eventos(metodo) {
             seletor.blur()
         }
 
-        if (Verificar_memoria(seletor.id) != null) {
+        if (Verificar_option(seletor)) {
             seletor.value = Verificar_memoria(seletor.id)
         }
 
@@ -379,7 +396,6 @@ function Eventos(metodo) {
         element.onkeydown = (event) => {
             if (event.key === "Enter") {
                 event.preventDefault() // Impede o comportamento padrão de enviar o formulário
-
                 // Move o foco para o próximo input
                 const nextIndex = (index + 1) % input.length
                 input[nextIndex].focus()
