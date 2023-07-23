@@ -21,15 +21,23 @@
         --shadow-blue: 0 0 10px var(--cor-2);
         --borda-simples: 1pt solid black;
     }
-
+    body {
+        height: auto;
+        overflow: scroll;
+        margin: 0;
+        padding-bottom: 15px;
+        padding-top: 5px;
+    }
     main {
+        position: relative;
         width: 98%;
-        height: 445px;
+        height: 100%;
         border: var(--borda-simples);
         border-radius: 20px;
-        padding: 5px;
+        padding: 10px;
+        margin: auto;
+        box-sizing: border-box;
     }
-
     #div-creditos {
         display: flex;
         flex-direction: column;
@@ -45,7 +53,11 @@
     }
 
     #universidade,
-    #laboratorio,
+    #laboratorio {
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
     #data,
     #localizacao {
         font-size: 10pt;
@@ -57,19 +69,25 @@
     }
 
     #autores {
-        font-size: 11pt;
+        font-size: 12pt;
+        font-weight: bold;
         margin-bottom: 5px;
     }
 
     #titulo-ferramenta {
-        font-size: 16pt;
+        font-size: 22pt;
         margin-bottom: 0;
         margin-top: 0;
     }
 
-    #inspiracao,
+    #inspiracao {
+        font-size: 8pt;
+    }
+
     #inspiracao a {
-        font-size: 9pt;
+        font-size: 8pt;
+        text-decoration: none;
+        color: var(--cor-2);
     }
 
     #titulo-autores,
@@ -80,6 +98,7 @@
 </style>
 
 <body>
+
     <main>
 
         <div id="div-creditos">
@@ -101,6 +120,7 @@
         </div>
 
     </main>
+
 </body>
 <script>
     Language_page()

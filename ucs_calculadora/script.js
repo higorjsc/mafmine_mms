@@ -54,5 +54,6 @@ function Eventos() {
     valores.forEach(element => {
         element.onclick = () => Retornar_valor(element.innerText)
     })
-
+    
+    Language()
 }

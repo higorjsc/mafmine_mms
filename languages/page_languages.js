@@ -18,7 +18,7 @@ function Language_page(idioma_child = "none") {
             laboratorio: "LABORATÓRIO DE PROCESSAMENTO MINERAL<br><br><br>",
             versao: "VERSÃO 1.0.0, dd/mm/2023",
             titulo_ferramenta: "SELEÇÃO DE MÉTODOS DE LAVRA<br>",
-            inspiracao: "(INSIPIRADO NA FERRAMENTA 'MINING METHOD SELECTION' DA <a href='https://www.edumine.com/' target='_blank'>EDUMINE)</a><br>",
+            inspiracao: "(INSIPIRADO NA FERRAMENTA 'MINING METHOD SELECTION' DA <a href='https://www.edumine.com/' target='_blank'>EDUMINE)</a><br><br>",
             titulo_autores: "<br>AUTORES<br>",
             autores: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br>",
             autores_2: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br><br>",
@@ -160,12 +160,12 @@ function Language_page(idioma_child = "none") {
     Escrever("laboratorio", "laboratorio")
     Escrever("titulo_ferramenta", "titulo_ferramenta")
     Escrever("inspiracao", "inspiracao")
-    Escrever("titulo_autores", "titulo_autores")
+    Escrever("titulo-autores", "titulo_autores")
     Escrever("autores", "autores")
     Escrever("autores-2", "autores_2")
     Escrever("localizacao", "localizacao")
     Escrever("data", "data")
-    Escrever("titulo_apoio", "titulo_apoio")
+    Escrever("titulo-apoio", "titulo_apoio")
     Escrever("apoio-1", "apoio_1")
     Escrever("apoio-2", "apoio_2")
     Escrever("versao", "versao")

@@ -62,6 +62,7 @@ function Language() {
             td_rocha_greywack: "Grauvaque",
             td_rocha_mylonite: "Milonita",
             td_rocha_hornfels: "Hornfels",
+            span_referencia: "<strong>Fonte: </strong><a href='https://doi.org/10.1016/j.cageo.2010.07.010' target='_blank'>TENZER, et al., 2011.</a><br><br>"
         },
         "en": {
             span_help: "CLICK ON VALUE",
@@ -115,6 +116,7 @@ function Language() {
             td_rocha_greywack: "Greywack",
             td_rocha_mylonite: "Mylonite",
             td_rocha_hornfels: "Hornfels",
+            span_referencia: "<strong>Source: </strong><a href='https://doi.org/10.1016/j.cageo.2010.07.010' target='_blank'>TENZER, et al., 2011.</a><br><br>"
         }
     }
 
@@ -179,4 +181,5 @@ function Language() {
     Escrever("td-rocha-greywack", "td_rocha_greywack")
     Escrever("td-rocha-mylonite", "td_rocha_mylonite")
     Escrever("td-rocha-hornfels", "td_rocha_hornfels")
+    Escrever("span-referencia", "span_referencia")
 }
