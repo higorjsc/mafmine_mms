@@ -52,11 +52,12 @@ function Configurar_pop_up(id) {
         pop_up.style.width = "750px"
         pop_up.style.height = "740px"
         pop_up.style.left = "35%"
-        pop_up.style.top = "0%"
+        pop_up.style.top = "20%"
         Modificar_id("gsi-" + litologia)
     } if (id.includes("rmr")) {
         pop_up.style.width = "520px"
         pop_up.style.height = "650px"
+        pop_up.style.top = "20%"
         Modificar_id("rmr-" + litologia)
     } else if (id.includes("densidade")) {
         pop_up.style.width = "420px"
@@ -73,14 +74,14 @@ function Configurar_pop_up(id) {
     } else if (id.includes("creditos")) {
         pop_up.style.width = "550px"
         pop_up.style.height = "500px"
-        pop_up.style.left = "35%"
-        pop_up.style.top = "5%"
+        pop_up.style.left = "45%"
+        pop_up.style.top = "25%"
         Modificar_id("creditos")
     } else if (id.includes("referencias")) {
         pop_up.style.width = "550px"
         pop_up.style.height = "500px"
-        pop_up.style.left = "35%"
-        pop_up.style.top = "5%"
+        pop_up.style.left = "45%"
+        pop_up.style.top = "25%"
         Modificar_id("referencias")
     } else if (id.includes("bug_report")) {
         pop_up.style.width = "420px"
