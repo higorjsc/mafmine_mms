@@ -1,26 +1,72 @@
-
-//TROCA O IDIOMA DA PÁGINA
 function Switch_language() {
     const switch_botao = document.getElementById("checkbox-switch")
     const switch_texto = document.getElementById("switch-texto")
+
+    // Armazena o valor da checkbox de troca de idioma
     let idioma
     if (switch_botao.checked) {
-        //Configura a posição to texto PT se switch on (página em ingles)
+        // Configura a posição do texto PT se switch on (página em inglês)
         switch_texto.innerHTML = "PT"
         switch_texto.style.transform = "translate(5px, -6px)"
         idioma = "en"
     } else {
-        //Configura a posição to texto EN se switch on (página em portugues)
+        // Configura a posição do texto EN se switch off (página em português)
         switch_texto.innerHTML = "EN"
         switch_texto.style.transform = "translate(21px, -6px)"
         idioma = "pt"
     }
+
+    // Chame as funções para alterar o idioma da página conforme a preferência do usuário
     Language(idioma)
     Language_page(idioma)
+
     const frame = Iframe_ativo()
     // Envia uma mensagem para o Iframe ativo para trocar de idioma também
     if (frame) frame.contentWindow.postMessage("CallLanguage", "*")
+}
 
+function Armazenar_valor(objeto, memoria = "session") {
+    // Verifica se o armazenamento local é suportado
+    if (typeof (Storage) !== "undefined") {
+
+        // Obtém o valor atual do input
+        let type = objeto.type
+        let valor
+        if (type == "checkbox") {
+            valor = objeto.checked ? true : false
+        } else {
+            valor = objeto.value
+        }
+
+        // Armazena o valor do input no armazenamento local
+        memoria == "session" ? sessionStorage.setItem(objeto.id, valor) : localStorage.setItem(objeto.id, valor)
+    }
+}
+
+function Verificar_memoria(id, memoria = "session") {
+    // Verifica se o armazenamento local é suportado
+    if (typeof (Storage) !== "undefined") {
+
+        // Tenta recuperar o valor armazenado para o input especificado pelo id
+        let valor = memoria == "session" ? sessionStorage.getItem(id) : localStorage.getItem(id)
+
+        // Se houver um valor armazenado, verifica se é uma string representando um booleano
+        if (valor !== null) {
+            if (valor === "true") {
+                return true
+            } else if (valor === "false") {
+                return false
+            } else {
+                return valor
+            }
+        } else {
+            // Caso não haja valor armazenado, retorna false
+            return null
+        }
+
+    } else {
+        return null
+    }
 }
 
 // OBTÉM O ID DO IFRAME ATIVO NO POP UP
@@ -129,7 +175,7 @@ function Open_iframe(id_trigger) {
 
 // CONFIGURA O MOVIMENTO DOS POP UPS. OBS: ESSA FUNÇÃO DEVE SER APRIMORADA.
 function Mover_pop_up() {
-    
+
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
     const overlay = document.getElementById("overlay")
@@ -149,7 +195,7 @@ function Mover_pop_up() {
         overlay.style.display = "none"
         overlay_div.style.display = "none"
     }
-    
+
     // Eventos que interromperão o movimento do pop up 
     document.onmouseup = () => Interromper()
     document.onscroll = () => Interromper()
@@ -171,7 +217,7 @@ function Mover_pop_up() {
 
         // Define a posição do mouse em relação ao pop up
         position.x = event.clientX - main_pop_up.offsetLeft
-        position.y = event.clientY - main_pop_up.offsetTop 
+        position.y = event.clientY - main_pop_up.offsetTop
 
         // Define os limites de movimento do pop up
         limite.right = body_width - main_pop_up.clientWidth
@@ -241,9 +287,12 @@ function Eventos(metodo) {
     //BOTÃO SWITCH LANGUAGE
     const switch_language = document.querySelector("#checkbox-switch")
     switch_language.onchange = () => {
+        Armazenar_valor(switch_language, "local") //Armazena a preferencia de idioma em localStorage
         Switch_language(metodo)
         Calculo() // Calculo é chamada para alterar o valor do resultado do RSS
     }
+    switch_language.checked = Verificar_memoria(switch_language.id) != null ? Verificar_memoria(switch_language.id) : false
+
 
     //label do switch
     const switch_label = document.querySelector(".switch-label") //mouseover no label, não na checkbox invisível
@@ -294,8 +343,13 @@ function Eventos(metodo) {
     selects.forEach((seletor) => {
         // Evento onchange para o select
         seletor.onchange = () => {
+            Armazenar_valor(seletor)
             Calculo()
             seletor.blur()
+        }
+
+        if (Verificar_memoria(seletor.id) != null) {
+            seletor.value = Verificar_memoria(seletor.id)
         }
 
         // Evento mouseover e mouseout para o select
@@ -325,7 +379,10 @@ function Eventos(metodo) {
     const input = document.querySelectorAll("input")
     input.forEach((element, index) => {
         element.oninput = () => Calculo()
-        element.onblur = () => Formatar_entry(element.id)
+        element.onblur = () => {
+            Formatar_entry(element.id)
+            Armazenar_valor(element)
+        }
         element.onmouseover = () => Baloes(element.id, metodo)
         element.onmouseout = () => Balao_sai()
         element.onkeydown = (event) => {
@@ -336,6 +393,9 @@ function Eventos(metodo) {
                 const nextIndex = (index + 1) % input.length
                 input[nextIndex].focus()
             }
+        }
+        if (Verificar_memoria(element.id) != null) {
+            element.value = Verificar_memoria(element.id)
         }
     })
 
