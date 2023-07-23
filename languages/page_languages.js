@@ -63,13 +63,16 @@ function Language_page(idioma_child = "none") {
             titulo_pop_up_ahp: "AHP",
             titulo_pop_up_creditos: "CRÉDITOS",
             titulo_pop_up_referencias: "REFERENCIAS",
-            titulo_pop_up_report_bug: "REPORTAR BUG",
+            titulo_pop_up_report_bug: "REPORTAR ERRO",
 
             // FOOTER DAS PÁGINAS PRINCIPAIS
             footer_universidade: "Universidade Federal do Rio Grande do Sul",
             footer_laboratorio: "Laboratório de Processamento Mineral",
             footer_localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
             footer_contato: "Contato: email@ufrgs.com",
+            creditos: "Creditos",
+            referencias: "Referencias",
+            bug_report: "Reportar erro"
         },
         en: {
             // CREDITOS
@@ -122,13 +125,16 @@ function Language_page(idioma_child = "none") {
             titulo_pop_up_ahp: "AHP",
             titulo_pop_up_creditos: "CREDITS",
             titulo_pop_up_referencias: "REFERENCES",
-            titulo_pop_up_report_bug: "REPORT BUG",
+            titulo_pop_up_report_bug: "REPORT ISSUE",
 
             // FOOTER DAS PÁGINAS PRINCIPAIS
             footer_universidade: "Universidade Federal do Rio Grande do Sul",
             footer_laboratorio: "Laboratório de Processamento Mineral",
             footer_localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
             footer_contato: "Contato: email@ufrgs.com",
+            creditos: "Credits",
+            referencias: "References",
+            bug_report: "Report issue"
 
         }
     }
@@ -205,5 +211,8 @@ function Language_page(idioma_child = "none") {
     Escrever("footer-laboratorio", "footer_laboratorio")
     Escrever("footer-localizacao", "footer_localizacao")
     Escrever("footer-contato", "footer_contato")
+    Escrever("creditos", "creditos")
+    Escrever("referencias", "referencias")
+    Escrever("bug_report", "bug_report")
 
 }
