@@ -429,6 +429,7 @@ select:hover {
   grid-template-columns: var(--main-columns);
   height: auto;
   position: relative;
+  margin-bottom: 5px;
 }
 
 .rodape .div-footer {
@@ -436,7 +437,7 @@ select:hover {
   border: var(--borda-simples);
   display: grid;
   grid-template-columns: minmax(150px, 1fr) minmax(600px, 5fr) minmax(150px, 1fr) minmax(200px, 3fr);
-  position: absolute;
+  position: relative;
   grid-column: 1/5;
   min-width: 100%;
   width: 100%;
@@ -445,6 +446,7 @@ select:hover {
   border-radius: 20px;
   align-items: center;
   align-content: center;
+  overflow: hidden;
 }
 
 .div-span-footer {
@@ -459,8 +461,8 @@ select:hover {
   position: absolute;
   grid-column: 1/2;
   transform: scale(0.6);
-  bottom: -70%;
-  left: -30%;
+  bottom: -16%;
+  left: -10%;
 }
 
 #div-span-footer-1 {
@@ -470,17 +472,23 @@ select:hover {
 }
 
 #div-span-footer-2 {
-  display: none;
+  display: block;
   position: absolute;
   grid-column: 4/5;
   left: 5%;
 }
 
-#div-span-footer-2 h4,  #div-span-footer-2 span a {
+#div-span-footer-2 h4,  #div-span-footer-2 span {
+  display: block;
   margin: 0;
   padding: 0;
   color: white;
   font-size: 10pt;
+}
+
+#div-span-footer-2 span:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 #img-mafmine {
@@ -525,7 +533,7 @@ select:hover {
   cursor: move;
 }
 
-#titulo-pop-up {
+.titulo-pop-up {
   color: white;
   padding-left: 2%;
 }

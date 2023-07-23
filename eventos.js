@@ -1,4 +1,5 @@
-//BOTÃO SWITCH DE TROCAR IDIOMAS
+
+//TROCA O IDIOMA DA PÁGINA
 function Switch_language() {
     const switch_botao = document.getElementById("checkbox-switch")
     const switch_texto = document.getElementById("switch-texto")
@@ -15,6 +16,7 @@ function Switch_language() {
         idioma = "pt"
     }
     Language(idioma)
+    Language_page(idioma)
     const frame = Iframe_ativo()
     // Envia uma mensagem para o Iframe ativo para trocar de idioma também
     if (frame) frame.contentWindow.postMessage("CallLanguage", "*")
@@ -37,45 +39,61 @@ function Fechar_pop_up() {
 // ABRE A DIV QUE CONTÉM OS IFRAMES-POP-UPS E DEFINE AS DIMENSÓES
 function Configurar_pop_up(id) {
 
-    // Escreve o titulo na barra superior do pop up
-    let Titulo_pop_up = (calculo, id = "none") => {
-        const titulo = document.getElementById("titulo-pop-up")
-        id == "ob" ? (id = Obter_idioma() == "pt" ? "Corpo de Minério" : "Orebody") : id
-        id = id == "hw" ? "Hanging Wall" : id
-        id = id == "fw" ? "Footwall" : id
-        calculo == "DENSIDADE:" ? (calculo = Obter_idioma() == "pt" ? "DENSIDADE:" : "DENSITY") : calculo
-        titulo.innerText = calculo + " " + id
+    // Modifica o id do span-titulo do pop up para ser diferenciado na função de trocar idiomas
+    let Modificar_id = (id = "none") => {
+        const titulo = document.querySelector(".titulo-pop-up")
+        titulo.id = "titulo-pop-up-" + id
     }
 
+    // Define as dimensões de cada pop-up
     const pop_up = document.getElementById("main-pop-up")
     const litologia = id.split("-")[2]
     if (id.includes("gsi")) {
         pop_up.style.width = "750px"
         pop_up.style.height = "740px"
         pop_up.style.left = "35%"
-        Titulo_pop_up("GSI:", litologia)
+        pop_up.style.top = "0%"
+        Modificar_id("gsi-" + litologia)
     } if (id.includes("rmr")) {
         pop_up.style.width = "520px"
         pop_up.style.height = "650px"
-        Titulo_pop_up("RMR:", litologia)
+        Modificar_id("rmr-" + litologia)
     } else if (id.includes("densidade")) {
         pop_up.style.width = "420px"
         pop_up.style.height = "650px"
-        Titulo_pop_up("DENSIDADE:", litologia)
+        Modificar_id("densidade-" + litologia)
     } else if (id.includes("ucs")) {
         pop_up.style.width = "420px"
         pop_up.style.height = "650px"
-        Titulo_pop_up("UCS:", litologia)
+        Modificar_id("ucs-" + litologia)
     } else if (id.includes("ahp")) {
         pop_up.style.width = "680px"
         pop_up.style.height = "670px"
-        Titulo_pop_up("AHP", " ")
+        Modificar_id("ahp")
+    } else if (id.includes("creditos")) {
+        pop_up.style.width = "550px"
+        pop_up.style.height = "500px"
+        pop_up.style.left = "35%"
+        pop_up.style.top = "5%"
+        Modificar_id("creditos")
+    } else if (id.includes("referencias")) {
+        pop_up.style.width = "550px"
+        pop_up.style.height = "500px"
+        pop_up.style.left = "35%"
+        pop_up.style.top = "5%"
+        Modificar_id("referencias")
+    } else if (id.includes("bug_report")) {
+        pop_up.style.width = "420px"
+        pop_up.style.height = "400px"
+        pop_up.style.left = "45%"
+        pop_up.style.top = "25%"
+        Modificar_id("report_bug")
     }
     pop_up.style.display = "block"
 }
 
 // ABRE QUALQUER IFRAME-POP-UP
-function Open_iframe(id_calc) {
+function Open_iframe(id_trigger) {
 
     // Desabilita o display de todos os iframes
     let Desabilitar_iframe = () => {
@@ -94,62 +112,88 @@ function Open_iframe(id_calc) {
     }
 
     Desabilitar_iframe()
-    let id_input = id_calc.split("-")[1] + "-" + id_calc.split("-")[2]
-    let frame = document.getElementById(("iframe-" + id_input))
-    Configurar_pop_up(id_calc)
-    const endereco = Obter_endereco(id_calc)
+    let frame = document.getElementById(("iframe-" + id_trigger))
+
+    // Chama a função que configura largura, altura e titulo da janela pop up
+    Configurar_pop_up(id_trigger)
+
+    // Verifica se o pop up é uma calculadora e cria uma URL
+    const endereco = id_trigger.includes("calculadora") ? Obter_endereco(id_trigger) : (id_trigger + ".html")
     frame.src = endereco
     frame.style.display = "block"
+
+    // ADICIONA O TITULO DO POP UP
+    Language_page()
 }
 
-// CONFIGURA O MOVIMENTO DOS POP UPS
-function Mover_pop_up(metodo) {
+// CONFIGURA O MOVIMENTO DOS POP UPS. OBS: ESSA FUNÇÃO DEVE SER APRIMORADA.
+function Mover_pop_up() {
+    
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
     const overlay = document.getElementById("overlay")
     const overlay_div = document.getElementById("overlay-div")
 
     let position = { x: 0, y: 0 }
-    const y_min_max = {
-        min: -85,
-        max_ubc: 215,
-        max_shb: 275,
-        max_nicholas_81: 295,
-        max_nicholas_92: 295,
+    let limite = {
+        right: 0,
+        left: 0,
+        top: 0,
+        bottom: 0
     }
 
-    const key = "max_" + metodo
-    let limite_inferior
-
+    // Interrompe o movimento do pop up
     let Interromper = () => {
         document.removeEventListener("mousemove", Move_element)
         overlay.style.display = "none"
         overlay_div.style.display = "none"
     }
-
+    
+    // Eventos que interromperão o movimento do pop up 
     document.onmouseup = () => Interromper()
     document.onscroll = () => Interromper()
     document.onkeydown = () => Interromper()
     document.onclick = () => Interromper()
 
-    barra_pop_up.addEventListener("mousedown", () => {
+    barra_pop_up.addEventListener("mousedown", (event) => {
+
+        // Coloca uma div invisível sobre toda a página e todo o pop up, para evitar interações durante o arraste
         overlay.style.display = "block"
         overlay_div.style.display = "block"
+
+        // Impede o usuário de selecionar textos enquanto arrasta o pop up
         document.body.style.userSelect = "none"
-        position.x = main_pop_up.offsetLeft + (main_pop_up.clientWidth / 2)
-        position.y = main_pop_up.offsetTop
-        // define o maior valor possível para o ofset do top não fazer body.style.height aumentar
-        let iframe = Iframe_ativo().id
-        limite_inferior = iframe.includes("gsi") ? y_min_max[key] - 85 : y_min_max[key]
+
+        // Calcula a largura e altura do body. Os valores variam com o scroll da página (manter cálculo dentro desse evento)
+        let body_height = document.body.clientHeight - 5
+        let body_width = document.body.clientWidth
+
+        // Define a posição do mouse em relação ao pop up
+        position.x = event.clientX - main_pop_up.offsetLeft
+        position.y = event.clientY - main_pop_up.offsetTop 
+
+        // Define os limites de movimento do pop up
+        limite.right = body_width - main_pop_up.clientWidth
+        limite.bottom = body_height - main_pop_up.clientHeight
+
+        // Chama a função para mover
         document.addEventListener("mousemove", Move_element)
     })
 
+    // Move o pop up enquanto mousedown
     let Move_element = (event) => {
+
         let x = event.clientX - position.x
-        let y = event.clientY - position.y - 80 + document.documentElement.scrollTop
-        y = y < y_min_max.min ? y_min_max.min : y
-        y = y > limite_inferior ? limite_inferior : y
-        main_pop_up.style.transform = `translate(${x}px, ${y}px)`
+        let y = event.clientY - position.y
+
+        // Conserva os limites de movimento estabelecidos
+        x = x < limite.left ? limite.left : x
+        x = x > limite.right ? limite.right : x
+        y = y < limite.top ? limite.top : y
+        y = y > limite.bottom ? limite.bottom : y
+
+        main_pop_up.style.left = `${x}px`
+        main_pop_up.style.top = `${y}px`
     }
 
 }
@@ -183,6 +227,7 @@ function Obter_idioma() {
     return idioma
 }
 
+// DEFINE TODOS OS EVENTOS DO PROGRAMA COM BASE NO MÉTODO DE SELEÇÃO DE MÉTODOS DE LAVRA
 function Eventos(metodo) {
 
     //POSICIONA O BALÃO DE AJUDA NA POSIÇÃO DO CURSOR
@@ -224,8 +269,8 @@ function Eventos(metodo) {
     if (metodo == "nicholas_92") {
         const menu_pesos = document.querySelector("#menu-pesos")
         menu_pesos.addEventListener("change", Mostrar_input_pesos)
-        const botao_ahp = document.querySelector("#botao-ahp-nicholas")
-        botao_ahp.onclick = () => Open_iframe(botao_ahp.id)
+        const calculadora_ahp_nicholas = document.querySelector("#calculadora-ahp-nicholas")
+        calculadora_ahp_nicholas.onclick = () => Open_iframe(calculadora_ahp_nicholas.id)
     }
 
     //BOTÃO MOSTRA TABELA COM OS PESOS
@@ -307,8 +352,13 @@ function Eventos(metodo) {
         element.draggable = false
     })
 
-    Switch_language()
-    Mover_pop_up(metodo)
-    Calculo()
+    const spans_footer = document.querySelectorAll(".span-footer-2")
+    spans_footer.forEach((element) => {
+        element.onclick = () => Open_iframe(element.id)
+    })
 
+
+    Switch_language()
+    Mover_pop_up()
+    Calculo()
 }

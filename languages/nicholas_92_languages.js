@@ -53,16 +53,10 @@ function Language(idioma_janela) {
             menu_fracture_strenght_2: "Forte",
             h2_fatores_peso: "Fatores de Peso",
             span_cm: "OB",
-            botao_ahp_nicholas: "CALCULAR POR AHP",
-            universidade: "UFRGS Universidade Federal do Rio Grande do Sul",
-            laboratorio: "LAPROM Laboratório de Processamento Mineral",
-            localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
-            contato: "Contato: email@ufrgs.com",
-            desenvolvedor: "Desenvolvedor: Higor Campos",
-            contato_desenvolvedor: "Contato: hhigor1217@gmail.com",
+            calculadora_ahp_nicholas: "CALCULAR POR AHP",
         },
         en: {
-            titulo_pagina: "MINING METHOD SELECTION: Shahriar and Bakhtavar (2007)",
+            titulo_pagina: "MINING METHOD SELECTION: Nicholas (1992)",
             li_titulo: "SELECT METHOD",
             paragrafo_explicacao: ""
                 + "The Nicholas selection procedure of 1992 is an modified version of the Nicholas approach from 1981, published by the same author."
@@ -113,13 +107,7 @@ function Language(idioma_janela) {
             menu_fracture_strenght_2: "Strongh",
             h2_fatores_peso: "Weighting Factors",
             span_cm: "OB",
-            botao_ahp_nicholas: "CALCULATE BY AHP",
-            universidade: "UFRGS Universidade Federal do Rio Grande do Sul",
-            laboratorio: "LAPROM Laboratório de Processamento Mineral",
-            localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
-            contato: "Contato: email@ufrgs.com",
-            desenvolvedor: "Desenvolvedor: Higor Campos",
-            contato_desenvolvedor: "Contato: hhigor1217@gmail.com",
+            calculadora_ahp_nicholas: "CALCULATE BY AHP",
         }
     }
 
@@ -203,14 +191,6 @@ function Language(idioma_janela) {
     // FATORES DE PESO 
     Escrever("h2-fatores-peso", "h2_fatores_peso")
     Escrever("span-cm", "span_cm")
-    Escrever("botao-ahp-nicholas", "botao_ahp_nicholas")
-
-    //FOOTER
-    Escrever("universidade", "universidade")
-    Escrever("laboratorio", "laboratorio")
-    Escrever("localizacao", "localizacao")
-    Escrever("contato", "contato")
-    // Escrever("desenvolvedor", "desenvolvedor")
-    // Escrever("contato-desenvolvedor", "contato_desenvolvedor")
+    Escrever("calculadora-ahp-nicholas", "calculadora_ahp_nicholas")
 
 }

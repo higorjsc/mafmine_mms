@@ -1,7 +1,8 @@
-:root {
-  --cor-1: #304454;;
-  --shadow-apretada: -5px 0 5px rgb(12 7 7 / 76%);
-  --shadow-blue: 0 0 10px blue;
+* {
+  --cor-1: #304454;
+  --cor-2: #112536;
+  --shadow-apretada: -2px 0px 2px  rgb(0 0 0 / 95%);
+  --shadow-blue: 0 0 10px var(--cor-2);
   --borda-simples: 1pt solid black;
 }
 
@@ -162,21 +163,21 @@ label:hover {
 
 
 /* --------------BOTAO AHP------------------------------- */
-#botao-ahp-nicholas {
+#calculadora-ahp-nicholas {
   grid-row: 5/6;
   grid-column: 1/5;
   width: 100%;
   height: 100%;
   align-self: center;
   border: var(--borda-simples);
-  background-color: black;
+  background-color: var(--cor-1);
   color: white;
   border-radius: 20px;
   justify-self: center;
   display: none;
 }
 
-#botao-ahp-nicholas:hover {
+#calculadora-ahp-nicholas:hover {
   box-shadow: var( --shadow-blue);
   transform: scale(1.05);
   cursor: pointer;

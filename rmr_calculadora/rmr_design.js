@@ -80,12 +80,12 @@ function Balao_entra(entry) {
             "separacao": "Espessura da abertura (ranhura) da fratura.",
             "preenchimento": ""
                 + "Duro: quartzo, piritas, rochas ígneas, etc.\n\n"
-                + "Macio: argilas, siltes, materiais decompostos, etc.\n\n",
+                + "Macio: argilas, siltes, materiais decompostos, etc.\n",
             "select-strike": ""
                 + "- Perpendicular no sentido do dip: fraturas perpendiculares\nao eixo da galeria, que avança em sentido\ncontrário ao mergulho das descontinuidades.\n\n"
                 + "- Perpendicular contra o dip: fraturas perpendiculares\nao eixo da galeria, que avança no sentido\ndo mergulho das descontinuidades.\n\n"
                 + "- Paralela ao eixo: descontinuidades\nparalelas ao eixo da galeria.\n\n"
-                + "- Qualquer strike ou vários: descontinuidades\ncom diversas orientações de strike.\n\n",
+                + "- Qualquer strike ou vários: descontinuidades\ncom diversas orientações de strike.\n",
         }
     } else {
         messages = {
@@ -95,8 +95,12 @@ function Balao_entra(entry) {
             "spacing": "Distance between discontinuities",
             "comprimento": "Discontinuity lenght",
             "separacao": "Thickness of discontinuity",
-            "preenchimento": "Hard: quartzo, piritas, igneous rocks...\n\nSoft: Clay, silt, decomposed materials...\n\n",
-            "select-strike": " ", //Imagem
+            "preenchimento": "Hard: quartzo, piritas, igneous rocks...\n\nSoft: Clay, silt, decomposed materials...\n",
+            "select-strike": ""
+                + "- Perpendicular to the dip: fractures perpendicular to the tunnel axis, with galleries advancing in the opposite direction of the dip of discontinuities.\n\n"
+                + "- Perpendicular to the dip: fractures perpendicular to the tunnel axis, with galleries advancing in the same direction as the dip of the discontinuities.\n\n"
+                + "- Parallel to the tunnel axis: discontinuities parallel to the axis of the tunnel.\n\n"
+                + "- Any strike or multiple strikes: discontinuities with various strike orientations.\n",
         }
     }
     const positions = {
