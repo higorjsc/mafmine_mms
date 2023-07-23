@@ -2,7 +2,7 @@
 function Language(idioma_janela) {
     const idiomas = {
         pt: {
-            titulo_pagina: "SELEÇÃO DE METODOS DE LAVRA: Nicholas (1992)",
+            titulo_pagina: "SELEÇÃO DE METODOS DE LAVRA: Nicholas (1981)",
             li_titulo: "SELECIONE O MÉTODO",
             paragrafo_explicacao:
                 "O Método de Nicholas (1981) foi o primeiro procedimento númerico desenvolvido para a seleção de métodos de lavra. " +
@@ -49,15 +49,9 @@ function Language(idioma_janela) {
             menu_fracture_strenght_0: "Fraca",
             menu_fracture_strenght_1: "Moderada",
             menu_fracture_strenght_2: "Forte",
-            universidade: "UFRGS Universidade Federal do Rio Grande do Sul",
-            laboratorio: "LAPROM Laboratório de Processamento Mineral",
-            localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
-            contato: "Contato: email@ufrgs.com",
-            desenvolvedor: "Desenvolvedor: Higor Campos",
-            contato_desenvolvedor: "Contato: hhigor1217@gmail.com",
         },
         en: {
-            titulo_pagina: "MINING METHOD SELECTION: Shahriar and Bakhtavar (2007)",
+            titulo_pagina: "MINING METHOD SELECTION: Nicholas (1981)",
             li_titulo: "SELECT METHOD",
             paragrafo_explicacao:
                 "The Nicholas (1981) mining method selection procedure was the first numerical approach developed to the problem. " +

@@ -533,7 +533,7 @@ select:hover {
   cursor: move;
 }
 
-#titulo-pop-up {
+.titulo-pop-up {
   color: white;
   padding-left: 2%;
 }

@@ -56,7 +56,7 @@ function Language(idioma_janela) {
             calculadora_ahp_nicholas: "CALCULAR POR AHP",
         },
         en: {
-            titulo_pagina: "MINING METHOD SELECTION: Shahriar and Bakhtavar (2007)",
+            titulo_pagina: "MINING METHOD SELECTION: Nicholas (1992)",
             li_titulo: "SELECT METHOD",
             paragrafo_explicacao: ""
                 + "The Nicholas selection procedure of 1992 is an modified version of the Nicholas approach from 1981, published by the same author."

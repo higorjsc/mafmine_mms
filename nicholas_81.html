@@ -18,7 +18,7 @@
     <script src="calculos.js"></script>
     <script src="design.js"></script>
     <script src="languages\nicholas_81_languages.js"></script>
-    <script src="languages\footer_languages.js"></script>
+    <script src="languages\page_languages.js"></script>
     <script src="imprimir_relatorio.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
@@ -30,8 +30,10 @@
 
 <body>
     <header class="head">
-        <img class='img-simbolo-mineracao' id='img-simbolo-mineracao-direita' src="Imagens\mining1.png" alt="Simbolo_mineração">
-        <img class='img-simbolo-mineracao' id='img-simbolo-mineracao-esquerda' src="Imagens\mining1.png" alt="Simbolo_mineração">
+        <img class='img-simbolo-mineracao' id='img-simbolo-mineracao-direita' src="Imagens\mining1.png"
+            alt="Simbolo_mineração">
+        <img class='img-simbolo-mineracao' id='img-simbolo-mineracao-esquerda' src="Imagens\mining1.png"
+            alt="Simbolo_mineração">
         <div id="div-header">
             <h1 id="titulo-pagina"></h1>
         </div>
@@ -103,20 +105,20 @@
             <h3 id="subtitulo-densidade">Densidade</h3>
             <div>
                 <span id="span-densidade-ob"> Corpo de minério:</span>
-                <button class='botao-calculadora botao-calculadora-densidade' id='calculadora-densidade-ob'><img class='botao-img'
-                    src="Imagens\\calculadora.png"></button>
+                <button class='botao-calculadora botao-calculadora-densidade' id='calculadora-densidade-ob'><img
+                        class='botao-img' src="Imagens\\calculadora.png"></button>
                 <input type="text" class='input-rss' id="densidade-ob" placeholder="2600 kg/m³">
             </div>
             <div>
                 <span> Hanging wall:</span>
-                <button class='botao-calculadora botao-calculadora-densidade' id='calculadora-densidade-hw'><img class='botao-img'
-                    src="Imagens\\calculadora.png"></button>
+                <button class='botao-calculadora botao-calculadora-densidade' id='calculadora-densidade-hw'><img
+                        class='botao-img' src="Imagens\\calculadora.png"></button>
                 <input type="text" class='input-rss' id="densidade-hw" placeholder="2800 kg/m³">
             </div>
             <div>
                 <span> Footwall:</span>
-                <button class='botao-calculadora botao-calculadora-densidade' id='calculadora-densidade-fw'><img class='botao-img'
-                    src="Imagens\\calculadora.png"></button>
+                <button class='botao-calculadora botao-calculadora-densidade' id='calculadora-densidade-fw'><img
+                        class='botao-img' src="Imagens\\calculadora.png"></button>
                 <input type="text" class='input-rss' id="densidade-fw" placeholder="2650 kg/m³">
             </div>
 
@@ -140,19 +142,19 @@
             <div>
                 <span id="span-ucs-ob"> Corpo de minério:</span>
                 <button class='botao-calculadora botao-calculadora-ucs' id='calculadora-ucs-ob'><img class='botao-img'
-                    src="Imagens\\calculadora.png"></button>
+                        src="Imagens\\calculadora.png"></button>
                 <input type="text" class='input-rss' id="ucs-ob" placeholder="185 MPa">
             </div>
             <div>
                 <span> Hanging wall:</span>
                 <button class='botao-calculadora botao-calculadora-ucs' id='calculadora-ucs-hw'><img class='botao-img'
-                    src="Imagens\\calculadora.png"></button>
+                        src="Imagens\\calculadora.png"></button>
                 <input type="text" class='input-rss' id="ucs-hw" placeholder="220 MPa">
             </div>
             <div>
                 <span> Footwall:</span>
                 <button class='botao-calculadora botao-calculadora-ucs' id='calculadora-ucs-fw'><img class='botao-img'
-                    src="Imagens\\calculadora.png"></button>
+                        src="Imagens\\calculadora.png"></button>
                 <input type="text" class='input-rss' id="ucs-fw" placeholder="200 MPa">
             </div>
 
@@ -256,20 +258,23 @@
         <div class=div-pop-up id="main-pop-up" display="none">
 
             <div class='div-pop-up' id="barra-pop-up">
-                <span id="titulo-pop-up">Exemplo</span>
+                <span class="titulo-pop-up" id="titulo-pop-up"></span>
                 <div class="div-pop-up" id="fechar-pop-up">&times;</div>
             </div>
             <div class="overlay" id="overlay-div"></div>
 
-            <iframe class="iframe-densidade" id='iframe-calculadora-densidade-ob' frameborder="0" display="none"></iframe>
-            <iframe class="iframe-densidade" id='iframe-calculadora-densidade-hw' frameborder="0" display="none"></iframe>
-            <iframe class="iframe-densidade" id='iframe-calculadora-densidade-fw' frameborder="0" display="none"></iframe>
+            <iframe class="iframe-densidade" id='iframe-calculadora-densidade-ob' frameborder="0"
+                display="none"></iframe>
+            <iframe class="iframe-densidade" id='iframe-calculadora-densidade-hw' frameborder="0"
+                display="none"></iframe>
+            <iframe class="iframe-densidade" id='iframe-calculadora-densidade-fw' frameborder="0"
+                display="none"></iframe>
 
             <iframe class="iframe-ucs" id='iframe-calculadora-ucs-ob' frameborder="0" display="none"></iframe>
             <iframe class="iframe-ucs" id='iframe-calculadora-ucs-hw' frameborder="0" display="none"></iframe>
             <iframe class="iframe-ucs" id='iframe-calculadora-ucs-fw' frameborder="0" display="none"></iframe>
 
-            
+
             <iframe class="iframe-creditos" id='iframe-creditos' frameborder="0" display="none"></iframe>
             <iframe class="iframe-referencias" id='iframe-referencias' frameborder="0" display="none"></iframe>
             <iframe class="iframe-bug_report" id='iframe-bug_report' frameborder="0" display="none"></iframe>

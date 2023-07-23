@@ -16,7 +16,7 @@ function Switch_language() {
         idioma = "pt"
     }
     Language(idioma)
-    Language_footer(idioma)
+    Language_page(idioma)
     const frame = Iframe_ativo()
     // Envia uma mensagem para o Iframe ativo para trocar de idioma também
     if (frame) frame.contentWindow.postMessage("CallLanguage", "*")
@@ -39,16 +39,13 @@ function Fechar_pop_up() {
 // ABRE A DIV QUE CONTÉM OS IFRAMES-POP-UPS E DEFINE AS DIMENSÓES
 function Configurar_pop_up(id) {
 
-    // Escreve o titulo na barra superior do pop up
-    let Titulo_pop_up = (calculo, id = "none") => {
-        const titulo = document.getElementById("titulo-pop-up")
-        id == "ob" ? (id = Obter_idioma() == "pt" ? "Corpo de Minério" : "Orebody") : id
-        id = id == "hw" ? "Hanging Wall" : id
-        id = id == "fw" ? "Footwall" : id
-        calculo == "DENSIDADE:" ? (calculo = Obter_idioma() == "pt" ? "DENSIDADE:" : "DENSITY") : calculo
-        titulo.innerText = calculo + " " + id
+    // Modifica o id do span-titulo do pop up para ser diferenciado na função de trocar idiomas
+    let Modificar_id = (id = "none") => {
+        const titulo = document.querySelector(".titulo-pop-up")
+        titulo.id = "titulo-pop-up-" + id
     }
-
+    
+    // Define as dimensões de cada pop-up
     const pop_up = document.getElementById("main-pop-up")
     const litologia = id.split("-")[2]
     if (id.includes("gsi")) {
@@ -56,41 +53,41 @@ function Configurar_pop_up(id) {
         pop_up.style.height = "740px"
         pop_up.style.left = "35%"
         pop_up.style.top = "0%"
-        Titulo_pop_up("GSI:", litologia)
+        Modificar_id("gsi-" + litologia)
     } if (id.includes("rmr")) {
         pop_up.style.width = "520px"
         pop_up.style.height = "650px"
-        Titulo_pop_up("RMR:", litologia)
+        Modificar_id("rmr-" + litologia)
     } else if (id.includes("densidade")) {
         pop_up.style.width = "420px"
         pop_up.style.height = "650px"
-        Titulo_pop_up("DENSIDADE:", litologia)
+        Modificar_id("densidade-" + litologia)
     } else if (id.includes("ucs")) {
         pop_up.style.width = "420px"
         pop_up.style.height = "650px"
-        Titulo_pop_up("UCS:", litologia)
+        Modificar_id("ucs-" + litologia)
     } else if (id.includes("ahp")) {
         pop_up.style.width = "680px"
         pop_up.style.height = "670px"
-        Titulo_pop_up("AHP", " ")
+        Modificar_id("ahp")
     } else if (id.includes("creditos")) {
         pop_up.style.width = "550px"
         pop_up.style.height = "500px"
         pop_up.style.left = "35%"
         pop_up.style.top = "5%"
-        Titulo_pop_up("CRÉDITOS", " ")
+        Modificar_id("creditos")
     } else if (id.includes("referencias")) {
         pop_up.style.width = "550px"
         pop_up.style.height = "500px"
         pop_up.style.left = "35%"
         pop_up.style.top = "5%"
-        Titulo_pop_up("REFERENCIAS", " ")
+        Modificar_id("referencias")
     } else if (id.includes("bug_report")) {
         pop_up.style.width = "420px"
         pop_up.style.height = "400px"
         pop_up.style.left = "45%"
         pop_up.style.top = "25%"
-        Titulo_pop_up("REPORTAR BUG", " ")
+        Modificar_id("report_bug")
     }
     pop_up.style.display = "block"
 }
@@ -124,6 +121,9 @@ function Open_iframe(id_trigger) {
     const endereco = id_trigger.includes("calculadora") ? Obter_endereco(id_trigger) : (id_trigger + ".html")
     frame.src = endereco
     frame.style.display = "block"
+    
+    // ADICIONA O TITULO DO POP UP
+    Language_page()
 }
 
 // CONFIGURA O MOVIMENTO DOS POP UPS. OBS: ESSA FUNÇÃO DEVE SER APRIMORADA.
