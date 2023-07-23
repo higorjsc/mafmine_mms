@@ -1,3 +1,4 @@
+
 //TROCA O IDIOMA DA PÁGINA
 function Switch_language() {
     const switch_botao = document.getElementById("checkbox-switch")
@@ -75,6 +76,10 @@ function Configurar_pop_up(id) {
         pop_up.style.width = "750px"
         pop_up.style.height = "740px"
         pop_up.style.left = "35%"
+        Titulo_pop_up("CRÉDITOS", " ")
+    }else if (id.includes("bug_report")) {
+        pop_up.style.width = "420px"
+        pop_up.style.height = "400px"
         Titulo_pop_up("CRÉDITOS", " ")
     }
     pop_up.style.display = "block"
@@ -319,9 +324,11 @@ function Eventos(metodo) {
 
     const creditos = document.getElementById("creditos")
     creditos.onclick = () => Open_iframe(creditos.id)
+    
+    const bug_report = document.getElementById("bug_report")
+    bug_report.onclick = () => Open_iframe(bug_report.id)
 
     Switch_language()
     Mover_pop_up(metodo)
     Calculo()
-
 }

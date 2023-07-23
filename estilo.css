@@ -476,11 +476,17 @@ select:hover {
   left: 5%;
 }
 
-#div-span-footer-2 h4,  #div-span-footer-2 span a {
+#div-span-footer-2 h4,  #div-span-footer-2 span {
+  display: block;
   margin: 0;
   padding: 0;
   color: white;
   font-size: 10pt;
+}
+
+#div-span-footer-2 span:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 #img-mafmine {

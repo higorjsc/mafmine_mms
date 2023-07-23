@@ -13,7 +13,6 @@
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 11pt;
-        line-height: 1.5;
         color: black;
 
         --cor-1: #304454;
@@ -28,50 +27,112 @@
         height: 100%;
         border: var(--borda-simples);
         border-radius: 20px;
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    #inspiracao {
+        font-size: 8pt;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    #inspiracao a {
+        font-size: 8pt;
     }
 
     h2 {
-        margin: 0;
         box-sizing: border-box;
+        margin-bottom: 8px;
     }
 
-    #div-referencias{
-        font-size: 8pt;
+    #div-creditos {
+        text-align: justify;
+        line-height: 2;
+    }
+
+    #div-referencias,
+    #div-referencias a {
+        font-size: 10pt;
         text-align: justify;
         line-height: 1;
     }
 
+
     ul {
         margin: 0;
-        padding: 10px;
+        padding: 0;
         list-style-type: none;
     }
-
-    li {}
 </style>
 
 <body>
     <main>
+        <h1 id="titulo-ferramenta">SELEÇÃO DE MÉTODOS DE LAVRA</h1>
+        <span id="inspiracao"> Insipirado na "Online Toll: Mining Method Selection" da <a
+                href="https://www.edumine.com/">EduMine</a></span>
+        <div id="div-créditos">
+            <h2 id="titulo-creditos">CRÉDITOS</h2>
+            <ul>
+                <li id="autores"></li>
+                <li id="orientacao"></li>
+                <li id="universidade"></li>
+                <li id="orgao"></li>
+                <li id="localizacao"></li>
+                <li id="data-publicacao"></li>
+                <li id="desenvolvedor"></li>
+                <li id="versao"></li>
+            </ul>
 
+        </div>
 
 
         <div id="div-referencias">
+            <h2 id="titulo-referencias">REFERENCIAS</h2>
             <ul>
-                <h2 id="titulo-referencias">REFERENCIAS</h2>
-                <li id="ref-1"></li>
-                <li id="ref-2"></li>
-                <li id="ref-3"></li>
-                <li id="ref-4"></li>
-                <li id="ref-5"></li>
-                <li id="ref-6"></li>
-                <li id="ref-7"></li>
-                <li id="ref-8"></li>
-                <li id="ref-9"></li>
-                <li id="ref-10"></li>
+                <li>
+                    <a href="" id="ref-1" target="_blank">Bieniawski</a>
+                </li>
+                <li>
+                    <a href="" id="ref-2" target="_blank">Nicholas 81</a>
+                </li>
+                <li>
+                    <a href="" id="ref-3" target="_blank">Nicholas 92</a>
+                </li>
+                <li>
+                    <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84892845821&partnerID=40&md5=e27a11086ae9cb77dce28447353c71e2"
+                        id="ref-4" target="_blank">Hoek</a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.1016/j.tust.2008.12.002" id="ref-5" target="_blank">Palmström</a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.20985/1980-5160.2016.v11n3.988" id="ref-6" target="_blank">Ribeiro</a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.1016/0377-2217(90)90057-I" id="ref-7" target="_blank">Saaty</a>
+                </li>
+                <li>
+                    <a href="https://www.researchgate.net/publication/279188649_A_New_Numerical_Method_and_AHP_for_Mining_Method_Selection"
+                        id="ref-8" target="_blank">Shahriar</a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.1016/j.cageo.2010.07.010" id="ref-9" target="_blank">Tenzer</a>
+                </li>
+                <li>
+                    <a href="" id="ref-10" target="_blank">UBC</a>
+                </li>
             </ul>
         </div>
 
-        
+
     </main>
 </body>
 <script>
