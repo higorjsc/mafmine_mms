@@ -201,9 +201,9 @@ function Language_page(idioma_child = "none") {
     Escrever_parent("titulo-pop-up-report_bug", "titulo_pop_up_report_bug")
 
     //FOOTER
-    Escrever("universidade", "footer_universidade")
-    Escrever("laboratorio", "footer_laboratorio")
-    Escrever("localizacao", "footer_localizacao")
-    Escrever("contato", "footer_contato")
+    Escrever("footer-universidade", "footer_universidade")
+    Escrever("footer-laboratorio", "footer_laboratorio")
+    Escrever("footer-localizacao", "footer_localizacao")
+    Escrever("footer-contato", "footer_contato")
 
 }
