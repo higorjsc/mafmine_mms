@@ -70,7 +70,10 @@ function Language() {
             td_rocha_serpentinito: "Serpentinito",
             td_rocha_slate: "Slate",
             td_rocha_talco_xisto: "Talco-xisto",
-            span_referencia: "<strong>Fonte:</strong> valores derivados de medições realizadas pelo SINTEF Norway e apresentados por Palmström (2009), disponível em formato de planilha Excel, como produto de seu trabalho intitulado:",
+            span_referencia: ""
+                + "<strong>Fonte:</strong> valores derivados de medições realizadas pelo SINTEF Norway"
+                + " e apresentados por Palmström (2009), disponível em formato de planilha Excel, como produto de seu trabalho intitulado:"
+                + " <a href='https://doi.org/10.1016/j.tust.2008.12.002' target='_blank'>' Combining The RMR, Q and RMI Systems'</a>"
         },
         "en": {
             span_help: "CLICK ON VALUE",
@@ -132,7 +135,11 @@ function Language() {
             td_rocha_serpentinito: "Serpentinite",
             td_rocha_slate: "Slate",
             td_rocha_talco_xisto: "Talc Schist",
-            span_referencia: "<strong>Source:</strong> values derived from measurements conducted by SINTEF Norway and presented by Palmström (2009), available in Excel spreadsheet format, as part of their work titled:"
+            span_referencia: ""
+                + "<strong>Source:</strong>"
+                + " values derived from measurements conducted by SINTEF Norway and presented by Palmström (2009),"
+                + " available in Excel spreadsheet format, as part of their work titled:"
+                + " <a href='https://doi.org/10.1016/j.tust.2008.12.002' target='_blank'>' Combining The RMR, Q and RMI Systems'</a>"
         }
     }
 
