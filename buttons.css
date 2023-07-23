@@ -170,7 +170,7 @@ label:hover {
   height: 100%;
   align-self: center;
   border: var(--borda-simples);
-  background-color: black;
+  background-color: var(--cor-1);
   color: white;
   border-radius: 20px;
   justify-self: center;
