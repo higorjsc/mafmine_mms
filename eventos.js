@@ -25,6 +25,7 @@ function Switch_language() {
     if (frame) frame.contentWindow.postMessage("CallLanguage", "*")
 }
 
+// ARMAZENA INPUTS DO USUÁRIO EM SESSION STORAGE OU LOCAL STORAGE
 function Armazenar_valor(objeto, memoria = "session") {
     // Verifica se o armazenamento local é suportado
     if (typeof (Storage) !== "undefined") {
@@ -32,7 +33,7 @@ function Armazenar_valor(objeto, memoria = "session") {
         // Obtém o valor atual do input
         let type = objeto.type
         let valor
-        if (type == "checkbox") {
+        if (type == "checkbox" || type == "radio") {
             valor = objeto.checked ? true : false
         } else {
             valor = objeto.value
@@ -43,6 +44,7 @@ function Armazenar_valor(objeto, memoria = "session") {
     }
 }
 
+// VERIFICA SE EXISTE ALGUM VALOR ARMAZENADO EM SESSION STORAGE OU LOCAL STORAGE PARA ALGUM INPUT
 function Verificar_memoria(id, memoria = "session") {
     // Verifica se o armazenamento local é suportado
     if (typeof (Storage) !== "undefined") {
@@ -291,14 +293,12 @@ function Eventos(metodo) {
         Switch_language(metodo)
         Calculo() // Calculo é chamada para alterar o valor do resultado do RSS
     }
-    switch_language.checked = Verificar_memoria(switch_language.id) != null ? Verificar_memoria(switch_language.id) : false
-
+    switch_language.checked = Verificar_memoria(switch_language.id, "local") != null ? Verificar_memoria(switch_language.id, "local") : false
 
     //label do switch
     const switch_label = document.querySelector(".switch-label") //mouseover no label, não na checkbox invisível
     switch_label.onmouseover = () => Balao_entra("switch-language")
     switch_label.onmouseout = () => Balao_sai()
-
 
     //BOTAO RMR_Q_GSI
     if (metodo == "ubc" || metodo == "shb") {
@@ -314,14 +314,6 @@ function Eventos(metodo) {
     calculadoras.forEach((elemento) => {
         elemento.onclick = () => Open_iframe(elemento.id)
     })
-
-    //INPUT DOS FATORES DE PESOS E AHP NO MÉTODO DE NICHOLAS 1992
-    if (metodo == "nicholas_92") {
-        const menu_pesos = document.querySelector("#menu-pesos")
-        menu_pesos.addEventListener("change", Mostrar_input_pesos)
-        const calculadora_ahp_nicholas = document.querySelector("#calculadora-ahp-nicholas")
-        calculadora_ahp_nicholas.onclick = () => Open_iframe(calculadora_ahp_nicholas.id)
-    }
 
     //BOTÃO MOSTRA TABELA COM OS PESOS
     const botao_pesos = document.querySelector("#botao-pesos")
@@ -367,7 +359,6 @@ function Eventos(metodo) {
         }
     })
 
-
     // SPAN RESULTADO RSS
     const span_resultado_rss = document.querySelectorAll(".resultado-rss")
     span_resultado_rss.forEach((element) => {
@@ -394,10 +385,19 @@ function Eventos(metodo) {
                 input[nextIndex].focus()
             }
         }
-        if (Verificar_memoria(element.id) != null) {
+        if (Verificar_memoria(element.id) != null && element.type != "radio") {
             element.value = Verificar_memoria(element.id)
         }
     })
+
+    //INPUT DOS FATORES DE PESOS E AHP NO MÉTODO DE NICHOLAS 1992
+    if (metodo == "nicholas_92") {
+        const menu_pesos = document.querySelector("#menu-pesos")
+        menu_pesos.addEventListener("change", Mostrar_input_pesos)
+        const calculadora_ahp_nicholas = document.querySelector("#calculadora-ahp-nicholas")
+        calculadora_ahp_nicholas.onclick = () => Open_iframe(calculadora_ahp_nicholas.id)
+        Mostrar_input_pesos()
+    }
 
     // FECHAR POP UP
     let pop_ups = document.getElementById("fechar-pop-up")

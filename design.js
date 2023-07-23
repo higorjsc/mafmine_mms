@@ -1,7 +1,7 @@
 
 // MOSTRA OU OCULTA OS INPUTS DE PESOS PERSONALIZADOS DO MÉTODO DE NICHOLAS 1992
 function Mostrar_input_pesos() {
-    const select = document.getElementById("menu-pesos").value
+    let select = document.getElementById("menu-pesos").value
     const input_pesos = document.querySelectorAll(".input-pesos")
     const botao_ahp_nicholas = document.querySelector("#calculadora-ahp-nicholas")
 
