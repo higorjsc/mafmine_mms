@@ -53,6 +53,7 @@ function Language(idioma_janela) {
             menu_fracture_strenght_2: "Forte",
             h2_fatores_peso: "Fatores de Peso",
             span_cm: "OB",
+            menu_pesos_3: "Inserir valores",
             calculadora_ahp_nicholas: "CALCULAR POR AHP",
         },
         en: {
@@ -107,6 +108,7 @@ function Language(idioma_janela) {
             menu_fracture_strenght_2: "Strongh",
             h2_fatores_peso: "Weighting Factors",
             span_cm: "OB",
+            menu_pesos_3: "Input values",
             calculadora_ahp_nicholas: "CALCULATE BY AHP",
         }
     }
@@ -191,6 +193,7 @@ function Language(idioma_janela) {
     // FATORES DE PESO 
     Escrever("h2-fatores-peso", "h2_fatores_peso")
     Escrever("span-cm", "span_cm")
+    Escrever("menu-pesos", "menu_pesos_3", 3)
     Escrever("calculadora-ahp-nicholas", "calculadora_ahp_nicholas")
 
 }
