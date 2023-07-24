@@ -44,7 +44,7 @@ function Language(idioma_janela) {
             menu_fracture_spacing_1: "Próximas",
             menu_fracture_spacing_2: "Distantes",
             menu_fracture_spacing_3: "Muito distantes",
-            subtitulo_fracture_strenght: "Espaçamento das Fraturas",
+            subtitulo_fracture_strenght: "Características das inter-fraturas",
             span_fracture_strenght_ob: "Corpo de minério:",
             menu_fracture_strenght_0: "Fraca",
             menu_fracture_strenght_1: "Moderada",
