@@ -196,6 +196,7 @@ function Mover_pop_up() {
         document.removeEventListener("mousemove", Move_element)
         overlay.style.display = "none"
         overlay_div.style.display = "none"
+        document.body.style.userSelect = ""
     }
 
     // Eventos que interromperão o movimento do pop up 
