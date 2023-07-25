@@ -254,7 +254,8 @@ function Balao_entra_shb(entry, idioma) {
                 + "- Deep: more than 800 m\n\n",
             "valor-minerio": "Relative value",
             "substance": "\n"
-                + "- Very weak: <5\n\n- Weak: 5,00 a 10,00\n\n"
+                + "- Very weak: <5\n\n"
+                + "- Weak: 5,00 a 10,00\n\n"
                 + "- Moderate: 10,00 a 15,00\n\n "
                 + "- Strong: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
@@ -290,7 +291,8 @@ function Balao_entra_shb(entry, idioma) {
                 + "- Pouco profunda: entre 500 m e 800 m\n\n"
                 + "- Profunda: superior a 800 m\n\n",
             "valor-minerio": "Valores relativos",
-            "substance": "\n- Muito fraca: <5\n\n"
+            "substance": ""
+                + "\n- Muito fraca: <5\n\n"
                 + "- Fraca: 5,00 a 10,00\n\n"
                 + "- Moderada: 10,00 a 15,00\n\n "
                 + "- Resistente: >15,00\n\n\n"
@@ -403,8 +405,8 @@ function Balao_entra_nicholas(entry, idioma) {
             "espessura": "\n"
                 + "- Narrow: less than 10 m thick\n\n"
                 + "- Intermediate: between 10 m an 30 m thick\n\n"
-                + "- Thick: between 30m and 100m thick\n\n"
-                + "- Very Thick: more than 100m thick\n\n",
+                + "- Thick: between 30 m and 100 m thick\n\n"
+                + "- Very Thick: more than 100 m thick\n\n",
             "distribuicao": "\n"
                 + "- Uniforme:the grade at any point does not vary\n significantly from the mean grade for that deposit\n\n"
                 + "- Gradational: grade values have zonal characteristics, and\n the grades change gradually from one to another.\n\n"
@@ -419,10 +421,10 @@ function Balao_entra_nicholas(entry, idioma) {
                 + "- Strong: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
             "fracture-spacing": "\n"
-                + "- Very close - more than 16 fractures per meter \n\n"
-                + "- Close: 10 to 16 fracture per meter\n\n"
-                + "- Wide: 3 to 10 fracture per meter\n\n"
-                + "- Very wide: 3 fracture per meter or less\n\n",
+                + "- Very close: more than 16 fractures\n per meter (RQD 0-20%)\n\n"
+                + "- Close: 10 to 16 fracture per\n meter (RQD 20%-40%)\n\n"
+                + "- Wide: 3 to 10 fracture per\n meter (RQD 40%-70%)\n\n"
+                + "- Very wide: 3 fracture per meter\n or less (RQD 70%-100%)\n\n",
             "fracture-strenght": "\n"
                 + "- Weak: clean joint with a smooth surface\nor fill with material whose strenght is less\n than rock RSS\n\n"
                 + "- Moderate: clean joint with a rough surface\n\n"
@@ -441,8 +443,8 @@ function Balao_entra_nicholas(entry, idioma) {
             "espessura": "\n"
                 + "- Estreito: menos de 10 m\n\n"
                 + "- Intermediário: entre 10 m e 30 m\n\n"
-                + "- Espesso: entre 30 m e 100m\n\n"
-                + "- Muito espesso: superior a 100m\n\n",
+                + "- Espesso: entre 30 m e 100 m\n\n"
+                + "- Muito espesso: superior a 100 m\n\n",
             "distribuicao": "\n"
                 + "- Uniforme: o teor em qualquer ponto não\n varia muito da média global\n\n"
                 + "- Gradacional: os teores mudam gradualmente\nde uma \"zona\" do depósito para outra\n\n"
@@ -457,10 +459,10 @@ function Balao_entra_nicholas(entry, idioma) {
                 + "- Resistente: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensidade(N/m³) x Profundidade(m)\n\n",
             "fracture-spacing": "\n"
-                + "- Muito próximas: menos de 16 fraturas por metro\n\n"
-                + "- Próximas: entre 10 e 16 fraturas por metro\n\n"
-                + "- Distantes: entre 3 e 10 fraturas por metro\n\n"
-                + "- Muito distantes: 3 fraturas por metro ou menos\n\n",
+                + "- Muito próximas: menos de 16 fraturas\n por metro (RQD 0-20%)\n\n"
+                + "- Próximas: entre 10 e 16 fraturas\n por metro (RQD 20%-40%)\n\n"
+                + "- Distantes: entre 3 e 10 fraturas\n por metro (RQD 40%-70%)\n\n"
+                + "- Muito distantes: 3 fraturas por\n metro ou menos (RQD 70%-100%)\n\n",
             "fracture-strenght": "\n"
                 + "- Fraca: fraturas \"limpas\" com uma superfície\n ou preenchimento de resistencia menor\n do que a RSS da rocha\n\n"
                 + "- Média: fraturas \"limpas\" e com uma superfície rugosa\n\n"
