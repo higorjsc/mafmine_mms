@@ -9,35 +9,34 @@ function Display_block(id) {
     let elemento = document.getElementById(id)
     elemento.style.display = "block"
 }
+
 //OCULTA elementos
-function Display_none(id) {
-    let elemento = document.getElementById(id)
-    elemento.style.display = "none"
+function Display_none(ids = []) {
+    ids.forEach((id) => {
+        let elemento = document.getElementById(id)
+        elemento.style.display = "none"
+    }
+    )
 }
 
 //EVENTO de troca do select visível da rock strenght
 function Display_strenght() {
     let strenght = document.getElementById("select-strenght").value
-
-    Display_none("point-load")
-    Display_none("ucs")
+    Display_none(["point-load", "ucs"])
     Display_block(strenght)
 }
 
 //EVENTO de troca do select visível de grownd water conditions
 function Display_grownd_water() {
     const gw = document.getElementById("select-gw").value
-    Display_none("inflow")
-    Display_none("ratio")
-    Display_none("general")
+    Display_none(["inflow", "ratio", "general"])
     Display_block(gw)
 }
 
 //EVENTO de troca do select visível do dip e strike
 function Display_dip() {
     let strike = document.getElementById("select-strike").value
-    Display_none("dip-1")
-    Display_none("dip-2")
+    Display_none(["dip-1", "dip-2"])
 
     let id_dip = (strike !== "irrelevante") ? "dip-1" : "dip-2"
     Display_block(id_dip)
