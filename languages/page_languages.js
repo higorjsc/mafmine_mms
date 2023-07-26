@@ -177,7 +177,7 @@ function Language_page(idioma_child = "none") {
     Escrever("versao", "versao")
 
     // OBJETOS DO POP UP "REFERENCIAS"
-    Escrever("titulo_referencias", "titulo_referencias")
+    Escrever("titulo-referencias", "titulo_referencias")
     for (i = 1; i <= 10; i++) {
         Escrever(`ref-${i}`, `ref_${i}`)
     }
