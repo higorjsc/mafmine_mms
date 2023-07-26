@@ -80,8 +80,8 @@ function Language_page(idioma_child = "none") {
             laboratorio: "LABORATÓRIO DE PROCESSAMENTO MINERAL<br><br><br>",
             versao: "VERSÃO 1.0.0, dd/mm/2023",
             titulo_ferramenta: "SELEÇÃO DE MÉTODOS DE LAVRA<br>",
-            inspiracao: "(INSIPIRADO NA FERRAMENTA 'MINING METHOD SELECTION' DA <a href='https://www.edumine.com/' target='_blank'>EDUMINE)</a><br>",
-            titulo_autores: "<br>AUTORES<br>",
+            inspiracao: "(INSIPIRADO NA FERRAMENTA 'MINING METHOD SELECTION' DA <a href='https://www.edumine.com/' target='_blank'>EDUMINE)</a><br><br>",
+            titulo_autores: "<br>AUTHORS<br>",
             autores: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br>",
             autores_2: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br><br>",
             titulo_apoio: "APOIO<br>",
@@ -91,7 +91,7 @@ function Language_page(idioma_child = "none") {
             data: "2023.<br>",
 
             // REFERENCIAS
-            titulo_referencias: "<br>REFERENCIAS",
+            titulo_referencias: "<br>REFERENCES",
             ref_1: "BIENIAWSKI, Z. T. Engineering Rock Mass Classifications: A Complete Manual for Engineers and Geologists in Mining, Civil, and Petroleum Engineering. [S. l.]: John Wiley & Sons, 1989. ",
             ref_2: "NICHOLAS, D.E. Method Selection - A Numerical Aproach. Em: DESIGN AND OPERATION OF CAVING AND SUBLEVEL STOPING MINE. Stewart, Daniel R.ed. New York: Society of Mining Engineers of the American Institute of Mining, Metallurgical, and Petroleum Engineers, 1981. ",
             ref_3: "NICHOLAS, D.E. Selection Procedure. Em: MINING ENGINEERING HANDBOOK. 2nd. ed. Littleton, Colorado: Society for Mining, Metallurgy, and Exploration, Inc., 1992. v. 2, p. 2090–2106. ",
