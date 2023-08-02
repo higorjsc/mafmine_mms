@@ -12,7 +12,7 @@ function Preferencias_nicholas_92(geometria, resultado_rss, resultado_fracture_s
         top_slicing:        { massivo: 3.00, tabular: 3.00, irregular: 0.00 },
         square_set:         { massivo: 0.00, tabular: 2.00, irregular: 4.00 },
     }
-    
+
     let pesos_espessura = {
         open_pit:           { estreito: 2.00, intermediario: 3.00, espesso: 4.00, muito_espesso: 4.00 },
         block_caving:       { estreito:-49.0, intermediario: 0.00, espesso: 2.00, muito_espesso: 4.00 },
@@ -93,80 +93,81 @@ function Preferencias_nicholas_92(geometria, resultado_rss, resultado_fracture_s
     }
 
     let fracture_spacing_ob = {
-        open_pit:           { perto: 2.00, muito_perto: 3.00, longe: 4.00, muito_longe: 4.00 },
-        block_caving:       { perto: 4.00, muito_perto: 4.00, longe: 3.00, muito_longe: 0.00 },
-        sublevel_stoping:   { perto: 0.00, muito_perto: 0.00, longe: 1.00, muito_longe: 4.00 },
-        sublevel_caving:    { perto: 0.00, muito_perto: 2.00, longe: 4.00, muito_longe: 4.00 },
-        longwall:           { perto: 4.00, muito_perto: 4.00, longe: 0.00, muito_longe: 0.00 },
-        room_and_pillar:    { perto: 0.00, muito_perto: 1.00, longe: 2.00, muito_longe: 4.00 },
-        shrinkage_stoping:  { perto: 0.00, muito_perto: 1.00, longe: 3.00, muito_longe: 4.00 },
-        cut_and_fill:       { perto: 3.00, muito_perto: 3.00, longe: 2.00, muito_longe: 2.00 },
-        top_slicing:        { perto: 1.00, muito_perto: 1.00, longe: 2.00, muito_longe: 4.00 },
-        square_set:         { perto: 4.00, muito_perto: 4.00, longe: 2.00, muito_longe: 1.00 },
+        open_pit:           { muito_perto: 2.00, perto: 3.00, longe: 4.00, muito_longe: 4.00 },
+        block_caving:       { muito_perto: 4.00, perto: 4.00, longe: 3.00, muito_longe: 0.00 },
+        sublevel_stoping:   { muito_perto: 0.00, perto: 0.00, longe: 1.00, muito_longe: 4.00 },
+        sublevel_caving:    { muito_perto: 0.00, perto: 2.00, longe: 4.00, muito_longe: 4.00 },
+        longwall:           { muito_perto: 4.00, perto: 4.00, longe: 0.00, muito_longe: 0.00 },
+        room_and_pillar:    { muito_perto: 0.00, perto: 1.00, longe: 2.00, muito_longe: 4.00 },
+        shrinkage_stoping:  { muito_perto: 0.00, perto: 1.00, longe: 3.00, muito_longe: 4.00 },
+        cut_and_fill:       { muito_perto: 3.00, perto: 3.00, longe: 2.00, muito_longe: 2.00 },
+        top_slicing:        { muito_perto: 1.00, perto: 1.00, longe: 2.00, muito_longe: 4.00 },
+        square_set:         { muito_perto: 4.00, perto: 4.00, longe: 2.00, muito_longe: 1.00 },
     }
     let fracture_spacing_hw = {
-        open_pit:           { perto: 2.00, muito_perto: 3.00, longe: 4.00, muito_longe: 4.00 },
-        block_caving:       { perto: 3.00, muito_perto: 4.00, longe: 3.00, muito_longe: 0.00 },
-        sublevel_stoping:   { perto:-49.0, muito_perto: 0.00, longe: 1.00, muito_longe: 4.00 },
-        sublevel_caving:    { perto: 3.00, muito_perto: 4.00, longe: 3.00, muito_longe: 1.00 },
-        longwall:           { perto: 4.00, muito_perto: 4.00, longe: 3.00, muito_longe: 0.00 },
-        room_and_pillar:    { perto: 0.00, muito_perto: 1.00, longe: 2.00, muito_longe: 4.00 },
-        shrinkage_stoping:  { perto: 4.00, muito_perto: 4.00, longe: 3.00, muito_longe: 0.00 },
-        cut_and_fill:       { perto: 3.00, muito_perto: 3.00, longe: 2.00, muito_longe: 2.00 },
-        top_slicing:        { perto: 3.00, muito_perto: 3.00, longe: 3.00, muito_longe: 0.00 },
-        square_set:         { perto: 3.00, muito_perto: 3.00, longe: 2.00, muito_longe: 2.00 },
+        open_pit:           { muito_perto: 2.00, perto: 3.00, longe: 4.00, muito_longe: 4.00 },
+        block_caving:       { muito_perto: 3.00, perto: 4.00, longe: 3.00, muito_longe: 0.00 },
+        sublevel_stoping:   { muito_perto:-49.0, perto: 0.00, longe: 1.00, muito_longe: 4.00 },
+        sublevel_caving:    { muito_perto: 3.00, perto: 4.00, longe: 3.00, muito_longe: 1.00 },
+        longwall:           { muito_perto: 4.00, perto: 4.00, longe: 3.00, muito_longe: 0.00 },
+        room_and_pillar:    { muito_perto: 0.00, perto: 1.00, longe: 2.00, muito_longe: 4.00 },
+        shrinkage_stoping:  { muito_perto: 4.00, perto: 4.00, longe: 3.00, muito_longe: 0.00 },
+        cut_and_fill:       { muito_perto: 3.00, perto: 3.00, longe: 2.00, muito_longe: 2.00 },
+        top_slicing:        { muito_perto: 3.00, perto: 3.00, longe: 3.00, muito_longe: 0.00 },
+        square_set:         { muito_perto: 3.00, perto: 3.00, longe: 2.00, muito_longe: 2.00 },
     }
     let fracture_spacing_fw = {
-        open_pit:           { perto: 2.00, muito_perto: 3.00, longe: 4.00, muito_longe: 4.00 },
-        block_caving:       { perto: 1.00, muito_perto: 3.00, longe: 3.00, muito_longe: 3.00 },
-        sublevel_stoping:   { perto: 0.00, muito_perto: 0.00, longe: 2.00, muito_longe: 4.00 },
-        sublevel_caving:    { perto: 0.00, muito_perto: 1.00, longe: 3.00, muito_longe: 4.00 },
-        longwall:           { perto: 1.00, muito_perto: 2.00, longe: 4.00, muito_longe: 3.00 },
-        room_and_pillar:    { perto: 0.00, muito_perto: 1.00, longe: 3.00, muito_longe: 3.00 },
-        shrinkage_stoping:  { perto: 2.00, muito_perto: 3.00, longe: 3.00, muito_longe: 2.00 },
-        cut_and_fill:       { perto: 4.00, muito_perto: 4.00, longe: 2.00, muito_longe: 2.00 },
-        top_slicing:        { perto: 1.00, muito_perto: 3.00, longe: 3.00, muito_longe: 3.00 },
-        square_set:         { perto: 4.00, muito_perto: 4.00, longe: 2.00, muito_longe: 2.00 },
+        open_pit:           { muito_perto: 2.00, perto: 3.00, longe: 4.00, muito_longe: 4.00 },
+        block_caving:       { muito_perto: 1.00, perto: 3.00, longe: 3.00, muito_longe: 3.00 },
+        sublevel_stoping:   { muito_perto: 0.00, perto: 0.00, longe: 2.00, muito_longe: 4.00 },
+        sublevel_caving:    { muito_perto: 0.00, perto: 1.00, longe: 3.00, muito_longe: 4.00 },
+        longwall:           { muito_perto: 1.00, perto: 2.00, longe: 4.00, muito_longe: 3.00 },
+        room_and_pillar:    { muito_perto: 0.00, perto: 1.00, longe: 3.00, muito_longe: 3.00 },
+        shrinkage_stoping:  { muito_perto: 2.00, perto: 3.00, longe: 3.00, muito_longe: 2.00 },
+        cut_and_fill:       { muito_perto: 4.00, perto: 4.00, longe: 2.00, muito_longe: 2.00 },
+        top_slicing:        { muito_perto: 1.00, perto: 3.00, longe: 3.00, muito_longe: 3.00 },
+        square_set:         { muito_perto: 4.00, perto: 4.00, longe: 2.00, muito_longe: 2.00 },
     }
 
     let fracture_strenght_ob = {
-        open_pit:           { fraca: 3.00, moderada: 4.00, forte: 4.00 },
-        block_caving:       { fraca: 4.00, moderada: 1.00, forte: 1.00 },
-        sublevel_stoping:   { fraca:-49.0, moderada: 3.00, forte: 4.00 },
-        sublevel_caving:    { fraca: 0.00, moderada: 3.00, forte: 3.00 },
-        longwall:           { fraca: 4.00, moderada: 1.00, forte: 0.00 },
-        room_and_pillar:    { fraca: 0.00, moderada: 3.00, forte: 4.00 },
-        shrinkage_stoping:  { fraca: 1.00, moderada: 3.00, forte: 4.00 },
-        cut_and_fill:       { fraca: 3.00, moderada: 2.00, forte: 2.00 },
-        top_slicing:        { fraca: 2.00, moderada: 3.00, forte: 3.00 },
-        square_set:         { fraca: 4.00, moderada: 1.00, forte: 1.00 },
+        open_pit:           { fraca: 2.00, moderada: 3.00, forte: 4.00 },
+        block_caving:       { fraca: 4.00, moderada: 3.00, forte: 0.00 },
+        sublevel_stoping:   { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        sublevel_caving:    { fraca: 0.00, moderada: 2.00, forte: 2.00 },
+        longwall:           { fraca: 4.00, moderada: 3.00, forte: 0.00 },
+        room_and_pillar:    { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        shrinkage_stoping:  { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        cut_and_fill:       { fraca: 3.00, moderada: 3.00, forte: 2.00 },
+        top_slicing:        { fraca: 1.00, moderada: 2.00, forte: 4.00 },
+        square_set:         { fraca: 4.00, moderada: 3.00, forte: 2.00 },
     }
 
     let fracture_strenght_hw = {
-        open_pit:           { fraca: 3.00, moderada: 4.00, forte: 4.00 },
-        block_caving:       { fraca: 4.00, moderada: 2.00, forte: 1.00 },
-        sublevel_stoping:   { fraca:-49.0, moderada: 3.00, forte: 4.00 },
-        sublevel_caving:    { fraca: 3.00, moderada: 2.00, forte: 1.00 },
+        open_pit:           { fraca: 2.00, moderada: 3.00, forte: 4.00 },
+        block_caving:       { fraca: 4.00, moderada: 2.00, forte: 0.00 },
+        sublevel_stoping:   { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        sublevel_caving:    { fraca: 4.00, moderada: 2.00, forte: 0.00 },
         longwall:           { fraca: 4.00, moderada: 2.00, forte: 0.00 },
-        room_and_pillar:    { fraca: 0.00, moderada: 3.00, forte: 4.00 },
-        shrinkage_stoping:  { fraca: 4.00, moderada: 2.00, forte: 1.00 },
-        cut_and_fill:       { fraca: 3.00, moderada: 2.00, forte: 2.00 },
-        top_slicing:        { fraca: 4.00, moderada: 2.00, forte: 1.00 },
-        square_set:         { fraca: 3.00, moderada: 2.00, forte: 2.00 },
+        room_and_pillar:    { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        shrinkage_stoping:  { fraca: 4.00, moderada: 2.00, forte: 0.00 },
+        cut_and_fill:       { fraca: 4.00, moderada: 3.00, forte: 2.00 },
+        top_slicing:        { fraca: 4.00, moderada: 2.00, forte: 0.00 },
+        square_set:         { fraca: 4.00, moderada: 3.00, forte: 2.00 },
     }
 
     let fracture_strenght_fw = {
-        open_pit:           { fraca: 3.00, moderada: 4.00, forte: 4.00 },
-        block_caving:       { fraca: 2.00, moderada: 3.00, forte: 3.00 },
-        sublevel_stoping:   { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        open_pit:           { fraca: 2.00, moderada: 3.00, forte: 4.00 },
+        block_caving:       { fraca: 1.00, moderada: 3.00, forte: 3.00 },
+        sublevel_stoping:   { fraca: 0.00, moderada: 1.00, forte: 4.00 },
         sublevel_caving:    { fraca: 0.00, moderada: 2.00, forte: 4.00 },
-        longwall:           { fraca: 2.00, moderada: 3.00, forte: 3.00 },
-        room_and_pillar:    { fraca: 0.00, moderada: 2.00, forte: 4.00 },
-        shrinkage_stoping:  { fraca: 2.00, moderada: 3.00, forte: 3.00 },
-        cut_and_fill:       { fraca: 4.00, moderada: 2.00, forte: 2.00 },
-        top_slicing:        { fraca: 2.00, moderada: 3.00, forte: 3.00 },
-        square_set:         { fraca: 4.00, moderada: 2.00, forte: 2.00 },
+        longwall:           { fraca: 1.00, moderada: 3.00, forte: 3.00 },
+        room_and_pillar:    { fraca: 0.00, moderada: 3.00, forte: 3.00 },
+        shrinkage_stoping:  { fraca: 2.00, moderada: 2.00, forte: 3.00 },
+        cut_and_fill:       { fraca: 4.00, moderada: 4.00, forte: 2.00 },
+        top_slicing:        { fraca: 1.00, moderada: 2.00, forte: 3.00 },
+        square_set:         { fraca: 4.00, moderada: 4.00, forte: 2.00 },
     }
+
 
     let preferencias = { //Cria o dicionário que armazenará o resultado do calculo
         "open_pit": 1.00,
@@ -672,79 +673,79 @@ function Preferencias_nicholas_81(geometria, resultado_rss, resultado_fracture_s
     }
 
     let fracture_spacing_ob = {
-        open_pit:           { perto: 2.00, muito_perto: 3.00, longe: 4.00, muito_longe: 4.00 },
-        block_caving:       { perto: 4.00, muito_perto: 4.00, longe: 3.00, muito_longe: 0.00 },
-        sublevel_stoping:   { perto: 0.00, muito_perto: 0.00, longe: 1.00, muito_longe: 4.00 },
-        sublevel_caving:    { perto: 0.00, muito_perto: 2.00, longe: 4.00, muito_longe: 4.00 },
-        longwall:           { perto: 4.00, muito_perto: 4.00, longe: 0.00, muito_longe: 0.00 },
-        room_and_pillar:    { perto: 0.00, muito_perto: 1.00, longe: 2.00, muito_longe: 4.00 },
-        shrinkage_stoping:  { perto: 0.00, muito_perto: 1.00, longe: 3.00, muito_longe: 4.00 },
-        cut_and_fill:       { perto: 3.00, muito_perto: 3.00, longe: 2.00, muito_longe: 2.00 },
-        top_slicing:        { perto: 1.00, muito_perto: 1.00, longe: 2.00, muito_longe: 4.00 },
-        square_set:         { perto: 4.00, muito_perto: 4.00, longe: 2.00, muito_longe: 1.00 },
+        open_pit:           { muito_perto: 2.00, perto: 3.00, longe: 4.00, muito_longe: 4.00 },
+        block_caving:       { muito_perto: 4.00, perto: 4.00, longe: 3.00, muito_longe: 0.00 },
+        sublevel_stoping:   { muito_perto: 0.00, perto: 0.00, longe: 1.00, muito_longe: 4.00 },
+        sublevel_caving:    { muito_perto: 0.00, perto: 2.00, longe: 4.00, muito_longe: 4.00 },
+        longwall:           { muito_perto: 4.00, perto: 4.00, longe: 0.00, muito_longe: 0.00 },
+        room_and_pillar:    { muito_perto: 0.00, perto: 1.00, longe: 2.00, muito_longe: 4.00 },
+        shrinkage_stoping:  { muito_perto: 0.00, perto: 1.00, longe: 3.00, muito_longe: 4.00 },
+        cut_and_fill:       { muito_perto: 3.00, perto: 3.00, longe: 2.00, muito_longe: 2.00 },
+        top_slicing:        { muito_perto: 1.00, perto: 1.00, longe: 2.00, muito_longe: 4.00 },
+        square_set:         { muito_perto: 4.00, perto: 4.00, longe: 2.00, muito_longe: 1.00 },
     }
     let fracture_spacing_hw = {
-        open_pit:           { perto: 2.00, muito_perto: 3.00, longe: 4.00, muito_longe: 4.00 },
-        block_caving:       { perto: 3.00, muito_perto: 4.00, longe: 3.00, muito_longe: 0.00 },
-        sublevel_stoping:   { perto:-49.0, muito_perto: 0.00, longe: 1.00, muito_longe: 4.00 },
-        sublevel_caving:    { perto: 3.00, muito_perto: 4.00, longe: 3.00, muito_longe: 1.00 },
-        longwall:           { perto: 4.00, muito_perto: 4.00, longe: 3.00, muito_longe: 0.00 },
-        room_and_pillar:    { perto: 0.00, muito_perto: 1.00, longe: 2.00, muito_longe: 4.00 },
-        shrinkage_stoping:  { perto: 4.00, muito_perto: 4.00, longe: 3.00, muito_longe: 0.00 },
-        cut_and_fill:       { perto: 3.00, muito_perto: 3.00, longe: 2.00, muito_longe: 2.00 },
-        top_slicing:        { perto: 3.00, muito_perto: 3.00, longe: 3.00, muito_longe: 0.00 },
-        square_set:         { perto: 3.00, muito_perto: 3.00, longe: 2.00, muito_longe: 2.00 },
+        open_pit:           { muito_perto: 2.00, perto: 3.00, longe: 4.00, muito_longe: 4.00 },
+        block_caving:       { muito_perto: 3.00, perto: 4.00, longe: 3.00, muito_longe: 0.00 },
+        sublevel_stoping:   { muito_perto:-49.0, perto: 0.00, longe: 1.00, muito_longe: 4.00 },
+        sublevel_caving:    { muito_perto: 3.00, perto: 4.00, longe: 3.00, muito_longe: 1.00 },
+        longwall:           { muito_perto: 4.00, perto: 4.00, longe: 3.00, muito_longe: 0.00 },
+        room_and_pillar:    { muito_perto: 0.00, perto: 1.00, longe: 2.00, muito_longe: 4.00 },
+        shrinkage_stoping:  { muito_perto: 4.00, perto: 4.00, longe: 3.00, muito_longe: 0.00 },
+        cut_and_fill:       { muito_perto: 3.00, perto: 3.00, longe: 2.00, muito_longe: 2.00 },
+        top_slicing:        { muito_perto: 3.00, perto: 3.00, longe: 3.00, muito_longe: 0.00 },
+        square_set:         { muito_perto: 3.00, perto: 3.00, longe: 2.00, muito_longe: 2.00 },
     }
     let fracture_spacing_fw = {
-        open_pit:           { perto: 2.00, muito_perto: 3.00, longe: 4.00, muito_longe: 4.00 },
-        block_caving:       { perto: 1.00, muito_perto: 3.00, longe: 3.00, muito_longe: 3.00 },
-        sublevel_stoping:   { perto: 0.00, muito_perto: 0.00, longe: 2.00, muito_longe: 4.00 },
-        sublevel_caving:    { perto: 0.00, muito_perto: 1.00, longe: 3.00, muito_longe: 4.00 },
-        longwall:           { perto: 1.00, muito_perto: 2.00, longe: 4.00, muito_longe: 3.00 },
-        room_and_pillar:    { perto: 0.00, muito_perto: 1.00, longe: 3.00, muito_longe: 3.00 },
-        shrinkage_stoping:  { perto: 2.00, muito_perto: 3.00, longe: 3.00, muito_longe: 2.00 },
-        cut_and_fill:       { perto: 4.00, muito_perto: 4.00, longe: 2.00, muito_longe: 2.00 },
-        top_slicing:        { perto: 1.00, muito_perto: 3.00, longe: 3.00, muito_longe: 3.00 },
-        square_set:         { perto: 4.00, muito_perto: 4.00, longe: 2.00, muito_longe: 2.00 },
+        open_pit:           { muito_perto: 2.00, perto: 3.00, longe: 4.00, muito_longe: 4.00 },
+        block_caving:       { muito_perto: 1.00, perto: 3.00, longe: 3.00, muito_longe: 3.00 },
+        sublevel_stoping:   { muito_perto: 0.00, perto: 0.00, longe: 2.00, muito_longe: 4.00 },
+        sublevel_caving:    { muito_perto: 0.00, perto: 1.00, longe: 3.00, muito_longe: 4.00 },
+        longwall:           { muito_perto: 1.00, perto: 2.00, longe: 4.00, muito_longe: 3.00 },
+        room_and_pillar:    { muito_perto: 0.00, perto: 1.00, longe: 3.00, muito_longe: 3.00 },
+        shrinkage_stoping:  { muito_perto: 2.00, perto: 3.00, longe: 3.00, muito_longe: 2.00 },
+        cut_and_fill:       { muito_perto: 4.00, perto: 4.00, longe: 2.00, muito_longe: 2.00 },
+        top_slicing:        { muito_perto: 1.00, perto: 3.00, longe: 3.00, muito_longe: 3.00 },
+        square_set:         { muito_perto: 4.00, perto: 4.00, longe: 2.00, muito_longe: 2.00 },
     }
 
     let fracture_strenght_ob = {
-        open_pit:           { fraca: 3.00, moderada: 4.00, forte: 4.00 },
-        block_caving:       { fraca: 4.00, moderada: 1.00, forte: 1.00 },
-        sublevel_stoping:   { fraca:-49.0, moderada: 3.00, forte: 4.00 },
-        sublevel_caving:    { fraca: 0.00, moderada: 3.00, forte: 3.00 },
-        longwall:           { fraca: 4.00, moderada: 1.00, forte: 0.00 },
-        room_and_pillar:    { fraca: 0.00, moderada: 3.00, forte: 4.00 },
-        shrinkage_stoping:  { fraca: 1.00, moderada: 3.00, forte: 4.00 },
-        cut_and_fill:       { fraca: 3.00, moderada: 2.00, forte: 2.00 },
-        top_slicing:        { fraca: 2.00, moderada: 3.00, forte: 3.00 },
-        square_set:         { fraca: 4.00, moderada: 1.00, forte: 1.00 },
+        open_pit:           { fraca: 2.00, moderada: 3.00, forte: 4.00 },
+        block_caving:       { fraca: 4.00, moderada: 3.00, forte: 0.00 },
+        sublevel_stoping:   { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        sublevel_caving:    { fraca: 0.00, moderada: 2.00, forte: 2.00 },
+        longwall:           { fraca: 4.00, moderada: 3.00, forte: 0.00 },
+        room_and_pillar:    { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        shrinkage_stoping:  { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        cut_and_fill:       { fraca: 3.00, moderada: 3.00, forte: 2.00 },
+        top_slicing:        { fraca: 1.00, moderada: 2.00, forte: 4.00 },
+        square_set:         { fraca: 4.00, moderada: 3.00, forte: 2.00 },
     }
 
     let fracture_strenght_hw = {
-        open_pit:           { fraca: 3.00, moderada: 4.00, forte: 4.00 },
-        block_caving:       { fraca: 4.00, moderada: 2.00, forte: 1.00 },
-        sublevel_stoping:   { fraca:-49.0, moderada: 3.00, forte: 4.00 },
-        sublevel_caving:    { fraca: 3.00, moderada: 2.00, forte: 1.00 },
+        open_pit:           { fraca: 2.00, moderada: 3.00, forte: 4.00 },
+        block_caving:       { fraca: 4.00, moderada: 2.00, forte: 0.00 },
+        sublevel_stoping:   { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        sublevel_caving:    { fraca: 4.00, moderada: 2.00, forte: 0.00 },
         longwall:           { fraca: 4.00, moderada: 2.00, forte: 0.00 },
-        room_and_pillar:    { fraca: 0.00, moderada: 3.00, forte: 4.00 },
-        shrinkage_stoping:  { fraca: 4.00, moderada: 2.00, forte: 1.00 },
-        cut_and_fill:       { fraca: 3.00, moderada: 2.00, forte: 2.00 },
-        top_slicing:        { fraca: 4.00, moderada: 2.00, forte: 1.00 },
-        square_set:         { fraca: 3.00, moderada: 2.00, forte: 2.00 },
+        room_and_pillar:    { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        shrinkage_stoping:  { fraca: 4.00, moderada: 2.00, forte: 0.00 },
+        cut_and_fill:       { fraca: 4.00, moderada: 3.00, forte: 2.00 },
+        top_slicing:        { fraca: 4.00, moderada: 2.00, forte: 0.00 },
+        square_set:         { fraca: 4.00, moderada: 3.00, forte: 2.00 },
     }
 
     let fracture_strenght_fw = {
-        open_pit:           { fraca: 3.00, moderada: 4.00, forte: 4.00 },
-        block_caving:       { fraca: 2.00, moderada: 3.00, forte: 3.00 },
-        sublevel_stoping:   { fraca: 0.00, moderada: 2.00, forte: 4.00 },
+        open_pit:           { fraca: 2.00, moderada: 3.00, forte: 4.00 },
+        block_caving:       { fraca: 1.00, moderada: 3.00, forte: 3.00 },
+        sublevel_stoping:   { fraca: 0.00, moderada: 1.00, forte: 4.00 },
         sublevel_caving:    { fraca: 0.00, moderada: 2.00, forte: 4.00 },
-        longwall:           { fraca: 2.00, moderada: 3.00, forte: 3.00 },
-        room_and_pillar:    { fraca: 0.00, moderada: 2.00, forte: 4.00 },
-        shrinkage_stoping:  { fraca: 2.00, moderada: 3.00, forte: 3.00 },
-        cut_and_fill:       { fraca: 4.00, moderada: 2.00, forte: 2.00 },
-        top_slicing:        { fraca: 2.00, moderada: 3.00, forte: 3.00 },
-        square_set:         { fraca: 4.00, moderada: 2.00, forte: 2.00 },
+        longwall:           { fraca: 1.00, moderada: 3.00, forte: 3.00 },
+        room_and_pillar:    { fraca: 0.00, moderada: 3.00, forte: 3.00 },
+        shrinkage_stoping:  { fraca: 2.00, moderada: 2.00, forte: 3.00 },
+        cut_and_fill:       { fraca: 4.00, moderada: 4.00, forte: 2.00 },
+        top_slicing:        { fraca: 1.00, moderada: 2.00, forte: 3.00 },
+        square_set:         { fraca: 4.00, moderada: 4.00, forte: 2.00 },
     }
 
     //Cria o dicionário que armazenará o resultado do calculo
@@ -760,7 +761,44 @@ function Preferencias_nicholas_81(geometria, resultado_rss, resultado_fracture_s
         "top_slicing": 1.00,
         "square_set": 1.00,
     }
+    geometria.forEach((element =>{
+        console.log(element.value)
+    }))
+    resultado_fracture_spacing.forEach((element =>{
+        console.log(element.value)
+    }))
+    resultado_fracture_strenght.forEach((element =>{
+        console.log(element.value)
+    }))
 
+    let deb = "open_pit"
+
+    let geo = ( 
+        + pesos_forma_geral[deb][geometria[0].value]   //Forma geral
+        + pesos_mergulho[deb][geometria[1].value]       //Mergulho
+        + pesos_espessura[deb][geometria[2].value]      //Espessura
+        + pesos_distribuicao[deb][geometria[3].value]   //Distribuição
+    )
+    let ob = (
+        + pesos_rss_ob[deb][resultado_rss["rss_ob"]]    //RSS Corpo de minério
+        + fracture_strenght_ob[deb][resultado_fracture_strenght[0].value]  //Fracture Strenght Corpo de minério
+        + fracture_spacing_ob[deb][resultado_fracture_spacing[0].value]    //Fracture Spacing Corpo de minério
+    )
+    let hw = (
+        + pesos_rss_hw[deb][resultado_rss["rss_hw"]]    //RSS Hanging Wall
+        + fracture_strenght_hw[deb][resultado_fracture_strenght[1].value]  //Fracture Strenght Hanging Wall
+        + fracture_spacing_hw[deb][resultado_fracture_spacing[1].value]    //Fracture Spacing Hanging Wall
+    )
+            
+    let fw = (
+        + pesos_rss_fw[deb][resultado_rss["rss_fw"]]    //RSS Footwall
+        + fracture_strenght_fw[deb][resultado_fracture_strenght[2].value]  //Fracture Strenght Footwall
+        + fracture_spacing_fw[deb][resultado_fracture_spacing[2].value]    //Fracture SpacingFootwall
+    )
+    console.log(
+        geo, ob, hw, fw
+
+    )
     //Calculo os valores de cada método de lavra e guarda no dicionário
     for (const key in preferencias) {
         preferencias[key] = 0
