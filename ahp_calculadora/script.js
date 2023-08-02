@@ -239,7 +239,7 @@ function Consistencia() {
 
     span_warn.innerText = texto_warn[(idioma + consistencia)]
 
-    if (span_warn.innerText.includes("INCONSISTENTE!")) {
+    if (span_warn.innerText.includes("INCONSISTENTE!") || span_warn.innerText.includes("INCONSISTENT")) {
         span_warn.style.color = "Red"
     } else {
         span_warn.style.color = "Green"
