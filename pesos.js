@@ -761,44 +761,7 @@ function Preferencias_nicholas_81(geometria, resultado_rss, resultado_fracture_s
         "top_slicing": 1.00,
         "square_set": 1.00,
     }
-    geometria.forEach((element =>{
-        console.log(element.value)
-    }))
-    resultado_fracture_spacing.forEach((element =>{
-        console.log(element.value)
-    }))
-    resultado_fracture_strenght.forEach((element =>{
-        console.log(element.value)
-    }))
-
-    let deb = "open_pit"
-
-    let geo = ( 
-        + pesos_forma_geral[deb][geometria[0].value]   //Forma geral
-        + pesos_mergulho[deb][geometria[1].value]       //Mergulho
-        + pesos_espessura[deb][geometria[2].value]      //Espessura
-        + pesos_distribuicao[deb][geometria[3].value]   //Distribuição
-    )
-    let ob = (
-        + pesos_rss_ob[deb][resultado_rss["rss_ob"]]    //RSS Corpo de minério
-        + fracture_strenght_ob[deb][resultado_fracture_strenght[0].value]  //Fracture Strenght Corpo de minério
-        + fracture_spacing_ob[deb][resultado_fracture_spacing[0].value]    //Fracture Spacing Corpo de minério
-    )
-    let hw = (
-        + pesos_rss_hw[deb][resultado_rss["rss_hw"]]    //RSS Hanging Wall
-        + fracture_strenght_hw[deb][resultado_fracture_strenght[1].value]  //Fracture Strenght Hanging Wall
-        + fracture_spacing_hw[deb][resultado_fracture_spacing[1].value]    //Fracture Spacing Hanging Wall
-    )
-            
-    let fw = (
-        + pesos_rss_fw[deb][resultado_rss["rss_fw"]]    //RSS Footwall
-        + fracture_strenght_fw[deb][resultado_fracture_strenght[2].value]  //Fracture Strenght Footwall
-        + fracture_spacing_fw[deb][resultado_fracture_spacing[2].value]    //Fracture SpacingFootwall
-    )
-    console.log(
-        geo, ob, hw, fw
-
-    )
+    
     //Calculo os valores de cada método de lavra e guarda no dicionário
     for (const key in preferencias) {
         preferencias[key] = 0
