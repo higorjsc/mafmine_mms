@@ -329,6 +329,7 @@ function Eventos(metodo) {
     button.forEach((element) => {
         element.onmouseover = () => Baloes(element.id)
         element.onmouseout = () => Balao_sai()
+        element.tabIndex = "1"
     })
 
     
@@ -351,6 +352,9 @@ function Eventos(metodo) {
     // EVENTOS SELECTS
     const selects = document.querySelectorAll("select")
     selects.forEach((seletor) => {
+        // Configura a troca de foco com a tecla tab
+        seletor.tabIndex = "2"
+
         // Evento onchange para o select
         seletor.onchange = () => {
             Armazenar_valor(seletor)
@@ -394,6 +398,7 @@ function Eventos(metodo) {
         }
         element.onmouseover = () => Baloes(element.id, metodo)
         element.onmouseout = () => Balao_sai()
+        element.tabIndex = "2"
         element.onkeydown = (event) => {
             if (event.key === "Enter") {
                 event.preventDefault() // Impede o comportamento padrão de enviar o formulário
