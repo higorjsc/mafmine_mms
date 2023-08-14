@@ -20,11 +20,9 @@ function Language_page(idioma_child = "none") {
             titulo_ferramenta: "SELEÇÃO DE MÉTODOS DE LAVRA<br>",
             inspiracao: "(INSIPIRADO NA FERRAMENTA 'MINING METHOD SELECTION' DA <a href='https://www.edumine.com/' target='_blank'>EDUMINE)</a><br><br>",
             titulo_autores: "<br>AUTORES<br>",
-            autores: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br>",
-            autores_2: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br><br>",
+            autores: "CAMPOS, H.&ensp;CARDOZO, F.&ensp;PETTER, C.<br>",
             titulo_apoio: "APOIO<br>",
-            apoio_1: "apoio-1<br>",
-            apoio_2: "apoio-2<br><br><br>",
+            apoio_1: "EQUIPE MAFMINE<br>",
             localizacao: "Porto Alegre, Rio Grande do Sul, Brasil,<br>",
             data: "2023.<br>",
 
@@ -79,14 +77,12 @@ function Language_page(idioma_child = "none") {
             universidade: "UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL<br>",
             laboratorio: "LABORATÓRIO DE PROCESSAMENTO MINERAL<br><br><br>",
             versao: "VERSÃO 1.0.0, dd/mm/2023",
-            titulo_ferramenta: "SELEÇÃO DE MÉTODOS DE LAVRA<br>",
+            titulo_ferramenta: "MINING METHOD SELECTION<br>",
             inspiracao: "(INSIPIRADO NA FERRAMENTA 'MINING METHOD SELECTION' DA <a href='https://www.edumine.com/' target='_blank'>EDUMINE)</a><br><br>",
             titulo_autores: "<br>AUTHORS<br>",
-            autores: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br>",
-            autores_2: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br><br>",
-            titulo_apoio: "APOIO<br>",
-            apoio_1: "apoio-1<br>",
-            apoio_2: "apoio-2<br><br><br>",
+            autores: "CAMPOS, H.&ensp;CARDOZO, F.&ensp;PETTER, C.<br>",
+            titulo_apoio: "SUPPORTERS<br>",
+            apoio_1: "EQUIPE MAFMINE<br>",
             localizacao: "Porto Alegre, Rio Grande do Sul, Brasil,<br>",
             data: "2023.<br>",
 
@@ -164,16 +160,14 @@ function Language_page(idioma_child = "none") {
     // OBJETOS DO POP UP "CREDITOS"
     Escrever("universidade", "universidade")
     Escrever("laboratorio", "laboratorio")
-    Escrever("titulo_ferramenta", "titulo_ferramenta")
+    Escrever("titulo-ferramenta", "titulo_ferramenta")
     Escrever("inspiracao", "inspiracao")
     Escrever("titulo-autores", "titulo_autores")
-    Escrever("autores", "autores")
-    Escrever("autores-2", "autores_2")
+    Escrever("autores", "autores")  
     Escrever("localizacao", "localizacao")
     Escrever("data", "data")
     Escrever("titulo-apoio", "titulo_apoio")
-    Escrever("apoio-1", "apoio_1")
-    Escrever("apoio-2", "apoio_2")
+    Escrever("apoio", "apoio_1")
     Escrever("versao", "versao")
 
     // OBJETOS DO POP UP "REFERENCIAS"

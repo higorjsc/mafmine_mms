@@ -121,7 +121,7 @@ function Configurar_pop_up(id) {
         Modificar_id("ahp")
     } else if (id.includes("creditos")) {
         pop_up.style.width = "550px"
-        pop_up.style.height = "500px"
+        pop_up.style.height = "420px"
         pop_up.style.left = "45%"
         pop_up.style.top = "25%"
         Modificar_id("creditos")
