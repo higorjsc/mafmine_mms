@@ -14,7 +14,7 @@ function Language() {
             select_strenght_1: "Point Load",
             span_espacamento: "Espaçamento das descontinuidades:",
             condicionamento_descontinuidades: "Condicionamento das Descontinuidades",
-            span_comprimento: "Persistencia/Continuiade:",
+            span_comprimento: "Persistencia/Continuidade:",
             span_separacao: "Separação:",
             span_rugosidade: "Rugosidade:",
             select_rugosidade_0: "Muito rugosa",
