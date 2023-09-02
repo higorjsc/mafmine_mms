@@ -18,7 +18,7 @@ function Mostrar_input_pesos() {
     }
 }
 
-// CONFIGURA O RADIO-BUTTON RMR-GSI-Q
+// CONFIGURA O RADIO-BUTTON RMR-GSI-Q 
 function Rock_mass() {
 
     // MOSTRA OS INPUTS SELECIONADOS
