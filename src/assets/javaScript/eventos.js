@@ -252,7 +252,7 @@ function Mover_pop_up() {
 function Open_pop_up_pesos() {
     let metodo = Obter_metodo()
     const tabela_nome = metodo + "_" + Obter_idioma() + ".html"
-    window.open("\\components\\tabelas\\" + tabela_nome, "_blank")
+    window.open("/src/components/tabelas/" + tabela_nome, "_blank")
 }
 
 // OBTÉM O MÉTODO DE ESCOLHA DE MÉTODOS DE LAVRA
