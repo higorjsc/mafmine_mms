@@ -155,7 +155,7 @@ function Open_iframe(id_trigger) {
     // Cria a url do pop up que será aberto
     let Obter_endereco = (calculadora) => {
         calculadora.split("-")[1]
-        const endereco = "/src/components/" + calculadora.split("-")[1] + "_" + "calculadora/" + calculadora.split("-")[1] + ".html"
+        const endereco = "components/" + calculadora.split("-")[1] + "_" + "calculadora/" + calculadora.split("-")[1] + ".html"
         const argumento = "?" + calculadora.split("-")[2]
         return (endereco + argumento)
     }
@@ -167,7 +167,7 @@ function Open_iframe(id_trigger) {
     Configurar_pop_up(id_trigger)
 
     // Verifica se o pop up é uma calculadora e cria uma URL
-    const endereco = id_trigger.includes("calculadora") ? Obter_endereco(id_trigger) : ("/src/components/" + id_trigger + ".html")
+    const endereco = id_trigger.includes("calculadora") ? Obter_endereco(id_trigger) : ("components/" + id_trigger + ".html")
     frame.src = endereco
     frame.style.display = "block"
 
@@ -252,7 +252,7 @@ function Mover_pop_up() {
 function Open_pop_up_pesos() {
     let metodo = Obter_metodo()
     const tabela_nome = metodo + "_" + Obter_idioma() + ".html"
-    window.open("\\src\\components\\tabelas\\" + tabela_nome, "_blank")
+    window.open("\\components\\tabelas\\" + tabela_nome, "_blank")
 }
 
 // OBTÉM O MÉTODO DE ESCOLHA DE MÉTODOS DE LAVRA
