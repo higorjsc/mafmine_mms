@@ -206,6 +206,7 @@ function Preferencias_nicholas_92(geometria, resultado_rss, resultado_fracture_s
 
 //Calculo o valor de cada método de lavra e retorna para Calculo em Calculos.js 2.10,
 function Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr) {
+
     let pesos_forma_geral = {
         open_pit:           { massivo: 4.00, tabular: 3.00, irregular: 3.00 },
         block_caving:       { massivo: 4.00, tabular: 2.00, irregular: 0.00 },
@@ -235,15 +236,15 @@ function Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr
 
     let pesos_mergulho = {
         open_pit:           { plano: 4.00, baixo: 4.00, intermediario: 4.00, pouco_inclinado: 4.00, inclinado: 4.00 },
-        block_caving:       { plano: 4.00, baixo: 0.00, intermediario: 1.00, pouco_inclinado: 3.00, inclinado: 4.00 },
-        sublevel_stoping:   { plano: 2.00, baixo: 0.00, intermediario: 2.00, pouco_inclinado: 4.00, inclinado: 4.00 },
-        sublevel_caving:    { plano: 4.00, baixo: 0.00, intermediario: 1.00, pouco_inclinado: 3.00, inclinado: 4.00 },
-        longwall:           { plano:-50.0, baixo: 3.00, intermediario: 1.00, pouco_inclinado:-50.0, inclinado:-50.0 },
-        room_and_pillar:    { plano:-50.0, baixo: 2.00, intermediario:-10.0, pouco_inclinado:-50.0, inclinado:-50.0 },
+        block_caving:       { plano:-10.0, baixo: 0.00, intermediario: 1.00, pouco_inclinado: 3.00, inclinado: 4.00 },
+        sublevel_stoping:   { plano:-10.0, baixo: 0.00, intermediario: 2.00, pouco_inclinado: 4.00, inclinado: 4.00 },
+        sublevel_caving:    { plano:-10.0, baixo: 0.00, intermediario: 1.00, pouco_inclinado: 3.00, inclinado: 4.00 },
+        longwall:           { plano: 4.00, baixo: 3.00, intermediario: 1.00, pouco_inclinado:-50.0, inclinado:-50.0 },
+        room_and_pillar:    { plano: 4.00, baixo: 2.00, intermediario:-10.0, pouco_inclinado:-50.0, inclinado:-50.0 },
         shrinkage_stoping:  { plano:-50.0, baixo:-10.0, intermediario: 1.00, pouco_inclinado: 4.00, inclinado: 4.00 },
-        cut_and_fill:       { plano:-10.0, baixo: 1.00, intermediario: 3.00, pouco_inclinado: 4.00, inclinado: 4.00 },
-        top_slicing:        { plano: 1.00, baixo: 4.00, intermediario: 2.00, pouco_inclinado: 0.00, inclinado: 0.00 },
-        square_set:         { plano: 0.00, baixo: 2.00, intermediario: 3.00, pouco_inclinado: 4.00, inclinado: 4.00 },
+        cut_and_fill:       { plano: 1.00, baixo: 1.00, intermediario: 3.00, pouco_inclinado: 4.00, inclinado: 4.00 },
+        top_slicing:        { plano: 3.00, baixo: 4.00, intermediario: 2.00, pouco_inclinado: 0.00, inclinado: 0.00 },
+        square_set:         { plano: 1.00, baixo: 2.00, intermediario: 3.00, pouco_inclinado: 4.00, inclinado: 4.00 },
     }
 
     let pesos_distribuicao = {
@@ -253,7 +254,7 @@ function Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr
         sublevel_caving:    { uniforme: 2.85, gradacional: 1.90, erratico: 1.90 },
         longwall:           { uniforme: 3.80, gradacional: 0.95, erratico: 0.00 },
         room_and_pillar:    { uniforme: 3.80, gradacional: 2.85, erratico: 0.00 },
-        shrinkage_stoping:  { uniforme: 3.80, gradacional: 1.95, erratico: 1.95 },
+        shrinkage_stoping:  { uniforme: 3.80, gradacional: 1.90, erratico: 1.90 },
         cut_and_fill:       { uniforme: 2.85, gradacional: 3.80, erratico: 3.80 },
         top_slicing:        { uniforme: 1.90, gradacional: 0.95, erratico: 0.95 },
         square_set:         { uniforme: 0.95, gradacional: 1.90, erratico: 2.85 },
@@ -279,10 +280,10 @@ function Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr
         sublevel_stoping:   { rasa: 1.20, intermediaria: 1.80, pouco_profunda: 2.40, profunda: 2.40 },
         sublevel_caving:    { rasa: 1.20, intermediaria: 1.80, pouco_profunda: 1.80, profunda: 2.40 },
         longwall:           { rasa: 0.60, intermediaria: 1.20, pouco_profunda: 1.80, profunda: 2.40 },
-        room_and_pillar:    { rasa: 1.80, intermediaria: 2.40, pouco_profunda: 1.20, profunda: 2.40 },
+        room_and_pillar:    { rasa: 1.80, intermediaria: 2.40, pouco_profunda: 1.20, profunda: 0.60 },
         shrinkage_stoping:  { rasa: 1.80, intermediaria: 1.80, pouco_profunda: 1.80, profunda: 0.60 },
-        cut_and_fill:       { rasa: 0.60, intermediaria: 1.20, pouco_profunda: 2.40, profunda: 0.60 },
-        top_slicing:        { rasa: 1.20, intermediaria: 1.20, pouco_profunda: 0.60, profunda: 2.40 },
+        cut_and_fill:       { rasa: 0.60, intermediaria: 1.20, pouco_profunda: 2.40, profunda: 2.40 },
+        top_slicing:        { rasa: 1.20, intermediaria: 1.20, pouco_profunda: 0.60, profunda: 0.60 },
         square_set:         { rasa: 0.60, intermediaria: 0.60, pouco_profunda: 1.20, profunda: 2.40 },
     }
 
@@ -305,7 +306,7 @@ function Preferencias_shb(geometria, valor_minerio, resultado_rss, resultado_rmr
         sublevel_stoping:   { muito_pobre:-50.0, pobre: 0.00, razoavel: 2.10, boa: 2.80, muito_boa: 2.80 },
         sublevel_caving:    { muito_pobre: 2.80, pobre: 2.80, razoavel: 2.10, boa: 1.40, muito_boa: 1.40 },
         longwall:           { muito_pobre: 4.20, pobre: 3.50, razoavel: 2.80, boa: 2.10, muito_boa: 2.10 },
-        room_and_pillar:    { muito_pobre:-50.0, pobre: 0.00, razoavel: 2.10, boa: 3.50, muito_boa: 3.50 },
+        room_and_pillar:    { muito_pobre:-50.0, pobre: 0.00, razoavel: 2.10, boa: 3.50, muito_boa: 4.20 },
         shrinkage_stoping:  { muito_pobre: 0.00, pobre: 0.00, razoavel: 1.40, boa: 2.80, muito_boa: 2.80 },
         cut_and_fill:       { muito_pobre: 2.10, pobre: 3.50, razoavel: 2.80, boa: 2.10, muito_boa: 2.10 },
         top_slicing:        { muito_pobre: 0.00, pobre: 0.00, razoavel: 1.40, boa: 2.10, muito_boa: 2.10 },
