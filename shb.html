@@ -5,25 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Calcule e apresente o método de lavra mais adequado para o depósito mineral em estudo, utilizando a versão UBC do procedimento seleção de métodos de lavra de Nicholas (1981), criado pela University of British Columbia. Tome decisões informadas sobre a melhor abordagem para a extração de minerais com base em análises e critérios específicos.">
-    <meta name="keywords" content="nicholas, 1992, mining, method, selection, procedure, calculation, software">
+        content="Calcule e apresente o método de lavra mais adequado para o depósito mineral em estudo, utilizando a versão de Shahriar e Bakhtavar (Sh&B, 2007) do método UBC, criado pela University of British Columbia. Tome decisões informadas sobre a melhor abordagem para a extração de minerais com base em análises e critérios específicos.">
+    <meta name="keywords"
+        content="Shahriar, Bakhtavar, 2007, Sh&B, mining, method, selection, procedure, nicholas, calculation, software">
     <meta name="author" content="Higor José Silva Campos">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mining Method Selection - UBC</title>
-
+    <title>Mining Method Selection - Sh&B</title>
     <link rel="icon" type="image/x-icon" href="assets\Imagens\mafmine.png">
     <!-- CSSS -->
-    <link rel="stylesheet" href="assets\css\estilo.css">
-    <link rel="stylesheet" href="assets\css\buttons.css">
+    <link rel="stylesheet" href="\src\assets\css\estilo.css">
+    <link rel="stylesheet" href="\src\assets\css\buttons.css">
     <!-- JAVA SCRIPT -->
-    <script src="assets\javaScript\eventos.js"></script>
-    <script src="assets\javaScript\pesos.js"></script>
-    <script src="assets\javaScript\calculos.js"></script>
-    <script src="assets\javaScript\design.js"></script>
-    <script src="assets\languages\page_languages.js"></script>
-    <script src="assets\javaScript\imprimir_relatorio.js"></script>
-    
-    <script src="assets\languages\ubc_languages.js"></script>
+    <script src="\src\assets\javaScript\eventos.js"></script>
+    <script src="\src\assets\javaScript\pesos.js"></script>
+    <script src="\src\assets\javaScript\calculos.js"></script>
+    <script src="\src\assets\javaScript\design.js"></script>
+    <script src="\src\assets\languages\page_languages.js"></script>
+    <script src="\src\assets\javaScript\imprimir_relatorio.js"></script>
+
+    <script src="\src\assets\languages\shb_languages.js"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
@@ -43,20 +44,22 @@
             <h1 id="titulo-pagina"></h1>
         </div>
     </header>
-    <main class="wrapper" id="wrapper">
+
+    <main class="wrapper">
+
         <section id="nav-menu">
             <ul id="menu-metodos">
                 <li id="li-titulo">SELECIONE O MÉTODO</li>
-                <li class='options' id="option-1">
-                    <a>UBC&ensp;&ensp;&darr;</a>
+                <li class='options' id="option-shb">
+                    <a>Sh&B&ensp;&ensp;&darr;</a>
                     <ul>
-                        <li class='options' id="option-nicholas-1981"><a href="nicholas_81.html">NICHOLAS 1981</a></li>
+                        <li class='options' id="option-ubc"><a href="index.html">UBC</a></li>
+                        <li class='options' id="option-nicholas-1991"><a href="nicholas_81.html">NICHOLAS 1981</a></li>
                         <li class='options' id="option-nicholas-1992"><a href="nicholas_92.html">NICHOLAS 1992</a></li>
-                        <li class='options' id="option-shb"><a href="shb.html">Sh&B</a></li>
                     </ul>
                 </li>
             </ul>
-            <p id="paragrafo-explicacao"> </p>
+            <p id="paragrafo-explicacao"></p>
 
         </section>
 
@@ -83,7 +86,9 @@
                 <span id='span-mergulho'> Mergulho:</span>
                 <select class="menu-geometria" id="mergulho">
                     <option value="plano"> Plano </option>
-                    <option value="intermediario"> Intermediário </option>
+                    <option value="baixo"> Baixo </option>
+                    <option value="intermediario"> Intermediario </option>
+                    <option value="pouco_inclinado"> Pouco inclinado </option>
                     <option value="inclinado"> Inclinado </option>
                 </select>
             </div>
@@ -110,7 +115,19 @@
                 <select class="menu-geometria" id="profundidade">
                     <option value="rasa"> Rasa </option>
                     <option value="intermediaria"> Intermediária </option>
+                    <option value="pouco_profunda"> Pouco profunda </option>
                     <option value="profunda"> Profunda </option>
+                </select>
+            </div>
+
+            <!-- SEÇÃO 1 (LATERAL ESQUERDA) - FATOR ECONÔMICO-->
+            <h3 id="subtitulo-valor-minerio">Fatores econômicos</h3>
+            <div>
+                <span id='span-valor-minerio'> Valor do minério:</span>
+                <select class="menu-economico" id="valor-minerio">
+                    <option value="baixo"> Baixo </option>
+                    <option value="medio"> Médio </option>
+                    <option value="alto"> Alto </option>
                 </select>
             </div>
 
@@ -183,8 +200,7 @@
             </div>
 
             <!-- RADIO CONTAINER -->
-            <div class="radio-container" id="radio-container-ubc">
-
+            <div class="radio-container" id="radio-container-shb">
                 <input type="radio" class="radio-rmr-q-gsi" value='rmr' name="radio-rmr-q-gsi" id="radio-rmr"
                     checked="true">
                 <label for="radio-rmr" class="label-radio-rmr-q-gsi">
@@ -289,9 +305,7 @@
             <!-- ilustração do depósito -->
             <img id='ilustracao' alt="Aqui deveria ter uma ilustracao">
 
-
             <span id="span-rights"> &copyUFRGS, 2023.</span>
-
         </section>
 
         <section id="section-3">
@@ -307,7 +321,7 @@
         </section>
 
     </main>
-    
+
     <!-- ----------------------------------------IFRAMES---------------------------------------- -->
     <div class=div-pop-up id="main-pop-up" display="none">
 
@@ -317,9 +331,12 @@
         </div>
         <div class="overlay" id="overlay-div"></div>
 
-        <iframe class="iframe-densidade" id='iframe-calculadora-densidade-ob' frameborder="0" display="none"></iframe>
-        <iframe class="iframe-densidade" id='iframe-calculadora-densidade-hw' frameborder="0" display="none"></iframe>
-        <iframe class="iframe-densidade" id='iframe-calculadora-densidade-fw' frameborder="0" display="none"></iframe>
+        <iframe class="iframe-densidade" id='iframe-calculadora-densidade-ob' frameborder="0"
+            display="none"></iframe>
+        <iframe class="iframe-densidade" id='iframe-calculadora-densidade-hw' frameborder="0"
+            display="none"></iframe>
+        <iframe class="iframe-densidade" id='iframe-calculadora-densidade-fw' frameborder="0"
+            display="none"></iframe>
 
         <iframe class="iframe-ucs" id='iframe-calculadora-ucs-ob' frameborder="0" display="none"></iframe>
         <iframe class="iframe-ucs" id='iframe-calculadora-ucs-hw' frameborder="0" display="none"></iframe>
@@ -338,7 +355,6 @@
         <iframe class="iframe-bug_report" id='iframe-bug_report' frameborder="0" display="none"></iframe>
 
     </div>
-
 
     <footer class="rodape">
 
@@ -367,13 +383,12 @@
 
     </footer>
 
-
     <span class=balao id='balao'> </span> <!-- Balão de ajuda -->
     <div class="overlay" id="overlay"></div>
 
 </body>
 <script>
-    Eventos('ubc')
+    Eventos('shb')
 </script>
 
 </html>

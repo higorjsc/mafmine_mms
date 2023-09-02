@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Calcule e apresente o método de lavra mais adequado para o depósito mineral em estudo, utilizando o procedimento de seleção de métodos de lavra de Nicholas (1981). Tome decisões informadas sobre a melhor abordagem para a extração de minerais com base em análises e critérios específicos.">
+        content="Calcule e apresente o método de lavra mais adequado para o depósito mineral em estudo, utilizando o procedimento de seleção de métodos de lavra de Nicholas (1992). Tome decisões informadas sobre a melhor abordagem para a extração de minerais com base em análises e critérios específicos.">
     <meta name="keywords" content="nicholas, 1992, mining, method, selection, procedure, calculation, software">
     <meta name="author" content="Higor José Silva Campos">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mining Method Selection - Nicholas 1981</title>
-    <link rel="icon" type="image/x-icon" href="assets\Imagens\mafmine.png">
+    <title>Mining Method Selection - Nicholas 1992</title>
+    <link rel="icon" type="image/x-icon" href="\src\assets\Imagens\mafmine.png">
     <!-- CSSS -->
-    <link rel="stylesheet" href="assets\css\estilo.css">
-    <link rel="stylesheet" href="assets\css\buttons.css">
+    <link rel="stylesheet" href="\src\assets\css\estilo.css">
+    <link rel="stylesheet" href="\src\assets\css\buttons.css">
     <!-- JAVA SCRIPT -->
-    <script src="assets\javaScript\eventos.js"></script>
-    <script src="assets\javaScript\pesos.js"></script>
-    <script src="assets\javaScript\calculos.js"></script>
-    <script src="assets\javaScript\design.js"></script>
-    <script src="assets\languages\page_languages.js"></script>
-    <script src="assets\javaScript\imprimir_relatorio.js"></script>
-
-    <script src="assets\languages\nicholas_81_languages.js"></script>
+    <script src="\src\assets\javaScript\eventos.js"></script>
+    <script src="\src\assets\javaScript\pesos.js"></script>
+    <script src="\src\assets\javaScript\calculos.js"></script>
+    <script src="\src\assets\javaScript\design.js"></script>
+    <script src="\src\assets\languages\page_languages.js"></script>
+    <script src="\src\assets\javaScript\imprimir_relatorio.js"></script>
+    
+    <script src="assets\languages\nicholas_92_languages.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
@@ -47,17 +47,19 @@
             <ul id="menu-metodos">
                 <li id="li-titulo">SELECIONE O MÉTODO</li>
                 <li class='options' id="option-ubc">
-                    <a>NICHOLAS 1981&ensp;&ensp;&darr;</a>
+                    <a>NICHOLAS 1992&ensp;&ensp;&darr;</a>
                     <ul>
-                        <li class='options' id="option-nicholas-1992"><a href="nicholas_92.html">NICHOLAS 1992</a></li>
-                        <li class='options' id="option-ubc"><a href="ubc.html">UBC</a></li>
+                        <li class='options' id="option-ubc"><a href="index.html">UBC</a>
+                        </li>
+                        <li class='options' id="option-nicholas-1981"><a href="nicholas_81.html">NICHOLAS 1981</a></li>
                         <li class='options' id="option-sheb"><a href="shb.html">SH&B</a></li>
+
                     </ul>
                 </li>
             </ul>
-
-            <p id='paragrafo-explicacao'></p>
+            <p id="paragrafo-explicacao"></p>
         </section>
+
 
         <section id="section-1"> <!-- SEÇÃO 1 (LATERAL ESQUERDA)-->
 
@@ -237,7 +239,6 @@
             <h2 id="titulo-section-2"> SIMULAÇÃO DO DEPÓSITO</h2>
             <div id='div-ilustracao'> </div>
             <!-- ilustração da superfície -->
-
             <img id=superficie src="\src\assets\Imagens\\superficie.png" alt="imagem_limite_da_superficie">
             <!-- ilustração do depósito -->
             <img id='ilustracao' alt="Aqui deveria ter uma ilustracao">
@@ -255,11 +256,27 @@
                     alt="icone_impressora_png"></button>
 
 
+            <div id="div-select-pesos">
+                <h2 id='h2-fatores-peso'>Fatores de Pesos<br></h2>
+                <span>Geo.</span>
+                <span id="span-cm">CM</span>
+                <span>HW</span>
+                <span>FW</span>
+                <select id="menu-pesos">
+                    <option value='1'>1.00&emsp;&emsp;1.33&emsp;&emsp;1.33&emsp;&emsp;1.33</option>
+                    <option value='2'>1.00&emsp;&emsp;0.75&emsp;&emsp;0.60&emsp;&emsp;0.38</option>
+                    <option value='3'>1.00&emsp;&emsp;1.00&emsp;&emsp;0.80&emsp;&emsp;0.50</option>
+                    <option value='4'>Inserir valores</option>
+                </select>
+                <input class="input-pesos" id="input-peso-geo" name="input-peso-geo" placeholder="1.00">
+                <input class="input-pesos" id="input-peso-ob" name="input-peso-ob" placeholder="1.00">
+                <input class="input-pesos" id="input-peso-hw" name="input-peso-hw" placeholder="1.00">
+                <input class="input-pesos" id="input-peso-fw" name="input-peso-fw" placeholder="1.00">
+                <button id="calculadora-ahp-nicholas">CALCULAR POR AHP</button>
+            </div>
         </section>
-
     </main>
 
-    
     <!-- ----------------------------------------IFRAMES---------------------------------------- -->
     <div class=div-pop-up id="main-pop-up" display="none">
 
@@ -280,13 +297,14 @@
         <iframe class="iframe-ucs" id='iframe-calculadora-ucs-hw' frameborder="0" display="none"></iframe>
         <iframe class="iframe-ucs" id='iframe-calculadora-ucs-fw' frameborder="0" display="none"></iframe>
 
+        <iframe class="iframe-ahp" id='iframe-calculadora-ahp-nicholas' frameborder="0" display="none"></iframe>
 
         <iframe class="iframe-creditos" id='iframe-creditos' frameborder="0" display="none"></iframe>
         <iframe class="iframe-referencias" id='iframe-referencias' frameborder="0" display="none"></iframe>
         <iframe class="iframe-bug_report" id='iframe-bug_report' frameborder="0" display="none"></iframe>
+
     </div>
 
-        
     <footer class="rodape">
 
         <div class="div-footer">
@@ -311,14 +329,14 @@
             <!-- <img id="img-mafmine" src="\src\assets\Imagens\mafmine_logao.png" alt="logo_mafmie_img"> -->
 
         </div>
+
     </footer>
     <span class=balao id='balao'> </span> <!-- Balão de ajuda -->
     <div class="overlay" id="overlay"></div>
 
-
 </body>
 <script>
-    Eventos('nicholas_81')
+    Eventos('nicholas_92')
 </script>
 
 </html>
