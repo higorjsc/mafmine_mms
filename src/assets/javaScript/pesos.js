@@ -429,7 +429,6 @@ function Preferencias_ubc(geometria, resultado_rss, resultado_rmr) {
         square_set:         { muito_estreito: 4.00, estreito: 3.00, intermediario: 2.00, espesso: 0.00, muito_espesso: 0.00 },
     }
 
-
     let pesos_mergulho = {
         open_pit:           { plano: 3.00, intermediario: 3.00, inclinado: 1.00 },
         block_caving:       { plano: 3.00, intermediario: 2.00, inclinado: 4.00 },
