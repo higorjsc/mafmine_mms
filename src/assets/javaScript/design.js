@@ -63,7 +63,7 @@ function Mudar_imagem() {
     const nome_imagem = forma_geral + "_" + distribuicao + ".png"
 
     //Adiciona o diretório ao elemento <img> da seção 2
-    ilustracao.src = "\\src\\assets\\Imagens\\" + nome_imagem
+    ilustracao.src = "assets/Imagens/" + nome_imagem
         
     const superficie = document.getElementById("superficie")
     superficie.style.display = "block"
