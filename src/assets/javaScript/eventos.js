@@ -255,6 +255,7 @@ function Open_pop_up_pesos() {
     window.open("components/tabelas/" + tabela_nome, "_blank")
 }
 
+
 // OBTÉM O MÉTODO DE ESCOLHA DE MÉTODOS DE LAVRA
 function Obter_metodo() {
     let titulo = document.getElementById("titulo-pagina").innerText
