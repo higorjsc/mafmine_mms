@@ -6,8 +6,9 @@
 </head>
 <body>
     <script>
-        // window.location.replace() para forçar o redirecionamento
-        window.location.replace("/src/ubc.html");
+        setTimeout(function() {
+            window.location.href = "/src/ubc.html"; // Redireciona após 5 segundos
+        }, 5); // 5000 milissegundos = 5 segundos
     </script>
 </body>
 </html>
