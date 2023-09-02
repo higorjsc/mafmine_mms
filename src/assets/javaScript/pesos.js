@@ -419,7 +419,7 @@ function Preferencias_ubc(geometria, resultado_rss, resultado_rmr) {
     let pesos_espessura = {
         open_pit:           { muito_estreito: 1.00, estreito: 2.00, intermediario: 3.00, espesso: 4.00, muito_espesso: 4.00 },
         block_caving:       { muito_estreito:-49.0, estreito:-49.0, intermediario: 0.00, espesso: 3.00, muito_espesso: 4.00 },
-        sublevel_stoping:   { muito_estreito:-10, estreito: 1.00, intermediario: 3.00, espesso: 4.00, muito_espesso: 3.00 },
+        sublevel_stoping:   { muito_estreito:-10.0, estreito: 1.00, intermediario: 3.00, espesso: 4.00, muito_espesso: 3.00 },
         sublevel_caving:    { muito_estreito:-49.0, estreito:-49.0, intermediario: 0.00, espesso: 4.00, muito_espesso: 4.00 },
         longwall:           { muito_estreito: 4.00, estreito: 3.00, intermediario: 0.00, espesso:-49.0, muito_espesso:-49.0 },
         room_and_pillar:    { muito_estreito: 4.00, estreito: 3.00, intermediario: 1.00, espesso:-49.0, muito_espesso:-49.0 },
@@ -470,16 +470,16 @@ function Preferencias_ubc(geometria, resultado_rss, resultado_rmr) {
     }
 
     let pesos_rmr_ob = {
-        open_pit:           { muito_pobre: 3.00, pobre: 3.00, razoavel: 3.00, boa: 3.00, muito_boa: 3.00, },
-        block_caving:       { muito_pobre: 4.00, pobre: 3.00, razoavel: 2.00, boa: 0.00, muito_boa:-49.0, },
-        sublevel_stoping:   { muito_pobre: 1.00, pobre: 3.00, razoavel: 4.00, boa: 4.00, muito_boa: 4.00, },
-        sublevel_caving:    { muito_pobre: 3.00, pobre: 4.00, razoavel: 3.00, boa: 1.00, muito_boa: 0.00, },
-        longwall:           { muito_pobre: 6, pobre: 6, razoavel: 4.00, boa: 2.00, muito_boa: 2.00, },
-        room_and_pillar:    { muito_pobre:-49.0, pobre: 0.00, razoavel: 3.00, boa: 5, muito_boa: 6, },
-        shrinkage_stoping:  { muito_pobre: 0.00, pobre: 1.00, razoavel: 3.00, boa: 3.00, muito_boa: 3.00, },
-        cut_and_fill:       { muito_pobre: 0.00, pobre: 1.00, razoavel: 2.00, boa: 3.00, muito_boa: 3.00, },
-        top_slicing:        { muito_pobre: 3.00, pobre: 2.00, razoavel: 1.00, boa: 1.00, muito_boa: 0.00, },
-        square_set:         { muito_pobre: 4.00, pobre: 4.00, razoavel: 1.00, boa: 0.00, muito_boa: 0.00, },
+        open_pit:           { muito_pobre: 3.00, pobre: 3.00, razoavel: 3.00, boa: 3.00, muito_boa: 3.00 },
+        block_caving:       { muito_pobre: 4.00, pobre: 3.00, razoavel: 2.00, boa: 0.00, muito_boa:-49.0 },
+        sublevel_stoping:   { muito_pobre: 1.00, pobre: 3.00, razoavel: 4.00, boa: 4.00, muito_boa: 4.00 },
+        sublevel_caving:    { muito_pobre: 3.00, pobre: 4.00, razoavel: 3.00, boa: 1.00, muito_boa: 0.00 },
+        longwall:           { muito_pobre: 6.00, pobre: 6.00, razoavel: 4.00, boa: 2.00, muito_boa: 2.00 },
+        room_and_pillar:    { muito_pobre:-49.0, pobre: 0.00, razoavel: 3.00, boa: 5.00, muito_boa: 6.00 },
+        shrinkage_stoping:  { muito_pobre: 0.00, pobre: 1.00, razoavel: 3.00, boa: 3.00, muito_boa: 3.00 },
+        cut_and_fill:       { muito_pobre: 0.00, pobre: 1.00, razoavel: 2.00, boa: 3.00, muito_boa: 3.00 },
+        top_slicing:        { muito_pobre: 3.00, pobre: 2.00, razoavel: 1.00, boa: 1.00, muito_boa: 0.00 },
+        square_set:         { muito_pobre: 4.00, pobre: 4.00, razoavel: 1.00, boa: 0.00, muito_boa: 0.00 },
     }
 
     let pesos_rmr_hw = {
@@ -487,10 +487,10 @@ function Preferencias_ubc(geometria, resultado_rss, resultado_rmr) {
         block_caving:       { muito_pobre: 3.00, pobre: 3.00, razoavel: 3.00, boa: 2.00, muito_boa: 2.00 },
         sublevel_stoping:   { muito_pobre:-49.0, pobre: 0.00, razoavel: 3.00, boa: 4.00, muito_boa: 4.00 },
         sublevel_caving:    { muito_pobre: 4.00, pobre: 4.00, razoavel: 3.00, boa: 2.00, muito_boa: 2.00 },
-        longwall:           { muito_pobre: 6, pobre: 5, razoavel: 4.00, boa: 3.00, muito_boa: 3.00 },
-        room_and_pillar:    { muito_pobre:-49.0, pobre: 0.00, razoavel: 3.00, boa: 5, muito_boa: 6 },
+        longwall:           { muito_pobre: 6.00, pobre: 5.00, razoavel: 4.00, boa: 3.00, muito_boa: 3.00 },
+        room_and_pillar:    { muito_pobre:-49.0, pobre: 0.00, razoavel: 3.00, boa: 5.00, muito_boa: 6.00 },
         shrinkage_stoping:  { muito_pobre: 0.00, pobre: 0.00, razoavel: 2.00, boa: 4.00, muito_boa: 4.00 },
-        cut_and_fill:       { muito_pobre: 3.00, pobre: 5, razoavel: 4.00, boa: 3.00, muito_boa: 3.00 },
+        cut_and_fill:       { muito_pobre: 3.00, pobre: 5.00, razoavel: 4.00, boa: 3.00, muito_boa: 3.00 },
         top_slicing:        { muito_pobre: 0.00, pobre: 0.00, razoavel: 2.00, boa: 3.00, muito_boa: 3.00 },
         square_set:         { muito_pobre: 4.00, pobre: 4.00, razoavel: 1.00, boa: 0.00, muito_boa: 0.00 },
     }
@@ -513,8 +513,8 @@ function Preferencias_ubc(geometria, resultado_rss, resultado_rmr) {
         block_caving:       { muito_fraco: 4.00, fraca: 2.00, moderada: 1.00, forte: 0.00 },
         sublevel_stoping:   { muito_fraco: 0.00, fraca: 2.00, moderada: 4.00, forte: 4.00 },
         sublevel_caving:    { muito_fraco: 2.00, fraca: 3.00, moderada: 3.00, forte: 2.00 },
-        longwall:           { muito_fraco: 6, fraca: 5, moderada: 2.00, forte: 1.00 },
-        room_and_pillar:    { muito_fraco: 0.00, fraca: 0.00, moderada: 3.00, forte: 6 },
+        longwall:           { muito_fraco: 6.00, fraca: 5.00, moderada: 2.00, forte: 1.00 },
+        room_and_pillar:    { muito_fraco: 0.00, fraca: 0.00, moderada: 3.00, forte: 6.00 },
         shrinkage_stoping:  { muito_fraco: 0.00, fraca: 1.00, moderada: 3.00, forte: 4.00 },
         cut_and_fill:       { muito_fraco: 0.00, fraca: 1.00, moderada: 3.00, forte: 3.00 },
         top_slicing:        { muito_fraco: 3.00, fraca: 2.00, moderada: 1.00, forte: 0.00 },
@@ -524,12 +524,12 @@ function Preferencias_ubc(geometria, resultado_rss, resultado_rmr) {
     let pesos_rss_hw = {
         open_pit:           { muito_fraco: 3.00, fraca: 3.00, moderada: 4.00, forte: 4.00 },
         block_caving:       { muito_fraco: 4.00, fraca: 3.00, moderada: 2.00, forte: 0.00 },
-        sublevel_stoping:   { muito_fraco: 0.00, fraca: 1.00, moderada: 4.00, forte: 5 },
+        sublevel_stoping:   { muito_fraco: 0.00, fraca: 1.00, moderada: 4.00, forte: 5.00 },
         sublevel_caving:    { muito_fraco: 4.00, fraca: 3.00, moderada: 2.00, forte: 1.00 },
-        longwall:           { muito_fraco: 6, fraca: 5, moderada: 2.00, forte: 2.00 },
-        room_and_pillar:    { muito_fraco: 0.00, fraca: 0.00, moderada: 2.00, forte: 6 },
+        longwall:           { muito_fraco: 6.00, fraca: 5.00, moderada: 2.00, forte: 2.00 },
+        room_and_pillar:    { muito_fraco: 0.00, fraca: 0.00, moderada: 2.00, forte: 6.00 },
         shrinkage_stoping:  { muito_fraco: 0.00, fraca: 1.00, moderada: 3.00, forte: 4.00 },
-        cut_and_fill:       { muito_fraco: 3.00, fraca: 5, moderada: 4.00, forte: 2.00 },
+        cut_and_fill:       { muito_fraco: 3.00, fraca: 5.00, moderada: 4.00, forte: 2.00 },
         top_slicing:        { muito_fraco: 3.00, fraca: 2.00, moderada: 2.00, forte: 2.00 },
         square_set:         { muito_fraco: 4.00, fraca: 2.00, moderada: 1.00, forte: 0.00 },
     }
