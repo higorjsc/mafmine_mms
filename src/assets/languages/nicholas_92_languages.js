@@ -1,5 +1,6 @@
 
 function Language(idioma_janela) {
+    
     const idiomas = {
         pt: {
             titulo_pagina: "SELEÇÃO DE METODOS DE LAVRA: Nicholas (1992)",

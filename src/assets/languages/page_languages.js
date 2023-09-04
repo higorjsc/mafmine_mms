@@ -6,8 +6,7 @@ window.addEventListener("message", function (event) {
 
 // FUNÇÃO CHAMADA A CADA TROCA DE IDIOMA E A CADA LOAD DE PÁGINA OU POP UP
 // GERENCIA OS TEXTOS QUE ESTARÃO PRESENTES EM TODAS AS PÁGINAS (NÃO APENAS UM MÉTODO ESPECÍFICO)
-function Language_page(idioma_child = "none") {
-
+function Language_page() {
     let idioma_parent = parent.document.getElementById("titulo-pagina").innerText
     idioma_parent = idioma_parent.includes("SELEÇÃO") ? "pt" : "en"
 
