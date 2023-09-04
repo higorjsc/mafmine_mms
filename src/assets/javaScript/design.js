@@ -456,6 +456,7 @@ function Balao_entra_nicholas(entry, idioma) {
                 + "- Rasa: entre 0 m e 100 m\n\n"
                 + "- Intermediária: entre 100 m e 600 m\n\n"
                 + "- Profunda: superior a 600 m\n\n",
+            "densidade": "Informe o peso específico médio dos\n materiais sobre cada uma das litologias\n (OB, HW e FW).",
             "substance": "\n"
                 + "- Fraca: <8,00\n\n"
                 + "- Moderada: 8,00 a 15,00\n\n "
