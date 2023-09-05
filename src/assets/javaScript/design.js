@@ -157,7 +157,8 @@ function Positions(entry, messages, positions) {
     entry = entry.includes("calculadora-rmr") ? "calculadora-bieniawsk" : entry
     entry = entry.includes("calculadora-gsi") ? "calculadora-hoek" : entry
     entry = entry.includes("calculadora-ucs") ? "calculadora-ucs" : entry
-    entry = entry.includes("calculadora-densidade") ? "calculadora-densidade" : entry
+    entry = entry.includes("calculadora-densidade") ? "calculadora-density" : entry
+    entry = entry.includes("densidade") ? "densidade" : entry
     entry = entry.includes("resultado-rss") ? "substance" : entry
     entry = entry.includes("gsi") ? "gsi" : entry
     entry = entry.includes("rmr") ? "rmr" : entry
@@ -191,7 +192,7 @@ function Balao_entra(entry, idioma) {
             "calculadora-bieniawsk": "Calculate RMR",
             "calculadora-hoek": "Calculate GSI",
             "calculadora-ucs": "Approximate values table",
-            "calculadora-densidade": "Approximate values table",
+            "calculadora-density": "Approximate values table",
             "botao-pesos": "Check weights",
             "botao-imprimir": "Print report",
             "switch-language": "Change to portuguese",
@@ -201,7 +202,7 @@ function Balao_entra(entry, idioma) {
             "calculadora-bieniawsk": "Calcular RMR",
             "calculadora-hoek": "Calcular GSI",
             "calculadora-ucs": "Tabela valores aproximados",
-            "calculadora-densidade": "Tabela valores aproximados",
+            "calculadora-density": "Tabela valores aproximados",
             "botao-pesos": "Verificar Pesos",
             "botao-imprimir": "Imprimir relatório",
             "switch-language": "Mudar para inglês",
@@ -212,7 +213,7 @@ function Balao_entra(entry, idioma) {
         "calculadora-bieniawsk": { x: 10, y: -70 },
         "calculadora-hoek": { x: 10, y: -70 },
         "calculadora-ucs": { x: 10, y: -70 },
-        "calculadora-densidade": { x: 10, y: -70 },
+        "calculadora-density": { x: 10, y: -70 },
         "botao": { x: -110, y: -100 },
         "botao-pesos": { x: -150, y: -50 },
         "botao-imprimir": { x: -150, y: -50 },
@@ -259,6 +260,7 @@ function Balao_entra_shb(entry, idioma) {
                 + "- Moderate: 10,00 a 15,00\n\n "
                 + "- Strong: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
+            "densidade": "Provide the average specific mass\n of the overlying materials",
             "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
             "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11.63) / 1.13\n\n",
             "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
@@ -297,6 +299,7 @@ function Balao_entra_shb(entry, idioma) {
                 + "- Moderada: 10,00 a 15,00\n\n "
                 + "- Resistente: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensidade(N/m³) x Profundidade(m)\n\n",
+            "densidade": "Informe a massa específica média\n dos materiais sobrejacente",
             "rmr": "\n Classificação RMR de Bieniawski (1989) \n\n",
             "gsi": "\nConversão GSI→RMR \n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
             "q": "\nConversão Q→RMR \n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
@@ -343,7 +346,8 @@ function Balao_entra_ubc(entry, idioma) {
                 + "- Moderate: 10,00 a 15,00\n\n"
                 + "- Strong: >15,00\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
-            "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
+            "densidade": "Provide the average specific mass\n of the overlying materials",
+            "rmr": "\nRMR classification by Bieniawski (1989)\n\n",
             "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11.63) / 1.13\n\n",
             "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n"
         }
@@ -375,6 +379,7 @@ function Balao_entra_ubc(entry, idioma) {
                 + "- Moderada: 10,00 a 15,00\n\n"
                 + "- Resistente: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensidade(N/m³) x Profundidade(m)\n\n",
+            "densidade": "Informe a massa específica média\n dos materiais sobrejacente",
             "rmr": "\n Classificação RMR de Bieniawski (1989) \n\n",
             "gsi": "\nConversão GSI→RMR \n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
             "q": "\nConversão Q→RMR \n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
@@ -420,6 +425,7 @@ function Balao_entra_nicholas(entry, idioma) {
                 + "- Moderate: 8,00 a 15,00\n\n"
                 + "- Strong: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
+            "densidade": "Provide the average specific mass\n of the overlying materials",
             "fracture-spacing": "\n"
                 + "- Very close: more than 16 fractures\n per meter (RQD 0-20%)\n\n"
                 + "- Close: 10 to 16 fracture per\n meter (RQD 20%-40%)\n\n"
@@ -453,6 +459,7 @@ function Balao_entra_nicholas(entry, idioma) {
                 + "- Rasa: entre 0 m e 100 m\n\n"
                 + "- Intermediária: entre 100 m e 600 m\n\n"
                 + "- Profunda: superior a 600 m\n\n",
+            "densidade": "Informe a massa específica média dos\n materiais sobrejacente",
             "substance": "\n"
                 + "- Fraca: <8,00\n\n"
                 + "- Moderada: 8,00 a 15,00\n\n "
@@ -485,7 +492,6 @@ function Balao_sai() {
 
 // COORDENA QUAL FUNÇÃO DE CONFIGURAÇÃO DE BALÕES SERÁ CHAMADA, COM BASE NO MÉTODO DE SELEÇÃO
 function Baloes(entry, metodo = "undefined") {
-
     let idioma = Obter_idioma()
     if (metodo == "nicholas_81") {
         Balao_entra_nicholas(entry, idioma)
