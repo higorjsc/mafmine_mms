@@ -260,6 +260,7 @@ function Balao_entra_shb(entry, idioma) {
                 + "- Moderate: 10,00 a 15,00\n\n "
                 + "- Strong: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
+            "densidade": "Provide the average specific mass\n of the overlying materials",
             "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
             "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11.63) / 1.13\n\n",
             "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
@@ -298,6 +299,7 @@ function Balao_entra_shb(entry, idioma) {
                 + "- Moderada: 10,00 a 15,00\n\n "
                 + "- Resistente: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensidade(N/m³) x Profundidade(m)\n\n",
+            "densidade": "Informe a massa específica média\n dos materiais sobrejacente",
             "rmr": "\n Classificação RMR de Bieniawski (1989) \n\n",
             "gsi": "\nConversão GSI→RMR \n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
             "q": "\nConversão Q→RMR \n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
@@ -344,8 +346,8 @@ function Balao_entra_ubc(entry, idioma) {
                 + "- Moderate: 10,00 a 15,00\n\n"
                 + "- Strong: >15,00\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
-            "densidade": "oi",
-            "rmr": "\nRMR classification by Bieniawski (1989) \n\n",
+            "densidade": "Provide the average specific mass\n of the overlying materials",
+            "rmr": "\nRMR classification by Bieniawski (1989)\n\n",
             "gsi": "\nGSI to RMR conversion\n\nCeballos e Olalla (2014):\nRMR = (GSI - 11.63) / 1.13\n\n",
             "q": "\nQ to RMR conversion\n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n"
         }
@@ -377,7 +379,7 @@ function Balao_entra_ubc(entry, idioma) {
                 + "- Moderada: 10,00 a 15,00\n\n"
                 + "- Resistente: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensidade(N/m³) x Profundidade(m)\n\n",
-            "densidade": "Informe o peso específico médio dos\n materiais sobre cada uma das litologias\n (OB, HW e FW).",
+            "densidade": "Informe a massa específica média\n dos materiais sobrejacente",
             "rmr": "\n Classificação RMR de Bieniawski (1989) \n\n",
             "gsi": "\nConversão GSI→RMR \n\nCeballos e Olalla (2014):\nRMR = (GSI - 11,63) / 1,13\n\n",
             "q": "\nConversão Q→RMR \n\nBieniawski (1989):\nRMR = 9 x ln(Q) + 44\n\n",
@@ -423,6 +425,7 @@ function Balao_entra_nicholas(entry, idioma) {
                 + "- Moderate: 8,00 a 15,00\n\n"
                 + "- Strong: >15,00\n\n\n"
                 + "UCS (Pa)\n----------------------------------\nDensity(N/m³) x Depth(m)\n\n",
+            "densidade": "Provide the average specific mass\n of the overlying materials",
             "fracture-spacing": "\n"
                 + "- Very close: more than 16 fractures\n per meter (RQD 0-20%)\n\n"
                 + "- Close: 10 to 16 fracture per\n meter (RQD 20%-40%)\n\n"
@@ -456,7 +459,7 @@ function Balao_entra_nicholas(entry, idioma) {
                 + "- Rasa: entre 0 m e 100 m\n\n"
                 + "- Intermediária: entre 100 m e 600 m\n\n"
                 + "- Profunda: superior a 600 m\n\n",
-            "densidade": "Informe o peso específico médio dos\n materiais sobre cada uma das litologias\n (OB, HW e FW).",
+            "densidade": "Informe a massa específica média dos\n materiais sobrejacente",
             "substance": "\n"
                 + "- Fraca: <8,00\n\n"
                 + "- Moderada: 8,00 a 15,00\n\n "
