@@ -72,6 +72,7 @@ function Calculo_rss() {
 
     // REALIZA O CÁLCULO E ESCREVE OS RESULTADOS
     let resultado_rss = {
+        
         "rss_ob": Atribuir_resultado("resultado-rss-ob", ucs_ob, densidade_ob, profundidade_ob),
         "rss_hw": Atribuir_resultado("resultado-rss-hw", ucs_hw, densidade_hw, profundidade_hw),
         "rss_fw": Atribuir_resultado("resultado-rss-fw", ucs_fw, densidade_fw, profundidade_fw)
