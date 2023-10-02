@@ -26,7 +26,7 @@ function Switch_language() {
 }
 
 // ARMAZENA INPUTS DO USUÁRIO EM SESSION STORAGE OU LOCAL STORAGE
-function Armazenar_valor(objeto, memoria = "session") {
+function Armazenar_valor(objeto, memoria = "local") {
     // Verifica se o armazenamento local é suportado
     if (typeof (Storage) !== "undefined") {
 
@@ -45,7 +45,7 @@ function Armazenar_valor(objeto, memoria = "session") {
 }
 
 // VERIFICA SE EXISTE ALGUM VALOR ARMAZENADO EM SESSION STORAGE OU LOCAL STORAGE PARA ALGUM INPUT
-function Verificar_memoria(id, memoria = "session") {
+function Verificar_memoria(id, memoria = "local") {
     // Verifica se o armazenamento local é suportado
     if (typeof (Storage) !== "undefined") {
 
