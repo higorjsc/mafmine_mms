@@ -28,7 +28,6 @@ module.exports = {
         "no-console": "warn",
         "space-infix-ops": ["warn", { "int32Hint": false }],
         "comma-spacing": ["warn", { "before": false, "after": true }],
-
     },
     
 }

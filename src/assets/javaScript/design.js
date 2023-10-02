@@ -147,7 +147,6 @@ function Formatar_entry(entry) {
             //Se o input for os pesos da section central, duas casas decimais são adicionadas ao texto númerico
             entrada.value = numero.toFixed(2).toString()
         }
-
     }
 }
 

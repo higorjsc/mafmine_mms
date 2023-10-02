@@ -36,7 +36,7 @@ function Armazenar_valor(objeto, memoria = "session") {
         if (type == "checkbox" || type == "radio") {
             valor = objeto.checked ? true : false
         } else {
-            valor = objeto.value
+            valor = objeto.value   
         }
 
         // Armazena o valor do input no armazenamento local

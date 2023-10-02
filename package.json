@@ -11,5 +11,8 @@
   "devDependencies": {
     "stylelint-config-standard-scss": "^10.0.0"
   },
-  "description": "Seleção de Métodos de Lavra"
+  "description": "Seleção de Métodos de Lavra",
+  "dependencies": {
+    "eslint": "^8.48.0"
+  }
 }
