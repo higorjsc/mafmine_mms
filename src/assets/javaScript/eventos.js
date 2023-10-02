@@ -358,13 +358,13 @@ function Eventos(metodo) {
 
         // Evento onchange para o select
         seletor.onchange = () => {
-            Armazenar_valor(seletor)
+            Armazenar_valor(seletor, "local")
             Calculo()
             seletor.blur()
         }
 
         if (Verificar_option(seletor)) {
-            seletor.value = Verificar_memoria(seletor.id)
+            seletor.value = Verificar_memoria(seletor.id, "local")
         }
 
         // Evento mouseover e mouseout para o select
@@ -395,7 +395,7 @@ function Eventos(metodo) {
         element.oninput = () => Calculo()
         element.onblur = () => {
             Formatar_entry(element.id)
-            Armazenar_valor(element)
+            Armazenar_valor(element, "local")
         }
         element.onmouseover = () => Baloes(element.id, metodo)
         element.onmouseout = () => Balao_sai()
@@ -409,7 +409,7 @@ function Eventos(metodo) {
             }
         }
         if (Verificar_memoria(element.id) != null && element.type != "radio") {
-            element.value = Verificar_memoria(element.id)
+            element.value = Verificar_memoria(element.id, "local")
         }
     })
 
