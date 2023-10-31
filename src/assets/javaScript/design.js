@@ -126,14 +126,11 @@ function Mudar_imagem() {
 
 //Recebe um texto específico informando o parâmetro.
 function Formatar_entry(entry) {
-
     let entrada = document.getElementById(entry)
     //Verifica se o input está vazio ou nulo
     if (entrada.value != 0) {
-
         //Retira do input APENAS um texto númerico com 2 casas decimais
         let numero = parseFloat((entrada.value).match(/\d+(\.\d{0,2})?/)[0])
-
         if (entry.includes("densidade")) {
             //Se o input for DENSIDADE, 'kg/m³' é adicionado ao texto númerico
             entrada.value = numero.toString() + " kg/m³"
