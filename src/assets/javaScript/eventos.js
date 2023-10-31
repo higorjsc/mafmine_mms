@@ -175,22 +175,14 @@ function Open_iframe(id_trigger) {
     Language_page()
 }
 
-// CONFIGURA O MOVIMENTO DOS POP UPS. OBS: ESSA FUNÇÃO DEVE SER APRIMORADA.
+// CONFIGURA O MOVIMENTO DOS POP UPS.
 function Mover_pop_up() {
-
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
     const overlay = document.getElementById("overlay")
     const overlay_div = document.getElementById("overlay-div")
-
     let position = { x: 0, y: 0 }
-    let limite = {
-        right: 0,
-        left: 0,
-        top: 0,
-        bottom: 0
-    }
-
+    let limite = { right: 0, left: 0, top: 0, bottom: 0 }
     // Interrompe o movimento do pop up
     let Interromper = () => {
         document.removeEventListener("mousemove", Move_element)
@@ -198,54 +190,41 @@ function Mover_pop_up() {
         overlay_div.style.display = "none"
         document.body.style.userSelect = ""
     }
-
     // Eventos que interromperão o movimento do pop up 
     document.onmouseup = () => Interromper()
     document.onscroll = () => Interromper()
     document.onkeydown = () => Interromper()
     document.onclick = () => Interromper()
-
     barra_pop_up.addEventListener("mousedown", (event) => {
-
         // Coloca uma div invisível sobre toda a página e todo o pop up, para evitar interações durante o arraste
         overlay.style.display = "block"
         overlay_div.style.display = "block"
-
         // Impede o usuário de selecionar textos enquanto arrasta o pop up
         document.body.style.userSelect = "none"
-
-        // Calcula a largura e altura do body. Os valores variam com o scroll da página (manter cálculo dentro desse evento)
+        // Calcula a largura e altura do body. Os valores variam com o scroll da página
         let body_height = document.body.clientHeight - 5
         let body_width = document.body.clientWidth
-
         // Define a posição do mouse em relação ao pop up
         position.x = event.clientX - main_pop_up.offsetLeft
         position.y = event.clientY - main_pop_up.offsetTop
-
         // Define os limites de movimento do pop up
         limite.right = body_width - main_pop_up.clientWidth
         limite.bottom = body_height - main_pop_up.clientHeight
-
         // Chama a função para mover
         document.addEventListener("mousemove", Move_element)
     })
-
     // Move o pop up enquanto mousedown
     let Move_element = (event) => {
-
         let x = event.clientX - position.x
         let y = event.clientY - position.y
-
         // Conserva os limites de movimento estabelecidos
         x = x < limite.left ? limite.left : x
         x = x > limite.right ? limite.right : x
         y = y < limite.top ? limite.top : y
         y = y > limite.bottom ? limite.bottom : y
-
         main_pop_up.style.left = `${x}px`
         main_pop_up.style.top = `${y}px`
     }
-
 }
 
 // MOSTRA A PLANILHA COM OS PESOS DE CADA MÉTODO 
