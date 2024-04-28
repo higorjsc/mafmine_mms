@@ -1,7 +1,7 @@
 function Mudar_imagem() {
     let select_strike = document.getElementById("select-strike").value
     const imagem = document.getElementById("img-strike")
-    imagem.src = `Imagens\\${select_strike}.png`
+    imagem.src = `Imagens\\${select_strike}.svg`
 }
 
 //MOSTRA elementos
