@@ -200,16 +200,10 @@ select:hover {
   position: absolute;
   left: 32%;
   bottom: 16%;
-  width: 20%;
 }
 
 #img-strike {
   position: relative;
+  margin: auto;
   display: block;
-  width: 100%;
-}
-#img-strike:hover{
-  transform: scale(2) translateY(-20px);
-  background-color: white;
-  cursor: pointer;
 }
