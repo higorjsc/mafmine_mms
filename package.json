@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "Higor José Silva Campos",
@@ -13,6 +15,7 @@
   },
   "description": "Seleção de Métodos de Lavra",
   "dependencies": {
-    "eslint": "^8.48.0"
+    "eslint": "^8.48.0",
+    "vite": "^5.4.8"
   }
 }
