@@ -16,6 +16,5 @@
   "description": "Seleção de Métodos de Lavra",
   "dependencies": {
     "eslint": "^8.48.0",
-    "vite": "^5.4.8"
   }
 }
