@@ -1,0 +1,69 @@
+cff-version: 1.2.0  # Atualizado para a versão mais recente do CFF
+message: "If you use this software, please cite it as below."
+title: "Mafmine: Mining Method Selection"
+abstract: "Mafmine: Mining Method Selection is a web-based tool designed to assist in the selection of mining methods based on geotechnical and operational parameters. It provides a user-friendly interface for decision-making in mining engineering."
+authors:
+  - name: "Higor José Silva Campos"
+    email: "higor.jose@ufrgs.br"
+    affiliation: "Federal University of Rio Grande do Sul"
+    orcid: "0009-0001-4762-6065"
+
+  - name: "Fernando Alves Cantini Cardoso"
+    email: "fernando.cantini@ufrgs.br"
+    affiliation: "Federal University of Rio Grande do Sul"
+    orcid: "0000-0001-5309-4061"
+
+  - name: "Carlos Otávio Petter"
+    email: "cpetter@ufrgs.br"
+    affiliation: "Federal University of Rio Grande do Sul"
+    orcid: "0000-0003-4959-4359"
+
+  - name: "Renato Aurélio Petter"
+    affiliation: "Federal University of Rio Grande do Sul"
+    email: "7rapetter@gmail.com"
+    orcid: "0000-0003-2479-2527"
+
+date-released: "2025-09"
+version: "1.0.0"
+license: "MIT"
+repository-code: "https://github.com/higorjsc/mafmine_mms"
+website: "https://www.mafmine.com.br/v3.1/tools/mms/src/ubc.html"
+keywords:
+  - "mining"
+  - "method selection"
+  - "nicholas 1981"
+  - "nicholas 1992"
+  - "ubc mining method selection"
+  - "shb mining method selection"
+  - "mafmine"
+  - "geomechanics"
+  - "rock mass rating"
+  - "geotechnical engineering"
+  - "decision-making"
+  - "software tool"
+
+preferred-citation:
+  title: "Mafmine: Mining Method Selection"
+  authors:
+    - name: "Higor José Silva Campos"
+      affiliation: "Federal University of Rio Grande do Sul"
+      orcid: "0009-0001-4762-6065"
+
+    - name: "Fernando Alves Cantini Cardoso"
+      affiliation: "Federal University of Rio Grande do Sul"
+      orcid: "0000-0001-5309-4061"
+
+    - name: "Carlos Otávio Petter"
+      affiliation: "Federal University of Rio Grande do Sul"
+      orcid: "0000-0003-4959-4359"
+      
+    - name: "Renato Aurélio Petter"
+      affiliation: "Federal University of Rio Grande do Sul"
+      orcid: "0000-0003-2479-2527"
+  year: 2025
+  version: "1.8.0"
+  url: "https://github.com/higorjsc/mafmine_mms"
+  doi: "10.5281/zenodo.14816455"  # Substitua pelo DOI real quando disponível
+  license: "MIT"
+  repository-code: "https://github.com/higorjsc/mafmine_mms"
+  website: "https://www.mafmine.com.br/v3.1/tools/mms/src/ubc.html"
