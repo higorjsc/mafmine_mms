@@ -15,7 +15,7 @@ function Language_page() {
             // CREDITOS
             universidade: "UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL<br>",
             laboratorio: "LABORATÓRIO DE PROCESSAMENTO MINERAL<br><br><br>",
-            versao: "VERSÃO 1.0.0, dd/mm/2023",
+            versao: "VERSÃO 1.0.0, 09/2023",
             titulo_ferramenta: "SELEÇÃO DE MÉTODOS DE LAVRA<br>",
             inspiracao: "(INSIPIRADO NA FERRAMENTA 'MINING METHOD SELECTION' DA <a href='https://www.edumine.com/' target='_blank'>EDUMINE)</a><br><br>",
             titulo_autores: "<br>AUTORES<br>",
@@ -75,7 +75,7 @@ function Language_page() {
             // CREDITOS
             universidade: "UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL<br>",
             laboratorio: "LABORATÓRIO DE PROCESSAMENTO MINERAL<br><br><br>",
-            versao: "VERSÃO 1.0.0, dd/mm/2023",
+            versao: "VERSÃO 1.0.0, 09/2023",
             titulo_ferramenta: "MINING METHOD SELECTION<br>",
             inspiracao: "(INSIPIRADO NA FERRAMENTA 'MINING METHOD SELECTION' DA <a href='https://www.edumine.com/' target='_blank'>EDUMINE)</a><br><br>",
             titulo_autores: "<br>AUTHORS<br>",

@@ -49,9 +49,11 @@ The development of the mining method selection application is described in two k
 
 1. **DESENVOLVIMENTO DE UM APLICATIVO DE SELEÇÃO DE MÉTODOS DE LAVRA PARA PROJETOS CONCEITUAIS DE MINERAÇÃO**  
    Authors: Higor José Silva Campos, Fernando Alves Cantini Cardozo, Vinícius Matheus Lenz, Carlos Petter.
+   DOI: [10.5151/2594-357X-40715](http://dx.doi.org/10.5151/2594-357X-40715)
 
 2. **METHODOLOGY FOR SELECTING MINING METHODS IN THE PRELIMINARY PROJECT STAGES**  
    Authors: Fernando Alves Cantini Cardozo, Higor José Silva Campos, Carlos Otávio Petter, Vinícius Matheus Lenz.
+   DOI: [10.5151/2594-357X-40716](http://dx.doi.org/10.5151/2594-357X-40716)
 
 These articles provide a detailed explanation of the methodology and the application’s development process.
 
