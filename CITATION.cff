@@ -45,23 +45,23 @@ keywords:
 preferred-citation:
   title: "Mafmine: Mining Method Selection"
   authors:
-    - name: "Higor José Silva Campos"
+    - name: "Campos, H."
       affiliation: "Federal University of Rio Grande do Sul"
       orcid: "0009-0001-4762-6065"
 
-    - name: "Fernando Alves Cantini Cardoso"
+    - name: "Cardoso, F."
       affiliation: "Federal University of Rio Grande do Sul"
       orcid: "0000-0001-5309-4061"
 
-    - name: "Carlos Otávio Petter"
+    - name: "Petter, C."
       affiliation: "Federal University of Rio Grande do Sul"
       orcid: "0000-0003-4959-4359"
       
-    - name: "Renato Aurélio Petter"
+    - name: "Petter, R."
       affiliation: "Federal University of Rio Grande do Sul"
       orcid: "0000-0003-2479-2527"
   year: 2025
-  version: "1.8.0"
+  version: "1.0.0"
   url: "https://github.com/higorjsc/mafmine_mms"
   doi: "10.5281/zenodo.14816455"  # Substitua pelo DOI real quando disponível
   license: "MIT"
