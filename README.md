@@ -21,6 +21,7 @@ This project implements a web application for the selection of mining methods fo
   - Lithological parameter tables
   - RMR geomechanical classification
   - GSI geomechanical classification
+  - AHP tool for decision-making in Nicholas' method
 - **No Frameworks:** The application was developed without using frameworks or additional dependencies.
 
 ## How to Use
@@ -37,7 +38,22 @@ The application is designed to be modular and scalable, ensuring that new featur
 
 ## Contributions
 
-This project is continuously evolving, and contributions to improvement are welcome.
+This project is continuously evolving, and contributions to improvement are welcome. 
+
+### Institutional Support
+This work was developed with the support of:  
+- **Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)**: For funding and fostering scientific research in Brazil.  
+  [![CNPq](https://img.shields.io/badge/Supported%20by-CNPq-blue)](https://www.gov.br/cnpq/)  
+- **Universidade Federal do Rio Grande do Sul (UFRGS)**: For providing academic infrastructure and resources.  
+  [![UFRGS](https://img.shields.io/badge/Affiliated%20with-UFRGS-red)](https://www.ufrgs.br/)  
+
+---
+
+### How to Contribute
+We welcome contributions from the community! Here’s how you can help:  
+1. **Report Bugs**: Open an issue on GitHub to document problems or suggestions.  
+2. **Improve Code**: Fork the repository, make changes, and submit a pull request.  
+3. **Enhance Documentation**: Help improve user guides or translate content. 
 
 ## License
 
