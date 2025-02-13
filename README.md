@@ -85,3 +85,12 @@ These articles provide a detailed explanation of the methodology and the applica
 - SHAHRIAR, K. et al. *A New Numerical Method and AHP For Mining Method Selection*. Proc. 4th Int. Symp. on ‘High performance mine production, 2007. p. 289–306.
 - TENZER, R. et al. *A digital rock density map of New Zealand*. Computers & Geosciences, 2011. v. 37, n. 8, p. 1181–1191.
 - MILLER, T.L.; PAKALNIS, R.; POULIN, R. *UBC Mining Method Selection*. University of British Columbia, Vancouver, B.C., Canada, 1995.
+
+## Related Works
+
+1. **Campos, H., Cardoso, F., Petter, C., & Petter, R.** (2025). _Mafmine: Mining Method Selection (Version 1.0.0)_ [Computer software]. Zenodo. DOI: [10.5281/zenodo.14816455](https://doi.org/10.5281/zenodo.14816455). GitHub repository: [Mafmine MAS](https://github.com/higorjsc/mafmine_mas).
+
+2. **Campos, H., Cardoso, F., Petter, C., & Petter, R.** (2025). _Mafmine: Mining Method Selection (Version 1.0.0)_ [Computer software]. Zenodo. DOI: [10.5281/zenodo.14816455](https://doi.org/10.5281/zenodo.14816455). GitHub repository: [Mafmine MMS](https://github.com/higorjsc/mafmine_mms).
+
+3. **Campos, H. J. S., Cardozo, F. A. C., Otávio, P. C., & Lenz, V. M.** (2024, September). _Development of an Application for the Selection of Mining Methods for Conceptual Mining Projects_. Paper presented at the 23rd Mining Seminar. DOI: [10.5151/2594-357X-40715](https://doi.org/10.5151/2594-357X-40715).
+
